@@ -12,7 +12,6 @@
   <meta property="og:description" content="Tratamento de canal com microscópio, retratamento e urgências. Atendimento humanizado e tecnologia de ponta." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mvendodontia.com" />
-  <!-- Usa a sua foto local como imagem de preview -->
   <meta property="og:image" content="/1.jpeg" />
   <link rel="canonical" href="https://mvendodontia.com" />
 
@@ -34,7 +33,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -46,7 +44,6 @@
     }
 
     h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 600; }
-
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* WhatsApp Button */
@@ -65,9 +62,7 @@
       background-color: var(--white); box-shadow: 0 2px 15px rgba(0,0,0,0.1);
       position: fixed; width: 100%; top: 0; z-index: 1000;
     }
-
     .header-content { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
-
     .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--primary-color); }
     .logo span { color: var(--secondary-color); }
 
@@ -75,9 +70,6 @@
     nav ul li { margin-left: 30px; }
     nav ul li a { text-decoration: none; color: var(--dark-color); font-weight: 500; transition: color 0.3s ease; }
     nav ul li a:hover { color: var(--primary-color); }
-
-    /* Hamburger */
-    .menu-btn { display: none; background: transparent; border: none; font-size: 24px; color: var(--dark-color); cursor: pointer; }
 
     /* Hero */
     .hero { padding: 160px 0 100px; background-color: var(--white); position: relative; overflow: hidden; }
@@ -98,7 +90,6 @@
 
     /* Sections */
     section { scroll-margin-top: 96px; }
-
     .about, .services, .testimonials, .contact { padding: 100px 0; background-color: var(--white); }
     .section-title { text-align: center; margin-bottom: 60px; }
     .section-title h2 { font-size: 36px; color: var(--primary-color); position: relative; display: inline-block; padding-bottom: 15px; }
@@ -148,20 +139,12 @@
     .footer-column ul li a:hover { color: var(--white); }
     .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); font-size: 14px; }
 
-    /* Responsive */
+    /* Responsivo básico */
     @media (max-width: 992px) {
       .hero-content, .about-content, .contact-content { flex-direction: column; }
       .hero { padding: 140px 0 80px; }
       .hero-text h1 { font-size: 36px; }
       .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 24px; }
-    }
-    @media (max-width: 768px) {
-      nav ul { display: none; }
-      .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
-      .mobile-nav { display: none; position: absolute; top: 64px; right: 20px; background: var(--white); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); overflow: hidden; }
-      .mobile-nav a { display: block; padding: 14px 18px; color: var(--dark-color); text-decoration: none; border-bottom: 1px solid #eee; }
-      .mobile-nav a:hover { background: var(--light-gray); }
-      .mobile-nav.open { display: block; }
     }
   </style>
 </head>
@@ -183,18 +166,11 @@
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#tratamentos">Tratamentos</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#depoimentos">Feedbacks</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
-        <div id="mobileNav" class="mobile-nav" aria-label="Menu móvel">
-          <a href="#inicio">Início</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#tratamentos">Tratamentos</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#contato">Contato</a>
-        </div>
+        <!-- Removido menu mobile para evitar itens duplicados -->
       </div>
     </div>
   </header>
@@ -210,7 +186,6 @@
           <a href="#contato" class="btn">Agende sua consulta</a>
         </div>
         <div class="hero-image">
-          <!-- SUA FOTO PRINCIPAL -->
           <img src="1.jpeg" alt="Retrato profissional da Dra. Maria Vitória Bello Avolio" />
         </div>
       </div>
@@ -223,16 +198,14 @@
       <div class="section-title">
         <h2>Conheça a Especialista</h2>
       </div>
-      <div class="about-content" style="display:flex;align-items:center;gap:50px;">
+      <div class="about-content">
         <div class="about-image">
-          <!-- Usa a mesma imagem; quando tiver foto do consultório, troque aqui -->
           <img src="1.jpeg" alt="Dra. Maria Vitória Bello Avolio no consultório" />
         </div>
         <div class="about-text">
           <h3>Dra. Maria Vitória Bello Avolio</h3>
+          <!-- Mantido apenas o primeiro parágrafo -->
           <p>Formada em Odontologia pela Universidade Estadual de Campinas (UNICAMP) e especialista em Endodontia pela Faculdade São Leopoldo Mandic, dedico minha carreira ao tratamento de canal e à preservação dos dentes naturais. Acredito que cada paciente merece um atendimento personalizado, com empatia e profissionalismo.</p>
-          <p>A Endodontia é uma área que exige precisão, paciência e cuidado extremo. Utilizo tecnologia moderna, como microscópio operatório e sistemas de instrumentação rotatória, para garantir tratamentos mais confortáveis, eficientes e com maior taxa de sucesso.</p>
-          <p>Meu consultório está equipado com os mais modernos recursos para proporcionar segurança e conforto durante todo o procedimento. Acredito que confiança, transparência e bem-estar são tão importantes quanto técnica e experiência.</p>
 
           <div class="credentials">
             <div class="credential-item">Formada em Odontologia pela UNICAMP</div>
@@ -250,7 +223,7 @@
   <section class="services" id="tratamentos">
     <div class="container">
       <div class="section-title">
-        <h2>Tratamentos de Endodontia</h2>
+        <h2>Tratamentos</h2>
       </div>
       <div class="services-grid">
         <div class="service-card">
@@ -285,7 +258,7 @@
   <section class="testimonials" id="depoimentos">
     <div class="container">
       <div class="section-title">
-        <h2>Pacientes Satisfeitos</h2>
+        <h2>Feedbacks</h2>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card">
@@ -351,14 +324,16 @@
             <i class="fas fa-phone-alt" aria-hidden="true"></i>
             <div class="info-text">
               <h4>Telefone</h4>
-              <p><a href="tel:+5511994802149">(11) 99480-2149</a></p>
+              <!-- Removido o link: agora é texto puro -->
+              <p>(11) 99480-2149</p>
             </div>
           </div>
           <div class="info-item">
             <i class="fas fa-envelope" aria-hidden="true"></i>
             <div class="info-text">
               <h4>E-mail</h4>
-              <p><a href="mailto:vitoriavolio@gmail.com">vitoriavolio@gmail.com</a></p>
+              <!-- Removido o link: agora é texto puro -->
+              <p>vitoriavolio@gmail.com</p>
             </div>
           </div>
           <div class="info-item">
@@ -400,8 +375,8 @@
         <div class="footer-column">
           <h3>Contato</h3>
           <ul>
-            <li><a href="tel:+5511994802149">(11) 99480-2149</a></li>
-            <li><a href="mailto:vitoriavolio@gmail.com">vitoriavolio@gmail.com</a></li>
+            <li>(11) 99480-2149</li>
+            <li>vitoriavolio@gmail.com</li>
             <li><a href="https://wa.me/5511994802149?text=Ol%C3%A1%20Dra.%20Maria%20Vit%C3%B3ria,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar Consulta</a></li>
           </ul>
         </div>
@@ -411,16 +386,5 @@
       </div>
     </div>
   </footer>
-
-  <!-- JS: menu mobile e fechamento ao clicar -->
-  <script>
-    (function(){
-      const btn = document.getElementById('menuBtn');
-      const mobile = document.getElementById('mobileNav');
-      btn.addEventListener('click', () => mobile.classList.toggle('open'));
-      mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobile.classList.remove('open')));
-    })();
-  </script>
 </body>
 </html>
-
