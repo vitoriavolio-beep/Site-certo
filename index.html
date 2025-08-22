@@ -1,604 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dra. Maria Vitória Bello Avolio | Especialista em Endodontia</title>
-  <!-- SEO básico -->
-  <meta name="description" content="Dra. Maria Vitória Bello Avolio, especialista em Endodontia em São Paulo (Jardim Paulista). Tratamento de canal com microscópio, retratamento e urgências com atendimento humanizado." />
-  <meta name="robots" content="index,follow" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Dra. Maria Vitória – Endodontia em São Paulo" />
-  <meta property="og:description" content="Tratamento de canal com microscópio, retratamento e urgências. Atendimento humanizado e tecnologia de ponta." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mvendodontia.com" />
-  <meta property="og:image" content="/1.jpeg" />
-  <link rel="canonical" href="https://mvendodontia.com" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #9b7a5d;
-      --secondary-color: #c9a77c;
+      --primary-color: #9b7a5d;     /* cor escura */
+      --secondary-color: #c9a77c;   /* cor clara */
       --light-color: #f8f9fa;
       --dark-color: #333333;
       --white: #ffffff;
-      --light-gray: #f0f0f0;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Poppins', sans-serif;
       color: var(--dark-color);
-      background-color: var(--light-color);
       line-height: 1.6;
-      position: relative;
     }
 
-    h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 600; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-    /* WhatsApp Button */
-    .whatsapp-float {
-      position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
-      background-color: #25d366; color: #fff; border-radius: 50px;
-      text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-      z-index: 100; display: flex; align-items: center; justify-content: center;
-      transition: all 0.3s ease; animation: pulse 2s infinite;
-    }
-    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 2px 2px 15px rgba(0,0,0,0.3); }
-    @keyframes pulse { 0% { transform: scale(1);} 50% { transform: scale(1.05);} 100% { transform: scale(1);} }
-
-    /* Header */
     header {
-      background-color: var(--white); box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      position: fixed; width: 100%; top: 0; z-index: 1000;
+      text-align: center;
+      padding: 1rem;
+      background: var(--white);
     }
-    .header-content { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
-    .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--primary-color); }
-    .logo span { color: var(--secondary-color); }
 
-    nav ul { display: flex; list-style: none; }
-    nav ul li { margin-left: 30px; }
-    nav ul li a { text-decoration: none; color: var(--dark-color); font-weight: 500; transition: color 0.3s ease; }
-    nav ul li a:hover { color: var(--primary-color); }
-
-    /* Hero */
-    .hero { padding: 160px 0 100px; background-color: var(--white); position: relative; overflow: hidden; }
-    .hero-content { display: flex; align-items: center; gap: 50px; }
-    .hero-text { flex: 1; }
-    .hero-text h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; color: var(--primary-color); }
-    .hero-text h1 span { color: var(--secondary-color); }
-    .hero-text p { font-size: 18px; margin-bottom: 30px; color: var(--dark-color); }
-    .hero-image { flex: 1; text-align: center; }
-    .hero-image img { max-width: 100%; border-radius: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-    .btn {
-      display: inline-block; background-color: var(--primary-color); color: var(--white);
-      padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 500;
-      transition: all 0.3s ease; border: none; cursor: pointer;
+    header h1 {
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+      font-family: 'Playfair Display', serif;
     }
-    .btn:hover { background-color: var(--secondary-color); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-    /* Sections */
-    section { scroll-margin-top: 96px; }
-    .about, .services, .testimonials, .contact, .techs, .faq { padding: 100px 0; background-color: var(--white); }
-    .section-title { text-align: center; margin-bottom: 60px; }
-    .section-title h2 { font-size: 36px; color: var(--primary-color); position: relative; display: inline-block; padding-bottom: 15px; }
-    .section-title h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: var(--secondary-color); }
-
-    .about-content, .contact-content { display: flex; align-items: center; gap: 50px; }
-    .about-image, .about-text { flex: 1; }
-    .about-image img { max-width: 100%; border-radius: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-    .about-text h3 { font-size: 24px; margin-bottom: 20px; color: var(--primary-color); }
-    .about-text p { margin-bottom: 20px; }
-    .credentials { margin-top: 30px; }
-    .credential-item { display: flex; margin-bottom: 15px; }
-    .credential-item::before { content: '✚'; color: var(--secondary-color); font-weight: bold; margin-right: 10px; }
-
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-    .service-card { background-color: var(--light-gray); border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-    .service-card:hover { transform: translateY(-10px); }
-    .service-card h3 { font-size: 22px; margin-bottom: 15px; color: var(--primary-color); }
-
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-    .testimonial-card { background-color: var(--light-gray); border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; }
-    .testimonial-card::before { content: '"'; position: absolute; top: 10px; left: 20px; font-size: 80px; color: var(--secondary-color); opacity: 0.2; font-family: 'Playfair Display', serif; }
-    .testimonial-content { position: relative; z-index: 1; }
-    .testimonial-content p { margin-bottom: 16px; font-style: italic; }
-    .testimonial-author { display: flex; align-items: center; gap: 12px; }
-    .author-info h4 { font-size: 18px; margin-bottom: 5px; }
-    .author-info span { color: #666; font-size: 14px; }
-
-    .contact-info { flex: 1; }
-    .contact-info h3 { font-size: 24px; margin-bottom: 20px; color: var(--primary-color); }
-    .info-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
-    .info-item i { color: var(--secondary-color); margin-right: 15px; margin-top: 5px; }
-    .info-text h4 { font-size: 18px; margin-bottom: 5px; }
-    .map { flex: 1; height: 400px; border-radius: 10px; overflow: hidden; }
-    .map iframe { width: 100%; height: 100%; border: none; }
-
-    footer { background-color: var(--primary-color); color: var(--white); padding: 60px 0 30px; }
-    .footer-content { display: flex; justify-content: space-between; margin-bottom: 40px; gap: 30px; }
-    .footer-column { flex: 1; }
-    .footer-column h3 { font-size: 20px; margin-bottom: 20px; color: var(--white); }
-    .footer-column ul { list-style: none; }
-    .footer-column ul li { margin-bottom: 10px; }
-    .footer-column ul li a { color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s ease; }
-    .footer-column ul li a:hover { color: var(--white); }
-    .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); font-size: 14px; }
-
-    /* ===== Carrossel (Tecnologias) ===== */
-    .techs { padding: 100px 0; background-color: var(--white); }
-    .tech-carousel {
-      position: relative; display: flex; align-items: center; gap: 12px;
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    .tech-track {
-      scroll-snap-type: x mandatory; overflow-x: auto; overflow-y: hidden;
-      display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 240px);
-      gap: 18px; padding: 10px 6px 16px; scrollbar-width: thin; scroll-behavior: smooth;
-    }
-    .tech-track::-webkit-scrollbar { height: 8px; }
-    .tech-track::-webkit-scrollbar-thumb { background: #ddd; border-radius: 999px; }
-    .tech-item {
-      scroll-snap-align: center; text-align: center; background: var(--light-gray);
-      border-radius: 12px; padding: 16px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      border: 1px solid #eee;
-    }
-    .tech-thumb {
-      width: 180px; height: 180px; margin: 0 auto 10px; border-radius: 50%;
-      overflow: hidden; border: 6px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    }
-    .tech-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .tech-item figcaption { font-weight: 600; color: var(--dark-color); }
 
-    .tech-arrow {
-      background: #fff; border: 1px solid #e8e8e8; width: 42px; height: 42px; border-radius: 50%;
-      display: grid; place-items: center; box-shadow: 0 10px 20px rgba(0,0,0,.07);
-      cursor: pointer; flex: 0 0 auto; transition: transform .1s ease, background .2s ease;
+    .hero h2 {
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
     }
-    .tech-arrow:hover { background: #fafafa; }
-    .tech-arrow:active { transform: scale(.98); }
 
-    .tech-dots { display: flex; gap: 8px; justify-content: center; margin-top: 12px; }
-    .tech-dots button {
-      width: 8px; height: 8px; border-radius: 50%; border: 0; background: #d9d9d9;
+    section {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
     }
-    .tech-dots button[aria-current="true"] { background: var(--primary-color); }
 
-    /* ===== FAQ (Acordeão) ===== */
-    .faq-wrap { display: grid; gap: 12px; max-width: 920px; margin: 0 auto; }
-    .faq-item { border: 1px solid #eee; border-radius: 12px; background: #fff; overflow: hidden; }
-    .faq-q {
-      width: 100%; text-align: left; background: #fff; border: 0; cursor: pointer;
-      padding: 16px 18px; font-weight: 600; display: flex; justify-content: space-between; align-items: center;
+    /* Espaçamento reduzido entre seções */
+    section + section {
+      margin-top: 1rem;
     }
-    .faq-q:focus { outline: 2px solid var(--secondary-color); outline-offset: -2px; }
-    .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-    .faq-a p { margin: 14px 0 18px; }
-    .chev { transition: transform .25s ease; }
-    .faq-item.open .faq-a { max-height: 500px; }
-    .faq-item.open .chev { transform: rotate(180deg); }
 
-    /* Responsivo */
-    @media (max-width: 992px) {
-      .hero-content, .about-content, .contact-content { flex-direction: column; }
-      .hero { padding: 140px 0 80px; }
-      .hero-text h1 { font-size: 36px; }
-      .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 24px; }
+    /* Carrossel simplificado */
+    .carousel {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
     }
-    @media (max-width: 680px){
-      .tech-thumb { width: 160px; height: 160px; }
-      .tech-track { grid-auto-columns: 200px; }
+
+    .carousel-item {
+      text-align: center;
+      max-width: 150px;
+    }
+
+    .carousel-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid var(--white); /* halo branco */
+      object-fit: cover;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .carousel-item p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--dark-color);
     }
   </style>
 </head>
 <body>
-  <!-- WhatsApp Button (com mensagem pronta) -->
-  <a class="whatsapp-float" aria-label="Agendar WhatsApp"
-     href="https://wa.me/5511994802149?text=Ol%C3%A1%20Dra.%20Maria%20Vit%C3%B3ria,%20gostaria%20de%20agendar%20uma%20consulta."
-     target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-  </a>
-
-  <!-- Header -->
+  <!-- Cabeçalho -->
   <header>
-    <div class="container">
-      <div class="header-content" role="navigation" aria-label="Navegação principal">
-        <div class="logo">Dra. Maria Vitória <span>Bello Avolio</span></div>
-        <nav>
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#tratamentos">Tratamentos</a></li>
-            <li><a href="#tecnologias">Tecnologias</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#depoimentos">Feedbacks</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <h1>Dra. Maria Vitória Bello Avolio</h1>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="inicio">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Especialista em <span>Endodontia</span><br />em São Paulo - SP</h1>
-          <p> Sou a Dra. Maria Vitória Bello Avolio, dentista especialista em Endodontia com formação e experiência dedicadas ao alívio da dor e à preservação dos dentes.</p>
-          <p> Meu objetivo é cuidar da saúde do seu sorriso, preservando seus dentes naturais com técnicas modernas e precisas.</p>
-          <a href="#contato" class="btn">Agende sua consulta</a>
-        </div>
-        <div class="hero-image">
-          <img src="1.jpeg" alt="Retrato profissional da Dra. Maria Vitória Bello Avolio" />
-        </div>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Especialista em Endodontia</h2>
+  </section>
+
+  <!-- Carrossel -->
+  <section>
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="img/laser1.jpg" alt="Laser terapia">
+        <p>Laser terapia</p>
+      </div>
+      <div class="carousel-item">
+        <img src="img/microscopio1.jpg" alt="Microscópio operatório">
+        <p>Microscópio operatório</p>
+      </div>
+      <div class="carousel-item">
+        <img src="img/microscopio2.jpg" alt="Microscópio">
+        <p>Microscópio</p>
+      </div>
+      <div class="carousel-item">
+        <img src="img/laser2.jpg" alt="Laser terapia">
+        <p>Laser terapia</p>
+      </div>
+      <div class="carousel-item">
+        <img src="img/camera.jpg" alt="Câmera intraoral">
+        <p>Câmera intraoral</p>
       </div>
     </div>
   </section>
-
-  <!-- Services Section (Tratamentos) -->
-  <section class="services" id="tratamentos">
-    <div class="container">
-      <div class="section-title">
-        <h2>Tratamentos</h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Tratamento de Canal com Microscópio</h3>
-          <p>Procedimento para salvar dentes com polpa inflamada ou infectada. O microscópio operatório aumenta a precisão e a previsibilidade, garantindo melhor limpeza e selamento dos canais.</p>
-        </div>
-        <div class="service-card">
-          <h3>Retratamento Endodôntico</h3>
-          <p>Quando um canal anterior não teve o resultado esperado, realizo o retratamento para limpar novamente os canais, remover materiais antigos e tratar possíveis reinfecções.</p>
-        </div>
-        <div class="service-card">
-          <h3>Cirurgia Paraendodôntica</h3>
-          <p>Indicado para infecções persistentes na ponta da raiz quando o tratamento convencional não resolve. Técnica minimamente invasiva, com foco em recuperação rápida.</p>
-        </div>
-        <div class="service-card">
-          <h3>Limpeza Dental</h3>
-          <p>Remoção profissional de placa bacteriana, tártaro e manchas para prevenir doenças gengivais e manter a saúde bucal.</p>
-        </div>
-        <div class="service-card">
-          <h3>Atendimento de Urgência</h3>
-          <p>Alívio imediato de dor de dente e situações agudas relacionadas a endodontia, com prioridade no agendamento.</p>
-        </div>
-        <div class="service-card">
-          <h3>Restaurações em Resina</h3>
-          <p>Reconstrução estética e funcional de dentes danificados com resinas compostas de alta qualidade, integradas à cor do dente.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tecnologias (Carrossel redondo) -->
-  <section class="techs" id="tecnologias" aria-labelledby="tec-title">
-    <div class="container">
-      <div class="section-title">
-        <h2 id="tec-title">Tecnologias do Consultório</h2>
-      </div>
-
-      <div class="tech-carousel">
-        <button class="tech-arrow tech-prev" aria-label="Anterior" title="Anterior">
-          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-        </button>
-
-        <div class="tech-track" role="list" aria-live="polite">
-          <figure class="tech-item" role="listitem">
-            <div class="tech-thumb"><img src="2.jpeg" alt="Microscópio clínico" loading="lazy" decoding="async"></div>
-            <figcaption>Microscópio</figcaption>
-          </figure>
-
-          <figure class="tech-item" role="listitem">
-            <div class="tech-thumb"><img src="3.jpeg" alt="Sistema de Raio-X digital" loading="lazy" decoding="async"></div>
-            <figcaption>Raio‑X Digital</figcaption>
-          </figure>
-
-          <figure class="tech-item" role="listitem">
-            <div class="tech-thumb"><img src="4.jpeg" alt="Localizador apical" loading="lazy" decoding="async"></div>
-            <figcaption>Localizador Apical</figcaption>
-          </figure>
-
-          <figure class="tech-item" role="listitem">
-            <div class="tech-thumb"><img src="5.jpeg" alt="Ultrassom odontológico" loading="lazy" decoding="async"></div>
-            <figcaption>Ultrassom</figcaption>
-          </figure>
-
-          <figure class="tech-item" role="listitem">
-            <div class="tech-thumb"><img src="6.jpeg" alt="Sistema de obturação termoplastificada" loading="lazy" decoding="async"></div>
-            <figcaption>Obturação Termoplastificada</figcaption>
-          </figure>
-
-          <figure class="tech-item" role="listitem">
-            <div class="tech-thumb"><img src="7.jpeg" alt="Irrigação ativada" loading="lazy" decoding="async"></div>
-            <figcaption>Irrigação Ativada</figcaption>
-          </figure>
-        </div>
-
-        <button class="tech-arrow tech-next" aria-label="Próximo" title="Próximo">
-          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-        </button>
-      </div>
-
-      <div class="tech-dots" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- Sobre (Conheça a Especialista) -->
-  <section class="about" id="sobre">
-    <div class="container">
-      <div class="section-title">
-        <h2>Conheça a Especialista</h2>
-      </div>
-      <div class="about-content">
-        <div class="about-image">
-          <img src="1.jpeg" alt="Dra. Maria Vitória Bello Avolio no consultório" />
-        </div>
-        <div class="about-text">
-          <h3>Dra. Maria Vitória Bello Avolio</h3>
-          <p>Formada em Odontologia pela Universidade Estadual de Campinas (UNICAMP) e especialista em Endodontia pela Faculdade São Leopoldo Mandic, dedico minha carreira ao tratamento de canal e à preservação dos dentes naturais. Acredito que cada paciente merece um atendimento personalizado, com empatia e profissionalismo.</p>
-
-          <div class="credentials">
-            <div class="credential-item">Formada em Odontologia pela UNICAMP</div>
-            <div class="credential-item">Especialista em Endodontia pela Faculdade São Leopoldo Mandic</div>
-            <div class="credential-item">Utilização de microscópio operatório para maior precisão</div>
-            <div class="credential-item">Técnicas modernas de anestesia para maior conforto</div>
-            <div class="credential-item">Tratamento de canal em uma única sessão quando possível</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feedbacks -->
-  <section class="testimonials" id="depoimentos">
-    <div class="container">
-      <div class="section-title">
-        <h2>Feedbacks</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>Atendimento impecável da Dra Maria Vitória! Fiz um tratamento muito bem-sucedido, me senti acolhida e nas mãos de uma excelente profissional. Recomendo muito!</p>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Aline Sousa</h4>
-                <span>9 meses atrás</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>Excelente profissional e clínica impecável. Cheguei com muita dor e saí aliviada após o procedimento. Recomendo!</p>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Stephanny Rosendo</h4>
-                <span>11 meses atrás</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>Fui atendida prontamente. A Dra explicou cada etapa com clareza, o que me deixou segura durante todo o tratamento. A clínica é muito bem montada e higienizada.</p>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Fernanda Faria</h4>
-                <span>um ano atrás</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ (acordeão) — inserido após Feedbacks -->
-  <section class="faq" id="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <div class="section-title">
-        <h2 id="faq-title">Perguntas Frequentes</h2>
-      </div>
-
-      <div class="faq-wrap" role="list">
-        <!-- Q1 -->
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="a1">
-            <span>Quais os benefícios de realizar um tratamento de canal com microscópio?</span>
-            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-          </button>
-          <div id="a1" class="faq-a" role="region" aria-label="Resposta">
-            <p>O tratamento de canal com microscópio representa um avanço significativo na odontologia moderna. Com o uso do microscópio, é possível alcançar um nível de precisão que métodos tradicionais não oferecem, permitindo ao dentista visualizar detalhes minuciosos da anatomia interna do dente. Isso garante a remoção completa de infecções, aumentando as chances de sucesso do tratamento e preservando a estrutura dentária.</p>
-          </div>
-        </div>
-
-        <!-- Q2 -->
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="a2">
-            <span>Vocês aceitam convênios odontológicos?</span>
-            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-          </button>
-          <div id="a2" class="faq-a" role="region" aria-label="Resposta">
-            <p>Não, na clínica os nossos tratamentos são particulares. Fazemos a emissão da nota fiscal, que pode ser usada no pedido de reembolso frente ao plano de saúde ou no imposto de renda.</p>
-          </div>
-        </div>
-
-        <!-- Q3 -->
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="a3">
-            <span>Vocês fazem atendimento de emergência fora do horário comercial?</span>
-            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-          </button>
-          <div id="a3" class="faq-a" role="region" aria-label="Resposta">
-            <p>Sim, fazemos. Nesses casos, pode entrar em contato pelo WhatsApp que iremos verificar a possibilidade de atendimento.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section class="contact" id="contato">
-    <div class="container">
-      <div class="section-title">
-        <h2>Entre em Contato</h2>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Consultório</h3>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>Endereço</h4>
-              <p>Av. Nove de Julho, 3229 - Conjunto 1506<br />Jardim Paulista, São Paulo - SP, 01407-200</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-phone-alt" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>Telefone</h4>
-              <p>(11) 99480-2149</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>E-mail</h4>
-              <p>vitoriavolio@gmail.com</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>Horários</h4>
-              <p>Segunda a Sexta: 8h às 19h<br />Sábado: 9h às 12h</p>
-            </div>
-          </div>
-          <a class="btn" href="https://wa.me/5511994802149?text=Ol%C3%A1%20Dra.%20Maria%20Vit%C3%B3ria,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-        </div>
-        <div class="map" aria-label="Mapa do consultório">
-          <iframe
-            src="https://www.google.com/maps?q=Av.+Nove+de+Julho,+3229+-+Jardim+Paulista,+S%C3%A3o+Paulo&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mapa: Av. Nove de Julho, 3229 - Jardim Paulista, São Paulo">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Dra. Maria Vitória Bello Avolio</h3>
-          <p>Especialista em Endodontia dedicada à preservação dos dentes naturais com técnicas modernas e atendimento humanizado.</p>
-        </div>
-        <div class="footer-column">
-          <h3>Atendimento</h3>
-          <ul>
-            <li><a href="#tratamentos">Tratamento de Canal com Microscópio</a></li>
-            <li><a href="#tratamentos">Retratamento Endodôntico</a></li>
-            <li><a href="#tratamentos">Cirurgia Paraendodôntica</a></li>
-            <li><a href="#contato">Atendimento de Urgência</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contato</h3>
-          <ul>
-            <li>(11) 99480-2149</li>
-            <li>vitoriavolio@gmail.com</li>
-            <li><a href="https://wa.me/5511994802149?text=Ol%C3%A1%20Dra.%20Maria%20Vit%C3%B3ria,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar Consulta</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 Dra. Maria Vitória Bello Avolio. Todos os direitos reservados. | CRO-SP: <strong><!-- INSERIR SEU NÚMERO DE CRO AQUI --></strong></p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // ===== Carrossel de Tecnologias =====
-    (function(){
-      const section = document.getElementById('tecnologias');
-      if(!section) return;
-      const carousel = section.querySelector('.tech-carousel');
-      const track = carousel.querySelector('.tech-track');
-      const prev = carousel.querySelector('.tech-prev');
-      const next = carousel.querySelector('.tech-next');
-      const items = [...track.querySelectorAll('.tech-item')];
-      const dotsWrap = section.querySelector('.tech-dots');
-
-      // criar dots
-      items.forEach((_, i) => {
-        const b = document.createElement('button');
-        if(i === 0) b.setAttribute('aria-current','true');
-        b.addEventListener('click', () => items[i].scrollIntoView({behavior:'smooth', inline:'center'}));
-        dotsWrap.appendChild(b);
-      });
-
-      const updateDots = () => {
-        const center = track.scrollLeft + track.clientWidth/2;
-        let idx = 0, best = Infinity;
-        items.forEach((el, i) => {
-          const rect = el.getBoundingClientRect();
-          const left = rect.left + window.scrollX - track.offsetLeft + track.scrollLeft;
-          const c = left + rect.width/2;
-          const d = Math.abs(c - center);
-          if(d < best){ best = d; idx = i; }
-        });
-        dotsWrap.querySelectorAll('button').forEach((d, i) => d.setAttribute('aria-current', i === idx ? 'true' : 'false'));
-      };
-
-      const cardGap = 18;
-      const scrollAmount = () => items[0].offsetWidth + cardGap;
-
-      prev.addEventListener('click', () => track.scrollBy({left: -scrollAmount(), behavior:'smooth'}));
-      next.addEventListener('click', () => track.scrollBy({left:  scrollAmount(), behavior:'smooth'}));
-
-      track.addEventListener('scroll', () => window.requestAnimationFrame(updateDots));
-      window.addEventListener('resize', updateDots);
-      updateDots();
-
-      // Acessibilidade via teclado
-      track.setAttribute('tabindex','0');
-      track.addEventListener('keydown', (e) => {
-        if(e.key === 'ArrowRight') next.click();
-        if(e.key === 'ArrowLeft')  prev.click();
-      });
-    })();
-
-    // ===== FAQ: acordeão acessível =====
-    (function(){
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        const btn = item.querySelector('.faq-q');
-        const panel = item.querySelector('.faq-a');
-        btn.addEventListener('click', () => {
-          const open = item.classList.toggle('open');
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        btn.addEventListener('keydown', (e) => {
-          if(e.key === 'Escape' && item.classList.contains('open')){
-            item.classList.remove('open');
-            btn.setAttribute('aria-expanded','false');
-            btn.focus();
-          }
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
