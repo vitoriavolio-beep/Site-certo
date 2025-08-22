@@ -62,16 +62,14 @@
       background-color: var(--white); box-shadow: 0 2px 15px rgba(0,0,0,0.1);
       position: fixed; width: 100%; top: 0; z-index: 1000;
     }
-    /* centraliza, pois removemos o menu */
-    .header-content { display: flex; justify-content: center; align-items: center; padding: 16px 0; }
-    /* nome no topo na cor secundária (a mais clara) */
+    /* alinhado à esquerda (sem menu) */
+    .header-content { display: flex; justify-content: flex-start; align-items: center; padding: 16px 0; }
     .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--secondary-color); }
 
     /* Hero */
     .hero { padding: 160px 0 100px; background-color: var(--white); position: relative; overflow: hidden; }
     .hero-content { display: flex; align-items: center; gap: 50px; }
     .hero-text { flex: 1; }
-    /* Título todo em cor escura (removido destaque da span) */
     .hero-text h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; color: var(--primary-color); }
     .hero-text h1 span { color: inherit; }
     .hero-text p { font-size: 18px; margin-bottom: 30px; color: var(--dark-color); }
@@ -87,7 +85,7 @@
 
     /* Sections — espaçamento reduzido */
     section { scroll-margin-top: 96px; }
-    .about, .services, .testimonials, .contact, .techs { padding: 72px 0; background-color: var(--white); }
+    .about, .services, .testimonials, .contact, .techs, .faq { padding: 72px 0; background-color: var(--white); }
     .section-title { text-align: center; margin-bottom: 40px; }
     .section-title h2 { font-size: 36px; color: var(--primary-color); position: relative; display: inline-block; padding-bottom: 12px; }
     .section-title h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: var(--secondary-color); }
@@ -133,8 +131,8 @@
     .footer-column ul li a:hover { color: var(--white); }
     .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); font-size: 14px; }
 
-    /* ===== Carrossel (Tecnologias) — sem “cartão”, só imagens redondas com halo branco ===== */
-    .techs { padding: 72px 0; background-color: var(--white); }
+    /* ===== Tecnologias (Carrossel) — sem “cartão”, só imagens redondas com halo branco ===== */
+    .techs { background-color: var(--white); }
     .tech-carousel { position: relative; display: flex; align-items: center; gap: 12px; }
     .tech-track {
       scroll-snap-type: x mandatory; overflow-x: auto; overflow-y: hidden;
@@ -162,6 +160,19 @@
     .tech-dots button { width: 8px; height: 8px; border-radius: 50%; border: 0; background: #d9d9d9; }
     .tech-dots button[aria-current="true"] { background: var(--primary-color); }
 
+    /* ===== FAQ (Acordeão) ===== */
+    .faq-wrap { display: grid; gap: 12px; max-width: 920px; margin: 0 auto; }
+    .faq-item { border: 1px solid #eee; border-radius: 12px; background: #fff; overflow: hidden; }
+    .faq-q {
+      width: 100%; text-align: left; background: #fff; border: 0; cursor: pointer;
+      padding: 16px 18px; font-weight: 600; display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-q:focus { outline: 2px solid var(--secondary-color); outline-offset: -2px; }
+    .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq-a p { margin: 14px 0 18px; }
+    .chev { transition: transform .25s ease; }
+    .faq-item.open .faq-a { max-height: 500px; }
+
     /* Responsivo */
     @media (max-width: 992px) {
       .hero-content, .about-content, .contact-content { flex-direction: column; }
@@ -187,9 +198,7 @@
   <header>
     <div class="container">
       <div class="header-content" role="navigation" aria-label="Navegação principal">
-        <!-- Cabeçalho: apenas o nome, cor secundária -->
         <div class="logo">Dra. Maria Vitória Bello Avolio</div>
-        <!-- Menu removido -->
       </div>
     </div>
   </header>
@@ -250,7 +259,7 @@
   <section class="techs" id="tecnologias" aria-labelledby="tec-title">
     <div class="container">
       <div class="section-title">
-        <h2 id="tec-title">Tecnologias do Consultório</h2>
+        <h2 id="tec-title">tecnologias</h2>
       </div>
 
       <div class="tech-carousel">
@@ -258,7 +267,6 @@
           <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
         </button>
 
-        <!-- Sequência e legendas conforme solicitado -->
         <div class="tech-track" role="list" aria-live="polite">
           <figure class="tech-item" role="listitem">
             <div class="tech-thumb"><img src="3.jpeg" alt="Laser terapia" loading="lazy" decoding="async"></div>
@@ -295,11 +303,11 @@
     </div>
   </section>
 
-  <!-- Sobre (Conheça a Especialista) -->
+  <!-- Sobre (Especialista) -->
   <section class="about" id="sobre">
     <div class="container">
       <div class="section-title">
-        <h2>Conheça a Especialista</h2>
+        <h2>Especialista</h2>
       </div>
       <div class="about-content">
         <div class="about-image">
@@ -365,11 +373,52 @@
     </div>
   </section>
 
+  <!-- FAQ (acordeão) -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="faq-title">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="faq-wrap" role="list">
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="a1">
+            <span>Quais os benefícios de realizar um tratamento de canal com microscópio?</span>
+            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+          </button>
+          <div id="a1" class="faq-a" role="region" aria-label="Resposta">
+            <p>O tratamento de canal com microscópio permite visualizar detalhes minuciosos da anatomia interna do dente, favorecendo uma limpeza mais precisa, remoção completa de infecções e melhor selamento dos canais — o que aumenta as chances de sucesso e preserva a estrutura dentária.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="a2">
+            <span>Vocês aceitam convênios odontológicos?</span>
+            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+          </button>
+          <div id="a2" class="faq-a" role="region" aria-label="Resposta">
+            <p>Os atendimentos são particulares. Emitimos nota fiscal, que pode ser utilizada para reembolso conforme regras do seu plano de saúde e no imposto de renda.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="a3">
+            <span>Vocês fazem atendimento de emergência fora do horário comercial?</span>
+            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+          </button>
+          <div id="a3" class="faq-a" role="region" aria-label="Resposta">
+            <p>Sim. Em situações de urgência, entre em contato pelo WhatsApp para verificarmos a disponibilidade de atendimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contato -->
   <section class="contact" id="contato">
     <div class="container">
       <div class="section-title">
-        <h2>Entre em Contato</h2>
+        <h2>Contato</h2>
       </div>
       <div class="contact-content">
         <div class="contact-info">
@@ -447,7 +496,7 @@
   </footer>
 
   <script>
-    // ===== Lógica do carrossel de Tecnologias =====
+    // ===== Carrossel de Tecnologias =====
     (function(){
       const section = document.getElementById('tecnologias');
       if(!section) return;
@@ -458,7 +507,6 @@
       const items = [...track.querySelectorAll('.tech-item')];
       const dotsWrap = section.querySelector('.tech-dots');
 
-      // criar dots
       items.forEach((_, i) => {
         const b = document.createElement('button');
         if(i === 0) b.setAttribute('aria-current','true');
@@ -494,6 +542,28 @@
       track.addEventListener('keydown', (e) => {
         if(e.key === 'ArrowRight') next.click();
         if(e.key === 'ArrowLeft')  prev.click();
+      });
+    })();
+
+    // ===== FAQ: acordeão acessível =====
+    (function(){
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-q');
+        const panel = item.querySelector('.faq-a');
+
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        btn.addEventListener('keydown', (e) => {
+          if(e.key === 'Escape' && item.classList.contains('open')){
+            item.classList.remove('open');
+            btn.setAttribute('aria-expanded','false');
+            btn.focus();
+          }
+        });
       });
     })();
   </script>
