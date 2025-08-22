@@ -15,7 +15,7 @@
   <meta property="og:image" content="/1.jpeg" />
   <link rel="canonical" href="https://mvendodontia.com" />
 
-  <!-- Favicon (trocar quando tiver o arquivo) -->
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
 
   <!-- Fonts & Icons -->
@@ -90,12 +90,12 @@
 
     /* Sections */
     section { scroll-margin-top: 96px; }
-    .about, .services, .testimonials, .contact { padding: 100px 0; background-color: var(--white); }
+    .about, .services, .testimonials, .contact, .techs { padding: 100px 0; background-color: var(--white); }
     .section-title { text-align: center; margin-bottom: 60px; }
     .section-title h2 { font-size: 36px; color: var(--primary-color); position: relative; display: inline-block; padding-bottom: 15px; }
     .section-title h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: var(--secondary-color); }
 
-    .about-content { display: flex; align-items: center; gap: 50px; }
+    .about-content, .contact-content { display: flex; align-items: center; gap: 50px; }
     .about-image, .about-text { flex: 1; }
     .about-image img { max-width: 100%; border-radius: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
     .about-text h3 { font-size: 24px; margin-bottom: 20px; color: var(--primary-color); }
@@ -113,14 +113,11 @@
     .testimonial-card { background-color: var(--light-gray); border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; }
     .testimonial-card::before { content: '"'; position: absolute; top: 10px; left: 20px; font-size: 80px; color: var(--secondary-color); opacity: 0.2; font-family: 'Playfair Display', serif; }
     .testimonial-content { position: relative; z-index: 1; }
-    .testimonial-content p { margin-bottom: 20px; font-style: italic; }
-    .testimonial-author { display: flex; align-items: center; }
-    .testimonial-author img { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; }
+    .testimonial-content p { margin-bottom: 16px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
     .author-info h4 { font-size: 18px; margin-bottom: 5px; }
     .author-info span { color: #666; font-size: 14px; }
-    .trustindex { font-size: 12px; color: #666; margin-top: 10px; font-style: italic; }
 
-    .contact-content { display: flex; gap: 50px; }
     .contact-info { flex: 1; }
     .contact-info h3 { font-size: 24px; margin-bottom: 20px; color: var(--primary-color); }
     .info-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
@@ -140,8 +137,7 @@
     .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); font-size: 14px; }
 
     /* ===== Carrossel (Tecnologias) ===== */
-    .techs { padding: 80px 0; background-color: var(--white); }
-    .techs .section-title { margin-bottom: 30px; }
+    .techs { padding: 100px 0; background-color: var(--white); }
     .tech-carousel {
       position: relative; display: flex; align-items: center; gap: 12px;
     }
@@ -178,6 +174,7 @@
     }
     .tech-dots button[aria-current="true"] { background: var(--primary-color); }
 
+    /* Responsivo */
     @media (max-width: 992px) {
       .hero-content, .about-content, .contact-content { flex-direction: column; }
       .hero { padding: 140px 0 80px; }
@@ -206,13 +203,13 @@
         <nav>
           <ul>
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
             <li><a href="#tratamentos">Tratamentos</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#sobre">Sobre</a></li>
             <li><a href="#depoimentos">Feedbacks</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <!-- Removido menu mobile para evitar itens duplicados -->
       </div>
     </div>
   </header>
@@ -234,34 +231,7 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="sobre">
-    <div class="container">
-      <div class="section-title">
-        <h2>Conheça a Especialista</h2>
-      </div>
-      <div class="about-content">
-        <div class="about-image">
-          <img src="1.jpeg" alt="Dra. Maria Vitória Bello Avolio no consultório" />
-        </div>
-        <div class="about-text">
-          <h3>Dra. Maria Vitória Bello Avolio</h3>
-          <!-- Mantido apenas o primeiro parágrafo -->
-          <p>Formada em Odontologia pela Universidade Estadual de Campinas (UNICAMP) e especialista em Endodontia pela Faculdade São Leopoldo Mandic, dedico minha carreira ao tratamento de canal e à preservação dos dentes naturais. Acredito que cada paciente merece um atendimento personalizado, com empatia e profissionalismo.</p>
-
-          <div class="credentials">
-            <div class="credential-item">Formada em Odontologia pela UNICAMP</div>
-            <div class="credential-item">Especialista em Endodontia pela Faculdade São Leopoldo Mandic</div>
-            <div class="credential-item">Utilização de microscópio operatório para maior precisão</div>
-            <div class="credential-item">Técnicas modernas de anestesia para maior conforto</div>
-            <div class="credential-item">Tratamento de canal em uma única sessão quando possível</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
+  <!-- Services Section (Tratamentos) -->
   <section class="services" id="tratamentos">
     <div class="container">
       <div class="section-title">
@@ -296,7 +266,7 @@
     </div>
   </section>
 
-  <!-- ===== NOVA SEÇÃO: Tecnologias (Carrossel) ===== -->
+  <!-- Tecnologias (Carrossel redondo) -->
   <section class="techs" id="tecnologias" aria-labelledby="tec-title">
     <div class="container">
       <div class="section-title">
@@ -348,9 +318,34 @@
       <div class="tech-dots" aria-hidden="true"></div>
     </div>
   </section>
-  <!-- ===== FIM DA NOVA SEÇÃO ===== -->
 
-  <!-- Testimonials Section -->
+  <!-- Sobre (Conheça a Especialista) — agora vem depois de Tratamentos e Tecnologias -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="section-title">
+        <h2>Conheça a Especialista</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="1.jpeg" alt="Dra. Maria Vitória Bello Avolio no consultório" />
+        </div>
+        <div class="about-text">
+          <h3>Dra. Maria Vitória Bello Avolio</h3>
+          <p>Formada em Odontologia pela Universidade Estadual de Campinas (UNICAMP) e especialista em Endodontia pela Faculdade São Leopoldo Mandic, dedico minha carreira ao tratamento de canal e à preservação dos dentes naturais. Acredito que cada paciente merece um atendimento personalizado, com empatia e profissionalismo.</p>
+
+          <div class="credentials">
+            <div class="credential-item">Formada em Odontologia pela UNICAMP</div>
+            <div class="credential-item">Especialista em Endodontia pela Faculdade São Leopoldo Mandic</div>
+            <div class="credential-item">Utilização de microscópio operatório para maior precisão</div>
+            <div class="credential-item">Técnicas modernas de anestesia para maior conforto</div>
+            <div class="credential-item">Tratamento de canal em uma única sessão quando possível</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedbacks (sem fotos e sem Trustindex) -->
   <section class="testimonials" id="depoimentos">
     <div class="container">
       <div class="section-title">
@@ -361,46 +356,40 @@
           <div class="testimonial-content">
             <p>Atendimento impecável da Dra Maria Vitória! Fiz um tratamento muito bem-sucedido, me senti acolhida e nas mãos de uma excelente profissional. Recomendo muito!</p>
             <div class="testimonial-author">
-              <img src="1.jpeg" alt="Foto de perfil da paciente Aline Sousa" />
               <div class="author-info">
                 <h4>Aline Sousa</h4>
                 <span>9 meses atrás</span>
               </div>
             </div>
-            <div class="trustindex">Trustindex verifica se a fonte original da avaliação é Google.</div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-content">
             <p>Excelente profissional e clínica impecável. Cheguei com muita dor e saí aliviada após o procedimento. Recomendo!</p>
             <div class="testimonial-author">
-              <img src="1.jpeg" alt="Foto de perfil da paciente Stephanny Rosendo" />
               <div class="author-info">
                 <h4>Stephanny Rosendo</h4>
                 <span>11 meses atrás</span>
               </div>
             </div>
-            <div class="trustindex">Trustindex verifica se a fonte original da avaliação é Google.</div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-content">
             <p>Fui atendida prontamente. A Dra explicou cada etapa com clareza, o que me deixou segura durante todo o tratamento. A clínica é muito bem montada e higienizada.</p>
             <div class="testimonial-author">
-              <img src="1.jpeg" alt="Foto de perfil da paciente Fernanda Faria" />
               <div class="author-info">
                 <h4>Fernanda Faria</h4>
                 <span>um ano atrás</span>
               </div>
             </div>
-            <div class="trustindex">Trustindex verifica se a fonte original da avaliação é Google.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contato -->
   <section class="contact" id="contato">
     <div class="container">
       <div class="section-title">
@@ -420,7 +409,6 @@
             <i class="fas fa-phone-alt" aria-hidden="true"></i>
             <div class="info-text">
               <h4>Telefone</h4>
-              <!-- Removido o link: agora é texto puro -->
               <p>(11) 99480-2149</p>
             </div>
           </div>
@@ -428,7 +416,6 @@
             <i class="fas fa-envelope" aria-hidden="true"></i>
             <div class="info-text">
               <h4>E-mail</h4>
-              <!-- Removido o link: agora é texto puro -->
               <p>vitoriavolio@gmail.com</p>
             </div>
           </div>
@@ -536,5 +523,3 @@
   </script>
 </body>
 </html>
-
-    
