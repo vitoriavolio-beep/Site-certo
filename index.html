@@ -15,9 +15,7 @@
   <meta property="og:image" content="/1.jpeg" />
   <link rel="canonical" href="https://mvendodontia.com" />
 
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
-
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -34,15 +32,7 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--dark-color);
-      background-color: var(--light-color);
-      line-height: 1.6;
-      position: relative;
-    }
-
+    body { font-family: 'Poppins', sans-serif; color: var(--dark-color); background-color: var(--light-color); line-height: 1.6; position: relative; }
     h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 600; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
@@ -58,21 +48,17 @@
     @keyframes pulse { 0% { transform: scale(1);} 50% { transform: scale(1.05);} 100% { transform: scale(1);} }
 
     /* Header */
-    header {
-      background-color: var(--white); box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      position: fixed; width: 100%; top: 0; z-index: 1000;
-    }
+    header { background-color: var(--white); box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
     .header-content { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
     .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--primary-color); }
     .logo span { color: var(--secondary-color); }
-
     nav ul { display: flex; list-style: none; }
     nav ul li { margin-left: 30px; }
     nav ul li a { text-decoration: none; color: var(--dark-color); font-weight: 500; transition: color 0.3s ease; }
     nav ul li a:hover { color: var(--primary-color); }
 
     /* Hero */
-    .hero { padding: 160px 0 100px; background-color: var(--white); position: relative; overflow: hidden; }
+    .hero { padding: 160px 0 100px; background-color: var(--white); overflow: hidden; }
     .hero-content { display: flex; align-items: center; gap: 50px; }
     .hero-text { flex: 1; }
     .hero-text h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; color: var(--primary-color); }
@@ -80,17 +66,12 @@
     .hero-text p { font-size: 18px; margin-bottom: 30px; color: var(--dark-color); }
     .hero-image { flex: 1; text-align: center; }
     .hero-image img { max-width: 100%; border-radius: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-    .btn {
-      display: inline-block; background-color: var(--primary-color); color: var(--white);
-      padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 500;
-      transition: all 0.3s ease; border: none; cursor: pointer;
-    }
+    .btn { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: none; cursor: pointer; }
     .btn:hover { background-color: var(--secondary-color); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
     /* Sections */
     section { scroll-margin-top: 96px; }
-    .about, .services, .testimonials, .contact, .techs { padding: 100px 0; background-color: var(--white); }
+    .about, .services, .testimonials, .contact, .techs, .faq { padding: 100px 0; background-color: var(--white); }
     .section-title { text-align: center; margin-bottom: 60px; }
     .section-title h2 { font-size: 36px; color: var(--primary-color); position: relative; display: inline-block; padding-bottom: 15px; }
     .section-title h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: var(--secondary-color); }
@@ -138,9 +119,7 @@
 
     /* ===== Carrossel (Tecnologias) ===== */
     .techs { padding: 100px 0; background-color: var(--white); }
-    .tech-carousel {
-      position: relative; display: flex; align-items: center; gap: 12px;
-    }
+    .tech-carousel { position: relative; display: flex; align-items: center; gap: 12px; }
     .tech-track {
       scroll-snap-type: x mandatory; overflow-x: auto; overflow-y: hidden;
       display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 240px);
@@ -148,18 +127,10 @@
     }
     .tech-track::-webkit-scrollbar { height: 8px; }
     .tech-track::-webkit-scrollbar-thumb { background: #ddd; border-radius: 999px; }
-    .tech-item {
-      scroll-snap-align: center; text-align: center; background: var(--light-gray);
-      border-radius: 12px; padding: 16px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      border: 1px solid #eee;
-    }
-    .tech-thumb {
-      width: 180px; height: 180px; margin: 0 auto 10px; border-radius: 50%;
-      overflow: hidden; border: 6px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    }
+    .tech-item { scroll-snap-align: center; text-align: center; background: var(--light-gray); border-radius: 12px; padding: 16px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+    .tech-thumb { width: 180px; height: 180px; margin: 0 auto 10px; border-radius: 50%; overflow: hidden; border: 6px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
     .tech-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .tech-item figcaption { font-weight: 600; color: var(--dark-color); }
-
     .tech-arrow {
       background: #fff; border: 1px solid #e8e8e8; width: 42px; height: 42px; border-radius: 50%;
       display: grid; place-items: center; box-shadow: 0 10px 20px rgba(0,0,0,.07);
@@ -167,12 +138,24 @@
     }
     .tech-arrow:hover { background: #fafafa; }
     .tech-arrow:active { transform: scale(.98); }
-
     .tech-dots { display: flex; gap: 8px; justify-content: center; margin-top: 12px; }
-    .tech-dots button {
-      width: 8px; height: 8px; border-radius: 50%; border: 0; background: #d9d9d9;
-    }
+    .tech-dots button { width: 8px; height: 8px; border-radius: 50%; border: 0; background: #d9d9d9; }
     .tech-dots button[aria-current="true"] { background: var(--primary-color); }
+
+    /* ===== FAQ (acordeão) ===== */
+    .faq { background: var(--white); }
+    .faq-wrap { display: grid; gap: 12px; max-width: 900px; margin: 0 auto; }
+    .faq-item { border: 1px solid #eee; border-radius: 12px; background: #fff; overflow: hidden; }
+    .faq-q {
+      width: 100%; text-align: left; background: #fff; border: 0; cursor: pointer;
+      padding: 16px 18px; font-weight: 600; display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-q:focus { outline: 2px solid var(--secondary-color); outline-offset: -2px; }
+    .faq-a { padding: 0 18px 0; max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq-a p { margin: 14px 0 18px; }
+    .chev { transition: transform .25s ease; }
+    .open .faq-a { max-height: 600px; }
+    .open .chev { transform: rotate(180deg); }
 
     /* Responsivo */
     @media (max-width: 992px) {
@@ -188,7 +171,7 @@
   </style>
 </head>
 <body>
-  <!-- WhatsApp Button (com mensagem pronta) -->
+  <!-- WhatsApp Button -->
   <a class="whatsapp-float" aria-label="Agendar WhatsApp"
      href="https://wa.me/5511994802149?text=Ol%C3%A1%20Dra.%20Maria%20Vit%C3%B3ria,%20gostaria%20de%20agendar%20uma%20consulta."
      target="_blank" rel="noopener">
@@ -207,6 +190,7 @@
             <li><a href="#tecnologias">Tecnologias</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#depoimentos">Feedbacks</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
@@ -214,7 +198,7 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" id="inicio">
     <div class="container">
       <div class="hero-content">
@@ -231,7 +215,7 @@
     </div>
   </section>
 
-  <!-- Services Section (Tratamentos) -->
+  <!-- Tratamentos -->
   <section class="services" id="tratamentos">
     <div class="container">
       <div class="section-title">
@@ -266,7 +250,7 @@
     </div>
   </section>
 
-  <!-- Tecnologias (Carrossel redondo) -->
+  <!-- Tecnologias -->
   <section class="techs" id="tecnologias" aria-labelledby="tec-title">
     <div class="container">
       <div class="section-title">
@@ -319,7 +303,7 @@
     </div>
   </section>
 
-  <!-- Sobre (Conheça a Especialista) — agora vem depois de Tratamentos e Tecnologias -->
+  <!-- Sobre -->
   <section class="about" id="sobre">
     <div class="container">
       <div class="section-title">
@@ -332,7 +316,6 @@
         <div class="about-text">
           <h3>Dra. Maria Vitória Bello Avolio</h3>
           <p>Formada em Odontologia pela Universidade Estadual de Campinas (UNICAMP) e especialista em Endodontia pela Faculdade São Leopoldo Mandic, dedico minha carreira ao tratamento de canal e à preservação dos dentes naturais. Acredito que cada paciente merece um atendimento personalizado, com empatia e profissionalismo.</p>
-
           <div class="credentials">
             <div class="credential-item">Formada em Odontologia pela UNICAMP</div>
             <div class="credential-item">Especialista em Endodontia pela Faculdade São Leopoldo Mandic</div>
@@ -345,7 +328,7 @@
     </div>
   </section>
 
-  <!-- Feedbacks (sem fotos e sem Trustindex) -->
+  <!-- Feedbacks -->
   <section class="testimonials" id="depoimentos">
     <div class="container">
       <div class="section-title">
@@ -389,137 +372,38 @@
     </div>
   </section>
 
-  <!-- Contato -->
-  <section class="contact" id="contato">
+  <!-- ===== NOVA SEÇÃO: FAQ (acordeão) ===== -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="section-title">
-        <h2>Entre em Contato</h2>
+        <h2 id="faq-title">Perguntas Frequentes</h2>
       </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Consultório</h3>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>Endereço</h4>
-              <p>Av. Nove de Julho, 3229 - Conjunto 1506<br />Jardim Paulista, São Paulo - SP, 01407-200</p>
-            </div>
+
+      <div class="faq-wrap" role="list">
+        <!-- Q1 -->
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">
+            <span>Quais os benefícios de realizar um tratamento de canal com microscópio?</span>
+            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+          </button>
+          <div id="faq-a1" class="faq-a" role="region" aria-label="Resposta">
+            <p>O tratamento de canal com microscópio representa um avanço significativo na odontologia moderna. Com o uso do microscópio, é possível alcançar um nível de precisão que métodos tradicionais não oferecem, permitindo ao dentista visualizar detalhes minuciosos da anatomia interna do dente. Isso garante a remoção completa de infecções, aumentando as chances de sucesso do tratamento e preservando a estrutura dentária.</p>
           </div>
-          <div class="info-item">
-            <i class="fas fa-phone-alt" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>Telefone</h4>
-              <p>(11) 99480-2149</p>
-            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">
+            <span>Vocês aceitam convênios odontológicos?</span>
+            <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+          </button>
+          <div id="faq-a2" class="faq-a" role="region" aria-label="Resposta">
+            <p>Não, na clínica os nossos tratamentos são particulares. Fazemos a emissão da nota fiscal, que pode ser usada no pedido de reembolso frente ao plano de saúde ou no imposto de renda.</p>
           </div>
-          <div class="info-item">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>E-mail</h4>
-              <p>vitoriavolio@gmail.com</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <div class="info-text">
-              <h4>Horários</h4>
-              <p>Segunda a Sexta: 8h às 19h<br />Sábado: 9h às 12h</p>
-            </div>
-          </div>
-          <a class="btn" href="https://wa.me/5511994802149?text=Ol%C3%A1%20Dra.%20Maria%20Vit%C3%B3ria,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
         </div>
-        <div class="map" aria-label="Mapa do consultório">
-          <iframe
-            src="https://www.google.com/maps?q=Av.+Nove+de+Julho,+3229+-+Jardim+Paulista,+S%C3%A3o+Paulo&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mapa: Av. Nove de Julho, 3229 - Jardim Paulista, São Paulo">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Dra. Maria Vitória Bello Avolio</h3>
-          <p>Especialista em Endodontia dedicada à preservação dos dentes naturais com técnicas modernas e atendimento humanizado.</p>
-        </div>
-        <div class="footer-column">
-          <h3>Atendimento</h3>
-          <ul>
-            <li><a href="#tratamentos">Tratamento de Canal com Microscópio</a></li>
-            <li><a href="#tratamentos">Retratamento Endodôntico</a></li>
-            <li><a href="#tratamentos">Cirurgia Paraendodôntica</a></li>
-            <li><a href="#contato">Atendimento de Urgência</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contato</h3>
-          <ul>
-            <li>(11) 99480-2149</li>
-            <li>vitoriavolio@gmail.com</li>
-            <li><a href="https://wa.me/5511994802149?text=Ol%C3%A1%20Dra.%20Maria%20Vit%C3%B3ria,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar Consulta</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 Dra. Maria Vitória Bello Avolio. Todos os direitos reservados. | CRO-SP: <strong><!-- INSERIR SEU NÚMERO DE CRO AQUI --></strong></p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // ===== Lógica do carrossel de Tecnologias =====
-    (function(){
-      const section = document.getElementById('tecnologias');
-      if(!section) return;
-      const carousel = section.querySelector('.tech-carousel');
-      const track = carousel.querySelector('.tech-track');
-      const prev = carousel.querySelector('.tech-prev');
-      const next = carousel.querySelector('.tech-next');
-      const items = [...track.querySelectorAll('.tech-item')];
-      const dotsWrap = section.querySelector('.tech-dots');
-
-      // criar dots
-      items.forEach((_, i) => {
-        const b = document.createElement('button');
-        if(i === 0) b.setAttribute('aria-current','true');
-        b.addEventListener('click', () => items[i].scrollIntoView({behavior:'smooth', inline:'center'}));
-        dotsWrap.appendChild(b);
-      });
-
-      const updateDots = () => {
-        const center = track.scrollLeft + track.clientWidth/2;
-        let idx = 0, best = Infinity;
-        items.forEach((el, i) => {
-          const rect = el.getBoundingClientRect();
-          const left = rect.left + window.scrollX - track.offsetLeft + track.scrollLeft;
-          const c = left + rect.width/2;
-          const d = Math.abs(c - center);
-          if(d < best){ best = d; idx = i; }
-        });
-        dotsWrap.querySelectorAll('button').forEach((d, i) => d.setAttribute('aria-current', i === idx ? 'true' : 'false'));
-      };
-
-      const cardGap = 18;
-      const scrollAmount = () => items[0].offsetWidth + cardGap;
-
-      prev.addEventListener('click', () => track.scrollBy({left: -scrollAmount(), behavior:'smooth'}));
-      next.addEventListener('click', () => track.scrollBy({left:  scrollAmount(), behavior:'smooth'}));
-
-      track.addEventListener('scroll', () => window.requestAnimationFrame(updateDots));
-      window.addEventListener('resize', updateDots);
-      updateDots();
-
-      // Acessibilidade via teclado
-      track.setAttribute('tabindex','0');
-      track.addEventListener('keydown', (e) => {
-        if(e.key === 'ArrowRight') next.click();
-        if(e.key === 'ArrowLeft')  prev.click();
-      });
-    })();
-  </script>
-</body>
-</html>
+        <!-- Q3 -->
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">
+            <span>Vocês fazem atendimento de emergência fora do horário comercial?</span>
+            <i class="fa-solid fa-chevron-down chev" aria
