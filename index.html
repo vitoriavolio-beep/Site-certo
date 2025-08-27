@@ -25,9 +25,9 @@
   <style>
     :root{
       --primary-color:#9b7a5d;
-      --secondary-color:#c9a77c; /* cabeçalho em cor secundária (mais clara) */
+      --secondary-color:#c9a77c;
       --light-color:#f8f9fa;
-      --dark-color:#333333;      /* textos escuros */
+      --dark-color:#333333;
       --white:#ffffff;
       --light-gray:#f0f0f0;
     }
@@ -70,7 +70,6 @@
     .hero-content{display:flex;align-items:center;gap:42px}
     .hero-text{flex:1}
     .hero-text h1{font-size:46px;line-height:1.2;margin-bottom:18px;color:var(--dark-color)}
-    .hero-text h1 span{color:inherit}
     .hero-text p{font-size:18px;margin-bottom:18px;color:var(--dark-color)}
     .hero-image{flex:1;text-align:center}
     .hero-image img{max-width:85%;border-radius:10px;box-shadow:0 15px 30px rgba(0,0,0,.1)}
@@ -95,7 +94,7 @@
     .about-text h3{font-size:24px;margin-bottom:12px;color:var(--primary-color)}
     .about-text p{margin-bottom:12px}
 
-    /* ===== Destaques (ícones circulares + texto) ===== */
+    /* ===== Destaques ===== */
     .highlights{padding-top:24px}
     .highlights-grid{
       display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -121,7 +120,7 @@
     .service-card:hover{transform:translateY(-6px)}
     .service-card h3{font-size:22px;margin-bottom:8px;color:var(--primary-color)}
 
-    /* Tecnologias — carrossel sem fundo, imagens maiores e redondas com halo branco */
+    /* Tecnologias — carrossel */
     .tech-carousel{position:relative;display:flex;align-items:center;gap:12px}
     .tech-track{
       scroll-snap-type:x mandatory;overflow-x:auto;overflow-y:hidden;
@@ -156,9 +155,17 @@
     .gallery-thumb{aspect-ratio:4/3;width:100%;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);background:#eee}
     .gallery-thumb img{width:100%;height:100%;object-fit:cover;display:block}
 
-    .benefits{max-width:920px;margin:12px auto 0}
-    .benefits h3{font-size:20px;margin:8px 0 10px;color:var(--primary-color);text-align:center}
-    .benefits ul{list-style:disc;margin:0 auto;padding-left:22px;max-width:800px}
+    /* >>> Benefícios — alinhado com o título (centralizado) <<< */
+    .benefits{max-width:920px;margin:12px auto 0;text-align:center}
+    .benefits h3{font-size:20px;margin:8px 0 10px;color:var(--primary-color)}
+    .benefits ul{
+      list-style:disc;
+      list-style-position:inside; /* bullets junto ao texto */
+      padding-left:0;            /* remove recuo extra */
+      margin:0 auto;
+      text-align:center;         /* centra o conteúdo sob o título */
+      max-width:800px;
+    }
     .benefits li{margin:6px 0}
 
     /* Depoimentos */
@@ -293,7 +300,7 @@
     </div>
   </section>
 
-  <!-- Tratamentos (cards) -->
+  <!-- Tratamentos -->
   <section class="services" id="tratamentos">
     <div class="container">
       <div class="section-title">
@@ -328,7 +335,7 @@
     </div>
   </section>
 
-  <!-- Tecnologias (carrossel redondo) -->
+  <!-- Tecnologias -->
   <section class="techs" id="tecnologias" aria-labelledby="tec-title">
     <div class="container">
       <div class="section-title">
@@ -373,7 +380,7 @@
     </div>
   </section>
 
-  <!-- Casos clínicos (carrossel 11–16 PNG, sem legendas) -->
+  <!-- Casos clínicos -->
   <section class="services-photos" id="tratamentos-fotos" aria-labelledby="trat-fotos-title">
     <div class="container">
       <div class="section-title">
@@ -429,7 +436,7 @@
     </div>
   </section>
 
-  <!-- Sobre (Especialista) -->
+  <!-- Especialista -->
   <section class="about" id="sobre">
     <div class="container">
       <div class="section-title">
@@ -442,7 +449,6 @@
         <div class="about-text">
           <h3>Dra. Maria Vitória Bello Avolio</h3>
           <p>Formada em Odontologia pela Universidade Estadual de Campinas (UNICAMP) e especialista em Endodontia pela Faculdade São Leopoldo Mandic, dedica sua carreira ao tratamento de canal e à preservação dos dentes naturais. Acredita que cada paciente merece um atendimento personalizado, com empatia e profissionalismo.</p>
-          <!-- Credenciais removidas conforme solicitado -->
         </div>
       </div>
     </div>
@@ -614,7 +620,7 @@
   </footer>
 
   <script>
-    // ===== Função genérica para carrosséis (track + dots + setas) =====
+    // Função genérica para carrosséis
     function initCarousel(rootSelector, opts){
       const root = document.querySelector(rootSelector);
       if(!root) return;
@@ -623,10 +629,8 @@
       const next  = root.querySelector(opts.nextSel);
       const items = [...track.querySelectorAll(opts.itemSel)];
       const dotsWrap = root.querySelector(opts.dotsSel);
-
       if(!track || items.length === 0) return;
 
-      // criar dots
       items.forEach((_, i) => {
         const b = document.createElement('button');
         if(i === 0) b.setAttribute('aria-current','true');
@@ -650,7 +654,6 @@
 
       const cardGap = 18;
       const scrollAmount = () => items[0].offsetWidth + cardGap;
-
       prev && prev.addEventListener('click', () => track.scrollBy({left: -scrollAmount(), behavior:'smooth'}));
       next && next.addEventListener('click', () => track.scrollBy({left:  scrollAmount(), behavior:'smooth'}));
 
@@ -658,7 +661,6 @@
       window.addEventListener('resize', updateDots);
       updateDots();
 
-      // Acessibilidade via teclado
       track.setAttribute('tabindex','0');
       track.addEventListener('keydown', (e) => {
         if(e.key === 'ArrowRight' && next) next.click();
@@ -666,7 +668,7 @@
       });
     }
 
-    // ===== Inicializa carrossel de Tecnologias =====
+    // Inicializa carrosséis
     initCarousel('#tecnologias', {
       trackSel: '.tech-track',
       prevSel: '.tech-prev',
@@ -675,7 +677,6 @@
       dotsSel: '.tech-dots'
     });
 
-    // ===== Inicializa carrossel de Casos clínicos (fotos 11–16 PNG) =====
     initCarousel('#tratamentos-fotos', {
       trackSel: '.gallery-track',
       prevSel: '.gallery-prev',
@@ -684,7 +685,7 @@
       dotsSel: '.gallery-dots'
     });
 
-    // ===== FAQ: acordeão acessível =====
+    // FAQ acordeão
     (function(){
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
@@ -706,4 +707,5 @@
   </script>
 </body>
 </html>
+
 
