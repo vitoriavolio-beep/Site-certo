@@ -69,12 +69,10 @@
     .hero{padding:120px 0 64px;background-color:var(--white);position:relative;overflow:hidden}
     .hero-content{display:flex;align-items:center;gap:42px}
     .hero-text{flex:1}
-    /* Título em cor escura */
     .hero-text h1{font-size:46px;line-height:1.2;margin-bottom:18px;color:var(--dark-color)}
     .hero-text h1 span{color:inherit}
     .hero-text p{font-size:18px;margin-bottom:24px;color:var(--dark-color)}
     .hero-image{flex:1;text-align:center}
-    /* ↓ imagem inicial um pouco menor em desktop */
     .hero-image img{max-width:85%;border-radius:10px;box-shadow:0 15px 30px rgba(0,0,0,.1)}
 
     .btn{
@@ -93,7 +91,6 @@
 
     .about-content,.contact-content{display:flex;align-items:center;gap:36px}
     .about-image,.about-text{flex:1}
-    /* ↓ foto da Especialista um pouco menor em desktop */
     .about-image img{max-width:86%;border-radius:10px;box-shadow:0 15px 30px rgba(0,0,0,.1)}
     .about-text h3{font-size:24px;margin-bottom:14px;color:var(--primary-color)}
     .about-text p{margin-bottom:14px}
@@ -177,7 +174,6 @@
     /* FAQ */
     .faq-wrap{display:grid;gap:10px;max-width:920px;margin:0 auto}
     .faq-item{border:1px solid #eee;border-radius:12px;background:#fff;overflow:hidden}
-    /* ↑ pergunta MAIOR que a resposta */
     .faq-q{width:100%;text-align:left;background:#fff;border:0;cursor:pointer;padding:16px 18px;font-weight:700;font-size:18px;display:flex;justify-content:space-between;align-items:center}
     .faq-q:focus{outline:2px solid var(--secondary-color);outline-offset:-2px}
     .faq-a{padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease}
@@ -191,7 +187,6 @@
       .hero-content,.about-content,.contact-content{flex-direction:column}
       .hero{padding:110px 0 56px}
       .hero-text h1{font-size:36px}
-      /* mantemos imagens em 100% no mobile */
       .hero-image img,.about-image img{max-width:100%}
       .whatsapp-float{bottom:20px;right:20px;width:50px;height:50px;font-size:24px}
     }
@@ -377,7 +372,8 @@
       </div>
       <div class="about-content">
         <div class="about-image">
-          <img src="1.jpeg" alt="Dra. Maria Vitória Bello Avolio no consultório"/>
+          <!-- TROCA SOLICITADA AQUI -->
+          <img src="foto profissional.png" alt="Foto profissional da Dra. Maria Vitória Bello Avolio"/>
         </div>
         <div class="about-text">
           <h3>Dra. Maria Vitória Bello Avolio</h3>
@@ -652,4 +648,3 @@
   </script>
 </body>
 </html>
-
