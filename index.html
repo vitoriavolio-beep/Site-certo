@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dra. Maria Vitória Bello Avolio | Endodontia em São Paulo</title>
-  <meta name="description" content="Tratamentos endodônticos com precisão, conforto e ética clínica. Atendimento particular em São Paulo (Jardim Paulista)." />
+  <meta name="description" content="Endodontia com precisão, conforto e ética clínica. Atendimento particular em São Paulo (Jardim Paulista)." />
   <meta name="author" content="Dra. Maria Vitória Bello Avolio" />
   <meta name="color-scheme" content="light" />
   <!-- Open Graph -->
@@ -16,113 +16,104 @@
   <meta property="og:image" content="/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b1220;          /* navy muito escuro para cabeçalho */
-      --bg-soft:#0f172a;     /* slate-900 */
-      --panel:#0c1528;       /* cards escuros discretos */
-      --text:#0e1116;        /* texto base para áreas claras */
-      --muted:#475569;       /* cinza azulado */
-      --ink:#111827;         /* quase preto */
-      --brand:#0ea5a6;       /* teal moderado, neutro/profissional */
-      --brand-strong:#0b8e8f;
-      --line:#e5e7eb;        /* linhas claras */
-      --surface:#ffffff;     /* fundo claro geral */
-      --surface-2:#f8fafc;   /* seções alternadas */
-      --shadow: 0 8px 24px rgba(2,6,23,.12);
-      --radius:14px;
+      --brand:#0ea5a6;         /* teal sóbrio (mantido) */
+      --brand-700:#0b8e8f;
+      --ink:#0f172a;           /* cinza-azulado escuro */
+      --muted:#475569;
+      --line:#e5e7eb;          /* divisores */
+      --surface:#ffffff;       /* fundo claro */
+      --alt:#f8fafc;           /* seções alternadas sutis */
+      --radius:12px;
+      --shadow:0 2px 10px rgba(2,6,23,.06);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--ink); background:var(--surface);}
-    img{max-width:100%; display:block}
+    body{margin:0;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;background:var(--surface)}
+    img{max-width:100%;display:block}
     a{color:inherit}
-    /* Header */
-    .topbar{background:var(--bg); color:#e5eaf3}
-    .container{width:min(1120px,92vw); margin-inline:auto}
-    .stack{display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px 0}
-    .brand{display:flex; align-items:center; gap:14px; text-decoration:none}
-    .logo{width:42px; height:42px; border-radius:10px; background:linear-gradient(135deg, var(--brand), #1f9fb0); display:grid; place-items:center; color:#fff; font-weight:700}
-    .brand h1{font-size:1.05rem; line-height:1.1; margin:0; letter-spacing:.2px; font-weight:600}
-    nav a{opacity:.9; text-decoration:none; font-weight:500}
+    .container{width:min(1140px,92vw);margin-inline:auto}
+
+    /* HEADER (estilo Google Sites: branco, simples, sticky, sombra leve) */
+    header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo{width:36px;height:36px;border-radius:8px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700}
+    .brand h1{font-size:1rem;margin:0;font-weight:700;letter-spacing:.2px}
+    nav{display:flex;gap:18px}
+    nav a{text-decoration:none;font-weight:500;color:var(--ink);opacity:.9}
     nav a:hover{opacity:1}
-    nav{display:flex; gap:22px}
-    .cta{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid rgba(255,255,255,.18); border-radius:10px; color:#eaf3f6; text-decoration:none; background:rgba(255,255,255,.06)}
-    .cta:hover{background:rgba(255,255,255,.12)}
+    .cta{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:1px solid var(--brand);text-decoration:none}
+    .cta:hover{background:var(--alt)}
 
-    /* Hero */
-    .hero{background:linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%); color:#eef2f7; padding:72px 0 64px}
-    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center}
-    .hero h2{font: 700 clamp(1.8rem, 1.2rem + 1.5vw, 2.4rem)/1.15 Inter, system-ui; margin:0 0 10px}
-    .hero p{margin:0 0 20px; color:#c9d4e3; max-width:62ch}
-    .badges{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px}
-    .badge{border:1px solid rgba(255,255,255,.14); color:#dbe7ee; padding:8px 12px; border-radius:999px; font-size:.9rem}
-    .hero-card{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); padding:22px; box-shadow: var(--shadow)}
-    .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:12px}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; text-decoration:none; font-weight:600}
-    .btn-primary{background:var(--brand); color:#073b3c}
-    .btn-primary:hover{background:var(--brand-strong)}
-    .btn-ghost{border:1px solid rgba(255,255,255,.2); color:#e6eef5}
+    /* HERO claro, com layout 2 colunas e divisores finos */
+    .hero{padding:48px 0}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .eyebrow{font-size:.85rem;color:var(--brand);font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+    .hero h2{font-size:clamp(1.8rem,1.2rem+1.6vw,2.6rem);margin:6px 0 12px;line-height:1.15}
+    .hero p{margin:0 0 14px;color:#334155}
+    .hero .bullets{display:grid;gap:8px;margin:16px 0}
+    .hero .bullets li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+    .hero .bullets li::before{content:"✓";color:var(--brand);font-weight:700;margin-top:1px}
+    .hero .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line)}
+    .btn-primary{background:var(--brand);border-color:var(--brand);color:#062c2d}
+    .btn-primary:hover{background:var(--brand-700);border-color:var(--brand-700)}
+    .mock{aspect-ratio:4/3;border:1px dashed var(--line);border-radius:12px;display:grid;place-items:center;color:#64748b}
 
-    /* Sections */
-    section{padding:68px 0}
-    .section-title{font: 700 clamp(1.4rem, 1rem + 1.2vw, 1.9rem)/1.15 Inter; margin:0 0 10px}
-    .section-sub{color:var(--muted); margin:0 0 24px}
+    /* SEÇÕES padronizadas (título + divisor) */
+    section{padding:54px 0}
+    .section-title{margin:0 0 6px;font-size:1.6rem}
+    .divider{height:2px;width:56px;background:var(--brand);border-radius:2px;margin:8px 0 18px}
+    .section-sub{color:#334155;margin:0 0 18px}
 
-    .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px}
-    .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow: var(--shadow)}
-    .card h3{margin:0 0 8px; font-size:1.05rem}
-    .card p{margin:0; color:#334155}
-    .card .icon{width:40px; height:40px; border-radius:10px; background:#ecfeff; display:grid; place-items:center; margin-bottom:10px}
+    /* CARDS neutros, com borda sutil */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+    .card h3{margin:0 0 6px;font-size:1.05rem}
+    .card p{margin:0;color:#334155}
 
-    /* Alternating section */
-    .alt{background:var(--surface-2)}
+    /* GRID 2 */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
 
-    /* Grid 2 */
-    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start}
+    /* TECHS em listagem simples estilo sites */
+    .list{display:grid;gap:8px;margin-top:8px}
+    .list li{list-style:none;display:flex;gap:10px}
+    .list li::before{content:"•";color:var(--brand);font-weight:700}
 
-    /* Tech gallery */
-    .techs{display:grid; grid-template-columns:repeat(6,1fr); gap:12px}
-    .tech{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px; text-align:center; font-size:.9rem}
+    /* QUOTES simples */
+    .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    blockquote{margin:0;padding:16px;border-left:4px solid var(--brand);background:#fff;border:1px solid var(--line);border-radius:10px}
+    blockquote footer{margin-top:8px;color:#64748b;font-size:.92rem}
 
-    /* FAQ */
+    /* FAQ estilo acordeão com borda */
     .faq{max-width:920px}
-    details{border:1px solid var(--line); background:var(--surface); border-radius:12px; padding:16px 18px; box-shadow: var(--shadow)}
-    details+details{margin-top:12px}
-    summary{list-style:none; cursor:pointer; font-weight:600}
+    details{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:#fff}
+    details+details{margin-top:10px}
+    summary{list-style:none;cursor:pointer;font-weight:600}
     summary::-webkit-details-marker{display:none}
-    summary span{color:var(--muted); font-weight:500; font-size:.95rem}
-    details[open]{background:#fff}
-    .faq p{margin:10px 0 0; color:#334155}
+    .faq p{margin:8px 0 0;color:#334155}
 
-    /* Feedbacks */
-    .quotes{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-    blockquote{margin:0; padding:18px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); color:#1f2937}
-    blockquote footer{margin-top:10px; font-size:.9rem; color:#64748b}
+    /* CONTATO simples com formulário */
+    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+    .info{display:grid;gap:10px}
+    .info-row{display:flex;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}
 
-    /* Contact */
-    .contact-card{display:grid; grid-template-columns:1.2fr .8fr; gap:24px}
-    .info-list{display:grid; gap:10px}
-    .info-row{display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--surface); border:1px solid var(--line); border-radius:12px}
-    .info-row strong{display:block}
+    /* ALTERNADA sutil */
+    .alt{background:var(--alt)}
 
-    /* Footer */
-    footer{background:#0f172a; color:#cbd5e1; padding:28px 0; margin-top:36px}
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);padding:22px 0;color:#64748b}
 
-    /* Responsividade */
+    /* RESPONSIVO */
     @media (max-width: 960px){
-      .hero-grid, .grid-2, .contact-card{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr 1fr}
-      .quotes{grid-template-columns:1fr 1fr}
-      .techs{grid-template-columns:repeat(3,1fr)}
+      .hero-grid,.grid-2,.contact{grid-template-columns:1fr}
+      .cards,.quotes{grid-template-columns:1fr 1fr}
     }
     @media (max-width: 640px){
       nav{display:none}
       .cards,.quotes{grid-template-columns:1fr}
-      .techs{grid-template-columns:repeat(2,1fr)}
-      .hero{padding:56px 0}
-      .stack{padding:14px 0}
     }
   </style>
   <script type="application/ld+json">
@@ -143,13 +134,11 @@
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "08:00",
-      "closes": "19:00"
+      "opens": "08:00","closes": "19:00"
     },{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Saturday"],
-      "opens": "09:00",
-      "closes": "12:00"
+      "opens": "09:00","closes": "12:00"
     }],
     "telephone": "+55 11 99480-2149",
     "priceRange": "$$$",
@@ -158,9 +147,9 @@
   </script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="topbar">
-    <div class="container stack">
+  <!-- HEADER -->
+  <header>
+    <div class="container topbar">
       <a class="brand" href="#top" aria-label="Página inicial">
         <div class="logo" aria-hidden="true">MV</div>
         <h1>Dra. Maria Vitória Bello Avolio</h1>
@@ -173,239 +162,180 @@
         <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
       </nav>
-      <a class="cta" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+pré-avaliação" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="cta" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+pré-avaliação" target="_blank" rel="noopener">Agendar WhatsApp</a>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="hero" id="top">
     <div class="container hero-grid">
       <div>
-        <h2>Endodontia com precisão, conforto e ética.</h2>
-        <p>Atendimento especializado em dor de dente, canal, retratamento e urgências. Protocolos modernos, anestesia eficaz e foco total na sua experiência.</p>
-        <div class="badges">
-          <div class="badge">Microscópio Operatório</div>
-          <div class="badge">Laserterapia</div>
-          <div class="badge">Radiografia Digital</div>
-          <div class="badge">Isolamento Absoluto</div>
-        </div>
-        <div class="hero-actions">
+        <div class="eyebrow">Endodontia clínica</div>
+        <h2>Precisão, conforto e comunicação clara.</h2>
+        <p>Canal, retratamento e urgências com protocolos atualizados e foco total no controle de dor.</p>
+        <ul class="bullets">
+          <li>Microscópio operatório e radiografia digital</li>
+          <li>Anestesia eficaz e isolamento absoluto</li>
+          <li>Acompanhamento de pós‑operatório</li>
+        </ul>
+        <div class="actions">
           <a class="btn btn-primary" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+pré-avaliação" target="_blank" rel="noopener">Agendar agora</a>
-          <a class="btn btn-ghost" href="#tratamentos">Ver tratamentos</a>
+          <a class="btn" href="#tratamentos">Ver tratamentos</a>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Informações de atendimento">
-        <h3 style="margin:0 0 8px">Informações rápidas</h3>
-        <ul style="margin:0; padding:0; list-style:none; display:grid; gap:8px">
-          <li>Endodontia (canal, retratamento, urgência)</li>
-          <li>Particular • emissão de nota</li>
-          <li>Jardim Paulista — São Paulo</li>
-          <li>Seg–Sex: 08h–19h • Sáb: 09h–12h</li>
-        </ul>
-      </aside>
+      <div class="mock">(Imagem do consultório / foto profissional)</div>
     </div>
   </section>
 
-  <!-- Sobre -->
-  <section id="sobre">
+  <!-- SOBRE -->
+  <section id="sobre" class="alt">
     <div class="container grid-2">
       <div>
         <h2 class="section-title">Sobre a especialista</h2>
-        <p class="section-sub">Dra. Maria Vitória é endodontista com prática clínica focada em controle de dor, previsibilidade e atendimento humano. Utiliza protocolos atualizados, magnificação e planejamento digital para alcançar o melhor desfecho clínico.</p>
+        <div class="divider"></div>
+        <p class="section-sub">Prática clínica centrada em previsibilidade e acolhimento. Magnificação, planejamento e comunicação para decisões compartilhadas.</p>
         <div class="cards">
           <div class="card">
-            <div class="icon" aria-hidden="true">🔬</div>
             <h3>Precisão</h3>
-            <p>Microscopia operatória para localizar canais, remover obstruções e executar técnicas minimamente invasivas.</p>
+            <p>Localização de canais, remoção de obstruções e técnicas minimamente invasivas com magnificação.</p>
           </div>
           <div class="card">
-            <div class="icon" aria-hidden="true">🛡️</div>
             <h3>Segurança</h3>
-            <p>Isolamento absoluto, irrigação ativada e controle rigoroso de biossegurança.</p>
+            <p>Isolamento absoluto, irrigação ativada e protocolo de biossegurança rigoroso.</p>
           </div>
           <div class="card">
-            <div class="icon" aria-hidden="true">🤝</div>
             <h3>Experiência</h3>
-            <p>Comunicação clara, anestesia eficaz e acompanhamento no pós‑operatório.</p>
+            <p>Anestesia eficaz, explicação de cada etapa e acompanhamento no pós‑operatório.</p>
           </div>
         </div>
       </div>
-      <div class="card" style="align-self: start">
+      <div class="card" style="align-self:start">
         <h3 style="margin:0 0 6px">Onde atendo</h3>
-        <p style="margin:0 0 14px; color:#334155">Avenida Nove de Julho, 3229 — cj 1506, Jardim Paulista — São Paulo</p>
-        <div style="aspect-ratio:16/9; background:#e5e7eb; border-radius:12px; display:grid; place-items:center">Mapa / Foto do consultório</div>
-        <p style="margin:14px 0 0; color:#334155">Estacione nas ruas próximas ou utilize apps de transporte. Acessibilidade e segurança no prédio.</p>
+        <p style="margin:0 0 12px;color:#334155">Avenida Nove de Julho, 3229 — cj 1506, Jardim Paulista — São Paulo</p>
+        <div class="mock">(Mapa / foto do prédio)</div>
+        <p style="margin:12px 0 0;color:#334155">Acesso fácil e opções de estacionamento nas ruas próximas.</p>
       </div>
     </div>
   </section>
 
-  <!-- Tratamentos -->
-  <section id="tratamentos" class="alt">
+  <!-- TRATAMENTOS -->
+  <section id="tratamentos">
     <div class="container">
       <h2 class="section-title">Tratamentos</h2>
-      <p class="section-sub">Abordagem baseada em evidências, voltada para alívio de dor e preservação dentária.</p>
+      <div class="divider"></div>
+      <p class="section-sub">Abordagem baseada em evidências para alívio de dor e preservação dentária.</p>
       <div class="cards">
-        <div class="card">
-          <h3>Canal (primário)</h3>
-          <p>Diagnóstico, instrumentação mecanizada e obturação tridimensional para controle de infecção e preservação da estrutura.</p>
-        </div>
-        <div class="card">
-          <h3>Retratamento</h3>
-          <p>Reabordagem de casos com sintomas persistentes, refazendo a desinfecção e a selagem para cicatrização adequada.</p>
-        </div>
-        <div class="card">
-          <h3>Urgência / Dor</h3>
-          <p>Alívio imediato com anestesia eficaz, medicação intra‑canal e orientação completa de cuidados.</p>
-        </div>
-        <div class="card">
-          <h3>Trauma dentário</h3>
-          <p>Condutas em fraturas e luxações com acompanhamento radiográfico e controle de vitalidade pulpar.</p>
-        </div>
-        <div class="card">
-          <h3>Cirurgia parendodôntica</h3>
-          <p>Quando indicado, acesso apical com magnificação e técnica moderna de retropreparo/retrobturação.</p>
-        </div>
-        <div class="card">
-          <h3>Pós‑operatório</h3>
-          <p>Monitoramento clínico e radiográfico, com canal direto de suporte ao paciente.</p>
-        </div>
+        <div class="card"><h3>Canal (primário)</h3><p>Diagnóstico, instrumentação mecanizada e obturação tridimensional.</p></div>
+        <div class="card"><h3>Retratamento</h3><p>Reabordagem com nova desinfecção e selagem para cicatrização adequada.</p></div>
+        <div class="card"><h3>Urgência / Dor</h3><p>Alívio imediato, medicação intra‑canal e orientação de cuidados.</p></div>
+        <div class="card"><h3>Trauma dentário</h3><p>Manejo de fraturas e luxações com acompanhamento radiográfico.</p></div>
+        <div class="card"><h3>Cirurgia parendodôntica</h3><p>Acesso apical com magnificação quando indicado.</p></div>
+        <div class="card"><h3>Pós‑operatório</h3><p>Monitoramento clínico e radiográfico, com canal direto de suporte.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Tecnologias -->
-  <section id="tecnologias">
+  <!-- TECNOLOGIAS -->
+  <section id="tecnologias" class="alt">
     <div class="container">
       <h2 class="section-title">Tecnologias do consultório</h2>
-      <p class="section-sub">Infraestrutura para diagnóstico preciso e procedimentos previsíveis.</p>
-      <div class="techs">
-        <div class="tech">Microscópio operatório</div>
-        <div class="tech">Laserterapia</div>
-        <div class="tech">Localizador apical</div>
-        <div class="tech">Motor reciprocante</div>
-        <div class="tech">Ultrassom clínico</div>
-        <div class="tech">RX digital</div>
-      </div>
+      <div class="divider"></div>
+      <ul class="list">
+        <li>Microscópio operatório</li>
+        <li>Laserterapia</li>
+        <li>Localizador apical</li>
+        <li>Motor reciprocante</li>
+        <li>Ultrassom clínico</li>
+        <li>Radiografia digital</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Feedbacks -->
-  <section id="feedbacks" class="alt">
+  <!-- FEEDBACKS -->
+  <section id="feedbacks">
     <div class="container">
       <h2 class="section-title">Feedbacks</h2>
-      <p class="section-sub">Alguns relatos de pacientes sobre a experiência de atendimento.</p>
+      <div class="divider"></div>
+      <p class="section-sub">Relatos de pacientes sobre a experiência de atendimento.</p>
       <div class="quotes">
-        <blockquote>
-          “Cheguei com dor intensa e saí aliviado. Atendimento humano e muito criterioso.”
-          <footer>— P. R., paciente</footer>
-        </blockquote>
-        <blockquote>
-          “Explicou cada etapa, me senti segura durante todo o procedimento.”
-          <footer>— M. S., paciente</footer>
-        </blockquote>
-        <blockquote>
-          “Ótima comunicação no pós‑operatório, o cuidado continua depois da consulta.”
-          <footer>— L. T., paciente</footer>
-        </blockquote>
+        <blockquote>“Cheguei com dor intensa e saí aliviado. Atendimento humano e criterioso.”<footer>— P. R., paciente</footer></blockquote>
+        <blockquote>“Explicou cada etapa, senti segurança do início ao fim.”<footer>— M. S., paciente</footer></blockquote>
+        <blockquote>“Ótima comunicação no pós‑operatório, o cuidado continua.”<footer>— L. T., paciente</footer></blockquote>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq">
+  <section id="faq" class="alt">
     <div class="container faq">
       <h2 class="section-title">Perguntas frequentes</h2>
+      <div class="divider"></div>
       <details>
-        <summary>Canal dói? <span>Como é a anestesia e o conforto do procedimento?</span></summary>
-        <p>O objetivo é não doer. Utilizamos anestesia local eficaz, técnicas complementares e aguardamos o tempo de latência adequado. Durante o procedimento, o dente fica isolado e você é avisado sobre cada etapa.</p>
+        <summary>Canal dói?</summary>
+        <p>O objetivo é não doer. Utilizamos anestesia local eficaz, técnicas complementares e aguardamos o tempo de latência adequado.</p>
       </details>
       <details>
-        <summary>Quantas consultas são necessárias? <span>Existe atendimento em urgência?</span></summary>
-        <p>Casos simples podem ser concluídos em 1 visita; outros exigem 2 ou mais. Em dor aguda, priorizamos o alívio imediato e concluímos na sequência planejada.</p>
+        <summary>Quantas consultas são necessárias?</summary>
+        <p>Casos simples podem ser concluídos em 1 visita; outros exigem 2 ou mais. Em dor aguda, priorizamos o alívio imediato.</p>
       </details>
       <details>
-        <summary>Trabalha com convênio? <span>Como funciona o pagamento?</span></summary>
-        <p>Atendimento particular com emissão de nota. Formas de pagamento combinadas previamente na pré‑avaliação.</p>
+        <summary>Trabalha com convênio?</summary>
+        <p>Atendimento particular com emissão de nota. Formas de pagamento combinadas na pré‑avaliação.</p>
       </details>
     </div>
   </section>
 
-  <!-- Contato -->
-  <section id="contato" class="alt">
-    <div class="container contact-card">
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container contact">
       <div>
         <h2 class="section-title">Entre em contato</h2>
+        <div class="divider"></div>
         <p class="section-sub">Agende sua pré‑avaliação para entender o caso, alinhar expectativas e estimar valores.</p>
-        <div class="info-list">
-          <div class="info-row">
-            <div aria-hidden="true">📍</div>
-            <div>
-              <strong>Endereço</strong>
-              Avenida Nove de Julho, 3229 — cj 1506, Jardim Paulista — São Paulo
-            </div>
-          </div>
-          <div class="info-row">
-            <div aria-hidden="true">⏰</div>
-            <div>
-              <strong>Horários</strong>
-              Seg–Sex: 08h–19h • Sáb: 09h–12h
-            </div>
-          </div>
-          <div class="info-row">
-            <div aria-hidden="true">📞</div>
-            <div>
-              <strong>WhatsApp</strong>
-              (11) 99480‑2149
-            </div>
-          </div>
-          <div class="info-row">
-            <div aria-hidden="true">✉️</div>
-            <div>
-              <strong>E‑mail</strong>
-              vitoriavolio@gmail.com
-            </div>
-          </div>
+        <div class="info">
+          <div class="info-row">📍 Avenida Nove de Julho, 3229 — cj 1506, Jardim Paulista — São Paulo</div>
+          <div class="info-row">⏰ Seg–Sex: 08h–19h • Sáb: 09h–12h</div>
+          <div class="info-row">📞 WhatsApp: (11) 99480‑2149</div>
+          <div class="info-row">✉️ E‑mail: vitoriavolio@gmail.com</div>
         </div>
-        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn btn-primary" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+pré-avaliação" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-          <a class="btn" style="border:1px solid var(--line)" href="#faq">Ver FAQ</a>
+          <a class="btn" href="#faq">Ver FAQ</a>
         </div>
       </div>
       <form class="card" aria-label="Formulário de contato" onsubmit="event.preventDefault(); this.reset(); alert('Recebido! Em breve entraremos em contato.');">
         <h3 style="margin:0 0 8px">Envie uma mensagem</h3>
-        <div style="display:grid; gap:10px">
+        <div style="display:grid;gap:10px">
           <label>Nome<br>
-            <input required type="text" name="nome" placeholder="Seu nome" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px" />
+            <input required type="text" name="nome" placeholder="Seu nome" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px" />
           </label>
           <label>Telefone/WhatsApp<br>
-            <input required type="tel" name="tel" placeholder="(DDD) 00000-0000" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px" />
+            <input required type="tel" name="tel" placeholder="(DDD) 00000-0000" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px" />
           </label>
           <label>Mensagem<br>
-            <textarea required name="msg" rows="4" placeholder="Como podemos ajudar?" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; resize:vertical"></textarea>
+            <textarea required name="msg" rows="4" placeholder="Como podemos ajudar?" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;resize:vertical"></textarea>
           </label>
           <button class="btn btn-primary" type="submit">Enviar</button>
-          <p style="margin:0; color:#64748b; font-size:.9rem">*Este formulário é demonstrativo. Você pode integrá‑lo a um serviço de e‑mail posteriormente.</p>
+          <p style="margin:0;color:#64748b;font-size:.9rem">*Formulário demonstrativo. Integração posterior (Formspree/EmailJS).</p>
         </div>
       </form>
     </div>
   </section>
 
   <footer>
-    <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <small>© <span id="y"></span> Dra. Maria Vitória Bello Avolio — Endodontia</small>
       <small>CRM/CRO: informar</small>
     </div>
   </footer>
 
   <script>
-    // Atualiza ano
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Foco acessível no summary
-    document.querySelectorAll('summary').forEach(s => {
-      s.addEventListener('keydown', (e)=>{ if(e.key==="Enter"|| e.key===" "){ e.preventDefault(); s.click(); } });
-    });
+    document.querySelectorAll('summary').forEach(s=>{
+      s.addEventListener('keydown',e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();s.click();}})
+    })
   </script>
 </body>
 </html>
+
 
