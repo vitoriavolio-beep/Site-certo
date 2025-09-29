@@ -3,113 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Endodontia com Microscópio | Dra. Maria Vitória Bello Avolio</title>
-  <meta name="description" content="Tratamento de canal com microscópio operatório no Jardins (SP). Urgências, retratamentos e atendimento humanizado. Agende pelo WhatsApp." />
+  <title>Dra. Maria Vitória | Endodontia com Microscópio</title>
+  <meta name="description" content="Tratamento de canal com microscópio no Jardins (SP). Urgências, retratamentos e atendimento humanizado. Agende pelo WhatsApp." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ========== BASE ========== */
+    /* ===================== BASE / TOKENS ===================== */
     :root{
-      --brand:#9b7a5d;      /* dourado-terroso (sua paleta) */
-      --ink:#1f2937;        /* título */
-      --body:#4b5563;       /* texto */
+      --brand:#9b7a5d;      /* cor principal */
+      --brand-2:#c9a77c;    /* gradiente sutil */
+      --ink:#1f2937;        /* títulos */
+      --text:#4b5563;       /* corpo */
       --muted:#6b7280;      /* apoio */
-      --bg:#fffdf9;         /* fundo */
-      --card:#ffffff;       /* cartões */
+      --bg:#fffdf9;         /* fundo base */
+      --panel:#ffffff;      /* cartões */
       --line:#efe7de;       /* divisórias */
-      --ok:#10b981;         /* verde */
-      --warn:#f59e0b;       /* laranja */
-      --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
-      --max:1000px;
-      --space: clamp(18px, 2.5vw, 28px);
+      --radius:14px;        /* cantos */
+      --shadow:0 8px 28px rgba(0,0,0,.06);
+      --max:1080px;         /* largura do conteúdo */
+      --sp:clamp(18px,2.5vw,28px);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--body);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    img{max-width:100%;display:block}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    img{max-width:100%;display:block;border-radius:var(--radius)}
     a{color:inherit;text-decoration:none}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:10px}
     .container{max-width:var(--max);margin:0 auto;padding:0 20px}
-    .divider{height:1px;background:var(--line);margin:40px 0}
-
-    /* Tipografia */
+    .container.narrow{max-width:820px}
     h1,h2,h3{color:var(--ink);margin:0 0 10px}
-    h1{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,40px);line-height:1.1}
-    h2{font-size:clamp(22px,3.2vw,30px)}
-    h3{font-size:clamp(18px,2.6vw,22px)}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,42px);line-height:1.15}
+    h2{font-size:clamp(22px,3vw,30px)}
+    h3{font-size:clamp(18px,2.4vw,22px)}
     p{margin:8px 0 0}
 
-    /* Botões */
+    /* ===================== COMPONENTES ===================== */
     .btn{display:inline-flex;align-items:center;gap:.6rem;padding:12px 16px;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow);transition:.18s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn.outline{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.outline{background:#fff;color:var(--brand);border:2px solid var(--brand);box-shadow:none}
+    .tag{display:inline-flex;gap:.5rem;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);font-size:.85rem}
 
-    /* Header simples e limpo */
-    header{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.9);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp)}
+    .auto-rows{grid-auto-rows:1fr}
+
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+
+    .list{display:grid;gap:10px}
+    .li{display:flex;gap:.6rem;align-items:flex-start}
+    .li .dot{width:10px;height:10px;border-radius:999px;background:var(--brand);margin-top:7px;flex:0 0 10px}
+
+    .divider{height:1px;background:var(--line);margin:28px 0}
+
+    /* ===================== HEADER / NAV ===================== */
+    header{position:sticky;top:0;z-index:40;background:rgba(255,253,249,.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
     .head{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:.8rem}
-    .dot{width:12px;height:12px;border-radius:999px;background:var(--brand)}
-    .brand h4{margin:0;color:var(--ink);font-weight:700}
-
+    .brand{display:flex;align-items:center;gap:.7rem}
+    .brand .dot{width:12px;height:12px;border-radius:999px;background:var(--brand)}
+    .brand strong{color:var(--ink)}
     nav{display:flex;gap:16px}
     nav a{font-weight:600;color:var(--muted)}
     nav a:hover{color:var(--ink)}
 
-    /* HERO focado em 3 linhas + CTA */
-    .hero{padding:32px 0}
-    .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space);align-items:center}
+    /* ===================== HERO ===================== */
+    .hero{padding:34px 0}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--sp);align-items:center}
     .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
-    .k{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px;text-align:center}
-    .k strong{display:block;color:var(--ink);font-size:18px}
-    .k span{color:var(--muted);font-size:12px}
+    .k{background:#fff;border:1px solid var(--line);border-radius:12px;text-align:center;padding:12px}
+    .k strong{display:block;color:var(--ink)}
+    .k span{color:var(--muted);font-size:.85rem}
 
-    /* Seções estruturadas com cabeçalho + corpo em cartões */
-    .section{padding:34px 0}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space)}
-    .list{display:grid;gap:10px}
-    .li{display:flex;align-items:flex-start;gap:.6rem}
-    .li .bullet{width:10px;height:10px;border-radius:999px;background:var(--brand);margin-top:7px}
+    /* ===================== SECTIONS ===================== */
+    .section{padding:40px 0}
+    .band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-    /* Passo a passo */
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space)}
-    .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-    .n{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:var(--brand);color:#fff;font-weight:800;margin-bottom:8px}
+    /* Steps */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp)}
+    .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .n{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;font-weight:800;margin-bottom:8px}
 
     /* FAQ */
     .faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
     .faq details+details{margin-top:10px}
     .faq summary{cursor:pointer;font-weight:700;color:var(--ink)}
-    .faq p{margin:.5rem 0 0}
 
     /* Testemunhos */
     .testi{display:grid;gap:12px}
     .t{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
     .stars{color:#f59e0b}
 
-    /* CTA fixo do WhatsApp */
-    .wpp{position:fixed;right:16px;bottom:16px;z-index:60}
+    /* WhatsApp fixo */
+    .wpp{position:fixed;right:16px;bottom:16px;z-index:50}
     .wpp a{background:#25d366}
 
-    /* Responsivo */
+    /* ===================== RESPONSIVO ===================== */
     @media (max-width: 960px){
-      .hero .grid{grid-template-columns:1fr}
+      nav{display:none}
+      .hero .wrap{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr 1fr}
       .steps{grid-template-columns:1fr}
-      nav{display:none}
     }
     @media (max-width: 560px){
       .grid-3{grid-template-columns:1fr}
     }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .btn{transition:none}
+    }
   </style>
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
+  <!-- ===================== HEADER ===================== -->
   <header>
     <div class="container head">
-      <div class="brand"><span class="dot"></span><h4>Dra. Maria Vitória – Endodontia</h4></div>
+      <div class="brand"><span class="dot"></span><strong>Dra. Maria Vitória – Endodontia</strong></div>
       <nav>
-        <a href="#como-funciona">Como funciona</a>
+        <a href="#como">Como funciona</a>
+        <a href="#alertas">Sinais</a>
         <a href="#tecnologia">Tecnologia</a>
         <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
@@ -118,123 +128,107 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===================== HERO ===================== -->
   <section class="hero">
-    <div class="container">
-      <div class="grid">
-        <div>
-          <h1>Tratamento de canal com microscópio operatório</h1>
-          <h2 style="color:var(--muted);font-weight:600">Precisão, conforto e transparência no Jardins (SP).</h2>
-          <p style="margin-top:10px">Atendo urgências, primeiros canais e retratamentos. Planejamento claro, comunicação direta e tecnologias que preservam ao máximo o seu dente.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-            <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20estou%20com%20dor%20e%20preciso%20de%20uma%20avalia%C3%A7%C3%A3o">🚑 Urgência agora</a>
-            <a class="btn outline" href="#faq">Tirar dúvidas</a>
-          </div>
-          <div class="kpis">
-            <div class="k"><strong>Atendimento particular</strong><span>Sem convênios</span></div>
-            <div class="k"><strong>Microscópio 40×</strong><span>Mais precisão</span></div>
-            <div class="k"><strong>Jardins • SP</strong><span>Av. Nove de Julho</span></div>
-          </div>
+    <div class="container wrap">
+      <div>
+        <span class="tag">Jardins • São Paulo • Particular</span>
+        <h1>Tratamento de canal com <em>microscópio operatório</em></h1>
+        <p style="margin-top:8px">Precisão, conforto e transparência. Atendo urgências, primeiros canais e retratamentos com tecnologia que preserva seu dente.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+          <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20estou%20com%20dor%20e%20preciso%20de%20uma%20avalia%C3%A7%C3%A3o">🚑 Urgência agora</a>
+          <a class="btn outline" href="#faq">Tirar dúvidas</a>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1588771930290-4f23ab1a4b49?q=80&w=1200&auto=format&fit=crop" alt="Microscópio operatório em consultório" style="border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow)">
+        <div class="kpis">
+          <div class="k"><strong>Atendimento particular</strong><span>Sem convênios</span></div>
+          <div class="k"><strong>Microscópio 40×</strong><span>Mais precisão</span></div>
+          <div class="k"><strong>Av. Nove de Julho</strong><span>Jardins • SP</span></div>
         </div>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1588771930290-4f23ab1a4b49?q=80&w=1200&auto=format&fit=crop" alt="Microscópio operatório em consultório">
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- ===== COMO FUNCIONA (3 passos) ===== -->
-  <section class="section" id="como-funciona">
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section id="como" class="section band">
     <div class="container">
       <h2>Como funciona</h2>
-      <p>Fluxo simples, em três passos, para resolver sua dor com segurança.</p>
+      <p class="container narrow">Fluxo simples, em três passos, para resolver sua dor com segurança e previsibilidade.</p>
       <div class="steps" style="margin-top:14px">
-        <div class="step">
-          <div class="n">1</div>
-          <h3>Contato e triagem</h3>
-          <p>Me chame no WhatsApp. Se for urgência, atendemos o quanto antes. Faço algumas perguntas rápidas e, se tiver, você pode enviar radiografia.</p>
-        </div>
-        <div class="step">
-          <div class="n">2</div>
-          <h3>Avaliação e plano</h3>
-          <p>Exame clínico com câmera intraoral, testes de sensibilidade e radiografias. Explico o diagnóstico e o plano (tempo, número de sessões e valores).</p>
-        </div>
-        <div class="step">
-          <div class="n">3</div>
-          <h3>Tratamento confortável</h3>
-          <p>Microscópio operatório, anestesia efetiva e isolamento absoluto. Objetivo: preservar estrutura e concluir com o máximo de precisão.</p>
-        </div>
+        <div class="step"><div class="n">1</div><h3>Contato e triagem</h3><p>Chame no WhatsApp. Em urgência, priorizo encaixe no mesmo dia. Se tiver, envie radiografia.</p></div>
+        <div class="step"><div class="n">2</div><h3>Avaliação e plano</h3><p>Exame clínico com câmera intraoral, testes e radiografias. Explico diagnóstico, sessões e valores.</p></div>
+        <div class="step"><div class="n">3</div><h3>Tratamento confortável</h3><p>Microscópio, anestesia efetiva e isolamento absoluto para máxima preservação do dente.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SINAIS DE ALERTA / RISCOS DE ADIAR ===== -->
-  <section class="section">
-    <div class="container grid-2">
+  <!-- ===================== ALERTAS / ADIAR ===================== -->
+  <section id="alertas" class="section">
+    <div class="container grid-2 auto-rows">
       <div class="card">
         <h2>Sinais de alerta</h2>
         <div class="list" style="margin-top:8px">
-          <div class="li"><span class="bullet"></span><div>Dor que não passa (latejante / à mastigação)</div></div>
-          <div class="li"><span class="bullet"></span><div>Sensibilidade forte ao frio ou quente</div></div>
-          <div class="li"><span class="bullet"></span><div>Inchaço, fístula (bolinha de pus) ou escurecimento do dente</div></div>
-          <div class="li"><span class="bullet"></span><div>Histórico de trauma ou restaurações profundas</div></div>
+          <div class="li"><span class="dot"></span><div>Dor que não passa (latejante ou à mastigação)</div></div>
+          <div class="li"><span class="dot"></span><div>Sensibilidade forte ao frio ou quente</div></div>
+          <div class="li"><span class="dot"></span><div>Inchaço, fístula (bolinha de pus) ou escurecimento do dente</div></div>
+          <div class="li"><span class="dot"></span><div>Trauma ou restaurações profundas recentes</div></div>
         </div>
         <a class="btn" style="margin-top:12px" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20tenho%20estes%20sintomas%20e%20quero%20avaliar">Falar com a Dra. Maria</a>
       </div>
       <div class="card">
         <h2>Se adiar o tratamento…</h2>
         <div class="list" style="margin-top:8px">
-          <div class="li"><span class="bullet"></span><div>Infecção pode piorar e formar abscesso</div></div>
-          <div class="li"><span class="bullet"></span><div>Maior dor e desconforto no dia a dia</div></div>
-          <div class="li"><span class="bullet"></span><div>Risco de perda do dente e custos maiores depois</div></div>
+          <div class="li"><span class="dot"></span><div>Infecção pode piorar e formar abscesso</div></div>
+          <div class="li"><span class="dot"></span><div>Mais dor e desconforto no dia a dia</div></div>
+          <div class="li"><span class="dot"></span><div>Risco de perda do dente e custos maiores depois</div></div>
         </div>
         <p style="margin-top:10px;color:var(--muted)">Quanto antes tratar, mais conservador e previsível tende a ser.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== TECNOLOGIA / DIFERENCIAIS ===== -->
-  <section class="section" id="tecnologia">
+  <!-- ===================== TECNOLOGIA / SOBRE ===================== -->
+  <section id="tecnologia" class="section band">
     <div class="container grid-2">
       <div>
         <h2>Tecnologia que preserva</h2>
-        <p>Uso microscópio operatório (até 40×), laserterapia e câmera intraoral. Protocolos atuais de instrumentação e obturação.</p>
+        <p>Microscópio operatório (até 40×), laserterapia e câmera intraoral. Protocolos atuais de instrumentação e obturação.</p>
         <div class="list" style="margin-top:10px">
-          <div class="li"><span class="bullet"></span><div><strong>Precisão</strong> para localizar canais calcificados e detalhes invisíveis a olho nu.</div></div>
-          <div class="li"><span class="bullet"></span><div><strong>Conservação</strong> de estrutura dentária, reduzindo retratamentos.</div></div>
-          <div class="li"><span class="bullet"></span><div><strong>Conforto</strong> com anestesia efetiva e isolamento absoluto.</div></div>
+          <div class="li"><span class="dot"></span><div><strong>Precisão</strong> para localizar canais calcificados e detalhes invisíveis a olho nu.</div></div>
+          <div class="li"><span class="dot"></span><div><strong>Conservação</strong> de estrutura dentária, reduzindo retratamentos.</div></div>
+          <div class="li"><span class="dot"></span><div><strong>Conforto</strong> com anestesia efetiva e isolamento absoluto.</div></div>
         </div>
       </div>
       <div class="card">
         <h3>Quem vai te atender</h3>
         <p><strong>Dra. Maria Vitória Bello Avolio</strong> — Especialista em Endodontia. Atuação focada em urgências, primeiros tratamentos e retratamentos. Comunicação clara e ética do início ao fim.</p>
         <div class="list" style="margin-top:10px">
-          <div class="li"><span class="bullet"></span><div>Consultório: Av. Nove de Julho 3229, cj. 1506 — Jardins, São Paulo</div></div>
-          <div class="li"><span class="bullet"></span><div>Horários: seg–sex 08h–19h • sáb 09h–12h</div></div>
-          <div class="li"><span class="bullet"></span><div>Atendimento <strong>particular</strong> (não atendemos convênios)</div></div>
+          <div class="li"><span class="dot"></span><div>Consultório: Av. Nove de Julho 3229, cj. 1506 — Jardins, São Paulo</div></div>
+          <div class="li"><span class="dot"></span><div>Horários: seg–sex 08h–19h • sáb 09h–12h</div></div>
+          <div class="li"><span class="dot"></span><div>Atendimento <strong>particular</strong> (não atendemos convênios)</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FEEDBACKS ===== -->
-  <section class="section" id="depoimentos">
+  <!-- ===================== FEEDBACKS ===================== -->
+  <section class="section">
     <div class="container">
       <h2>Feedbacks de pacientes</h2>
-      <p style="margin-bottom:14px">Relatos sobre acolhimento, clareza e alívio da dor.</p>
+      <p class="container narrow" style="margin-bottom:14px">Relatos sobre acolhimento, clareza e alívio da dor.</p>
       <div class="grid-3 testi">
-        <div class="t"><div class="stars">★★★★★</div><p>Eu estava com dor há dias e com medo do canal. A Dra. explicou tudo e no mesmo dia já melhorei. Recomendo!</p><p><strong>Ana S.</strong></p></div>
-        <div class="t"><div class="stars">★★★★★</div><p>Atendimento muito humano e técnico. Transparência nos valores e procedimento sem dor.</p><p><strong>Rodrigo M.</strong></p></div>
-        <div class="t"><div class="stars">★★★★★</div><p>Demorei por medo, mas foi a melhor decisão. Clínica linda e muita confiança. Voltei a mastigar sem dor.</p><p><strong>Larissa P.</strong></p></div>
+        <div class="t"><div class="stars">★★★★★</div><p>Eu estava com dor há dias e com medo do canal. A Dra. explicou tudo e melhorei no mesmo dia. Recomendo!</p><p><strong>Ana S.</strong></p></div>
+        <div class="t"><div class="stars">★★★★★</div><p>Atendimento humano e técnico. Transparência nos valores e procedimento sem dor.</p><p><strong>Rodrigo M.</strong></p></div>
+        <div class="t"><div class="stars">★★★★★</div><p>Demorei por medo, mas foi a melhor decisão. Clínica linda e muita confiança.</p><p><strong>Larissa P.</strong></p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="section" id="faq">
-    <div class="container">
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="section band">
+    <div class="container narrow">
       <h2>Perguntas frequentes</h2>
       <div class="faq" style="margin-top:10px">
         <details>
@@ -258,16 +252,16 @@
     </div>
   </section>
 
-  <!-- ===== CONTATO / MAPA ===== -->
-  <section class="section" id="contato">
-    <div class="container grid-2">
+  <!-- ===================== CONTATO ===================== -->
+  <section id="contato" class="section">
+    <div class="container grid-2 auto-rows">
       <div class="card">
         <h2>Contato e agendamento</h2>
         <div class="list" style="margin-top:8px">
-          <div class="li"><span class="bullet"></span><div><strong>WhatsApp:</strong> (11) 99480‑2149</div></div>
-          <div class="li"><span class="bullet"></span><div><strong>Endereço:</strong> Av. Nove de Julho, 3229 — cj. 1506 — Jardim Paulista, São Paulo</div></div>
-          <div class="li"><span class="bullet"></span><div><strong>Horários:</strong> seg–sex 08h–19h • sáb 09h–12h</div></div>
-          <div class="li"><span class="bullet"></span><div><strong>E‑mail:</strong> vitoriavolio@gmail.com</div></div>
+          <div class="li"><span class="dot"></span><div><strong>WhatsApp:</strong> (11) 99480‑2149</div></div>
+          <div class="li"><span class="dot"></span><div><strong>Endereço:</strong> Av. Nove de Julho, 3229 — cj. 1506 — Jardim Paulista, São Paulo</div></div>
+          <div class="li"><span class="dot"></span><div><strong>Horários:</strong> seg–sex 08h–19h • sáb 09h–12h</div></div>
+          <div class="li"><span class="dot"></span><div><strong>E‑mail:</strong> vitoriavolio@gmail.com</div></div>
         </div>
         <a class="btn" style="margin-top:12px" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20quero%20agendar">Agendar pelo WhatsApp</a>
       </div>
@@ -278,18 +272,16 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- ===== FOOTER ===== -->
+  <!-- ===================== FOOTER ===================== -->
   <footer>
-    <div class="container" style="padding:20px 0 70px;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div class="container" style="padding:20px 0 72px;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
       <div>© <span id="y"></span> Dra. Maria Vitória Bello Avolio — Endodontia</div>
       <div>Atendimento particular • Não atendemos convênios</div>
     </div>
   </footer>
 
   <!-- WhatsApp flutuante -->
-  <div class="wpp"><a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20quero%20agendar%20uma%20consulta">WhatsApp</a></div>
+  <div class="wpp"><a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20quero%20agendar%20uma%20consulta" aria-label="WhatsApp da clínica">WhatsApp</a></div>
 
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
