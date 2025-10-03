@@ -7,9 +7,9 @@
   <meta name="description" content="Urgências e tratamentos que preservam o seu dente com tecnologia e segurança. Endodontia especializada em São Paulo." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* === Design tokens (inspirado no layout de referência: clean, respiro, seções em faixas) === */
+    /* === Design tokens (estilo do site de referência: clean, seções em faixas) === */
     :root{
       --brand:#9b7a5d;     /* acento */
       --ink:#121212;       /* títulos */
@@ -36,10 +36,10 @@
     .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
     section{padding:56px 0}
 
-    /* Tipografia com hierarquia simples */
-    h1{font-family:"Playfair Display",serif;color:var(--ink);font-size:clamp(32px,5.2vw,48px);line-height:1.12;margin:0 0 8px}
-    h2{color:var(--ink);font-weight:800;font-size:clamp(22px,3.2vw,30px);margin:0 0 6px}
-    h3{color:var(--ink);font-weight:700;font-size:clamp(18px,2.6vw,22px);margin:0 0 6px}
+    /* Tipografia (tudo Inter) */
+    h1{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);font-weight:800;font-size:clamp(32px,5.2vw,48px);letter-spacing:-0.01em;line-height:1.12;margin:0 0 8px}
+    h2{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);font-weight:800;font-size:clamp(22px,3.2vw,30px);letter-spacing:-0.01em;margin:0 0 6px}
+    h3{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);font-weight:700;font-size:clamp(18px,2.6vw,22px);margin:0 0 6px}
     p{margin:8px 0 0}
     .eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;font-size:.8rem;margin-bottom:10px}
 
@@ -52,16 +52,16 @@
     .band{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
 
-    /* Listas estilo referência (checks alinhados à esquerda) */
+    /* Listas com ícones minimalistas */
     .list{display:grid;gap:10px;margin-top:8px}
-    .li{display:flex;gap:10px}
-    .li:before{content:"";width:14px;height:14px;border-radius:999px;background:var(--brand);margin-top:7px;flex:0 0 14px}
+    .li{display:flex;gap:10px;align-items:flex-start}
+    .ico{width:16px;height:16px;flex:0 0 16px;margin-top:4px}
 
-    /* Barra de CTA fixa no mobile – comum no estilo de referência */
+    /* Barra de CTA fixa (mobile) */
     .sticky-cta{position:sticky;bottom:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px}
     .sticky-cta .wrap{display:flex;gap:12px;justify-content:center}
 
-    /* Header super minimal (sem localização/menus complexos) */
+    /* Header minimalista */
     header{border-bottom:1px solid var(--line);background:rgba(255,255,255,.86);backdrop-filter:blur(6px)}
     .head{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .logo{font-weight:900;letter-spacing:.2px;color:var(--ink)}
@@ -76,7 +76,7 @@
   </header>
 
   <main>
-    <!-- HERO enxuto, sem imagem grande, foco em texto e CTA (estilo de referência) -->
+    <!-- HERO: texto + CTAs + diferenciais (sem imagem grande) -->
     <section class="wrap">
       <span class="eyebrow">Endodontia</span>
       <h1>Endodontia especializada em São Paulo</h1>
@@ -86,26 +86,32 @@
         <a class="btn ghost" href="#contato">Falar com a Dra.</a>
       </div>
       <div class="list" style="margin-top:14px">
-        <div class="li"><div><strong>Atendimento particular</strong></div></div>
-        <div class="li"><div><strong>Microscópio operatório</strong></div></div>
+        <div class="li">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Atendimento particular</strong></div>
+        </div>
+        <div class="li">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Microscópio operatório</strong></div>
+        </div>
       </div>
     </section>
 
-    <!-- FAIXA: Para quem é / Sinais (bloco curto, direto) -->
+    <!-- FAIXA: Para quem é -->
     <section class="band">
       <div class="wrap">
         <span class="eyebrow">Indicações</span>
         <h2>Para quem é o tratamento de canal?</h2>
         <div class="list">
-          <div class="li"><div>Dor ao mastigar ou com quente/frio</div></div>
-          <div class="li"><div>Indicação de canal por cárie profunda ou infecção</div></div>
-          <div class="li"><div><strong>Retratamento</strong> após canal anterior</div></div>
-          <div class="li"><div>Busca diagnóstico preciso e tratamento confortável</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Dor ao mastigar ou com quente/frio</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Indicação de canal por cárie profunda ou infecção</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong>Retratamento</strong> após canal anterior</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Busca diagnóstico preciso e tratamento confortável</div></div>
         </div>
       </div>
     </section>
 
-    <!-- Especialidades em texto linear com divisórias (como no site de referência) -->
+    <!-- Especialidades (texto linear com divisórias) -->
     <section>
       <div class="wrap">
         <span class="eyebrow">Especialidades</span>
@@ -124,16 +130,20 @@
       </div>
     </section>
 
-    <!-- FAIXA: Tecnologia e cuidado (curta) -->
+    <!-- FAIXA: Tecnologia -->
     <section class="band">
       <div class="wrap">
         <span class="eyebrow">Tecnologia</span>
         <h2>Precisão que preserva o seu dente</h2>
-        <p>Microscopia operatória (até 40×), protocolos atuais de instrumentação/obturação e comunicação clara em cada etapa.</p>
+        <div class="list" style="margin-top:8px">
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Microscopia operatória até 40×</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Protocolos atuais de instrumentação/obturação</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Comunicação clara e conforto em cada etapa</div></div>
+        </div>
       </div>
     </section>
 
-    <!-- Provas sociais simples (texto corrido, com divisórias) -->
+    <!-- Depoimentos simples -->
     <section>
       <div class="wrap">
         <span class="eyebrow">Depoimentos</span>
@@ -148,7 +158,7 @@
       </div>
     </section>
 
-    <!-- FAIXA: CTA de urgência curto -->
+    <!-- FAIXA: CTA de urgência -->
     <section class="band">
       <div class="wrap">
         <h2 style="margin-bottom:8px">Dor agora?</h2>
@@ -175,7 +185,7 @@
       </div>
     </section>
 
-    <!-- Contato direto (simples, como no site de referência) -->
+    <!-- Contato -->
     <section class="band" id="contato">
       <div class="wrap">
         <span class="eyebrow">Contato</span>
