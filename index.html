@@ -4,21 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dra. Maria Vitória | Endodontia especializada em São Paulo</title>
-  <meta name="description" content="Somos referência em tratamento de canal sem dor. Urgências e tratamentos que preservam o seu dente com tecnologia e segurança em São Paulo." />
+  <meta name="description" content="Urgências e tratamentos que preservam o seu dente com tecnologia e segurança. Endodontia especializada em São Paulo." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --brand:#0ea5a7;        /* cor de ação semelhante à referência (turquesa/verde) */
-      --ink:#0f172a;          /* títulos escuros */
-      --text:#334155;         /* corpo */
-      --muted:#64748b;        /* apoio */
-      --line:#e2e8f0;         /* divisória clara */
-      --bg:#ffffff;           /* branco liso */
-      --band:#f8fafc;         /* faixa cinza muito claro */
-      --radius:14px;
-      --shadow:0 6px 28px rgba(2,8,23,.08);
+      --brand:#15a86a; /* verde conversão (próximo ao tom WhatsApp) */
+      --brand-2:#0e9a60;
+      --ink:#0f172a; --text:#334155; --muted:#64748b; --line:#e2e8f0;
+      --bg:#ffffff; --band:#f8fafc; --panel:#ffffff;
+      --radius:14px; --shadow:0 6px 28px rgba(2,8,23,.08);
       --max:1120px;
     }
     *{box-sizing:border-box}
@@ -26,30 +22,29 @@
     body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.7}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block;border-radius:16px}
-
     .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-    h1{font-weight:800;color:var(--ink);font-size:clamp(32px,5vw,52px);line-height:1.1;margin:0 0 10px}
-    h2{font-weight:800;color:var(--ink);font-size:clamp(24px,3.2vw,34px);margin:0 0 10px}
+    h1{font-weight:800;color:var(--ink);font-size:clamp(32px,5vw,52px);line-height:1.12;margin:0 0 10px}
+    h2{font-weight:800;color:var(--ink);font-size:clamp(24px,3.2vw,34px);margin:0 0 8px}
     h3{font-weight:800;color:var(--ink);font-size:clamp(18px,2.2vw,22px);margin:0}
     p{margin:0}
 
-    /* Top bar */
+    /* Topbar */
     .topbar{background:var(--band);border-bottom:1px solid var(--line);font-size:.95rem}
     .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:12px;flex-wrap:wrap}
     .topbar .left,.topbar .right{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
     .topbar a{font-weight:700;color:var(--brand)}
 
     /* Header */
-    header{position:sticky;top:0;z-index:50;background:#ffffffcc;backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+    header{position:sticky;top:0;z-index:60;background:#ffffffd9;backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
     .head{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .logo{font-weight:900;color:var(--ink);letter-spacing:.2px}
 
-    /* Buttons */
+    /* Botões */
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:14px 22px;border-radius:12px;background:var(--brand);color:#fff;font-weight:800;box-shadow:var(--shadow);transition:.18s}
     .btn:hover{transform:translateY(-1px)}
     .btn.ghost{background:#fff;color:var(--brand);border:2px solid var(--brand);box-shadow:none}
 
-    /* Sections */
+    /* Seções */
     section{padding:56px 0}
     .band{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .grid-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
@@ -63,7 +58,7 @@
     .divider{height:1px;background:var(--line);margin:18px 0}
 
     .spec h3{margin-bottom:6px}
-    .spec .cta-row{margin-top:10px}
+    .cta-row{margin-top:10px}
 
     .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
     .pill{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;font-weight:700;color:var(--ink);background:#fff}
@@ -73,7 +68,7 @@
 
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 
-    .sticky-cta{position:sticky;bottom:0;background:#ffffffef;border-top:1px solid var(--line);backdrop-filter:blur(10px);padding:10px;z-index:60}
+    .sticky-cta{position:sticky;bottom:0;background:#ffffffef;border-top:1px solid var(--line);backdrop-filter:blur(10px);padding:10px;z-index:80}
     .sticky-cta .wrap{display:flex;justify-content:center}
 
     @media(max-width: 980px){
@@ -85,7 +80,7 @@
   </style>
 </head>
 <body>
-  <!-- Topbar -->
+  <!-- Topbar (horário + telefone + WhatsApp) -->
   <div class="topbar">
     <div class="wrap">
       <div class="left">
@@ -107,13 +102,13 @@
   </header>
 
   <main>
-    <!-- HERO (texto + imagem ao lado, CTA forte) -->
+    <!-- HERO (texto + imagem lateral) -->
     <section>
       <div class="wrap grid-hero">
         <div>
           <div class="kicker">Endodontia</div>
           <h1>Endodontia especializada em São Paulo</h1>
-          <p>Somos referência em <strong>Tratamento de Canal sem dor</strong>. Acabe com a dor e o desconforto: atendimento rápido, confortável e sem estresse.</p>
+          <p>Somos referência em <strong>Tratamento de Canal sem dor</strong>. Acabe com a dor e o desconforto com atendimento rápido, confortável e humanizado.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
             <a class="btn" href="https://wa.me/5511994802149?text=Estou%20com%20dor%20e%20preciso%20de%20um%20hor%C3%A1rio">FALE COM A ESPECIALISTA</a>
             <a class="btn ghost" href="#contato">Agendar avaliação</a>
@@ -125,52 +120,50 @@
       </div>
     </section>
 
-    <!-- PARA QUEM É -->
+    <!-- PARA QUEM É (faixa clara) -->
     <section class="band">
       <div class="wrap">
         <h2>Para quem é o Tratamento de Canal?</h2>
         <div class="list">
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Sente dor ao mastigar ou com alimentos quentes/frio.</div></div>
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Recebeu indicação por cárie profunda ou infecção.</div></div>
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Precisa de <strong>retratamento</strong> após canal anterior.</div></div>
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Quer diagnóstico preciso e tratamento indolor com tecnologia.</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Dor ao mastigar ou com alimentos quentes/frio</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Indicação por cárie profunda ou infecção</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Necessidade de <strong>retratamento</strong> após canal prévio</div></div>
+          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Busca por diagnóstico preciso e tratamento confortável</div></div>
         </div>
-        <p style="margin-top:10px">Saiba mais abaixo sobre as opções de tratamento que podem salvar o seu dente.</p>
       </div>
     </section>
 
-    <!-- ESPECIALIDADES (três blocos com CTA "Agende Agora") -->
+    <!-- ESPECIALIDADES (cartão com divisórias e CTA em cada bloco) -->
     <section>
       <div class="wrap spec">
         <h2>Nossas Especialidades</h2>
         <p>Endodontia microscópica: mais precisão, conforto e segurança.</p>
         <div class="card" style="margin-top:14px">
           <h2>Tratamento de Canal preciso e indolor</h2>
-          <h3>Com microscópio de alta precisão, tratamos sem dor, com segurança total e resultados duradouros.</h3>
+          <h3>Microscópio de alta precisão, anestesia efetiva e isolamento absoluto.</h3>
           <div class="cta-row"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20agendar%20Tratamento%20de%20Canal">Agende Agora</a></div>
 
           <div class="divider"></div>
           <h2>Retratamento de Canal para salvar seu dente</h2>
-          <h3>A dor voltou ou o canal falhou? Reavaliamos e corrigimos com técnicas avançadas, preservando a estrutura do dente.</h3>
+          <h3>Reavaliamos e corrigimos falhas anteriores preservando a estrutura dentária.</h3>
           <div class="cta-row"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20avaliar%20um%20Retratamento">Agende Agora</a></div>
 
           <div class="divider"></div>
-          <h2>Diagnóstico rápido com Raio-X Digital</h2>
-          <h3>Resultado na hora e com máxima precisão. Descubra o problema e a solução em minutos!</h3>
+          <h2>Diagnóstico rápido com Raio‑X Digital</h2>
+          <h3>Resultado na hora e com máxima precisão.</h3>
           <div class="cta-row"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20marcar%20um%20Diagn%C3%B3stico%20com%20Raio-X">Agende Agora</a></div>
 
           <p style="margin-top:12px;font-weight:700">Precisa de um diagnóstico detalhado para o seu caso?</p>
-          <div style="margin-top:8px"><a class="btn ghost" href="https://wa.me/5511994802149?text=Quero%20uma%20avalia%C3%A7%C3%A3o">AGENDE SUA AVALIAÇÃO AGORA E DIGA ADEUS À DOR DE DENTE!</a></div>
+          <div style="margin-top:8px"><a class="btn ghost" href="https://wa.me/5511994802149?text=Quero%20uma%20avalia%C3%A7%C3%A3o">AGENDE SUA AVALIAÇÃO AGORA</a></div>
         </div>
       </div>
     </section>
 
-    <!-- TECNOLOGIA E CUIDADO (texto + galeria simples) -->
+    <!-- TECNOLOGIA E CUIDADO (faixa com galeria) -->
     <section class="band">
       <div class="wrap">
-        <h2>Tecnologia e Cuidado para Seu Tratamento</h2>
-        <p>Unimos tecnologia de ponta e atendimento humanizado para oferecer o melhor em tratamento de canal em São Paulo.</p>
-        <p style="margin-top:6px">Utilizamos <strong>microscopia operatória</strong> (até 40×) para diagnósticos precisos e tratamentos minimamente invasivos. Também contamos com <strong>Raio‑X Digital</strong> na clínica, proporcionando exames radiográficos rápidos e seguros.</p>
+        <h2>Tecnologia e Cuidado</h2>
+        <p>Microscopia operatória (até 40×), protocolos atuais e comunicação clara em todas as etapas.</p>
         <div class="gallery">
           <img src="https://images.unsplash.com/photo-1598257006626-48b0c252070d?q=80&w=800&auto=format&fit=crop" alt="Microscópio operatório"/>
           <img src="https://images.unsplash.com/photo-1586162544471-65f9d123140f?q=80&w=800&auto=format&fit=crop" alt="Raio-X digital"/>
@@ -180,22 +173,22 @@
       </div>
     </section>
 
-    <!-- AVALIAÇÕES (bloco resumido) -->
+    <!-- AVALIAÇÕES (selo + depoimentos curtos) -->
     <section>
       <div class="wrap">
-        <h2>Quem Confiou e Hoje Sorri com Tranquilidade</h2>
+        <h2>Avaliações</h2>
         <div class="card" style="margin-top:12px">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-            <strong style="font-size:1.1rem">Avaliações no Google</strong>
+            <strong style="font-size:1.1rem">Google</strong>
             <span class="pill">★★★★★ 4,9 • 120+ avaliações</span>
           </div>
           <div class="divider"></div>
           <p><strong>“Atendimento excepcional”</strong> — clínica moderna, explicação clara e resolução rápida da dor. <em>(Ana S.)</em></p>
           <div class="divider"></div>
-          <p><strong>“Sem dor e com muita segurança”</strong> — recomendo, equipe atenciosa. <em>(Rodrigo M.)</em></p>
+          <p><strong>“Sem dor e com segurança”</strong> — recomendo, equipe atenciosa. <em>(Rodrigo M.)</em></p>
           <div class="divider"></div>
-          <p><strong>“Confiança do início ao fim”</strong> — ambiente impecável e resultados duradouros. <em>(Larissa P.)</em></p>
-          <div style="margin-top:12px"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20agendar%20ap%C3%B3s%20ver%20as%20avalia%C3%A7%C3%B5es">FALE COM NOSSOS ESPECIALISTAS</a></div>
+          <p><strong>“Confiança do início ao fim”</strong> — ambiente impecável e resultado duradouro. <em>(Larissa P.)</em></p>
+          <div style="margin-top:12px"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20agendar%20ap%C3%B3s%20ver%20as%20avalia%C3%A7%C3%B5es">FALE COM A ESPECIALISTA</a></div>
         </div>
       </div>
     </section>
@@ -205,7 +198,7 @@
       <div class="wrap">
         <div class="features">
           <div class="feat">Atendimento de<br>Urgência</div>
-          <div class="feat">Pagamento Facilitado<br>12x s/ juros no cartão</div>
+          <div class="feat">Pagamento Facilitado<br>12x s/ juros</div>
           <div class="feat">Local seguro com<br>Estacionamento</div>
         </div>
       </div>
@@ -247,4 +240,3 @@
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
