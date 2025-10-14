@@ -10,241 +10,153 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f172a; /* slate-900 */
-      --card:#111827; /* gray-900 */
-      --muted:#94a3b8; /* slate-400 */
-      --text:#e5e7eb; /* gray-200 */
-      --brand:#22d3ee; /* cyan-400 */
-      --brand-strong:#06b6d4; /* cyan-500 */
-      --accent:#a78bfa; /* violet-400 */
-      --ok:#34d399; /* green-400 */
-      --danger:#f87171; /* red-400 */
-      --shadow: 0 10px 25px rgba(2, 6, 23, .6);
-      --radius: 22px;
+      --bg:#ffffff;
+      --card:#fdfaf6;
+      --muted:#7c7c7c;
+      --text:#222222;
+      --brand:#d4b89c; /* bege claro */
+      --brand-strong:#b5906b;
+      --accent:#e0c7a7;
+      --shadow: 0 4px 14px rgba(0,0,0,0.08);
+      --radius: 18px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
-    .btn{display:inline-block;padding:14px 22px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b1020;font-weight:700;box-shadow:var(--shadow);transition:transform .15s ease,filter .2s ease}
-    .btn:hover{transform:translateY(-1px);filter:saturate(1.1)}
-    .btn.outline{background:transparent;border:1px solid var(--brand);color:var(--text)}
-    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.75);backdrop-filter: blur(10px);border-bottom:1px solid rgba(148,163,184,.12)}
+    img{max-width:100%;display:block;border-radius:var(--radius)}
+    .container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-block;padding:14px 22px;border-radius:999px;background:var(--brand);color:#fff;font-weight:600;box-shadow:var(--shadow);transition:background .2s ease,transform .2s ease}
+    .btn:hover{background:var(--brand-strong);transform:translateY(-2px)}
+    .btn.outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
+    header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #eee}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
-    .brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 0 3px rgba(34,211,238,.25)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--brand-strong)}
     .navlinks{display:flex;gap:16px;align-items:center}
     .navlinks a{padding:8px 12px;border-radius:10px;color:var(--muted)}
-    .navlinks a:hover{color:var(--text);background:rgba(148,163,184,.08)}
+    .navlinks a:hover{color:var(--brand-strong);background:#f8f5f1}
 
-    /* Hero */
-    .hero{position:relative;padding:72px 0 48px}
+    .hero{padding:80px 0 60px;background:#fdfaf6}
     .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:28px}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid rgba(34,211,238,.35);color:var(--brand)}
-    .h1{font-size:44px;line-height:1.05;margin:14px 0 10px}
-    .h1 strong{background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{color:var(--muted);font-size:18px}
-    .hero-cta{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
-    .meta{display:flex;gap:16px;margin-top:14px;color:var(--muted);font-size:14px}
-    .card{background:linear-gradient(180deg,rgba(17,24,39,.8),rgba(17,24,39,.6));border:1px solid rgba(148,163,184,.10);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .h1{font-size:42px;line-height:1.1;margin:0 0 14px;font-weight:700;color:#333}
+    .h1 strong{color:var(--brand-strong)}
+    .lead{color:#666;font-size:18px;line-height:1.5}
+    .hero-cta{display:flex;gap:12px;align-items:center;margin-top:20px;flex-wrap:wrap}
+    .meta{display:flex;gap:12px;margin-top:20px;color:#999;font-size:14px;flex-wrap:wrap}
+    .card{background:var(--card);border:1px solid #eee;border-radius:var(--radius);box-shadow:var(--shadow)}
     .hero-card{padding:18px}
 
-    /* Diferenciais (blocos grandes) */
-    .difs{padding:28px 0 12px}
-    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px}
-    .section-head h2{font-size:28px;margin:0}
-    .difs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .difs-item{padding:22px;border-radius:var(--radius);border:1px solid rgba(148,163,184,.10);background:linear-gradient(180deg,rgba(17,24,39,.85),rgba(17,24,39,.65));transition:transform .2s ease, border-color .2s ease}
-    .difs-item:hover{transform:translateY(-2px);border-color:rgba(167,139,250,.5)}
-    .difs-kicker{font-size:12px;letter-spacing:.12em;color:var(--brand);text-transform:uppercase}
-    .difs-title{font-size:22px;margin:6px 0 6px}
-    .difs-text{color:var(--muted);font-size:15px}
+    .services{padding:60px 0}
+    .services h2{font-size:28px;text-align:center;margin-bottom:24px;color:#333}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service{padding:20px;background:var(--card);border:1px solid #eee;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .2s ease}
+    .service:hover{transform:translateY(-3px)}
+    .service h3{margin:10px 0 6px;color:var(--brand-strong)}
+    .service p{color:#555;font-size:15px}
 
-    /* Serviços */
-    .services{padding:36px 0 10px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .service{padding:18px}
-    .service h3{margin:8px 0 6px}
-    .chip{display:inline-flex;gap:6px;align-items:center;border:1px solid rgba(148,163,184,.15);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .testimonials{padding:60px 0;background:#faf7f3}
+    .testimonials h2{text-align:center;margin-bottom:24px;color:#333}
+    .ts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .ts{padding:20px;background:#fff;border:1px solid #eee;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .ts p{color:#555;font-size:15px}
 
-    /* Depoimentos */
-    .testimonials{padding:32px 0 8px}
-    .ts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .ts{padding:18px}
-    .ts p{color:var(--muted);font-size:15px}
+    .contact{padding:60px 0}
+    .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start}
+    .contact h2{color:#333;margin-top:0}
+    .contact .map{min-height:280px;border:none;border-radius:14px;filter:grayscale(.1)}
 
-    /* Contato */
-    .contact{padding:36px 0}
-    .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
-    .contact .map{min-height:280px;border:none;border-radius:14px;filter:grayscale(.15) saturate(.9)}
+    footer{padding:24px 0;color:#777;border-top:1px solid #eee;text-align:center;background:#fff}
 
-    footer{padding:26px 0;color:var(--muted);border-top:1px solid rgba(148,163,184,.12)}
-
-    /* Responsive */
-    @media (max-width: 1024px){
+    @media (max-width: 900px){
       .hero-grid,.contact-grid{grid-template-columns:1fr}
-      .difs-grid{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr 1fr}
     }
-    @media (max-width: 640px){
-      .h1{font-size:34px}
+    @media (max-width: 600px){
       .grid3{grid-template-columns:1fr}
+      .h1{font-size:32px}
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="MV Endodontia">
-        <span class="dot"></span>
-        <span>MV Endodontia</span>
-      </a>
+      <a class="brand" href="#top">MV Endodontia</a>
       <nav class="navlinks">
-        <a href="#diferenciais">Diferenciais</a>
         <a href="#servicos">Serviços</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#contato">Contato</a>
-        <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar no WhatsApp</a>
+        <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Agendar</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero" id="top">
     <div class="container hero-grid">
       <div>
-        <div class="badge">Endodontia especializada • Jardim Paulista</div>
-        <h1 class="h1">Cuidado preciso em <strong>tratamento de canal</strong>, com conforto e técnica.</h1>
-        <p class="lead">Atendimento particular, acolhedor e com <strong>microscópio operatório</strong> para máxima precisão. Dra. Maria Vitória Bello Avolio – CRO-SP.</p>
+        <h1 class="h1">Tratamentos endodônticos com <strong>precisão e acolhimento</strong>.</h1>
+        <p class="lead">Atendimento particular e humanizado, com microscópio operatório e técnicas modernas para preservar o seu dente e o seu conforto.</p>
         <div class="hero-cta">
-          <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
-          <a class="btn outline" href="#diferenciais">Ver diferenciais</a>
+          <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Agendar avaliação</a>
         </div>
         <div class="meta">
-          <span class="chip">Av. Nove de Julho 3229, cj. 1506 – Jardim Paulista</span>
-          <span class="chip">Seg–Sex 08h–19h • Sáb 09h–12h</span>
+          <span>Av. Nove de Julho 3229, cj. 1506 – Jardim Paulista</span>
+          <span>Seg–Sex 08h–19h • Sáb 09h–12h</span>
         </div>
       </div>
       <div class="card hero-card">
-        <picture>
-          <source srcset="hero.webp" type="image/webp" />
-          <img src="hero.jpg" alt="Consultório da Dra. Maria Vitória com microscópio operatório" />
-        </picture>
+        <img src="hero.jpg" alt="Consultório da Dra. Maria Vitória com microscópio operatório" />
       </div>
     </div>
   </section>
 
-  <!-- Diferenciais (blocos grandes, logo abaixo do hero) -->
-  <section class="difs" id="diferenciais" aria-label="Diferenciais da clínica">
-    <div class="container">
-      <div class="section-head">
-        <h2>Diferenciais que importam pra você</h2>
-        <a class="btn outline" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Tirar dúvidas</a>
-      </div>
-      <div class="difs-grid">
-        <!-- Bloco 1 -->
-        <article class="difs-item">
-          <div class="difs-kicker">Precisão</div>
-          <h3 class="difs-title">Atendimento com microscópio operatório</h3>
-          <p class="difs-text">Mais segurança para você: melhor visualização dos canais, identificação de detalhes anatômicos e maior previsibilidade no resultado.</p>
-        </article>
-        <!-- Bloco 2 -->
-        <article class="difs-item">
-          <div class="difs-kicker">Sua rotina</div>
-          <h3 class="difs-title">Atendimento aos sábados</h3>
-          <p class="difs-text">Agenda pensada para facilitar sua vida. Consulte horários disponíveis aos sábados e evite faltar ao trabalho durante a semana.</p>
-        </article>
-        <!-- Bloco 3 (opcional) -->
-        <article class="difs-item">
-          <div class="difs-kicker">Conforto</div>
-          <h3 class="difs-title">Anestesia gentil & atendimento humanizado</h3>
-          <p class="difs-text">Abordagem acolhedora, explicando cada passo do tratamento para você se sentir seguro e tranquilo do início ao fim.</p>
-        </article>
-        <!-- Bloco 4 (opcional) -->
-        <article class="difs-item">
-          <div class="difs-kicker">Transparência</div>
-          <h3 class="difs-title">Orçamento claro & opções de pagamento</h3>
-          <p class="difs-text">Você recebe uma proposta objetiva, com etapas e valores por procedimento. Sem surpresas.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Serviços principais -->
   <section class="services" id="servicos">
     <div class="container">
       <h2>Serviços</h2>
       <div class="grid3">
-        <article class="card service">
-          <span class="chip">Dor de dente / Urgência</span>
-          <h3>Tratamento de canal</h3>
-          <p class="lead">Resolução precisa de dores e infecções com técnica atualizada e foco em preservar seu dente.</p>
-        </article>
-        <article class="card service">
-          <span class="chip">Estética</span>
-          <h3>Clareamento interno (dente escurecido)</h3>
-          <p class="lead">Opção estética para dentes escurecidos após trauma ou tratamento prévio, com avaliação individual.</p>
-        </article>
-        <article class="card service">
-          <span class="chip">Reabilitação</span>
-          <h3>Retratamento endodôntico</h3>
-          <p class="lead">Correção de tratamentos anteriores quando necessário, com análise por imagem e microscopia.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section class="testimonials" id="depoimentos">
-    <div class="container">
-      <h2>O que os pacientes dizem</h2>
-      <div class="ts-grid">
-        <article class="card ts">
-          <p>“Atendimento super humano. Cheguei com dor e saí aliviada, tudo muito bem explicado.”</p>
-          <small>– Paciente A. (depoimento fictício)</small>
-        </article>
-        <article class="card ts">
-          <p>“A clínica é linda e a Dra. Maria Vitória é extremamente cuidadosa. Recomendo.”</p>
-          <small>– Paciente B. (depoimento fictício)</small>
-        </article>
-        <article class="card ts">
-          <p>“Gostei da clareza no plano de tratamento e do conforto durante o procedimento.”</p>
-          <small>– Paciente C. (depoimento fictício)</small>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section class="contact" id="contato">
-    <div class="container contact-grid">
-      <div class="card" style="padding:18px">
-        <h2>Agende sua avaliação</h2>
-        <p class="lead">WhatsApp <a href="https://wa.me/5511994802149" target="_blank" rel="noopener">(11) 99480‑2149</a><br>
-        Endereço: Av. Nove de Julho 3229, conj. 1506 – Jardim Paulista, São Paulo<br>
-        Horários: Seg–Sex 08h–19h • Sáb 09h–12h</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
-          <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
-          <a class="btn outline" href="mailto:vitoriavolio@gmail.com">Enviar e‑mail</a>
+        <div class="service">
+          <h3>Tratamento de Canal</h3>
+          <p>Resolução de dores e infecções com tecnologia e segurança, priorizando a preservação do seu dente natural.</p>
+        </div>
+        <div class="service">
+          <h3>Clareamento Interno</h3>
+          <p>Tratamento para dentes escurecidos após trauma ou canal, devolvendo a estética e a harmonia do sorriso.</p>
+        </div>
+        <div class="service">
+          <h3>Retratamento Endodôntico</h3>
+          <p>Correção de canais previamente tratados, utilizando microscópio e técnicas atualizadas para o melhor resultado.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <div class="ts-grid">
+        <div class="ts"><p>“Atendimento impecável! A Dra. Maria Vitória me explicou tudo e me senti super segura.”</p><small>– Paciente A.</small></div>
+        <div class="ts"><p>“Fiz o canal sem dor e com muito cuidado. O consultório é lindo e acolhedor.”</p><small>– Paciente B.</small></div>
+        <div class="ts"><p>“Excelente experiência! Recomendo para quem busca profissionalismo e gentileza.”</p><small>– Paciente C.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="container contact-grid">
+      <div class="card" style="padding:24px">
+        <h2>Agende sua avaliação</h2>
+        <p>WhatsApp <a href="https://wa.me/5511994802149" target="_blank">(11) 99480‑2149</a><br>
+        Endereço: Av. Nove de Julho 3229, conj. 1506 – Jardim Paulista, São Paulo<br>
+        Horários: Seg–Sex 08h–19h • Sáb 09h–12h</p>
+        <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Chamar no WhatsApp</a>
+      </div>
       <div>
-        <iframe class="map" title="Mapa – MV Endodontia" src="https://www.google.com/maps?q=Av.%20Nove%20de%20Julho%203229%20-%20Jardim%20Paulista%20-%20S%C3%A3o%20Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="map" title="Mapa – MV Endodontia" src="https://www.google.com/maps?q=Av.%20Nove%20de%20Julho%203229%20-%20Jardim%20Paulista%20-%20S%C3%A3o%20Paulo&output=embed" loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <div>© <span id="year"></span> MV Endodontia • CRO‑SP • Todos os direitos reservados.</div>
-      <div style="color:var(--muted)">Site por MV • Endo com alma & técnica</div>
-    </div>
+    © <span id="year"></span> MV Endodontia • CRO‑SP • Todos os direitos reservados.
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
