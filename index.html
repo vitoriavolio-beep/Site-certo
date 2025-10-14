@@ -1,243 +1,250 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dra. Maria Vitória | Endodontia especializada em São Paulo</title>
-  <meta name="description" content="Urgências e tratamentos que preservam o seu dente com tecnologia e segurança. Endodontia especializada em São Paulo." />
+  <title>Dra. Maria Vitória Bello Avolio | Endodontia em São Paulo</title>
+  <meta name="description" content="Endodontia especializada em São Paulo com microscópio operatório. Atendimento particular, humanizado e também aos sábados. Agende sua avaliação pela WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --brand:#c9a77c; /* bege sofisticado */
-      --brand-2:#b38f64;
-      --ink:#0f172a; --text:#334155; --muted:#64748b; --line:#e2e8f0;
-      --bg:#ffffff; --band:#f8f6f3; --panel:#ffffff;
-      --radius:14px; --shadow:0 6px 28px rgba(2,8,23,.08);
-      --max:1120px;
+      --bg:#0f172a; /* slate-900 */
+      --card:#111827; /* gray-900 */
+      --muted:#94a3b8; /* slate-400 */
+      --text:#e5e7eb; /* gray-200 */
+      --brand:#22d3ee; /* cyan-400 */
+      --brand-strong:#06b6d4; /* cyan-500 */
+      --accent:#a78bfa; /* violet-400 */
+      --ok:#34d399; /* green-400 */
+      --danger:#f87171; /* red-400 */
+      --shadow: 0 10px 25px rgba(2, 6, 23, .6);
+      --radius: 22px;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.7}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block;border-radius:16px}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-    h1{font-weight:800;color:var(--ink);font-size:clamp(32px,5vw,52px);line-height:1.12;margin:0 0 10px}
-    h2{font-weight:800;color:var(--ink);font-size:clamp(24px,3.2vw,34px);margin:0 0 8px}
-    h3{font-weight:800;color:var(--ink);font-size:clamp(18px,2.2vw,22px);margin:0}
-    p{margin:0}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-block;padding:14px 22px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b1020;font-weight:700;box-shadow:var(--shadow);transition:transform .15s ease,filter .2s ease}
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.1)}
+    .btn.outline{background:transparent;border:1px solid var(--brand);color:var(--text)}
+    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.75);backdrop-filter: blur(10px);border-bottom:1px solid rgba(148,163,184,.12)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 0 3px rgba(34,211,238,.25)}
+    .navlinks{display:flex;gap:16px;align-items:center}
+    .navlinks a{padding:8px 12px;border-radius:10px;color:var(--muted)}
+    .navlinks a:hover{color:var(--text);background:rgba(148,163,184,.08)}
 
-    /* Topbar */
-    .topbar{background:var(--band);border-bottom:1px solid var(--line);font-size:.95rem}
-    .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:12px;flex-wrap:wrap}
-    .topbar .left,.topbar .right{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-    .topbar a{font-weight:700;color:var(--brand)}
+    /* Hero */
+    .hero{position:relative;padding:72px 0 48px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:28px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid rgba(34,211,238,.35);color:var(--brand)}
+    .h1{font-size:44px;line-height:1.05;margin:14px 0 10px}
+    .h1 strong{background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:18px}
+    .hero-cta{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+    .meta{display:flex;gap:16px;margin-top:14px;color:var(--muted);font-size:14px}
+    .card{background:linear-gradient(180deg,rgba(17,24,39,.8),rgba(17,24,39,.6));border:1px solid rgba(148,163,184,.10);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-card{padding:18px}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:60;background:#ffffffd9;backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
-    .head{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .logo{font-weight:900;color:var(--ink);letter-spacing:.2px}
+    /* Diferenciais (blocos grandes) */
+    .difs{padding:28px 0 12px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px}
+    .section-head h2{font-size:28px;margin:0}
+    .difs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .difs-item{padding:22px;border-radius:var(--radius);border:1px solid rgba(148,163,184,.10);background:linear-gradient(180deg,rgba(17,24,39,.85),rgba(17,24,39,.65));transition:transform .2s ease, border-color .2s ease}
+    .difs-item:hover{transform:translateY(-2px);border-color:rgba(167,139,250,.5)}
+    .difs-kicker{font-size:12px;letter-spacing:.12em;color:var(--brand);text-transform:uppercase}
+    .difs-title{font-size:22px;margin:6px 0 6px}
+    .difs-text{color:var(--muted);font-size:15px}
 
-    /* Botões */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:14px 22px;border-radius:12px;background:var(--brand);color:#fff;font-weight:800;box-shadow:var(--shadow);transition:.18s}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.ghost{background:#fff;color:var(--brand);border:2px solid var(--brand);box-shadow:none}
+    /* Serviços */
+    .services{padding:36px 0 10px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{padding:18px}
+    .service h3{margin:8px 0 6px}
+    .chip{display:inline-flex;gap:6px;align-items:center;border:1px solid rgba(148,163,184,.15);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
 
-    /* Seções */
-    section{padding:56px 0}
-    .band{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .grid-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
-    .kicker{font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+    /* Depoimentos */
+    .testimonials{padding:32px 0 8px}
+    .ts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .ts{padding:18px}
+    .ts p{color:var(--muted);font-size:15px}
 
-    .list{display:grid;gap:10px;margin-top:10px}
-    .li{display:flex;gap:10px;align-items:flex-start}
-    .ico{width:18px;height:18px;flex:0 0 18px;margin-top:3px}
+    /* Contato */
+    .contact{padding:36px 0}
+    .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+    .contact .map{min-height:280px;border:none;border-radius:14px;filter:grayscale(.15) saturate(.9)}
 
-    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
-    .divider{height:1px;background:var(--line);margin:18px 0}
+    footer{padding:26px 0;color:var(--muted);border-top:1px solid rgba(148,163,184,.12)}
 
-    .spec h3{margin-bottom:6px}
-    .cta-row{margin-top:10px}
-
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
-    .pill{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;font-weight:700;color:var(--ink);background:#fff}
-
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .feat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;font-weight:800;box-shadow:var(--shadow)}
-
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-
-    .sticky-cta{position:sticky;bottom:0;background:#ffffffef;border-top:1px solid var(--line);backdrop-filter:blur(10px);padding:10px;z-index:80}
-    .sticky-cta .wrap{display:flex;justify-content:center}
-
-    @media(max-width: 980px){
-      .grid-hero{grid-template-columns:1fr}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-      .contact-grid{grid-template-columns:1fr}
-      .features{grid-template-columns:1fr}
+    /* Responsive */
+    @media (max-width: 1024px){
+      .hero-grid,.contact-grid{grid-template-columns:1fr}
+      .difs-grid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .h1{font-size:34px}
+      .grid3{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="wrap">
-      <div class="left">
-        <span>Segunda a Sexta - 8h às 19h</span>
-        <span><a href="tel:+5511994802149">(11) 99480-2149</a></span>
-      </div>
-      <div class="right">
-        <a class="btn ghost" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20quero%20agendar">WhatsApp</a>
-      </div>
-    </div>
-  </div>
-
   <!-- Header -->
   <header>
-    <div class="wrap head">
-      <div class="logo">Dra. Maria Vitória — Endodontia</div>
-      <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o">FALE COM A ESPECIALISTA</a>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="MV Endodontia">
+        <span class="dot"></span>
+        <span>MV Endodontia</span>
+      </a>
+      <nav class="navlinks">
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+        <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar no WhatsApp</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section>
-      <div class="wrap grid-hero">
-        <div>
-          <div class="kicker">Endodontia</div>
-          <h1>Endodontia especializada em São Paulo</h1>
-          <p>Somos referência em <strong>Tratamento de Canal sem dor</strong>. Acabe com a dor e o desconforto com atendimento rápido, confortável e humanizado.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
-            <a class="btn" href="https://wa.me/5511994802149?text=Estou%20com%20dor%20e%20preciso%20de%20um%20hor%C3%A1rio">FALE COM A ESPECIALISTA</a>
-            <a class="btn ghost" href="#contato">Agendar avaliação</a>
-          </div>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Endodontia especializada • Jardim Paulista</div>
+        <h1 class="h1">Cuidado preciso em <strong>tratamento de canal</strong>, com conforto e técnica.</h1>
+        <p class="lead">Atendimento particular, acolhedor e com <strong>microscópio operatório</strong> para máxima precisão. Dra. Maria Vitória Bello Avolio – CRO-SP.</p>
+        <div class="hero-cta">
+          <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
+          <a class="btn outline" href="#diferenciais">Ver diferenciais</a>
         </div>
-        <div>
-          <img src="1.jpeg" alt="Tratamento de canal com microscópio operatório" />
-        </div>
-      </div>
-    </section>
-
-    <!-- PARA QUEM É -->
-    <section class="band">
-      <div class="wrap">
-        <h2>Para quem é o Tratamento de Canal?</h2>
-        <div class="list">
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Dor ao mastigar ou com alimentos quentes/frio</div></div>
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Indicação por cárie profunda ou infecção</div></div>
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Necessidade de <strong>retratamento</strong> após canal prévio</div></div>
-          <div class="li"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div>Busca por diagnóstico preciso e tratamento confortável</div></div>
+        <div class="meta">
+          <span class="chip">Av. Nove de Julho 3229, cj. 1506 – Jardim Paulista</span>
+          <span class="chip">Seg–Sex 08h–19h • Sáb 09h–12h</span>
         </div>
       </div>
-    </section>
+      <div class="card hero-card">
+        <picture>
+          <source srcset="hero.webp" type="image/webp" />
+          <img src="hero.jpg" alt="Consultório da Dra. Maria Vitória com microscópio operatório" />
+        </picture>
+      </div>
+    </div>
+  </section>
 
-    <!-- ESPECIALIDADES -->
-    <section>
-      <div class="wrap spec">
-        <h2>Nossas Especialidades</h2>
-        <p>Endodontia microscópica: mais precisão, conforto e segurança.</p>
-        <div class="card" style="margin-top:14px">
-          <h2>Tratamento de Canal preciso e indolor</h2>
-          <h3>Microscópio de alta precisão, anestesia efetiva e isolamento absoluto.</h3>
-          <div class="cta-row"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20agendar%20Tratamento%20de%20Canal">Agende Agora</a></div>
+  <!-- Diferenciais (blocos grandes, logo abaixo do hero) -->
+  <section class="difs" id="diferenciais" aria-label="Diferenciais da clínica">
+    <div class="container">
+      <div class="section-head">
+        <h2>Diferenciais que importam pra você</h2>
+        <a class="btn outline" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Tirar dúvidas</a>
+      </div>
+      <div class="difs-grid">
+        <!-- Bloco 1 -->
+        <article class="difs-item">
+          <div class="difs-kicker">Precisão</div>
+          <h3 class="difs-title">Atendimento com microscópio operatório</h3>
+          <p class="difs-text">Mais segurança para você: melhor visualização dos canais, identificação de detalhes anatômicos e maior previsibilidade no resultado.</p>
+        </article>
+        <!-- Bloco 2 -->
+        <article class="difs-item">
+          <div class="difs-kicker">Sua rotina</div>
+          <h3 class="difs-title">Atendimento aos sábados</h3>
+          <p class="difs-text">Agenda pensada para facilitar sua vida. Consulte horários disponíveis aos sábados e evite faltar ao trabalho durante a semana.</p>
+        </article>
+        <!-- Bloco 3 (opcional) -->
+        <article class="difs-item">
+          <div class="difs-kicker">Conforto</div>
+          <h3 class="difs-title">Anestesia gentil & atendimento humanizado</h3>
+          <p class="difs-text">Abordagem acolhedora, explicando cada passo do tratamento para você se sentir seguro e tranquilo do início ao fim.</p>
+        </article>
+        <!-- Bloco 4 (opcional) -->
+        <article class="difs-item">
+          <div class="difs-kicker">Transparência</div>
+          <h3 class="difs-title">Orçamento claro & opções de pagamento</h3>
+          <p class="difs-text">Você recebe uma proposta objetiva, com etapas e valores por procedimento. Sem surpresas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-          <div class="divider"></div>
-          <h2>Retratamento de Canal para salvar seu dente</h2>
-          <h3>Reavaliamos e corrigimos falhas anteriores preservando a estrutura dentária.</h3>
-          <div class="cta-row"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20avaliar%20um%20Retratamento">Agende Agora</a></div>
+  <!-- Serviços principais -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="grid3">
+        <article class="card service">
+          <span class="chip">Dor de dente / Urgência</span>
+          <h3>Tratamento de canal</h3>
+          <p class="lead">Resolução precisa de dores e infecções com técnica atualizada e foco em preservar seu dente.</p>
+        </article>
+        <article class="card service">
+          <span class="chip">Estética</span>
+          <h3>Clareamento interno (dente escurecido)</h3>
+          <p class="lead">Opção estética para dentes escurecidos após trauma ou tratamento prévio, com avaliação individual.</p>
+        </article>
+        <article class="card service">
+          <span class="chip">Reabilitação</span>
+          <h3>Retratamento endodôntico</h3>
+          <p class="lead">Correção de tratamentos anteriores quando necessário, com análise por imagem e microscopia.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-          <div class="divider"></div>
-          <h2>Diagnóstico rápido com Raio‑X Digital</h2>
-          <h3>Resultado na hora e com máxima precisão.</h3>
-          <div class="cta-row"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20marcar%20um%20Diagn%C3%B3stico%20com%20Raio-X">Agende Agora</a></div>
+  <!-- Depoimentos -->
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <h2>O que os pacientes dizem</h2>
+      <div class="ts-grid">
+        <article class="card ts">
+          <p>“Atendimento super humano. Cheguei com dor e saí aliviada, tudo muito bem explicado.”</p>
+          <small>– Paciente A. (depoimento fictício)</small>
+        </article>
+        <article class="card ts">
+          <p>“A clínica é linda e a Dra. Maria Vitória é extremamente cuidadosa. Recomendo.”</p>
+          <small>– Paciente B. (depoimento fictício)</small>
+        </article>
+        <article class="card ts">
+          <p>“Gostei da clareza no plano de tratamento e do conforto durante o procedimento.”</p>
+          <small>– Paciente C. (depoimento fictício)</small>
+        </article>
+      </div>
+    </div>
+  </section>
 
-          <p style="margin-top:12px;font-weight:700">Precisa de um diagnóstico detalhado para o seu caso?</p>
-          <div style="margin-top:8px"><a class="btn ghost" href="https://wa.me/5511994802149?text=Quero%20uma%20avalia%C3%A7%C3%A3o">AGENDE SUA AVALIAÇÃO AGORA</a></div>
+  <!-- Contato -->
+  <section class="contact" id="contato">
+    <div class="container contact-grid">
+      <div class="card" style="padding:18px">
+        <h2>Agende sua avaliação</h2>
+        <p class="lead">WhatsApp <a href="https://wa.me/5511994802149" target="_blank" rel="noopener">(11) 99480‑2149</a><br>
+        Endereço: Av. Nove de Julho 3229, conj. 1506 – Jardim Paulista, São Paulo<br>
+        Horários: Seg–Sex 08h–19h • Sáb 09h–12h</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+          <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <a class="btn outline" href="mailto:vitoriavolio@gmail.com">Enviar e‑mail</a>
         </div>
       </div>
-    </section>
-
-    <!-- TECNOLOGIA & CUIDADO -->
-    <section class="band">
-      <div class="wrap">
-        <h2>Tecnologia e Cuidado</h2>
-        <p>Microscopia operatória (até 40×), protocolos atuais e comunicação clara em todas as etapas.</p>
-        <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1598257006626-48b0c252070d?q=80&w=800&auto=format&fit=crop" alt="Microscópio operatório"/>
-          <img src="https://images.unsplash.com/photo-1586162544471-65f9d123140f?q=80&w=800&auto=format&fit=crop" alt="Raio-X digital"/>
-          <img src="https://images.unsplash.com/photo-1588774066893-85ae1295b3f8?q=80&w=800&auto=format&fit=crop" alt="Atendimento humanizado"/>
-          <img src="https://images.unsplash.com/photo-1612250905672-4c3b4a3a1d3c?q=80&w=800&auto=format&fit=crop" alt="Clínica moderna"/>
-        </div>
+      <div>
+        <iframe class="map" title="Mapa – MV Endodontia" src="https://www.google.com/maps?q=Av.%20Nove%20de%20Julho%203229%20-%20Jardim%20Paulista%20-%20S%C3%A3o%20Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- AVALIAÇÕES -->
-    <section>
-      <div class="wrap">
-        <h2>Avaliações</h2>
-        <div class="card" style="margin-top:12px">
-          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-            <strong style="font-size:1.1rem">Google</strong>
-            <span class="pill">★★★★★ 4,9 • 120+ avaliações</span>
-          </div>
-          <div class="divider"></div>
-          <p><strong>“Atendimento excepcional”</strong> — clínica moderna, explicação clara e resolução rápida da dor. <em>(Ana S.)</em></p>
-          <div class="divider"></div>
-          <p><strong>“Sem dor e com segurança”</strong> — recomendo, equipe atenciosa. <em>(Rodrigo M.)</em></p>
-          <div class="divider"></div>
-          <p><strong>“Confiança do início ao fim”</strong> — ambiente impecável e resultado duradouro. <em>(Larissa P.)</em></p>
-          <div style="margin-top:12px"><a class="btn" href="https://wa.me/5511994802149?text=Quero%20agendar%20ap%C3%B3s%20ver%20as%20avalia%C3%A7%C3%B5es">FALE COM A ESPECIALISTA</a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DIFERENCIAIS -->
-    <section class="band">
-      <div class="wrap">
-        <div class="features">
-          <div class="feat">Atendimento de<br>Urgência</div>
-          <div class="feat">Pagamento Facilitado<br>12x s/ juros</div>
-          <div class="feat">Local seguro com<br>Estacionamento</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO / ENDEREÇO / HORÁRIO -->
-    <section id="contato">
-      <div class="wrap contact-grid">
-        <div>
-          <h2>Endereço</h2>
-          <p>Av. Nove de Julho, 3229 – Conj. 1506 – Jardim Paulista – São Paulo – SP</p>
-          <p style="margin-top:6px">Próximo à Av. Paulista e Hospital Sírio-Libanês</p>
-          <h2 style="margin-top:18px">Horário de funcionamento</h2>
-          <p>Segunda a Sexta – 8h às 19h</p>
-          <p>Sábado – 9h às 12h</p>
-        </div>
-        <div>
-          <h2>Contato</h2>
-          <p><strong>WhatsApp:</strong> (11) 99480‑2149</p>
-          <p><strong>Telefone:</strong> (11) 99480‑2149</p>
-          <p><strong>E‑mail:</strong> vitoriavolio@gmail.com</p>
-          <div class="divider"></div>
-          <h3>Como chegar</h3>
-          <iframe title="Mapa – Av. Nove de Julho 3229" width="100%" height="280" style="border:0;border-radius:12px" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Avenida%20Nove%20de%20Julho%203229%20-%20Jardim%20Paulista%20-%20S%C3%A3o%20Paulo&output=embed"></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Sticky CTA (mobile) -->
-  <div class="sticky-cta">
-    <div class="wrap"><a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%2C%20quero%20agendar">FALE COM A ESPECIALISTA</a></div>
-  </div>
-
-  <footer style="border-top:1px solid var(--line);padding:22px 0 80px;color:var(--muted)">
-    <div class="wrap">© <span id="y"></span> Dra. Maria Vitória Bello Avolio — Endodontia Microscópica</div>
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="year"></span> MV Endodontia • CRO‑SP • Todos os direitos reservados.</div>
+      <div style="color:var(--muted)">Site por MV • Endo com alma & técnica</div>
+    </div>
   </footer>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
