@@ -1,173 +1,423 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dra. Maria Vitória Bello Avolio | Endodontia em São Paulo</title>
-  <meta name="description" content="Endodontia especializada em São Paulo com microscópio operatório. Atendimento particular, humanizado e também aos sábados. Agende sua avaliação pela WhatsApp." />
+  <title>MV Endodontia – Dra. Maria Vitória Bello Avolio | Endodontista em São Paulo</title>
+  <meta name="description" content="Endodontia moderna com microscópio operatório, atendimento acolhedor e resultados previsíveis. Consultório no Jardim Paulista. Agende pelo WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eef8f7',
+              100: '#d7eeeb',
+              200: '#b0ddd6',
+              300: '#85c9bf',
+              400: '#5db3a7',
+              500: '#3a9f93',   // verde sofisticado
+              600: '#2e8077',
+              700: '#25665f',
+              800: '#1e504b',
+              900: '#153935'
+            },
+            ink: '#0f172a'
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          boxShadow: { soft: '0 10px 30px rgba(2, 6, 23, 0.06)' }
+        }
+      }
+    }
+  </script>
   <style>
-    :root{
-      --bg:#ffffff;
-      --surface:#ffffff;
-      --beige:#E8DCC8;   /* bege claro principal */
-      --beige-2:#D8C6A4; /* bege médio para hovers/bordas */
-      --text:#1F2937;    /* slate-800 */
-      --muted:#6B7280;   /* slate-500 */
-      --line:#EFE7DB;    /* divisórias bege muito claro */
-      --radius:16px;
-      --shadow:0 2px 12px rgba(0,0,0,.04);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block;border-radius:12px}
-    .container{width:100%;max-width:1080px;margin:0 auto;padding:0 24px}
-
-    /* Botões minimalistas em bege */
-    .btn{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--beige);color:#3A3A3A;font-weight:600;border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .15s ease, background .2s ease}
-    .btn:hover{background:var(--beige-2);transform:translateY(-1px)}
-    .btn.outline{background:transparent;border:1.5px solid var(--beige);color:#3A3A3A}
-
-    /* Header branco sem efeito */
-    header{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
-    .brand{font-weight:800;letter-spacing:.2px;color:#5A4A36}
-    .navlinks{display:flex;gap:14px;align-items:center}
-    .navlinks a{padding:8px 10px;border-radius:10px;color:#4B5563}
-    .navlinks a:hover{background:#FAF7F1;color:#2B2B2B}
-
-    /* Hero 100% branco, sem blocos coloridos */
-    .hero{padding:72px 0 48px;background:#fff}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:28px}
-    .h1{font-size:40px;line-height:1.15;margin:0 0 12px;font-weight:700;color:#2B2B2B}
-    .h1 strong{color:#7A6447}
-    .lead{color:#60646B;font-size:18px;line-height:1.55}
-    .hero-cta{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
-    .meta{display:flex;gap:10px;margin-top:16px;color:#8A8F97;font-size:14px;flex-wrap:wrap}
-    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero-card{padding:14px}
-
-    /* Separadores sutis bege entre seções */
-    section{border-top:1px solid var(--line)}
-
-    /* Serviços clean */
-    .services{padding:56px 0}
-    .services h2{font-size:26px;text-align:center;margin:0 0 22px;color:#2B2B2B}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .service{padding:18px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transition:transform .15s ease}
-    .service:hover{transform:translateY(-2px)}
-    .service h3{margin:8px 0 6px;color:#5A4A36}
-    .service p{color:#4B5563;font-size:15px}
-
-    /* Depoimentos em fundo quase branco/bege */
-    .testimonials{padding:56px 0;background:#FFFCF7}
-    .testimonials h2{text-align:center;margin:0 0 22px;color:#2B2B2B}
-    .ts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .ts{padding:18px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
-    .ts p{color:#4B5563;font-size:15px}
-
-    /* Contato */
-    .contact{padding:56px 0;background:#fff}
-    .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:start}
-    .contact h2{color:#2B2B2B;margin:0 0 6px}
-    .contact .map{min-height:300px;border:none;border-radius:12px;filter:grayscale(.05)}
-
-    footer{padding:22px 0;color:#6B7280;border-top:1px solid var(--line);text-align:center;background:#fff}
-
-    @media (max-width: 900px){
-      .hero-grid,.contact-grid{grid-template-columns:1fr}
-      .grid3{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 600px){
-      .grid3{grid-template-columns:1fr}
-      .h1{font-size:32px}
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-<body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#top">MV Endodontia</a>
-      <nav class="navlinks">
-        <a href="#servicos">Serviços</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato">Contato</a>
-        <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Agendar</a>
-      </nav>
+<body class="bg-white text-ink font-sans">
+
+  <!-- Top Bar -->
+  <div class="bg-ink text-white text-sm hidden md:block">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4">
+      <p>Avenida Nove de Julho 3229, cj. 1506 – Jardim Paulista, São Paulo</p>
+      <p>Seg–Sex 08h–19h · Sáb 09h–12h · <a class="underline hover:no-underline" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener">(11) 99480‑2149</a></p>
     </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-xl bg-primary-600 text-white grid place-content-center font-semibold">MV</div>
+          <div class="leading-tight">
+            <p class="font-semibold">MV Endodontia</p>
+            <p class="text-xs text-slate-500">Dra. Maria Vitória Bello Avolio</p>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#diferenciais" class="hover:text-primary-700">Diferenciais</a>
+          <a href="#servicos" class="hover:text-primary-700">Serviços</a>
+          <a href="#sobre" class="hover:text-primary-700">Sobre</a>
+          <a href="#depoimentos" class="hover:text-primary-700">Depoimentos</a>
+          <a href="#contato" class="hover:text-primary-700">Contato</a>
+          <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl shadow-soft">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4a1 1 0 0 0-1 1v16l4-4h13a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"/></svg>
+            Agendar WhatsApp
+          </a>
+        </div>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <div class="grid gap-2 text-sm">
+          <a href="#diferenciais" class="px-2 py-2 rounded-lg hover:bg-slate-100">Diferenciais</a>
+          <a href="#servicos" class="px-2 py-2 rounded-lg hover:bg-slate-100">Serviços</a>
+          <a href="#sobre" class="px-2 py-2 rounded-lg hover:bg-slate-100">Sobre</a>
+          <a href="#depoimentos" class="px-2 py-2 rounded-lg hover:bg-slate-100">Depoimentos</a>
+          <a href="#contato" class="px-2 py-2 rounded-lg hover:bg-slate-100">Contato</a>
+          <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="px-2 py-2 rounded-lg bg-primary-600 text-white">Agendar WhatsApp</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <section class="hero" id="top">
-    <div class="container hero-grid">
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-50/70 via-white to-white"></div>
+    <div class="max-w-7xl mx-auto px-4 pt-14 pb-24 relative">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-flex items-center text-primary-700 bg-primary-100/60 border border-primary-200 px-3 py-1 rounded-full text-xs font-medium">Endodontia com alma e técnica</span>
+          <h1 class="mt-5 text-4xl md:text-5xl font-semibold leading-tight">
+            Tratamento de canal com <span class="text-primary-600">precisão</span>, conforto e previsibilidade
+          </h1>
+          <p class="mt-5 text-slate-600 max-w-xl">Atendimento humano, tecnologia de ponta e planejamento centrado em você. Microscópio operatório, anestesia cuidadosa e comunicação transparente em cada etapa.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+              Agendar avaliação
+            </a>
+            <a href="#servicos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:bg-slate-50">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
+              Ver serviços
+            </a>
+          </div>
+          <div class="mt-8 grid grid-cols-3 sm:grid-cols-6 gap-6 text-center text-sm">
+            <div><p class="text-2xl font-semibold">5+</p><p class="text-slate-500">anos de prática</p></div>
+            <div><p class="text-2xl font-semibold">Microscópio</p><p class="text-slate-500">operatório</p></div>
+            <div><p class="text-2xl font-semibold">Alta</p><p class="text-slate-500">previsibilidade</p></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-3xl bg-gradient-to-br from-slate-100 to-primary-50 shadow-soft border border-slate-200 overflow-hidden">
+            <!-- Espaço para foto/ilustração profissional -->
+            <div class="absolute inset-0 grid place-content-center text-center p-8">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-24 h-24 mx-auto opacity-60"><path fill="currentColor" d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.33 0-8 2.17-8 5v1h16v-1c0-2.83-3.67-5-8-5Z"/></svg>
+                <p class="mt-4 text-slate-500 max-w-sm">Substitua por sua foto profissional em alta qualidade para aumentar confiança e conversão.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais -->
+  <section id="diferenciais" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="md:flex items-end justify-between gap-6">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold">Diferenciais que fazem você se sentir em boas mãos</h2>
+          <p class="mt-3 text-slate-600 max-w-2xl">Do primeiro contato ao pós‑operatório, cada detalhe foi pensado para o seu conforto, segurança e tranquilidade.</p>
+        </div>
+        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="mt-6 md:mt-0 inline-flex items-center gap-2 text-primary-700 hover:text-primary-800">Agendar agora →</a>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
+          <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Microscópio operatório</h3>
+          <p class="mt-2 text-slate-600">Ampliação e iluminação que elevam a precisão em localização de canais, instrumentação e obturação.</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
+          <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-9 9v7h6v-7H5a7 7 0 0 1 14 0h-4v7h6v-7a9 9 0 0 0-9-9Z"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Anestesia gentil</h3>
+          <p class="mt-2 text-slate-600">Técnicas e soluções anestésicas pensadas para conforto, inclusive em casos de pulpite.</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
+          <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h12v2H6zm0 6h12v2H6zm0 6h12v2H6z"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Comunicação clara</h3>
+          <p class="mt-2 text-slate-600">Explicações simples, orçamento transparente e orientações de cuidados fáceis de seguir.</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
+          <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 10-5Zm0 7 10-5v13l-10 5L2 17V4Z"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Atendimento aos sábados</h3>
+          <p class="mt-2 text-slate-600">Flexibilidade de agenda para urgências e para quem tem rotina intensa.</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
+          <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h10l1 2h4v2h-2l-2 10H6L4 8H2V6h4Zm3 10h4v2h-4Z"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Biossegurança rigorosa</h3>
+          <p class="mt-2 text-slate-600">Protocolos atualizados de esterilização e controle de infecção em cada procedimento.</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
+          <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21a9 9 0 1 1 9-9 9.01 9.01 0 0 1-9 9Zm-1-5 8-8-1.41-1.41L11 13.17 6.41 8.59 5 10Z"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Resultados previsíveis</h3>
+          <p class="mt-2 text-slate-600">Raciocínio clínico aplicado, sistemas mecanizados e obturação de excelência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-semibold">Serviços</h2>
+        <p class="mt-3 text-slate-600">Endodontia moderna, focada em conforto, precisão e custo‑benefício.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition-shadow">
+          <h3 class="font-semibold text-lg">Tratamento de canal</h3>
+          <p class="mt-2 text-slate-600">Diagnóstico completo, instrumentação mecanizada, irrigação ativa e obturação de alta qualidade.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition-shadow">
+          <h3 class="font-semibold text-lg">Retratamento endodôntico</h3>
+          <p class="mt-2 text-slate-600">Correção de tratamentos anteriores com abordagem minimamente invasiva e visão ampliada.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition-shadow">
+          <h3 class="font-semibold text-lg">Urgência e dor</h3>
+          <p class="mt-2 text-slate-600">Alívio seguro e rápido da dor, com priorização de anestesia efetiva e orientação pós‑operatória.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition-shadow">
+          <h3 class="font-semibold text-lg">Apoio a clínicos</h3>
+          <p class="mt-2 text-slate-600">Parcerias transparentes para casos de canal, com devolutiva completa ao dentista referenciador.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition-shadow">
+          <h3 class="font-semibold text-lg">Avaliação online (15 min)</h3>
+          <p class="mt-2 text-slate-600">Pré‑triagem gratuita para entender o caso e orientar exames antes da consulta presencial.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-6 hover:shadow-soft transition-shadow">
+          <h3 class="font-semibold text-lg">Pós‑operatório atento</h3>
+          <p class="mt-2 text-slate-600">Acompanhamento próximo, com canais de comunicação abertos para sua segurança.</p>
+        </article>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-ink hover:bg-slate-900 text-white px-6 py-3 rounded-xl shadow-soft">Quero agendar minha avaliação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="order-2 lg:order-1">
+        <h2 class="text-3xl md:text-4xl font-semibold">Sobre a doutora</h2>
+        <p class="mt-4 text-slate-700 leading-relaxed">Sou a <strong>Dra. Maria Vitória Bello Avolio</strong>, endodontista em São Paulo. Meu propósito é oferecer uma experiência acolhedora e técnica, unindo comunicação clara, planejamento previsível e tecnologia como o <em>microscópio operatório</em>. Cada caso é pensado para equilibrar conforto, eficiência e custo‑benefício, respeitando sua história e suas prioridades.</p>
+        <ul class="mt-6 space-y-3 text-slate-700">
+          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> 5+ anos de prática clínica com foco em Endodontia</li>
+          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Formação contínua e especialização com visão prática</li>
+          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Atendimento humano, transparente e resolutivo</li>
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft">Agendar pelo WhatsApp</a>
+          <a href="#faq" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:bg-white">Dúvidas frequentes</a>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="aspect-[4/5] rounded-3xl bg-white border border-slate-200 shadow-soft overflow-hidden">
+          <div class="absolute inset-0 grid place-content-center text-center p-8">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-24 h-24 mx-auto opacity-60"><path fill="currentColor" d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.33 0-8 2.17-8 5v1h16v-1c0-2.83-3.67-5-8-5Z"/></svg>
+              <p class="mt-4 text-slate-500 max-w-sm">Coloque aqui sua foto de jaleco (fundo claro). Isso aumenta muito a confiança.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-semibold">O que os pacientes dizem</h2>
+        <p class="mt-3 text-slate-600">Depoimentos reais constroem confiança. Você pode iniciar com placeholders e substituir depois.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="border border-slate-200 rounded-2xl p-6 shadow-soft bg-white">
+          <blockquote class="text-slate-700">“Eu tinha muito medo de canal e saí aliviada. Anestesia ótima e tudo muito bem explicado.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Paciente A.</figcaption>
+        </figure>
+        <figure class="border border-slate-200 rounded-2xl p-6 shadow-soft bg-white">
+          <blockquote class="text-slate-700">“Atendimento atencioso, tecnologia moderna e respeito ao meu orçamento. Recomendo muito.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Paciente B.</figcaption>
+        </figure>
+        <figure class="border border-slate-200 rounded-2xl p-6 shadow-soft bg-white">
+          <blockquote class="text-slate-700">“Canal com microscópio fez toda a diferença. Zero dor e resultado excelente.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Paciente C.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-semibold">Dúvidas frequentes</h2>
+        <p class="mt-3 text-slate-600">Respostas rápidas para decisões mais seguras.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <details class="group border border-slate-200 rounded-2xl p-6 bg-white">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">Tratamento de canal dói?
+            <span class="ml-6 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">Com anestesia adequada e técnicas modernas, o procedimento é confortável. O objetivo é justamente aliviar a dor.</p>
+        </details>
+        <details class="group border border-slate-200 rounded-2xl p-6 bg-white">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">Quando devo procurar a endodontista?
+            <span class="ml-6 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">Dor espontânea, sensibilidade prolongada, inchaço, escurecimento do dente ou indicação do seu dentista clínico.</p>
+        </details>
+        <details class="group border border-slate-200 rounded-2xl p-6 bg-white">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">Quanto tempo leva?
+            <span class="ml-6 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">Varia conforme o caso. Em muitos cenários resolvemos em uma ou duas sessões, sempre com orientação clara.</p>
+        </details>
+        <details class="group border border-slate-200 rounded-2xl p-6 bg-white">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">Vocês atendem aos sábados?
+            <span class="ml-6 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">Sim, com horários reservados para urgências e pacientes com agenda limitada durante a semana.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold">Agende sua avaliação</h2>
+          <p class="mt-3 text-slate-700">Fale direto pelo WhatsApp ou veja o mapa para chegar ao consultório.</p>
+          <div class="mt-6 space-y-3">
+            <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+              Chamar no WhatsApp
+            </a>
+            <div class="text-slate-700">
+              <p class="font-medium">Endereço</p>
+              <p>Avenida Nove de Julho 3229, conjunto 1506, Jardim Paulista – São Paulo</p>
+              <p class="mt-2 font-medium">Horários</p>
+              <p>Segunda a sexta: 08h–19h · Sábado: 09h–12h</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200 shadow-soft">
+            <iframe title="Mapa – MV Endodontia" width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Avenida%20Nove%20de%20Julho%203229%2C%20Jardim%20Paulista%2C%20São%20Paulo&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
       <div>
-        <h1 class="h1">Tratamentos endodônticos com <strong>precisão e acolhimento</strong>.</h1>
-        <p class="lead">Atendimento particular e humanizado, com microscópio operatório e técnicas modernas para preservar o seu dente e o seu conforto.</p>
-        <div class="hero-cta">
-          <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Agendar avaliação</a>
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-primary-600 text-white grid place-content-center font-semibold">MV</div>
+          <span class="font-medium">MV Endodontia</span>
         </div>
-        <div class="meta">
-          <span>Av. Nove de Julho 3229, cj. 1506 – Jardim Paulista</span>
-          <span>Seg–Sex 08h–19h • Sáb 09h–12h</span>
-        </div>
-      </div>
-      <div class="card hero-card">
-        <img src="hero.jpg" alt="Consultório da Dra. Maria Vitória com microscópio operatório" />
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="servicos">
-    <div class="container">
-      <h2>Serviços</h2>
-      <div class="grid3">
-        <div class="service">
-          <h3>Tratamento de Canal</h3>
-          <p>Resolução de dores e infecções com tecnologia e segurança, priorizando a preservação do seu dente natural.</p>
-        </div>
-        <div class="service">
-          <h3>Clareamento Interno</h3>
-          <p>Tratamento para dentes escurecidos após trauma ou canal, devolvendo a estética e a harmonia do sorriso.</p>
-        </div>
-        <div class="service">
-          <h3>Retratamento Endodôntico</h3>
-          <p>Correção de canais previamente tratados, utilizando microscópio e técnicas atualizadas para o melhor resultado.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials" id="depoimentos">
-    <div class="container">
-      <h2>Depoimentos</h2>
-      <div class="ts-grid">
-        <div class="ts"><p>“Atendimento impecável! A Dra. Maria Vitória me explicou tudo e me senti super segura.”</p><small>– Paciente A.</small></div>
-        <div class="ts"><p>“Fiz o canal sem dor e com muito cuidado. O consultório é lindo e acolhedor.”</p><small>– Paciente B.</small></div>
-        <div class="ts"><p>“Excelente experiência! Recomendo para quem busca profissionalismo e gentileza.”</p><small>– Paciente C.</small></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contato">
-    <div class="container contact-grid">
-      <div class="card" style="padding:24px">
-        <h2>Agende sua avaliação</h2>
-        <p>WhatsApp <a href="https://wa.me/5511994802149" target="_blank">(11) 99480‑2149</a><br>
-        Endereço: Av. Nove de Julho 3229, conj. 1506 – Jardim Paulista, São Paulo<br>
-        Horários: Seg–Sex 08h–19h • Sáb 09h–12h</p>
-        <a class="btn" href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Chamar no WhatsApp</a>
+        <p class="mt-3 text-slate-600">Endodontia com planejamento, tecnologia e acolhimento no Jardim Paulista.</p>
       </div>
       <div>
-        <iframe class="map" title="Mapa – MV Endodontia" src="https://www.google.com/maps?q=Av.%20Nove%20de%20Julho%203229%20-%20Jardim%20Paulista%20-%20S%C3%A3o%20Paulo&output=embed" loading="lazy"></iframe>
+        <p class="font-medium">Contato</p>
+        <ul class="mt-3 space-y-2 text-slate-600">
+          <li><a class="hover:text-primary-700" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener">WhatsApp: (11) 99480‑2149</a></li>
+          <li>Endereço: Av. Nove de Julho 3229, cj. 1506 – São Paulo</li>
+          <li>Horários: Seg–Sex 08h–19h · Sáb 09h–12h</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-medium">Links</p>
+        <ul class="mt-3 space-y-2 text-slate-600">
+          <li><a class="hover:text-primary-700" href="#diferenciais">Diferenciais</a></li>
+          <li><a class="hover:text-primary-700" href="#servicos">Serviços</a></li>
+          <li><a class="hover:text-primary-700" href="#depoimentos">Depoimentos</a></li>
+          <li><a class="hover:text-primary-700" href="#contato">Contato</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <footer>
-    © <span id="year"></span> MV Endodontia • CRO‑SP • Todos os direitos reservados.
+    <div class="text-center text-xs text-slate-500 pb-8">© <span id="year"></span> MV Endodontia. Todos os direitos reservados.</div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "MV Endodontia – Dra. Maria Vitória Bello Avolio",
+    "image": "",
+    "telephone": "+55 11 99480-2149",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Nove de Julho 3229, conjunto 1506",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHours": [
+      "Mo-Fr 08:00-19:00",
+      "Sa 09:00-12:00"
+    ],
+    "url": "https://www.mvendodontia.com.br/",
+    "medicalSpecialty": "Endodontics"
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile nav
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'))
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear()
+  </script>
 </body>
 </html>
