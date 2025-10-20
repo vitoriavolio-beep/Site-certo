@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MV Endodontia – Dra. Maria Vitória Bello Avolio | Endodontista em São Paulo</title>
   <meta name="description" content="Endodontia moderna com microscópio operatório, atendimento acolhedor e resultados previsíveis. Consultório no Jardim Paulista. Agende pelo WhatsApp." />
+
+  <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,7 +22,7 @@
               200: '#f0e8dc',
               300: '#e6d8c3',
               400: '#d8c4a5',
-              500: '#c6ac83', // bege sofisticado
+              500: '#c6ac83',
               600: '#b19470',
               700: '#977e5d',
               800: '#7d684b',
@@ -30,7 +32,7 @@
             offwhite: '#fcfaf6'
           },
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          boxShadow: { soft: '0 10px 30px rgba(0, 0, 0, 0.06)' }
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.06)' }
         }
       }
     }
@@ -79,16 +81,11 @@
     </nav>
   </header>
 
-  <!-- Hero (foto à esquerda, textos à direita, sem tagline) -->
+  <!-- Hero (foto à direita, sem tagline) -->
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-offwhite to-offwhite"></div>
     <div class="max-w-7xl mx-auto px-4 pt-14 pb-24 relative">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div class="relative">
-          <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-slate-200 shadow-soft bg-white">
-            <img src="1.jpeg" alt="Foto da Dra. Maria Vitória Bello Avolio" class="w-full h-full object-cover" />
-          </div>
-        </div>
         <div>
           <h1 class="mt-0 text-4xl md:text-5xl font-semibold leading-tight">Tratamento de canal com <span class="text-primary-600">precisão</span>, conforto e previsibilidade</h1>
           <p class="mt-5 text-slate-700 max-w-xl">Atendimento humano, tecnologia de ponta e planejamento centrado em você. Microscópio operatório, anestesia cuidadosa e comunicação transparente em cada etapa.</p>
@@ -100,6 +97,11 @@
             <div><p class="text-2xl font-semibold">5+</p><p class="text-slate-500">anos de prática</p></div>
             <div><p class="text-2xl font-semibold">Microscópio</p><p class="text-slate-500">operatório</p></div>
             <div><p class="text-2xl font-semibold">Alta</p><p class="text-slate-500">previsibilidade</p></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-slate-200 shadow-soft bg-white">
+            <img src="1.jpeg" alt="Foto da Dra. Maria Vitória Bello Avolio" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
