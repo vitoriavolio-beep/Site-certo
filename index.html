@@ -46,16 +46,12 @@
 </head>
 <body class="bg-offwhite text-ink font-sans">
 
-  <!-- Header (sem top bar) -->
+  <!-- Header com logo (LOGO.jpeg) -->
   <header class="sticky top-0 z-40 bg-offwhite/90 backdrop-blur border-b border-primary-100">
     <nav class="max-w-7xl mx-auto px-4">
       <div class="flex items-center justify-between h-16">
-        <a href="#home" class="flex items-center gap-2">
-          <div class="w-9 h-9 rounded-xl bg-primary-600 text-white grid place-content-center font-semibold">MV</div>
-          <div class="leading-tight">
-            <p class="font-semibold">MV Endodontia</p>
-            <p class="text-xs text-slate-500">Dra. Maria Vitória Bello Avolio</p>
-          </div>
+        <a href="#home" class="flex items-center" aria-label="Ir para início">
+          <img src="LOGO.jpeg" alt="Logo MV Endodontia" class="h-12 w-auto" />
         </a>
         <div class="hidden md:flex items-center gap-6 text-sm">
           <a href="#servicos" class="hover:text-primary-700">Serviços</a>
@@ -86,7 +82,7 @@
     </nav>
   </header>
 
-  <!-- Hero (foto à direita, sem tagline, sem textos laterais dos números) -->
+  <!-- Hero (foto à direita, sem tagline; métrica única) -->
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-offwhite to-offwhite"></div>
     <div class="max-w-7xl mx-auto px-4 pt-14 pb-24 relative">
@@ -98,7 +94,6 @@
             <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft">Agendar avaliação</a>
             <a href="#servicos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-primary-300 hover:bg-primary-50">Ver serviços</a>
           </div>
-          <!-- Métrica única, sem texto lateral -->
           <div class="mt-8 inline-flex items-center gap-3 bg-white border border-primary-100 rounded-full px-4 py-2 shadow-soft">
             <span class="text-xl font-semibold">5+ anos de prática</span>
           </div>
@@ -112,14 +107,13 @@
     </div>
   </section>
 
-  <!-- Serviços (vem antes) -->
+  <!-- Serviços (primeiro) -->
   <section id="servicos" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto reveal">
         <h2 class="text-3xl md:text-4xl font-semibold">Serviços</h2>
         <p class="mt-3 text-slate-600">Endodontia moderna, focada em conforto, precisão e custo‑benefício.</p>
       </div>
-
       <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="border border-primary-100 bg-white rounded-2xl p-6 hover:shadow-soft transition-shadow reveal">
           <h3 class="font-semibold text-lg">Consulta diagnóstica</h3>
@@ -146,14 +140,13 @@
           <p class="mt-2 text-slate-600">Abordagens cirúrgicas quando indicadas para preservar o dente.</p>
         </article>
       </div>
-
       <div class="mt-12 text-center reveal">
         <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-ink hover:bg-slate-900 text-white px-6 py-3 rounded-xl shadow-soft">Quero agendar minha avaliação</a>
       </div>
     </div>
   </section>
 
-  <!-- Diferenciais (vem depois) -->
+  <!-- Diferenciais -->
   <section id="diferenciais" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="md:flex items-end justify-between gap-6 reveal">
@@ -249,7 +242,7 @@
     </div>
   </section>
 
-  <!-- Pré-avaliação online (agora após Diferenciais e Feedbacks) -->
+  <!-- Pré-avaliação online (após Diferenciais e Feedbacks) -->
   <section id="pre-avaliacao" class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-semibold reveal">Pré‑avaliação online (15 min)</h2>
@@ -291,7 +284,7 @@
     </div>
   </section>
 
-  <!-- FAQ (continua por último) -->
+  <!-- FAQ (por último) -->
   <section id="faq" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto reveal">
@@ -358,7 +351,7 @@
     <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
       <div class="reveal">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-lg bg-primary-600 text-white grid place-content-center font-semibold">MV</div>
+          <img src="LOGO.jpeg" alt="Logo MV Endodontia" class="h-8 w-auto rounded" />
           <span class="font-medium">MV Endodontia</span>
         </div>
         <p class="mt-3 text-slate-600">Endodontia com planejamento, tecnologia e acolhimento no Jardim Paulista.</p>
