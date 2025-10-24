@@ -46,56 +46,29 @@
 </head>
 <body class="bg-offwhite text-ink font-sans">
 
-  <!-- Header com logo (LOGO.jpeg) -->
+  <!-- Header minimalista: só logo (esquerda) e botão de agendar (direita) -->
   <header class="sticky top-0 z-40 bg-offwhite/90 backdrop-blur border-b border-primary-100">
     <nav class="max-w-7xl mx-auto px-4">
       <div class="flex items-center justify-between h-16">
         <a href="#home" class="flex items-center" aria-label="Ir para início">
           <img src="LOGO.jpeg" alt="Logo MV Endodontia" class="h-12 w-auto" />
         </a>
-        <div class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#servicos" class="hover:text-primary-700">Serviços</a>
-          <a href="#diferenciais" class="hover:text-primary-700">Diferenciais</a>
-          <a href="#sobre" class="hover:text-primary-700">Sobre</a>
-          <a href="#feedbacks" class="hover:text-primary-700">Feedbacks</a>
-          <a href="#pre-avaliacao" class="hover:text-primary-700">Pré‑avaliação</a>
-          <a href="#faq" class="hover:text-primary-700">FAQ</a>
-          <a href="#contato" class="hover:text-primary-700">Contato</a>
-          <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl shadow-soft">Agendar WhatsApp</a>
-        </div>
-        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-primary-50" aria-label="Abrir menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-      </div>
-      <div id="mobileMenu" class="md:hidden hidden pb-4">
-        <div class="grid gap-2 text-sm">
-          <a href="#servicos" class="px-2 py-2 rounded-lg hover:bg-primary-50">Serviços</a>
-          <a href="#diferenciais" class="px-2 py-2 rounded-lg hover:bg-primary-50">Diferenciais</a>
-          <a href="#sobre" class="px-2 py-2 rounded-lg hover:bg-primary-50">Sobre</a>
-          <a href="#feedbacks" class="px-2 py-2 rounded-lg hover:bg-primary-50">Feedbacks</a>
-          <a href="#pre-avaliacao" class="px-2 py-2 rounded-lg hover:bg-primary-50">Pré‑avaliação</a>
-          <a href="#faq" class="px-2 py-2 rounded-lg hover:bg-primary-50">FAQ</a>
-          <a href="#contato" class="px-2 py-2 rounded-lg hover:bg-primary-50">Contato</a>
-          <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="px-2 py-2 rounded-lg bg-primary-600 text-white">Agendar WhatsApp</a>
-        </div>
+        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl shadow-soft">Agendar WhatsApp</a>
       </div>
     </nav>
   </header>
 
-  <!-- Hero (foto à direita, sem tagline; métrica única) -->
+  <!-- Hero (foto à direita) -->
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-offwhite to-offwhite"></div>
     <div class="max-w-7xl mx-auto px-4 pt-14 pb-24 relative">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div class="reveal">
-          <h1 class="mt-0 text-4xl md:text-5xl font-semibold leading-tight">Tratamento de canal com <span class="text-primary-600">precisão</span>, conforto e previsibilidade</h1>
+          <h1 class="mt-0 text-4xl md:text-5xl font-semibold leading-tight">tratamento odontológico com <span class="text-primary-600">precisão</span>, conforto e previsibilidade</h1>
           <p class="mt-5 text-slate-700 max-w-xl">Atendimento humano, tecnologia de ponta e planejamento centrado em você. Microscópio operatório, anestesia cuidadosa e comunicação transparente em cada etapa.</p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft">Agendar avaliação</a>
             <a href="#servicos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-primary-300 hover:bg-primary-50">Ver serviços</a>
-          </div>
-          <div class="mt-8 inline-flex items-center gap-3 bg-white border border-primary-100 rounded-full px-4 py-2 shadow-soft">
-            <span class="text-xl font-semibold">5+ anos de prática</span>
           </div>
         </div>
         <div class="relative reveal">
@@ -107,7 +80,27 @@
     </div>
   </section>
 
-  <!-- Serviços (primeiro) -->
+  <!-- Bloco: Câmera intraoral (texto à esquerda, foto à direita) -->
+  <section id="intraoral" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-semibold">Câmera intraoral</h2>
+        <p class="mt-4 text-slate-700 leading-relaxed">Aqui você vê o seu tratamento <strong>em tempo real</strong>. Cada etapa é mostrada com clareza, para que você compreenda o que será feito e participe das decisões com segurança.</p>
+        <ul class="mt-6 space-y-3 text-slate-700">
+          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Transparência total no diagnóstico e no plano.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Explicações simples, sem termos complicados.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Mais tranquilidade para você durante o atendimento.</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-primary-100 shadow-soft bg-white">
+          <img src="camera.jpeg" alt="Demonstração com câmera intraoral" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
   <section id="servicos" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto reveal">
@@ -242,12 +235,12 @@
     </div>
   </section>
 
-  <!-- Pré-avaliação online (após Diferenciais e Feedbacks) -->
-  <section id="pre-avaliacao" class="py-16 bg-white">
+  <!-- Pré-agendamento (novo texto) -->
+  <section id="pre-agendamento" class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-semibold reveal">Pré‑avaliação online (15 min)</h2>
-      <p class="mt-3 text-slate-600 reveal">Preencha os dados abaixo e retornaremos para confirmar um horário rápido por chamada ou mensagem.</p>
-      <form id="formPre" class="mt-8 grid gap-5 reveal" onsubmit="return enviarPreAvaliacao(event)">
+      <h2 class="text-2xl md:text-3xl font-semibold reveal">Pré‑agendamento</h2>
+      <p class="mt-3 text-slate-600 reveal">Preencha os dados abaixo e retornaremos o contato para entender melhor a sua necessidade.</p>
+      <form id="formPre" class="mt-8 grid gap-5 reveal" onsubmit="return enviarPreAgendamento(event)">
         <div class="grid md:grid-cols-2 gap-5">
           <label class="block">
             <span class="text-sm font-medium">Nome completo</span>
@@ -370,7 +363,7 @@
           <li><a class="hover:text-primary-700" href="#servicos">Serviços</a></li>
           <li><a class="hover:text-primary-700" href="#diferenciais">Diferenciais</a></li>
           <li><a class="hover:text-primary-700" href="#feedbacks">Feedbacks</a></li>
-          <li><a class="hover:text-primary-700" href="#pre-avaliacao">Pré‑avaliação</a></li>
+          <li><a class="hover:text-primary-700" href="#pre-agendamento">Pré‑agendamento</a></li>
           <li><a class="hover:text-primary-700" href="#contato">Contato</a></li>
         </ul>
       </div>
@@ -380,7 +373,7 @@
 
   <!-- Botão flutuante WhatsApp -->
   <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+agendar+uma+avaliação+em+Endodontia" target="_blank" rel="noopener" aria-label="Abrir WhatsApp" class="fixed bottom-6 right-6 z-50 grid place-content-center w-14 h-14 rounded-full shadow-soft bg-green-500 hover:bg-green-600 text-white">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor"><path d="M20.5 3.5A11.5 11.5 0 0 0 2.2 16.7L1 23l6.5-1.7A11.5 11.5 0 1 0 20.5 3.5Zm-5.4 15.6c-1.9.1-3.7-.4-5.2-1.6-1.4-1.1-2.4-2.7-2.8-4.5-.3-1.2-.2-2.4.2-3.6.1-.3.4-.6.7-.6h.5c.2 0 .4.2.5.4l1 2c.1.2 0 .5-.1.7l-.3.4c-.2.4-.2.8 0 1.2.6 1.2 1.7 2.1 3 2.6.4.2.8.1 1.1-.2l.4-.4c.2-.2.5-.3.7-.2l2.1.7c.2.1.4.3.4.6v.5c0 .3-.2.6-.5.7-1 .3-2 .4-3 .3Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor"><path d="M20.5 3.5A11.5 11.5 0 0 0 2.2 16.7L1 23l6.5-1.7A11.5 11.5 0 1 0 20.5 3.5Zm-5.4 15.6c-1.9.1-3.7-.4-5.2-1.6-1.4-1.1-2.4-2.7-2.8-4.5-.3-1.2-.2-2.4 .2-3.6.1-.3.4-.6.7-.6h.5c.2 0 .4.2.5.4l1 2c.1.2 0 .5-.1.7l-.3.4c-.2.4-.2.8 0 1.2.6 1.2 1.7 2.1 3 2.6.4.2.8.1 1.1-.2l.4-.4c.2-.2.5-.3.7-.2l2.1.7c.2.1.4.3.4.6v.5c0 .3-.2.6-.5.7-1 .3-2 .4-3 .3Z"/></svg>
   </a>
 
   <!-- JSON-LD Schema -->
@@ -409,11 +402,6 @@
 
   <!-- Scripts -->
   <script>
-    // Mobile nav
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'))
-
     // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear()
 
@@ -423,8 +411,8 @@
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    // Pré-avaliação → abrir WhatsApp com mensagem predefinida
-    function enviarPreAvaliacao(ev){
+    // Pré-agendamento → abrir WhatsApp com mensagem predefinida
+    function enviarPreAgendamento(ev){
       ev.preventDefault();
       const f = ev.target;
       const nome = f.nome.value.trim();
@@ -433,12 +421,13 @@
       const rx = f.rx.value;
       const motivo = f.motivo.value.trim();
       if(!nome || !whats){ alert('Por favor, informe nome e WhatsApp.'); return false; }
-      const msg = `Olá, sou ${nome}.\nWhatsApp: ${whats}\nMelhor horário: ${horario}\nPossui RX: ${rx}\nMotivo: ${motivo || '-'}\nQuero agendar a pré-avaliação de 15 min.`;
+      const msg = `Olá, sou ${nome}.\nWhatsApp: ${whats}\nMelhor horário: ${horario}\nPossui RX: ${rx}\nMotivo: ${motivo || '-'}\nGostaria de fazer o pré-agendamento.`;
       const url = `https://wa.me/5511994802149?text=${encodeURIComponent(msg)}`;
       window.open(url, '_blank');
       return false;
     }
-    window.enviarPreAvaliacao = enviarPreAvaliacao;
+    window.enviarPreAgendamento = enviarPreAgendamento;
   </script>
 </body>
 </html>
+
