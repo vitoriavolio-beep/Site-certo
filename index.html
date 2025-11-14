@@ -24,23 +24,10 @@
       theme: {
         extend: {
           colors: {
-            primary: {
-              50: '#fdfbf8',
-              100: '#f9f5ef',
-              200: '#f0e8dc',
-              300: '#e6d8c3',
-              400: '#d8c4a5',
-              500: '#c6ac83',
-              600: '#b19470',
-              700: '#977e5d',
-              800: '#7d684b',
-              900: '#5f4f39'
-            },
-            ink: '#232323',
-            offwhite: '#fcfaf6',
-            success: '#16a34a'
+            primary: { 50: '#fdfbf8', 100: '#f9f5ef', 200: '#f0e8dc', 300: '#e6d8c3', 400: '#d8c4a5', 500: '#c6ac83', 600: '#b19470', 700: '#977e5d', 800: '#7d684b', 900: '#5f4f39' },
+            ink: '#232323', offwhite: '#fcfaf6', success: '#16a34a'
           },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
           boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.06)' }
         }
       }
@@ -48,18 +35,15 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity:1; transform: translateY(0); }
     .hover-lift { transition: transform .25s ease, box-shadow .25s ease; }
     .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.08); }
     .focus-ring:focus { outline: 2px solid rgba(177,148,112,.6); outline-offset: 2px; }
-    /* Feedbacks: mantém grid no desktop e vira carrossel no mobile */
-    .scroll-snap { scroll-snap-type: x mandatory; }
-    .snap-item { scroll-snap-align: start; }
-    .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-    /* Toast */
-    .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) scale(.98); background:#fff; border:1px solid #e7e1d6; padding:12px 16px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.08); opacity:0; pointer-events:none; transition:opacity .25s ease, transform .25s ease; }
-    .toast.show { opacity:1; pointer-events:auto; transform: translateX(-50%) scale(1); }
+    .scroll-snap { scroll-snap-type:x mandatory; }
+    .snap-item { scroll-snap-align:start; }
+    .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%) scale(.98); background:#fff; border:1px solid #e7e1d6; padding:12px 16px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.08); opacity:0; pointer-events:none; transition:opacity .25s ease, transform .25s ease; }
+    .toast.show { opacity:1; pointer-events:auto; transform:translateX(-50%) scale(1); }
   </style>
 </head>
 <body class="bg-offwhite text-ink font-sans">
@@ -93,26 +77,6 @@
           <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-slate-200 shadow-soft bg-white">
             <img src="1.jpeg" alt="Foto da Dra. Maria Vitória Bello Avolio" class="w-full h-full object-cover" loading="eager" />
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Câmera intraoral (texto à esquerda, foto à direita) -->
-  <section id="intraoral" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
-      <div class="reveal">
-        <h2 class="text-3xl md:text-4xl font-semibold">Câmera intraoral</h2>
-        <p class="mt-4 text-slate-700 leading-relaxed">Aqui você vê o seu tratamento <strong>em tempo real</strong>. Cada etapa é mostrada com clareza, para que você compreenda o que será feito e participe das decisões com segurança.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Transparência total no diagnóstico e no plano.</li>
-          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Explicações simples, sem termos complicados.</li>
-          <li class="flex items-start gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-primary-600"></span> Mais tranquilidade para você durante o atendimento.</li>
-        </ul>
-      </div>
-      <div class="reveal">
-        <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-primary-100 shadow-soft bg-white">
-          <img src="camera.jpeg" alt="Demonstração com câmera intraoral" class="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </div>
@@ -157,7 +121,7 @@
     </div>
   </section>
 
-  <!-- Diferenciais -->
+  <!-- Diferenciais (lista + carrossel de fotos substituíveis) -->
   <section id="diferenciais" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="md:flex items-end justify-between gap-6 reveal">
@@ -165,50 +129,89 @@
           <h2 class="text-3xl md:text-4xl font-semibold">Diferenciais</h2>
           <p class="mt-3 text-slate-600 max-w-2xl">Cada detalhe do atendimento foi pensado para conforto, segurança e tranquilidade.</p>
         </div>
-        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+ de+canal" target="_blank" rel="noopener" class="mt-6 md:mt-0 inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 focus-ring">Agendar agora →</a>
+        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="mt-6 md:mt-0 inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 focus-ring">Agendar agora →</a>
       </div>
+
+      <!-- Cards dos diferenciais (5 itens solicitados) -->
       <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-offwhite border border-primary-100 rounded-2xl p-6 shadow-soft reveal hover-lift">
           <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
           </div>
           <h3 class="mt-4 font-semibold text-lg">Microscópio operatório</h3>
-          <p class="mt-2 text-slate-600">Ampliação e iluminação que elevam a precisão em localização de canais, instrumentação e obturação.</p>
+          <p class="mt-2 text-slate-600">Ampliação e iluminação que elevam a precisão em todas as etapas.</p>
         </div>
         <div class="bg-offwhite border border-primary-100 rounded-2xl p-6 shadow-soft reveal hover-lift">
           <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-9 9v7h6v-7H5a7 7 0 0 1 14 0h-4v7h6v-7a9 9 0 0 0-9-9Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v2H3zm0 6h18v2H3zm0 6h18v2H3z"/></svg>
           </div>
-          <h3 class="mt-4 font-semibold text-lg">Anestesia gentil</h3>
-          <p class="mt-2 text-slate-600">Técnicas e soluções anestésicas pensadas para conforto, inclusive em casos de pulpite.</p>
+          <h3 class="mt-4 font-semibold text-lg">Câmera intraoral</h3>
+          <p class="mt-2 text-slate-600">Você acompanha o tratamento em tempo real com transparência.</p>
         </div>
         <div class="bg-offwhite border border-primary-100 rounded-2xl p-6 shadow-soft reveal hover-lift">
           <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h12v2H6zm0 6h12v2H6zm0 6h12v2H6z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7v10l10 5 10-5V7Z"/></svg>
           </div>
-          <h3 class="mt-4 font-semibold text-lg">Comunicação clara</h3>
-          <p class="mt-2 text-slate-600">Explicações simples, orçamento transparente e orientações de cuidados fáceis de seguir.</p>
+          <h3 class="mt-4 font-semibold text-lg">Localização de fácil acesso</h3>
+          <p class="mt-2 text-slate-600">Consultório no Jardim Paulista, com acesso simples e seguro.</p>
         </div>
         <div class="bg-offwhite border border-primary-100 rounded-2xl p-6 shadow-soft reveal hover-lift">
           <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 10-5Zm0 7 10-5v13l-10 5L2 17V4Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 1-10 10h2a8 8 0 1 0 8-8V2Zm-1 11h2v5h-2Zm0-6h2v2h-2Z"/></svg>
           </div>
-          <h3 class="mt-4 font-semibold text-lg">Atendimento aos sábados</h3>
-          <p class="mt-2 text-slate-600">Flexibilidade de agenda para urgências e para quem tem rotina intensa.</p>
+          <h3 class="mt-4 font-semibold text-lg">Atendimentos aos sábados</h3>
+          <p class="mt-2 text-slate-600">Flexibilidade para quem tem rotina intensa ou urgências.</p>
         </div>
         <div class="bg-offwhite border border-primary-100 rounded-2xl p-6 shadow-soft reveal hover-lift">
           <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h10l1 2h4v2h-2l-2 10H6L4 8H2V6h4Zm3 10h4v2h-4Z"/></svg>
           </div>
-          <h3 class="mt-4 font-semibold text-lg">Biossegurança rigorosa</h3>
-          <p class="mt-2 text-slate-600">Protocolos atualizados de esterilização e controle de infecção em cada procedimento.</p>
+          <h3 class="mt-4 font-semibold text-lg">Biossegurança</h3>
+          <p class="mt-2 text-slate-600">Protocolos rigorosos de esterilização e controle de infecção.</p>
         </div>
-        <div class="bg-offwhite border border-primary-100 rounded-2xl p-6 shadow-soft reveal hover-lift">
-          <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21a9 9 0 1 1 9-9 9.01 9.01 0 0 1-9 9Zm-1-5 8-8-1.41-1.41L11 13.17 6.41 8.59 5 10Z"/></svg>
+      </div>
+
+      <!-- Carrossel de fotos (placeholders para você trocar) -->
+      <div class="mt-14 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl font-semibold">Galeria de diferenciais</h3>
+          <div class="flex items-center gap-2">
+            <button id="prevBtn" class="w-9 h-9 rounded-lg border border-primary-200 hover:bg-primary-50 focus-ring" aria-label="Slide anterior">‹</button>
+            <button id="nextBtn" class="w-9 h-9 rounded-lg border border-primary-200 hover:bg-primary-50 focus-ring" aria-label="Próximo slide">›</button>
           </div>
-          <h3 class="mt-4 font-semibold text-lg">Resultados previsíveis</h3>
-          <p class="mt-2 text-slate-600">Raciocínio clínico aplicado, sistemas mecanizados e obturação de excelência.</p>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl border border-primary-100 shadow-soft">
+          <div id="carouselTrack" class="flex transition-transform duration-500 ease-out">
+            <!-- Substitua os src pelos seus arquivos reais -->
+            <figure class="min-w-full relative">
+              <img src="dif-microscopio.jpg" alt="Microscópio operatório" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Microscópio operatório</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-camera.jpg" alt="Câmera intraoral" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Câmera intraoral</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-localizacao.jpg" alt="Localização de fácil acesso" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Localização de fácil acesso</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-sabado.jpg" alt="Atendimentos aos sábados" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Atendimentos aos sábados</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-biosseguranca.jpg" alt="Biossegurança" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Biossegurança</figcaption>
+            </figure>
+          </div>
+          <!-- Dots -->
+          <div class="absolute bottom-3 right-4 flex gap-2 bg-offwhite/80 rounded-full px-2 py-1">
+            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-300" aria-label="Ir ao slide 1"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 2"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 3"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 4"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 5"></button>
+          </div>
         </div>
       </div>
     </div>
@@ -229,7 +232,7 @@
     </div>
   </section>
 
-  <!-- Feedbacks (grid no desktop / carrossel no mobile) -->
+  <!-- Feedbacks -->
   <section id="feedbacks" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto reveal">
@@ -396,7 +399,7 @@
 
   <!-- Botão flutuante WhatsApp -->
   <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" aria-label="Abrir WhatsApp" class="fixed bottom-6 right-6 z-50 grid place-content-center w-14 h-14 rounded-full shadow-soft bg-green-500 hover:bg-green-600 text-white focus-ring">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 0 0 2.2 16.7L1 23l6.5-1.7A11.5 11.5 0 1 0 20.5 3.5Zm-5.4 15.6c-1.9.1-3.7-.4-5.2-1.6-1.4-1.1-2.4-2.7-2.8-4.5-.3-1.2-.2-2.4.2-3.6.1-.3.4-.6.7-.6h.5c.2 0 .4.2 .5.4l1 2c.1.2 0 .5-.1.7l-.3.4c-.2.4-.2.8 0 1.2.6 1.2 1.7 2.1 3 2.6.4.2.8.1 1.1-.2l.4-.4c.2-.2.5-.3.7-.2l2.1.7c.2.1.4.3.4.6v.5c0 .3-.2.6-.5.7-1 .3-2 .4-3 .3Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 0 0 2.2 16.7L1 23l6.5-1.7A11.5 11.5 0 1 0 20.5 3.5Zm-5.4 15.6c-1.9.1-3.7-.4-5.2-1.6-1.4-1.1-2.4-2.7-2.8-4.5-.3-1.2-.2-2.4 .2-3.6.1-.3.4-.6.7-.6h.5c.2 0 .4.2 .5.4l1 2c.1.2 0 .5-.1.7l-.3.4c-.2.4-.2.8 0 1.2.6 1.2 1.7 2.1 3 2.6.4.2.8.1 1.1-.2l.4-.4c.2-.2.5-.3.7-.2l2.1.7c.2.1.4.3.4.6v.5c0 .3-.2.6-.5.7-1 .3-2 .4-3 .3Z"/></svg>
   </a>
 
   <!-- JSON-LD Schema -->
@@ -407,17 +410,8 @@
     "name": "MV Endodontia – Dra. Maria Vitória Bello Avolio",
     "image": "1.jpeg",
     "telephone": "+55 11 99480-2149",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Avenida Nove de Julho 3229, conjunto 1506",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
-    },
-    "openingHours": [
-      "Mo-Fr 08:00-19:00",
-      "Sa 09:00-12:00"
-    ],
+    "address": { "@type": "PostalAddress", "streetAddress": "Avenida Nove de Julho 3229, conjunto 1506", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+    "openingHours": ["Mo-Fr 08:00-19:00","Sa 09:00-12:00"],
     "url": "https://www.mvendodontia.com.br/",
     "medicalSpecialty": "Endodontics",
     "description": "Tratamento de canal especializado em São Paulo com microscópio operatório, anestesia gentil e comunicação clara."
@@ -429,20 +423,16 @@
     // Ano no rodapé
     document.getElementById('year').textContent = new Date().getFullYear()
 
-    // Reveal suave ao rolar
+    // Reveal suave
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    // Pré-agendamento → abrir WhatsApp com mensagem e feedback visual
-    const toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.setAttribute('role','status');
-    toast.setAttribute('aria-live','polite');
-    toast.innerText = 'Abrindo conversa no WhatsApp…';
-    document.body.appendChild(toast);
+    // Toast
+    const toast = document.createElement('div'); toast.className = 'toast'; toast.setAttribute('role','status'); toast.setAttribute('aria-live','polite'); toast.innerText = 'Abrindo conversa no WhatsApp…'; document.body.appendChild(toast);
 
+    // Pré-agendamento → abrir WhatsApp e feedback
     function enviarPreAgendamento(ev){
       ev.preventDefault();
       const f = ev.target;
@@ -456,14 +446,30 @@
       if(!lgpd){ alert('Para continuar, autorize o contato por WhatsApp.'); return false; }
       const msg = `Olá, sou ${nome}.\nWhatsApp: ${whats}\nMelhor horário: ${horario}\nPossui RX: ${rx}\nMotivo: ${motivo || '-'}\nGostaria de fazer o pré-agendamento.`;
       const url = `https://wa.me/5511994802149?text=${encodeURIComponent(msg)}`;
-      toast.classList.add('show');
-      setTimeout(()=>toast.classList.remove('show'), 2500);
+      toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'), 2500);
       document.getElementById('okMsg').classList.remove('hidden');
       window.open(url, '_blank');
       return false;
     }
     window.enviarPreAgendamento = enviarPreAgendamento;
+
+    // Carrossel simples dos diferenciais
+    const track = document.getElementById('carouselTrack');
+    const prev = document.getElementById('prevBtn');
+    const next = document.getElementById('nextBtn');
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    let index = 0; const total = dots.length;
+    function updateCarousel(){
+      track.style.transform = `translateX(-${index*100}%)`;
+      dots.forEach((d,i)=>d.className = 'dot w-2.5 h-2.5 rounded-full ' + (i===index? 'bg-primary-300' : 'bg-primary-200'));
+    }
+    function go(dir){ index = (index + dir + total) % total; updateCarousel(); }
+    prev.addEventListener('click', ()=>go(-1));
+    next.addEventListener('click', ()=>go(1));
+    dots.forEach((d,i)=> d.addEventListener('click', ()=>{ index = i; updateCarousel(); }));
+    // swipe em mobile
+    let startX=0; track.addEventListener('touchstart', e=> startX = e.touches[0].clientX, {passive:true});
+    track.addEventListener('touchend', e=>{ const dx = e.changedTouches[0].clientX - startX; if(Math.abs(dx)>40){ go(dx<0?1:-1); } }, {passive:true});
   </script>
 </body>
 </html>
-
