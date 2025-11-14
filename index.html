@@ -24,10 +24,23 @@
       theme: {
         extend: {
           colors: {
-            primary: { 50: '#fdfbf8', 100: '#f9f5ef', 200: '#f0e8dc', 300: '#e6d8c3', 400: '#d8c4a5', 500: '#c6ac83', 600: '#b19470', 700: '#977e5d', 800: '#7d684b', 900: '#5f4f39' },
-            ink: '#232323', offwhite: '#fcfaf6', success: '#16a34a'
+            primary: {
+              50: '#fdfbf8',
+              100: '#f9f5ef',
+              200: '#f0e8dc',
+              300: '#e6d8c3',
+              400: '#d8c4a5',
+              500: '#c6ac83',
+              600: '#b19470',
+              700: '#977e5d',
+              800: '#7d684b',
+              900: '#5f4f39'
+            },
+            ink: '#232323',
+            offwhite: '#fcfaf6',
+            success: '#16a34a'
           },
-          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.06)' }
         }
       }
@@ -42,7 +55,15 @@
     .focus-ring:focus { outline: 2px solid rgba(177,148,112,.6); outline-offset: 2px; }
     .scroll-snap { scroll-snap-type:x mandatory; }
     .snap-item { scroll-snap-align:start; }
-    .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%) scale(.98); background:#fff; border:1px solid #e7e1d6; padding:12px 16px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.08); opacity:0; pointer-events:none; transition:opacity .25s ease, transform .25s ease; }
+    .toast {
+      position:fixed; left:50%; bottom:24px;
+      transform:translateX(-50%) scale(.98);
+      background:#fff; border:1px solid #e7e1d6;
+      padding:12px 16px; border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      opacity:0; pointer-events:none;
+      transition:opacity .25s ease, transform .25s ease;
+    }
     .toast.show { opacity:1; pointer-events:auto; transform:translateX(-50%) scale(1); }
   </style>
 </head>
@@ -55,7 +76,9 @@
         <a href="#home" class="flex items-center" aria-label="Ir para o início">
           <img src="LOGO.jpeg" alt="Logo MV Endodontia" class="h-12 w-auto" loading="eager" />
         </a>
-        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl shadow-soft focus-ring" aria-label="Abrir WhatsApp para agendar">Agendar WhatsApp</a>
+        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl shadow-soft focus-ring" aria-label="Abrir WhatsApp para agendar">
+          Agendar WhatsApp
+        </a>
       </div>
     </nav>
   </header>
@@ -66,11 +89,20 @@
     <div class="max-w-7xl mx-auto px-4 pt-14 pb-24 relative">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div class="reveal">
-          <h1 class="mt-0 text-4xl md:text-5xl font-semibold leading-tight">Tratamento de canal <span class="text-primary-600">especializado</span> em São Paulo</h1>
-          <p class="mt-5 text-slate-700 max-w-xl">Atendimento humano, tecnologia de ponta e planejamento centrado em você. Microscópio operatório, anestesia cuidadosa e comunicação transparente em cada etapa.</p>
+          <h1 class="mt-0 text-4xl md:text-5xl font-semibold leading-tight">
+            Tratamento de canal <span class="text-primary-600">especializado</span> em São Paulo
+          </h1>
+          <p class="mt-5 text-slate-700 max-w-xl">
+            Atendimento humano, tecnologia de ponta e planejamento centrado em você. Microscópio operatório,
+            anestesia cuidadosa e comunicação transparente em cada etapa.
+          </p>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft focus-ring">Agendar avaliação</a>
-            <a href="#servicos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-primary-300 hover:bg-primary-50 focus-ring">Ver serviços</a>
+            <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft focus-ring">
+              Agendar avaliação
+            </a>
+            <a href="#servicos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-primary-300 hover:bg-primary-50 focus-ring">
+              Ver serviços
+            </a>
           </div>
         </div>
         <div class="relative reveal">
@@ -87,7 +119,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto reveal">
         <h2 class="text-3xl md:text-4xl font-semibold">Serviços</h2>
-        <p class="mt-3 text-slate-600">Endodontia moderna, focada em conforto, precisão e custo‑benefício.</p>
+        <p class="mt-3 text-slate-600">Endodontia moderna, focada em conforto, precisão e custo-benefício.</p>
       </div>
       <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="border border-primary-100 bg-white rounded-2xl p-6 hover-lift reveal">
@@ -116,23 +148,29 @@
         </article>
       </div>
       <div class="mt-12 text-center reveal">
-        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-ink hover:bg-slate-900 text-white px-6 py-3 rounded-xl shadow-soft focus-ring">Quero agendar minha avaliação</a>
+        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-ink hover:bg-slate-900 text-white px-6 py-3 rounded-xl shadow-soft focus-ring">
+          Quero agendar minha avaliação
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Diferenciais (lista + carrossel de fotos substituíveis) -->
+  <!-- Diferenciais (lista + carrossel de fotos) -->
   <section id="diferenciais" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="md:flex items-end justify-between gap-6 reveal">
         <div>
           <h2 class="text-3xl md:text-4xl font-semibold">Diferenciais</h2>
-          <p class="mt-3 text-slate-600 max-w-2xl">Cada detalhe do atendimento foi pensado para conforto, segurança e tranquilidade.</p>
+          <p class="mt-3 text-slate-600 max-w-2xl">
+            Cada detalhe do atendimento foi pensado para conforto, segurança e tranquilidade.
+          </p>
         </div>
-        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="mt-6 md:mt-0 inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 focus-ring">Agendar agora →</a>
+        <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="mt-6 md:mt-0 inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 focus-ring">
+          Agendar agora →
+        </a>
       </div>
 
-      <!-- Cards dos diferenciais (5 itens solicitados) -->
+      <!-- Cards dos diferenciais -->
       <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-offwhite border border-primary-100 rounded-2xl p-6 shadow-soft reveal hover-lift">
           <div class="w-10 h-10 rounded-lg bg-primary-100 text-primary-700 grid place-content-center" aria-hidden="true">
@@ -171,7 +209,7 @@
         </div>
       </div>
 
-      <!-- Carrossel de fotos (placeholders para você trocar) -->
+      <!-- Carrossel de fotos -->
       <div class="mt-14 reveal">
         <div class="flex items-center justify-between mb-4">
           <h3 class="text-xl font-semibold">Galeria de diferenciais</h3>
@@ -182,11 +220,26 @@
         </div>
         <div class="relative overflow-hidden rounded-2xl border border-primary-100 shadow-soft">
           <div id="carouselTrack" class="flex transition-transform duration-500 ease-out">
-            <figure class="min-w-full relative"><img src="dif-microscopio.jpg" alt="Microscópio operatório" class="w-full h-[380px] object-cover" /><figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Microscópio operatório</figcaption></figure>
-            <figure class="min-w-full relative"><img src="dif-camera.jpg" alt="Câmera intraoral" class="w-full h-[380px] object-cover" /><figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Câmera intraoral</figcaption></figure>
-            <figure class="min-w-full relative"><img src="dif-localizacao.jpg" alt="Localização de fácil acesso" class="w-full h-[380px] object-cover" /><figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Localização de fácil acesso</figcaption></figure>
-            <figure class="min-w-full relative"><img src="dif-sabado.jpg" alt="Atendimentos aos sábados" class="w-full h-[380px] object-cover" /><figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Atendimentos aos sábados</figcaption></figure>
-            <figure class="min-w-full relative"><img src="dif-biosseguranca.jpg" alt="Biossegurança" class="w-full h-[380px] object-cover" /><figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Biossegurança</figcaption></figure>
+            <figure class="min-w-full relative">
+              <img src="dif-microscopio.jpg" alt="Microscópio operatório" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Microscópio operatório</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-camera.jpg" alt="Câmera intraoral" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Câmera intraoral</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-localizacao.jpg" alt="Localização de fácil acesso" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Localização de fácil acesso</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-sabado.jpg" alt="Atendimentos aos sábados" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Atendimentos aos sábados</figcaption>
+            </figure>
+            <figure class="min-w-full relative">
+              <img src="dif-biosseguranca.jpg" alt="Biossegurança" class="w-full h-[380px] object-cover" />
+              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Biossegurança</figcaption>
+            </figure>
           </div>
           <div class="absolute bottom-3 right-4 flex gap-2 bg-offwhite/80 rounded-full px-2 py-1">
             <button class="dot w-2.5 h-2.5 rounded-full bg-primary-300" aria-label="Ir ao slide 1"></button>
@@ -205,7 +258,13 @@
     <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
       <div class="order-2 lg:order-1 reveal">
         <h2 class="text-3xl md:text-4xl font-semibold">Sobre</h2>
-        <p class="mt-4 text-slate-700 leading-relaxed">A <strong>Dra. Maria Vitória Bello Avolio</strong> é cirurgiã‑dentista formada em <strong>Odontologia pela Universidade Estadual de Campinas (UNICAMP)</strong> e <strong>especialista em Endodontia pela São Leopoldo Mandic</strong>. Atua em São Paulo com foco em proporcionar uma experiência acolhedora, precisa e personalizada. Sua prática une planejamento claro, tecnologia como o <em>microscópio operatório</em> e atenção genuína ao conforto do paciente.</p>
+        <p class="mt-4 text-slate-700 leading-relaxed">
+          A <strong>Dra. Maria Vitória Bello Avolio</strong> é cirurgiã-dentista formada em
+          <strong>Odontologia pela Universidade Estadual de Campinas (UNICAMP)</strong> e
+          <strong>especialista em Endodontia pela São Leopoldo Mandic</strong>. Atua em São Paulo com foco em
+          proporcionar uma experiência acolhedora, precisa e personalizada. Sua prática une planejamento claro,
+          tecnologia como o <em>microscópio operatório</em> e atenção genuína ao conforto do paciente.
+        </p>
       </div>
       <div class="order-1 lg:order-2 reveal">
         <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-primary-100 shadow-soft">
@@ -215,51 +274,138 @@
     </div>
   </section>
 
-  <!-- Feedbacks (dinâmicos a partir do Google Reviews) -->
+  <!-- Feedbacks reais -->
   <section id="feedbacks" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto reveal">
         <h2 class="text-3xl md:text-4xl font-semibold">Feedbacks</h2>
-        <p class="mt-3 text-slate-600">Avaliações reais do Google para construir confiança.</p>
+        <p class="mt-3 text-slate-600">Avaliações reais dos pacientes no Google.</p>
       </div>
 
-      <!-- Grid/cards onde as reviews serão inseridas via JS -->
-      <div id="reviewsGrid" class="mt-10 grid md:grid-cols-3 gap-6"></div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Natalia -->
+        <figure class="border border-primary-100 rounded-2xl p-6 shadow-soft bg-white hover-lift reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-primary-200 flex items-center justify-center text-sm font-semibold text-primary-800">
+              N
+            </div>
+            <div>
+              <figcaption class="font-medium text-sm">Natalia Ibrahim</figcaption>
+              <div class="text-xs text-slate-500">6 meses atrás</div>
+            </div>
+          </div>
+          <div class="mt-3 text-amber-500" aria-label="Nota 5 de 5">
+            ★★★★★
+          </div>
+          <blockquote class="mt-3 text-slate-700">
+            “Excelente profissional, meu tratamento ocorreu perfeitamente além das expectativas 🙏”
+          </blockquote>
+          <a href="https://www.google.com/search?q=avolio+odontologia+especializada#lrd=0x94ce59054c8bae7f:0x8c57d5595b01d6a3,1" target="_blank" rel="noopener" class="mt-4 inline-block text-sm text-primary-700 hover:text-primary-800">
+            Ver no Google →
+          </a>
+        </figure>
 
-      <div class="mt-8 text-center">
-        <a href="https://www.google.com/search?q=avolio+odontologia+especializada#lrd=0x94ce59054c8bae7f:0x8c57d5595b01d6a3,1" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-primary-200 hover:bg-primary-50 focus-ring">Ver todos os feedbacks no Google</a>
+        <!-- Stephanny -->
+        <figure class="border border-primary-100 rounded-2xl p-6 shadow-soft bg-white hover-lift reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-primary-200 flex items-center justify-center text-sm font-semibold text-primary-800">
+              S
+            </div>
+            <div>
+              <figcaption class="font-medium text-sm">Stephanny Rosendo</figcaption>
+              <div class="text-xs text-slate-500">1 ano atrás</div>
+            </div>
+          </div>
+          <div class="mt-3 text-amber-500" aria-label="Nota 5 de 5">
+            ★★★★★
+          </div>
+          <blockquote class="mt-3 text-slate-700">
+            “Excelente profissional, com excelentes equipamentos, clínica limpa e organizada.
+            Super recomendo, preços acessíveis e super bem pagos pelo trabalho e profissionalismo
+            da doutora, já cheguei na clínica com muita dor e após cirurgia saí de lá sem sentir nada.”
+          </blockquote>
+          <a href="https://www.google.com/search?q=avolio+odontologia+especializada#lrd=0x94ce59054c8bae7f:0x8c57d5595b01d6a3,1" target="_blank" rel="noopener" class="mt-4 inline-block text-sm text-primary-700 hover:text-primary-800">
+            Ver no Google →
+          </a>
+        </figure>
+
+        <!-- Fernanda -->
+        <figure class="border border-primary-100 rounded-2xl p-6 shadow-soft bg-white hover-lift reveal">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-primary-200 flex items-center justify-center text-sm font-semibold text-primary-800">
+              F
+            </div>
+            <div>
+              <figcaption class="font-medium text-sm">Fernanda Faria</figcaption>
+              <div class="text-xs text-slate-500">1 ano atrás</div>
+            </div>
+          </div>
+          <div class="mt-3 text-amber-500" aria-label="Nota 5 de 5">
+            ★★★★★
+          </div>
+          <blockquote class="mt-3 text-slate-700">
+            “Tive uma ótima experiência na clínica. A Dra Maria Vitória me atendeu prontamente,
+            explicou com detalhes a situação do meu dente e o procedimento a ser realizado.
+            Foi super atenciosa. Ela tem uma mão super leve no tratamento e foi explicando
+            o passo a passo para que me sentisse segura e confortável. A clínica é muito bem montada
+            e com uma higiene impecável!!! Adorei!”
+          </blockquote>
+          <a href="https://www.google.com/search?q=avolio+odontologia+especializada#lrd=0x94ce59054c8bae7f:0x8c57d5595b01d6a3,1" target="_blank" rel="noopener" class="mt-4 inline-block text-sm text-primary-700 hover:text-primary-800">
+            Ver no Google →
+          </a>
+        </figure>
       </div>
-
-      <!-- Noscript fallback -->
-      <noscript>
-        <div class="mt-6 text-slate-600 text-sm">Ative o JavaScript para carregar as avaliações automaticamente. Você também pode <a class="underline" target="_blank" href="https://www.google.com/search?q=avolio+odontologia+especializada#lrd=0x94ce59054c8bae7f:0x8c57d5595b01d6a3,1">ver no Google</a>.</div>
-      </noscript>
     </div>
   </section>
 
-  <!-- Pré-agendamento (com LGPD + feedback de sucesso) -->
+  <!-- Pré-agendamento -->
   <section id="pre-agendamento" class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-semibold reveal">Pré‑agendamento</h2>
-      <p class="mt-3 text-slate-600 reveal">Preencha os dados abaixo e retornaremos o contato para entender melhor a sua necessidade.</p>
+      <h2 class="text-2xl md:text-3xl font-semibold reveal">Pré-agendamento</h2>
+      <p class="mt-3 text-slate-600 reveal">
+        Preencha os dados abaixo e retornaremos o contato para entender melhor a sua necessidade.
+      </p>
       <form id="formPre" class="mt-8 grid gap-5 reveal" onsubmit="return enviarPreAgendamento(event)" aria-describedby="lgpdHelp">
         <div class="grid md:grid-cols-2 gap-5">
-          <label class="block"><span class="text-sm font-medium">Nome completo</span>
-            <input type="text" name="nome" required class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring" /></label>
-          <label class="block"><span class="text-sm font-medium">WhatsApp</span>
-            <input type="tel" name="whats" required placeholder="(11) 9XXXX-XXXX" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring" /></label>
+          <label class="block">
+            <span class="text-sm font-medium">Nome completo</span>
+            <input type="text" name="nome" required class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring" />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">WhatsApp</span>
+            <input type="tel" name="whats" required placeholder="(11) 9XXXX-XXXX" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring" />
+          </label>
         </div>
         <div class="grid md:grid-cols-2 gap-5">
-          <label class="block"><span class="text-sm font-medium">Melhor horário</span>
-            <select name="horario" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring"><option>Manhã</option><option>Tarde</option><option>Noite</option></select></label>
-          <label class="block"><span class="text-sm font-medium">Possui radiografia?</span>
-            <select name="rx" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring"><option>Sim</option><option>Não</option></select></label>
+          <label class="block">
+            <span class="text-sm font-medium">Melhor horário</span>
+            <select name="horario" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring">
+              <option>Manhã</option>
+              <option>Tarde</option>
+              <option>Noite</option>
+            </select>
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">Possui radiografia?</span>
+            <select name="rx" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring">
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </label>
         </div>
-        <label class="block"><span class="text-sm font-medium">Motivo principal</span>
-          <textarea name="motivo" rows="4" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring" placeholder="Dor, indicação do dentista, dente escurecido, etc."></textarea></label>
-        <label class="flex items-start gap-3 text-sm text-slate-600"><input type="checkbox" name="lgpd" required class="mt-1 rounded border-primary-300" />
-          <span id="lgpdHelp">Autorizo o contato por WhatsApp para continuidade do atendimento. Seus dados não serão compartilhados com terceiros.</span></label>
-        <button type="submit" class="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-xl shadow-soft w-full md:w-auto focus-ring">Enviar pelo WhatsApp</button>
+        <label class="block">
+          <span class="text-sm font-medium">Motivo principal</span>
+          <textarea name="motivo" rows="4" class="mt-1 w-full rounded-xl border border-primary-200 bg-offwhite px-4 py-3 outline-none focus:ring-2 focus:ring-primary-300 focus-ring" placeholder="Dor, indicação do dentista, dente escurecido, etc."></textarea>
+        </label>
+        <label class="flex items-start gap-3 text-sm text-slate-600">
+          <input type="checkbox" name="lgpd" required class="mt-1 rounded border-primary-300" />
+          <span id="lgpdHelp">
+            Autorizo o contato por WhatsApp para continuidade do atendimento. Seus dados não serão compartilhados com terceiros.
+          </span>
+        </label>
+        <button type="submit" class="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-xl shadow-soft w-full md:w-auto focus-ring">
+          Enviar pelo WhatsApp
+        </button>
         <p id="okMsg" class="hidden text-success font-medium">Obrigado! Sua solicitação foi aberta no WhatsApp.</p>
       </form>
     </div>
@@ -273,14 +419,42 @@
         <p class="mt-3 text-slate-600">Respostas rápidas para decisões mais seguras.</p>
       </div>
       <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal"><summary class="flex items-center justify-between cursor-pointer font-medium">Tratamento de canal dói?<span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span></summary>
-          <p class="mt-3 text-slate-700">Com anestesia adequada e técnicas modernas, o procedimento é confortável. O objetivo é justamente aliviar a dor.</p></details>
-        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal"><summary class="flex items-center justify-between cursor-pointer font-medium">Quando devo procurar a endodontista?<span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span></summary>
-          <p class="mt-3 text-slate-700">Dor espontânea, sensibilidade prolongada, inchaço, escurecimento do dente ou indicação do seu dentista clínico.</p></details>
-        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal"><summary class="flex items-center justify-between cursor-pointer font-medium">Quanto tempo leva?<span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span></summary>
-          <p class="mt-3 text-slate-700">Varia conforme o caso. Em muitos cenários resolvemos em uma ou duas sessões, sempre com orientação clara.</p></details>
-        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal"><summary class="flex items-center justify-between cursor-pointer font-medium">Vocês atendem convênios?<span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span></summary>
-          <p class="mt-3 text-slate-700">Não, apenas emitimos a nota fiscal.</p></details>
+        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">
+            Tratamento de canal dói?
+            <span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">
+            Com anestesia adequada e técnicas modernas, o procedimento é confortável. O objetivo é justamente aliviar a dor.
+          </p>
+        </details>
+        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">
+            Quando devo procurar a endodontista?
+            <span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">
+            Dor espontânea, sensibilidade prolongada, inchaço, escurecimento do dente ou indicação do seu dentista clínico.
+          </p>
+        </details>
+        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">
+            Quanto tempo leva?
+            <span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">
+            Varia conforme o caso. Em muitos cenários resolvemos em uma ou duas sessões, sempre com orientação clara.
+          </p>
+        </details>
+        <details class="group border border-primary-100 rounded-2xl p-6 bg-offwhite reveal">
+          <summary class="flex items-center justify-between cursor-pointer font-medium">
+            Vocês atendem convênios?
+            <span class="ml-6 group-open:rotate-180 transition-transform" aria-hidden="true">▾</span>
+          </summary>
+          <p class="mt-3 text-slate-700">
+            Não, apenas emitimos a nota fiscal.
+          </p>
+        </details>
       </div>
     </div>
   </section>
@@ -291,9 +465,13 @@
       <div class="grid lg:grid-cols-2 gap-10">
         <div class="reveal">
           <h2 class="text-3xl md:text-4xl font-semibold">Agende sua avaliação</h2>
-          <p class="mt-3 text-slate-700">Fale direto pelo WhatsApp ou veja o mapa para chegar ao consultório.</p>
+          <p class="mt-3 text-slate-700">
+            Fale direto pelo WhatsApp ou veja o mapa para chegar ao consultório.
+          </p>
           <div class="mt-6 space-y-3">
-            <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft focus-ring">Chamar no WhatsApp</a>
+            <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-3 rounded-xl shadow-soft focus-ring">
+              Chamar no WhatsApp
+            </a>
             <div class="text-slate-700">
               <p class="font-medium">Endereço</p>
               <p>Avenida Nove de Julho 3229, conjunto 1506, Jardim Paulista – São Paulo</p>
@@ -304,7 +482,12 @@
         </div>
         <div class="reveal">
           <div class="aspect-[16/10] rounded-2xl overflow-hidden border border-primary-100 shadow-soft bg-offwhite">
-            <iframe title="Mapa – MV Endodontia" width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Avenida%20Nove%20de%20Julho%203229%2C%20Jardim%20Paulista%2C%20São%20Paulo&output=embed"></iframe>
+            <iframe
+              title="Mapa – MV Endodontia"
+              width="100%" height="100%" style="border:0" loading="lazy"
+              allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Avenida%20Nove%20de%20Julho%203229%2C%20Jardim%20Paulista%2C%20São%20Paulo&output=embed">
+            </iframe>
           </div>
         </div>
       </div>
@@ -319,12 +502,18 @@
           <img src="LOGO.jpeg" alt="Logo MV Endodontia" class="h-8 w-auto rounded" loading="lazy" />
           <span class="font-medium">MV Endodontia</span>
         </div>
-        <p class="mt-3 text-slate-600">Endodontia com planejamento, tecnologia e acolhimento no Jardim Paulista.</p>
+        <p class="mt-3 text-slate-600">
+          Endodontia com planejamento, tecnologia e acolhimento no Jardim Paulista.
+        </p>
       </div>
       <div class="reveal">
         <p class="font-medium">Contato</p>
         <ul class="mt-3 space-y-2 text-slate-600">
-          <li><a class="hover:text-primary-700 focus-ring" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener">WhatsApp: (11) 99480‑2149</a></li>
+          <li>
+            <a class="hover:text-primary-700 focus-ring" href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener">
+              WhatsApp: (11) 99480-2149
+            </a>
+          </li>
           <li>Endereço: Av. Nove de Julho 3229, cj. 1506 – São Paulo</li>
           <li>Horários: Seg–Sex 08h–19h · Sáb 09h–12h</li>
         </ul>
@@ -335,17 +524,24 @@
           <li><a class="hover:text-primary-700 focus-ring" href="#servicos">Serviços</a></li>
           <li><a class="hover:text-primary-700 focus-ring" href="#diferenciais">Diferenciais</a></li>
           <li><a class="hover:text-primary-700 focus-ring" href="#feedbacks">Feedbacks</a></li>
-          <li><a class="hover:text-primary-700 focus-ring" href="#pre-agendamento">Pré‑agendamento</a></li>
+          <li><a class="hover:text-primary-700 focus-ring" href="#pre-agendamento">Pré-agendamento</a></li>
           <li><a class="hover:text-primary-700 focus-ring" href="#contato">Contato</a></li>
         </ul>
       </div>
     </div>
-    <div class="text-center text-xs text-slate-500 pb-8">© <span id="year"></span> MV Endodontia. Todos os direitos reservados.</div>
+    <div class="text-center text-xs text-slate-500 pb-8">
+      © <span id="year"></span> MV Endodontia. Todos os direitos reservados.
+    </div>
   </footer>
 
   <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal" target="_blank" rel="noopener" aria-label="Abrir WhatsApp" class="fixed bottom-6 right-6 z-50 grid place-content-center w-14 h-14 rounded-full shadow-soft bg-green-500 hover:bg-green-600 text-white focus-ring">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 0 0 2.2 16.7L1 23l6.5-1.7A11.5 11.5 0 1 0 20.5 3.5Zm-5.4 15.6c-1.9.1-3.7-.4-5.2-1.6-1.4-1.1-2.4-2.7-2.8-4.5-.3-1.2-.2-2.4 .2-3.6.1-.3.4-.6.7-.6h.5c.2 0 .4.2 .5.4l1 2c.1.2 0 .5-.1.7l-.3.4c-.2.4-.2.8 0 1.2.6 1.2 1.7 2.1 3 2.6.4.2.8.1 1.1-.2l.4-.4c.2-.2.5-.3.7-.2l2.1.7c.2.1.4.3.4.6v.5c0 .3-.2.6-.5.7-1 .3-2 .4-3 .3Z"/></svg>
+  <a
+    href="https://wa.me/5511994802149?text=Olá%2C+gostaria+de+fazer+um+pré-agendamento+para+tratamento+de+canal"
+    target="_blank" rel="noopener" aria-label="Abrir WhatsApp"
+    class="fixed bottom-6 right-6 z-50 grid place-content-center w-14 h-14 rounded-full shadow-soft bg-green-500 hover:bg-green-600 text-white focus-ring">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A11.5 11.5 0 0 0 2.2 16.7L1 23l6.5-1.7A11.5 11.5 0 1 0 20.5 3.5Zm-5.4 15.6c-1.9.1-3.7-.4-5.2-1.6-1.4-1.1-2.4-2.7-2.8-4.5-.3-1.2-.2-2.4 .2-3.6.1-.3.4-.6.7-.6h.5c.2 0 .4.2 .5.4l1 2c.1.2 0 .5-.1.7l-.3.4c-.2.4-.2.8 0 1.2.6 1.2 1.7 2.1 3 2.6.4.2.8.1 1.1-.2l.4-.4c.2-.2.5-.3.7-.2l2.1.7c.2.1.4.3.4.6v.5c0 .3-.2.6-.5.7-1 .3-2 .4-3 .3Z"/>
+    </svg>
   </a>
 
   <!-- JSON-LD Schema -->
@@ -356,7 +552,13 @@
     "name": "MV Endodontia – Dra. Maria Vitória Bello Avolio",
     "image": "1.jpeg",
     "telephone": "+55 11 99480-2149",
-    "address": { "@type": "PostalAddress", "streetAddress": "Avenida Nove de Julho 3229, conjunto 1506", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Nove de Julho 3229, conjunto 1506",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
     "openingHours": ["Mo-Fr 08:00-19:00","Sa 09:00-12:00"],
     "url": "https://www.mvendodontia.com.br/",
     "medicalSpecialty": "Endodontics",
@@ -367,17 +569,29 @@
   <!-- Scripts -->
   <script>
     // Ano no rodapé
-    document.getElementById('year').textContent = new Date().getFullYear()
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Reveal suave
-    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
     // Toast
-    const toast = document.createElement('div'); toast.className = 'toast'; toast.setAttribute('role','status'); toast.setAttribute('aria-live','polite'); toast.innerText = 'Abrindo conversa no WhatsApp…'; document.body.appendChild(toast);
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    toast.innerText = 'Abrindo conversa no WhatsApp…';
+    document.body.appendChild(toast);
 
     // Pré-agendamento → abrir WhatsApp e feedback
-    function enviarPreAgendamento(ev){
+    function enviarPreAgendamento(ev) {
       ev.preventDefault();
       const f = ev.target;
       const nome = f.nome.value.trim();
@@ -386,11 +600,27 @@
       const rx = f.rx.value;
       const motivo = f.motivo.value.trim();
       const lgpd = f.lgpd.checked;
-      if(!nome || !whats){ alert('Por favor, informe nome e WhatsApp.'); return false; }
-      if(!lgpd){ alert('Para continuar, autorize o contato por WhatsApp.'); return false; }
-      const msg = `Olá, sou ${nome}.\nWhatsApp: ${whats}\nMelhor horário: ${horario}\nPossui RX: ${rx}\nMotivo: ${motivo || '-'}\nGostaria de fazer o pré-agendamento.`;
+
+      if (!nome || !whats) {
+        alert('Por favor, informe nome e WhatsApp.');
+        return false;
+      }
+      if (!lgpd) {
+        alert('Para continuar, autorize o contato por WhatsApp.');
+        return false;
+      }
+
+      const msg =
+        `Olá, sou ${nome}.\n` +
+        `WhatsApp: ${whats}\n` +
+        `Melhor horário: ${horario}\n` +
+        `Possui RX: ${rx}\n` +
+        `Motivo: ${motivo || '-'}\n` +
+        `Gostaria de fazer o pré-agendamento.`;
+
       const url = `https://wa.me/5511994802149?text=${encodeURIComponent(msg)}`;
-      toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'), 2500);
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
       document.getElementById('okMsg').classList.remove('hidden');
       window.open(url, '_blank');
       return false;
@@ -399,70 +629,39 @@
 
     // Carrossel simples dos diferenciais
     const track = document.getElementById('carouselTrack');
-    if(track){
+    if (track) {
       const prev = document.getElementById('prevBtn');
       const next = document.getElementById('nextBtn');
       const dots = Array.from(document.querySelectorAll('.dot'));
-      let index = 0; const total = dots.length;
-      function updateCarousel(){ track.style.transform = `translateX(-${index*100}%)`; dots.forEach((d,i)=>d.className = 'dot w-2.5 h-2.5 rounded-full ' + (i===index? 'bg-primary-300' : 'bg-primary-200')); }
-      function go(dir){ index = (index + dir + total) % total; updateCarousel(); }
-      prev.addEventListener('click', ()=>go(-1)); next.addEventListener('click', ()=>go(1)); dots.forEach((d,i)=> d.addEventListener('click', ()=>{ index = i; updateCarousel(); }));
-      let startX=0; track.addEventListener('touchstart', e=> startX = e.touches[0].clientX, {passive:true});
-      track.addEventListener('touchend', e=>{ const dx = e.changedTouches[0].clientX - startX; if(Math.abs(dx)>40){ go(dx<0?1:-1); } }, {passive:true});
-    }
+      let index = 0;
+      const total = dots.length;
 
-    /**
-     * ==============================
-     *  GOOGLE REVIEWS – COMO ATIVAR
-     * ==============================
-     * Para puxar automaticamente os 3 feedbacks mais recentes do Google:
-     * 1) Obtenha uma chave da Google Maps JavaScript API com Places API habilitada.
-     * 2) Preencha sua PLACE_ID abaixo (ex.: ChIJ...)
-     * 3) Descomente o <script> do Maps logo após este arquivo e mantenha libraries=places.
-     */
-    const PLACE_ID = 'REPLACE_WITH_YOUR_PLACE_ID'; // TODO: inserir Place ID real da clínica
+      function updateCarousel() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, i) => {
+          d.className = 'dot w-2.5 h-2.5 rounded-full ' +
+            (i === index ? 'bg-primary-300' : 'bg-primary-200');
+        });
+      }
 
-    function renderReviews(reviews){
-      const grid = document.getElementById('reviewsGrid');
-      if(!grid) return;
-      grid.innerHTML = '';
-      reviews.slice(0,3).forEach(r=>{
-        const card = document.createElement('figure');
-        card.className = 'border border-primary-100 rounded-2xl p-6 shadow-soft bg-white hover-lift';
-        const stars = '★★★★★☆☆☆☆☆'.slice(5 - Math.round(r.rating), 10 - Math.round(r.rating));
-        card.innerHTML = `
-          <div class="flex items-center gap-3">
-            <img src="${r.profile_photo_url || 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/doctor-71.png'}" alt="Foto do autor" class="w-10 h-10 rounded-full object-cover"/>
-            <div>
-              <figcaption class="font-medium text-sm">${r.author_name || 'Paciente'}</figcaption>
-              <div class="text-xs text-slate-500">${r.relative_time_description || ''}</div>
-            </div>
-          </div>
-          <div class="mt-3 text-amber-500" aria-label="Nota">${'★'.repeat(Math.round(r.rating))}<span class="text-slate-300">${'★'.repeat(5-Math.round(r.rating))}</span></div>
-          <blockquote class="mt-3 text-slate-700">${r.text || ''}</blockquote>
-          <a href="${r.author_url || '#'}" target="_blank" rel="noopener" class="mt-4 inline-block text-sm text-primary-700 hover:text-primary-800">Ver no Google →</a>
-        `;
-        grid.appendChild(card);
-      });
-    }
+      function go(dir) {
+        index = (index + dir + total) % total;
+        updateCarousel();
+      }
 
-    function initPlaces(){
-      if(!PLACE_ID || PLACE_ID.startsWith('REPLACE_')) return; // evita erro sem Place ID
-      const service = new google.maps.places.PlacesService(document.createElement('div'));
-      service.getDetails({ placeId: PLACE_ID, fields: ['reviews','rating','user_ratings_total','url'] }, (place, status)=>{
-        if(status === google.maps.places.PlacesServiceStatus.OK && place && place.reviews){
-          // ordena por data (mais recentes primeiro)
-          const ordered = [...place.reviews].sort((a,b)=> (b.time||0) - (a.time||0));
-          renderReviews(ordered);
-        }
-      });
+      prev.addEventListener('click', () => go(-1));
+      next.addEventListener('click', () => go(1));
+      dots.forEach((d, i) => d.addEventListener('click', () => { index = i; updateCarousel(); }));
+
+      // swipe em mobile
+      let startX = 0;
+      track.addEventListener('touchstart', e => startX = e.touches[0].clientX, { passive: true });
+      track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) { go(dx < 0 ? 1 : -1); }
+      }, { passive: true });
     }
-    window.initPlaces = initPlaces;
   </script>
-  
-  <!-- ATIVE ESTE SCRIPT QUANDO INSERIR SUA API KEY E PLACE_ID
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=SEU_API_KEY_AQUI&libraries=places&callback=initPlaces"></script>
-  -->
 </body>
 </html>
 
