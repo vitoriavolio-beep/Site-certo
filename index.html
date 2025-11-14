@@ -53,8 +53,6 @@
     .hover-lift { transition: transform .25s ease, box-shadow .25s ease; }
     .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.08); }
     .focus-ring:focus { outline: 2px solid rgba(177,148,112,.6); outline-offset: 2px; }
-    .scroll-snap { scroll-snap-type:x mandatory; }
-    .snap-item { scroll-snap-align:start; }
     .toast {
       position:fixed; left:50%; bottom:24px;
       transform:translateX(-50%) scale(.98);
@@ -155,7 +153,7 @@
     </div>
   </section>
 
-  <!-- Diferenciais (lista + carrossel de fotos) -->
+  <!-- Diferenciais (apenas lista) -->
   <section id="diferenciais" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="md:flex items-end justify-between gap-6 reveal">
@@ -206,48 +204,6 @@
           </div>
           <h3 class="mt-4 font-semibold text-lg">Biossegurança</h3>
           <p class="mt-2 text-slate-600">Protocolos rigorosos de esterilização e controle de infecção.</p>
-        </div>
-      </div>
-
-      <!-- Carrossel de fotos -->
-      <div class="mt-14 reveal">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-xl font-semibold">Galeria de diferenciais</h3>
-          <div class="flex items-center gap-2">
-            <button id="prevBtn" class="w-9 h-9 rounded-lg border border-primary-200 hover:bg-primary-50 focus-ring" aria-label="Slide anterior">‹</button>
-            <button id="nextBtn" class="w-9 h-9 rounded-lg border border-primary-200 hover:bg-primary-50 focus-ring" aria-label="Próximo slide">›</button>
-          </div>
-        </div>
-        <div class="relative overflow-hidden rounded-2xl border border-primary-100 shadow-soft">
-          <div id="carouselTrack" class="flex transition-transform duration-500 ease-out">
-            <figure class="min-w-full relative">
-              <img src="dif-microscopio.jpg" alt="Microscópio operatório" class="w-full h-[380px] object-cover" />
-              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Microscópio operatório</figcaption>
-            </figure>
-            <figure class="min-w-full relative">
-              <img src="dif-camera.jpg" alt="Câmera intraoral" class="w-full h-[380px] object-cover" />
-              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Câmera intraoral</figcaption>
-            </figure>
-            <figure class="min-w-full relative">
-              <img src="dif-localizacao.jpg" alt="Localização de fácil acesso" class="w-full h-[380px] object-cover" />
-              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Localização de fácil acesso</figcaption>
-            </figure>
-            <figure class="min-w-full relative">
-              <img src="dif-sabado.jpg" alt="Atendimentos aos sábados" class="w-full h-[380px] object-cover" />
-              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Atendimentos aos sábados</figcaption>
-            </figure>
-            <figure class="min-w-full relative">
-              <img src="dif-biosseguranca.jpg" alt="Biossegurança" class="w-full h-[380px] object-cover" />
-              <figcaption class="absolute bottom-4 left-4 bg-offwhite/90 px-3 py-1.5 rounded-lg text-sm">Biossegurança</figcaption>
-            </figure>
-          </div>
-          <div class="absolute bottom-3 right-4 flex gap-2 bg-offwhite/80 rounded-full px-2 py-1">
-            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-300" aria-label="Ir ao slide 1"></button>
-            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 2"></button>
-            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 3"></button>
-            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 4"></button>
-            <button class="dot w-2.5 h-2.5 rounded-full bg-primary-200" aria-label="Ir ao slide 5"></button>
-          </div>
         </div>
       </div>
     </div>
@@ -626,42 +582,6 @@
       return false;
     }
     window.enviarPreAgendamento = enviarPreAgendamento;
-
-    // Carrossel simples dos diferenciais
-    const track = document.getElementById('carouselTrack');
-    if (track) {
-      const prev = document.getElementById('prevBtn');
-      const next = document.getElementById('nextBtn');
-      const dots = Array.from(document.querySelectorAll('.dot'));
-      let index = 0;
-      const total = dots.length;
-
-      function updateCarousel() {
-        track.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((d, i) => {
-          d.className = 'dot w-2.5 h-2.5 rounded-full ' +
-            (i === index ? 'bg-primary-300' : 'bg-primary-200');
-        });
-      }
-
-      function go(dir) {
-        index = (index + dir + total) % total;
-        updateCarousel();
-      }
-
-      prev.addEventListener('click', () => go(-1));
-      next.addEventListener('click', () => go(1));
-      dots.forEach((d, i) => d.addEventListener('click', () => { index = i; updateCarousel(); }));
-
-      // swipe em mobile
-      let startX = 0;
-      track.addEventListener('touchstart', e => startX = e.touches[0].clientX, { passive: true });
-      track.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - startX;
-        if (Math.abs(dx) > 40) { go(dx < 0 ? 1 : -1); }
-      }, { passive: true });
-    }
   </script>
 </body>
 </html>
-
