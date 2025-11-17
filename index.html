@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Tratamento de Canal em São Paulo | Dra. Maria Vitória Avólio</title>
-  <meta name="description" content="Tratamento de canal em São Paulo com endodontista especialista. Atendimento rápido, acolhedor e sem dor. Agende sua consulta pelo WhatsApp.">
+  <meta name="description" content="Tratamento de canal em São Paulo com endodontista especialista. Atendimento acolhedor, particular e sem dor. Agende sua consulta pelo WhatsApp.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google tag (gtag.js) -->
@@ -23,10 +23,15 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
+    html, body {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: radial-gradient(circle at top, #edf3ff 0, #f9fbff 40%, #ffffff 100%);
+      background: #f5f7ff;
       color: #111827;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 17px; /* AUMENTEI A FONTE GERAL */
     }
 
     a {
@@ -34,21 +39,22 @@
       color: inherit;
     }
 
-    /* HEADER */
+    /* CONTAINER MAIS ESTREITO (MENOS CANSATIVO) */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* HEADER SIMPLES */
 
     header {
-      background-color: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
+      background-color: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
       border-bottom: 1px solid #e5e7f0;
       position: sticky;
       top: 0;
       z-index: 999;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
     }
 
     .navbar {
@@ -60,32 +66,38 @@
 
     .logo {
       font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: 0.12em;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     .logo span {
       display: block;
       font-weight: 400;
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #9aa3b5;
-      margin-top: 0.05rem;
+      margin-top: 0.1rem;
     }
 
     /* HERO */
 
     .hero {
-      padding: 3.2rem 0 2.4rem;
+      padding: 2.8rem 0 2.4rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-      gap: 2.8rem;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2rem;
       align-items: center;
+    }
+
+    @media (max-width: 820px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .hero-badge {
@@ -96,12 +108,12 @@
       color: #2563eb;
       padding: 0.3rem 0.9rem;
       border-radius: 999px;
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       margin-bottom: 0.9rem;
     }
 
     .hero-title {
-      font-size: 2.3rem;
+      font-size: 2.1rem;
       font-weight: 700;
       letter-spacing: -0.03em;
       margin-bottom: 0.7rem;
@@ -111,29 +123,25 @@
     .hero-subtitle {
       font-size: 1rem;
       color: #4b5563;
-      margin-bottom: 1.4rem;
-      max-width: 34rem;
+      margin-bottom: 1.1rem;
     }
 
     .hero-list {
       list-style: none;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero-list li {
       display: flex;
-      align-items: flex-start;
       gap: 0.5rem;
-      margin-bottom: 0.4rem;
-      font-size: 0.92rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.98rem;
       color: #4b5563;
     }
 
     .hero-list span.bullet {
-      font-size: 0.9rem;
-      line-height: 1.3;
-      margin-top: 0.1rem;
       color: #2563eb;
+      margin-top: 0.2rem;
     }
 
     .hero-cta-group {
@@ -148,52 +156,52 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.78rem 1.7rem;
+      padding: 0.85rem 1.8rem;
       border-radius: 999px;
       background: linear-gradient(135deg, #2563eb, #4f8df9);
       color: #fff;
       font-weight: 600;
-      font-size: 0.96rem;
+      font-size: 0.98rem;
       border: none;
       cursor: pointer;
-      box-shadow: 0 12px 30px rgba(37,99,235,0.32);
-      transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.15s ease;
+      box-shadow: 0 10px 26px rgba(37,99,235,0.32);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.15s ease;
       gap: 0.45rem;
       white-space: nowrap;
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 36px rgba(37,99,235,0.4);
+      box-shadow: 0 14px 32px rgba(37,99,235,0.4);
       opacity: 0.96;
     }
 
     .btn-secondary {
-      font-size: 0.86rem;
+      font-size: 0.9rem;
       color: #4b5563;
       text-decoration: underline;
     }
 
     .hero-note {
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       color: #6b7280;
       margin-top: 0.4rem;
     }
 
-    /* FOTO HERO – clean e elegante */
+    /* FOTO HERO – simples e bonita */
 
     .hero-photo {
-      border-radius: 26px;
-      padding: 0.3rem;
-      background: linear-gradient(140deg, rgba(37,99,235,0.1), rgba(255,255,255,1));
-      box-shadow: 0 16px 40px rgba(15,23,42,0.16);
+      border-radius: 24px;
+      padding: 0.35rem;
+      background: linear-gradient(140deg, rgba(37,99,235,0.12), rgba(255,255,255,1));
+      box-shadow: 0 14px 34px rgba(15,23,42,0.14);
     }
 
     .hero-photo-inner {
       background: #ffffff;
-      border-radius: 22px;
+      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(226,232,240,0.9);
+      border: 1px solid #e5e7f0;
     }
 
     .hero-photo img {
@@ -205,7 +213,7 @@
     }
 
     .hero-photo-caption {
-      padding: 0.9rem 1.1rem 1.1rem;
+      padding: 0.85rem 1rem 1rem;
     }
 
     .hero-photo-caption h2 {
@@ -216,139 +224,162 @@
     }
 
     .hero-photo-caption p {
-      font-size: 0.83rem;
+      font-size: 0.85rem;
       color: #6b7280;
     }
 
-    /* SEÇÕES BASE */
+    /* SEÇÕES GERAIS */
 
     section {
-      padding: 2.5rem 0;
+      padding: 2.3rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid rgba(209,213,219,0.5);
     }
 
     section:nth-of-type(even) {
       background-color: #ffffff;
     }
 
+    .section-header {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
     .section-title {
-      font-size: 1.45rem;
-      margin-bottom: 0.6rem;
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
       letter-spacing: -0.02em;
       color: #0f172a;
     }
 
     .section-subtitle {
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: #6b7280;
-      margin-bottom: 1.6rem;
-      max-width: 640px;
+      max-width: 36rem;
     }
 
-    /* ILUSTRAÇÃO SIMPLES – PARA QUEM É */
+    /* “PARA QUEM” */
 
     .section-illus {
       display: flex;
       justify-content: center;
-      margin-bottom: 1.1rem;
+      margin-bottom: 1rem;
     }
 
     .section-illus-circle {
-      width: 72px;
-      height: 72px;
+      width: 70px;
+      height: 70px;
       border-radius: 999px;
       background: linear-gradient(145deg, #2563eb, #4f8df9);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 14px 32px rgba(37,99,235,0.55);
-      font-size: 2.1rem;
+      box-shadow: 0 12px 30px rgba(37,99,235,0.55);
+      font-size: 2rem;
       color: #ffffff;
     }
-
-    /* CARDS / GRID */
 
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.3rem;
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 820px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
       background: #ffffff;
       border-radius: 18px;
-      padding: 1.15rem;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      border: 1px solid rgba(226,232,240,0.9);
+      padding: 1.1rem;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.05);
+      border: 1px solid #e5e7f0;
+      font-size: 0.96rem;
     }
 
     .card h3 {
-      font-size: 0.98rem;
-      margin-bottom: 0.45rem;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
       color: #0f172a;
     }
 
     .card p {
-      font-size: 0.9rem;
       color: #4b5563;
     }
 
-    /* STEPS */
+    /* COMO FUNCIONA – 3 ETAPAS APENAS PRA FICAR MAIS LEVE */
 
     .steps {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
-      margin-top: 1.1rem;
+      margin-top: 0.8rem;
+    }
+
+    @media (max-width: 820px) {
+      .steps {
+        grid-template-columns: 1fr;
+      }
     }
 
     .step {
       background: #ffffff;
       border-radius: 18px;
       padding: 1rem;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      border: 1px solid rgba(226,232,240,0.9);
-      font-size: 0.9rem;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.05);
+      border: 1px solid #e5e7f0;
+      font-size: 0.96rem;
     }
 
     .step span {
       display: inline-block;
       font-weight: 700;
       color: #2563eb;
-      margin-bottom: 0.25rem;
-      font-size: 0.78rem;
+      margin-bottom: 0.2rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
     }
 
     .step strong {
       display: block;
-      margin-bottom: 0.22rem;
+      margin-bottom: 0.25rem;
       color: #0f172a;
     }
 
-    /* POR QUE AQUI – CARDS + INFO */
+    /* POR QUE AQUI – 3 CARDS SIMPLES */
 
     .benefit-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.3rem;
-      margin-bottom: 1.6rem;
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 820px) {
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .benefit-card {
       background: #ffffff;
       border-radius: 18px;
-      padding: 1.15rem;
-      border: 1px solid rgba(210,224,255,0.9);
-      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
-      font-size: 0.9rem;
+      padding: 1.1rem;
+      border: 1px solid #e0e7ff;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.05);
+      font-size: 0.96rem;
     }
 
     .benefit-card-header {
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
     }
 
     .benefit-icon {
@@ -363,31 +394,11 @@
     }
 
     .benefit-card h3 {
-      font-size: 0.98rem;
+      font-size: 1rem;
       color: #0f172a;
     }
 
     .benefit-card p {
-      color: #4b5563;
-      font-size: 0.9rem;
-      margin-top: 0.2rem;
-    }
-
-    .info-box {
-      background: #f1f5ff;
-      border-radius: 20px;
-      padding: 1.25rem;
-      font-size: 0.9rem;
-      border: 1px solid #d2e1ff;
-    }
-
-    .info-box h3 {
-      font-size: 1.02rem;
-      margin-bottom: 0.4rem;
-      color: #0f172a;
-    }
-
-    .info-box p {
       color: #4b5563;
     }
 
@@ -396,26 +407,31 @@
     .testimonials {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.1rem;
+      gap: 1rem;
+    }
+
+    @media (max-width: 820px) {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
     }
 
     .testimonial {
       background: #ffffff;
       border-radius: 18px;
-      padding: 1.1rem;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      border: 1px solid rgba(226,232,240,0.9);
-      font-size: 0.9rem;
+      padding: 1rem;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+      border: 1px solid #e5e7f0;
+      font-size: 0.96rem;
     }
 
     .testimonial p {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
       color: #4b5563;
-      font-size: 0.9rem;
     }
 
     .testimonial strong {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: #0f172a;
     }
 
@@ -425,9 +441,10 @@
       border-radius: 14px;
       margin-bottom: 0.8rem;
       box-shadow: 0 5px 14px rgba(15,23,42,0.04);
-      border: 1px solid rgba(226,232,240,0.9);
+      border: 1px solid #e5e7f0;
       background: #ffffff;
       overflow: hidden;
+      font-size: 0.96rem;
     }
 
     .faq-question {
@@ -435,13 +452,11 @@
       text-align: left;
       background: #ffffff;
       border: none;
-      padding: 0.95rem 1rem;
+      padding: 0.9rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
-      font-size: 0.95rem;
-      color: #0f172a;
     }
 
     .faq-question span.label {
@@ -450,7 +465,7 @@
     }
 
     .faq-question span.toggle {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #9ca3af;
       transition: transform 0.18s ease;
     }
@@ -467,9 +482,8 @@
     }
 
     .faq-answer p {
-      font-size: 0.9rem;
-      color: #4b5563;
       padding-bottom: 0.9rem;
+      color: #4b5563;
     }
 
     /* LOCALIZAÇÃO */
@@ -477,12 +491,18 @@
     .location-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-      gap: 1.6rem;
+      gap: 1.4rem;
       align-items: flex-start;
     }
 
+    @media (max-width: 820px) {
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .location-info {
-      font-size: 0.9rem;
+      font-size: 0.96rem;
       color: #4b5563;
     }
 
@@ -498,23 +518,23 @@
 
     .map-box iframe {
       width: 100%;
-      min-height: 260px;
+      min-height: 240px;
       border: 0;
-      border-radius: 20px;
-      box-shadow: 0 12px 32px rgba(15,23,42,0.18);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(15,23,42,0.18);
     }
 
     /* CTA FINAL */
 
     .final-cta {
       text-align: center;
-      padding: 2.6rem 1rem 3rem;
+      padding: 2.4rem 1rem 2.8rem;
     }
 
     .final-cta p {
-      margin: 0.5rem 0 1.2rem;
+      margin: 0.5rem 0 1.1rem;
       color: #4b5563;
-      font-size: 0.96rem;
+      font-size: 0.98rem;
     }
 
     /* BOTÃO FLUTUANTE WHATSAPP */
@@ -558,7 +578,7 @@
     footer {
       background: #0b1120;
       color: #9ca3af;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       padding: 1rem 0;
       text-align: center;
     }
@@ -566,47 +586,7 @@
     footer a {
       color: #e5e7eb;
       text-decoration: underline;
-      font-size: 0.78rem;
-    }
-
-    /* RESPONSIVO */
-
-    @media (max-width: 900px) {
-      .hero {
-        padding-top: 2.2rem;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-photo {
-        order: -1;
-      }
-
-      .grid-3,
-      .benefit-grid,
-      .testimonials {
-        grid-template-columns: 1fr;
-      }
-
-      .steps {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .location-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-title {
-        font-size: 1.8rem;
-      }
+      font-size: 0.8rem;
     }
   </style>
 </head>
@@ -634,13 +614,12 @@
             </div>
             <h1 class="hero-title">Tratamento de canal em São Paulo, com acolhimento e sem dor.</h1>
             <p class="hero-subtitle">
-              Atendimento particular com endodontista especialista, em consultório moderno na Av. Nove de Julho.
-              Avaliação rápida para alívio da dor e definição do melhor tratamento.
+              Atendimento particular com endodontista especialista na Av. Nove de Julho, em consultório calmo e moderno.
             </p>
             <ul class="hero-list">
-              <li><span class="bullet">•</span> Dor de dente intensa, sensibilidade ao mastigar ou à temperatura.</li>
-              <li><span class="bullet">•</span> Indicação de tratamento de canal pelo seu dentista e busca por especialista.</li>
-              <li><span class="bullet">•</span> Inchaço, trauma ou histórico de canal mal sucedido.</li>
+              <li><span class="bullet">•</span> Dor de dente forte ou sensibilidade ao mastigar.</li>
+              <li><span class="bullet">•</span> Indicação de tratamento de canal pelo seu dentista.</li>
+              <li><span class="bullet">•</span> Casos mais complexos ou retratamento de canal.</li>
             </ul>
 
             <div class="hero-cta-group">
@@ -655,7 +634,7 @@
               <a href="#faq" class="btn-secondary">Ver dúvidas frequentes</a>
             </div>
             <p class="hero-note">
-              Atendimento de segunda a sexta das 08h às 19h, e sábado das 09h às 12h.
+              Segunda a sexta das 08h às 19h · Sábado das 09h às 12h.
             </p>
           </div>
 
@@ -663,351 +642,4 @@
           <div class="hero-photo">
             <div class="hero-photo-inner">
               <img src="1.jpeg" alt="Dra. Maria Vitória Avólio no consultório" />
-              <div class="hero-photo-caption">
-                <h2>Dra. Maria Vitória Avólio</h2>
-                <p>Cirurgiã-dentista com atuação focada em endodontia (tratamento de canal) e acolhimento ao paciente.</p>
-              </div>
-            </div>
-          </div>
-          <!-- FIM FOTO -->
-        </div>
-      </div>
-    </section>
-
-    <!-- PARA QUEM É -->
-    <section id="para-quem">
-      <div class="container">
-        <div class="section-illus">
-          <div class="section-illus-circle">
-            🦷
-          </div>
-        </div>
-
-        <h2 class="section-title">Para quem é essa consulta?</h2>
-        <p class="section-subtitle">
-          Essa avaliação é para quem está com dor, desconforto ou já recebeu indicação de tratamento de canal
-          e deseja ser atendido por uma profissional que explique cada etapa com calma, priorizando seu conforto.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Dor de dente ou sensibilidade forte</h3>
-            <p>
-              Episódios de dor espontânea, pontadas, dor noturna, desconforto ao mastigar ou ao tomar algo quente/frio.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Indicação de canal pelo dentista</h3>
-            <p>
-              Você já fez radiografia ou passou por outro dentista e recebeu a recomendação de procurar um endodontista.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Casos mais complexos</h3>
-            <p>
-              Retratamento de canal, dentes com restaurações extensas, coroas, fraturas ou histórico de canal mal sucedido.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMO FUNCIONA -->
-    <section id="como-funciona">
-      <div class="container">
-        <h2 class="section-title">Como funciona o seu atendimento</h2>
-        <p class="section-subtitle">
-          O objetivo é aliviar sua dor, explicar com clareza o que está acontecendo e realizar
-          o tratamento de forma segura, planejada e o mais tranquila possível.
-        </p>
-
-        <div class="steps">
-          <div class="step">
-            <span>Etapa 1</span>
-            <strong>Consulta e diagnóstico</strong>
-            Avaliação clínica cuidadosa, análise do seu relato de dor e exame radiográfico quando necessário.
-          </div>
-          <div class="step">
-            <span>Etapa 2</span>
-            <strong>Planejamento e explicação</strong>
-            Explicação clara das opções de tratamento, tempo previsto, número de sessões e investimento.
-          </div>
-          <div class="step">
-            <span>Etapa 3</span>
-            <strong>Tratamento de canal</strong>
-            Realização do canal com técnicas modernas, anestesia eficaz e foco máximo em conforto e segurança.
-          </div>
-          <div class="step">
-            <span>Etapa 4</span>
-            <strong>Acompanhamento</strong>
-            Orientações após o procedimento e, quando necessário, retorno para controle e finalização da restauração.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- POR QUE AQUI -->
-    <section id="diferenciais">
-      <div class="container">
-        <h2 class="section-title">Por que fazer seu tratamento de canal aqui?</h2>
-        <p class="section-subtitle">
-          Mais do que tratar um dente, a proposta é cuidar de você por inteiro: sua dor, seu medo, suas dúvidas
-          e o seu momento de vida.
-        </p>
-
-        <div class="benefit-grid">
-          <div class="benefit-card">
-            <div class="benefit-card-header">
-              <div class="benefit-icon">🤍</div>
-              <h3>Acolhimento verdadeiro</h3>
-            </div>
-            <p>
-              Você é ouvido(a) com atenção, sem pressa. A consulta é um espaço seguro para falar dos seus medos e dúvidas.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-card-header">
-              <div class="benefit-icon">🦷</div>
-              <h3>Técnica e delicadeza</h3>
-            </div>
-            <p>
-              Tratamento de canal com foco em preservar o dente, usar boas técnicas e cuidar do seu conforto do início ao fim.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-card-header">
-              <div class="benefit-icon">📍</div>
-              <h3>Atendimento particular</h3>
-            </div>
-            <p>
-              Mais tempo para cada paciente, materiais de qualidade, ambiente tranquilo e consultório bem localizado.
-            </p>
-          </div>
-        </div>
-
-        <div class="info-box">
-          <h3>Sobre a Dra. Maria Vitória</h3>
-          <p>
-            Dentista apaixonada por endodontia e por cuidar de pessoas, unindo técnica e sensibilidade em cada atendimento.
-            O objetivo é que você saia do consultório com menos dor, mais tranquilidade e clareza sobre o que foi feito.
-          </p>
-          <p style="margin-top: 0.6rem;">
-            Se você está inseguro(a), com medo do tratamento de canal ou já teve uma experiência ruim, aqui é um espaço para ser acolhido e tratado com respeito.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- DEPOIMENTOS -->
-    <section id="depoimentos">
-      <div class="container">
-        <h2 class="section-title">O que os pacientes dizem</h2>
-
-        <div class="testimonials">
-          <div class="testimonial">
-            <p>
-              “Eu cheguei chorando de dor e morrendo de medo do canal. A Dra. Maria Vitória me explicou tudo com calma
-              e fez o procedimento sem que eu sentisse dor. Foi a melhor experiência no dentista que já tive.”
-            </p>
-            <strong>– A.C., 32 anos</strong>
-          </div>
-          <div class="testimonial">
-            <p>
-              “Já tinha feito um canal que não deu certo e estava desconfiado. Ela avaliou com muito cuidado, me mostrou a radiografia,
-              explicou o retratamento e hoje estou sem dor e com o dente preservado.”
-            </p>
-            <strong>– R.L., 45 anos</strong>
-          </div>
-          <div class="testimonial">
-            <p>
-              “Achei que iria perder o dente. Na consulta, ela foi super humana, me acolheu e me acalmou.
-              O atendimento foi rápido, organizado e eu me senti respeitada o tempo todo.”
-            </p>
-            <strong>– M.S., 27 anos</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ EM ACCORDION -->
-    <section id="faq">
-      <div class="container">
-        <h2 class="section-title">Dúvidas frequentes</h2>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="label">O tratamento de canal dói?</span>
-            <span class="toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              O procedimento é realizado com anestesia local e todo cuidado para que você não sinta dor durante o tratamento.
-              Podem haver desconfortos leves após a sessão, mas são controlados com medicação e orientações adequadas.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="label">Quantas sessões são necessárias?</span>
-            <span class="toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Isso varia de acordo com o dente, o grau de inflamação ou infecção e se é um retratamento ou um canal novo.
-              Em muitos casos, é possível concluir em 1 ou 2 sessões, mas isso é definido após avaliação.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="label">Qual é o valor do tratamento de canal?</span>
-            <span class="toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              O investimento depende do tipo de dente (anterior, pré-molar, molar), da complexidade do caso e da necessidade de retratamento.
-              O valor exato é informado após a consulta, com transparência e explicação de todas as etapas.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="label">Atende por convênio ou apenas particular?</span>
-            <span class="toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              O atendimento é particular, com foco em qualidade, tempo adequado em cada paciente e liberdade para utilizar materiais e técnicas de excelência.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="label">Como agendo uma consulta?</span>
-            <span class="toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Você pode clicar no botão de WhatsApp desta página, enviar a mensagem padrão ou escrever sua dúvida.
-              A equipe irá responder com os horários disponíveis e todas as orientações para o seu atendimento.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCALIZAÇÃO -->
-    <section id="localizacao">
-      <div class="container">
-        <h2 class="section-title">Localização do consultório</h2>
-        <p class="section-subtitle">
-          Consultório confortável e de fácil acesso, em uma das regiões mais conhecidas de São Paulo.
-        </p>
-
-        <div class="location-grid">
-          <div class="location-info">
-            <p><strong>Endereço:</strong></p>
-            <p>
-              Avenida Nove de Julho, 3229 – Conjunto 1506<br />
-              Jardim Paulista – São Paulo / SP
-            </p>
-            <p style="margin-top: 0.6rem;">
-              <strong>Horários de atendimento:</strong><br />
-              Segunda a sexta: 08h às 19h<br />
-              Sábado: 09h às 12h
-            </p>
-            <p style="margin-top: 0.6rem;">
-              <strong>WhatsApp para agendamento:</strong><br />
-              <a href="https://wa.me/5511994802149" target="_blank" rel="noopener noreferrer">
-                (11) 99480-2149
-              </a>
-            </p>
-          </div>
-
-          <div class="map-box">
-            <iframe
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229,+São+Paulo&output=embed">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section class="final-cta">
-      <div class="container">
-        <h2 class="section-title">Pronto(a) para aliviar essa dor e cuidar do seu dente?</h2>
-        <p>
-          Envie uma mensagem pelo WhatsApp, conte rapidamente o que está sentindo
-          e receba as opções de horário para avaliação.
-        </p>
-        <a
-          class="btn-primary"
-          href="https://wa.me/5511994802149?text=Ol%C3%A1%21%20Meu%20nome%20%C3%A9%20___%2C%20gostaria%20de%20marcar%20uma%20consulta%20para%20avalia%C3%A7%C3%A3o."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          💬 Falar com a Dra. Maria Vitória
-        </a>
-        <p class="hero-note" style="margin-top: 0.7rem;">
-          Você será atendido(a) com cuidado, respeito e total transparência em relação ao tratamento.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <div class="whatsapp-floating">
-    <a
-      href="https://wa.me/5511994802149?text=Ol%C3%A1%21%20Meu%20nome%20%C3%A9%20___%2C%20gostaria%20de%20marcar%20uma%20consulta%20para%20avalia%C3%A7%C3%A3o."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Agendar consulta pelo WhatsApp"
-    >
-      <span>Agendar agora</span>💬
-    </a>
-  </div>
-
-  <footer>
-    <div class="container">
-      <p>
-        © <span id="year"></span> MV Endodontia – Dra. Maria Vitória Avólio. Todos os direitos reservados.
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    // Atualiza ano automaticamente no rodapé
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Accordion FAQ
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      const answer = item.querySelector('.faq-answer');
-
-      question.addEventListener('click', () => {
-        const isOpen = item.classList.contains('open');
-
-        faqItems.forEach(i => {
-          i.classList.remove('open');
-          i.querySelector('.faq-answer').style.maxHeight = null;
-        });
-
-        if (!isOpen) {
-          item.classList.add('open');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
-      });
-    });
-  </script>
-</body>
-</html>
-
+              <div c
