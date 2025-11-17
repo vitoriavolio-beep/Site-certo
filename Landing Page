@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tratamento de Canal em São Paulo | Dra. Maria Vitória Avólio</title>
+  <meta name="description" content="Tratamento de canal em São Paulo com endodontista especialista. Atendimento rápido, acolhedor e sem dor. Agende sua consulta pelo WhatsApp.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16989951232"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16989951232');
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #f7f7f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .logo span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      padding: 0.4rem 0.6rem;
+      border-radius: 999px;
+      transition: background 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #f0f0f5;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 2.5rem 0 2rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #e8f4ff;
+      color: #0b74c9;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-list span.bullet {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      background: #0b74c9;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(11,116,201,0.3);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      background: #095ea2;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(11,116,201,0.35);
+    }
+
+    .btn-secondary {
+      font-size: 0.85rem;
+      color: #555;
+      text-decoration: underline;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.4rem;
+    }
+
+    .hero-photo {
+      background-color: #e0e4f2;
+      border-radius: 24px;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-photo-inner {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      width: 100%;
+      height: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-photo-inner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(11,116,201,0.16), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 75%;
+      border-radius: 16px;
+      background: #cfd6ec;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .hero-photo-caption {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-photo-caption h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-photo-caption p {
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(11,116,201,0.07);
+      color: #0b74c9;
+      font-size: 0.7rem;
+      margin-top: 0.4rem;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 2rem 0;
+    }
+
+    section:nth-of-type(even) {
+      background-color: #ffffff;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1.4rem;
+      max-width: 640px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .step {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 0.9rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      font-size: 0.88rem;
+    }
+
+    .step span {
+      display: inline-block;
+      font-weight: 700;
+      color: #0b74c9;
+      margin-bottom: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .benefits-list ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .benefits-list li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .highlight-box {
+      background: #0b74c9;
+      color: #fff;
+      border-radius: 16px;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .highlight-box h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Depoimentos */
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .testimonial {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      font-size: 0.9rem;
+    }
+
+    .testimonial p {
+      margin-bottom: 0.6rem;
+      color: #555;
+    }
+
+    .testimonial strong {
+      font-size: 0.85rem;
+      color: #333;
+    }
+
+    /* FAQ */
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.6rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .faq-item h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Localização */
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 1.5rem;
+    }
+
+    .location-info {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .location-info p {
+      margin-bottom: 0.4rem;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      min-height: 260px;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* CTA final */
+
+    .final-cta {
+      text-align: center;
+      padding: 2rem 1rem 2.4rem;
+    }
+
+    .final-cta p {
+      margin: 0.4rem 0 1.1rem;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* Floating WhatsApp button */
+
+    .whatsapp-floating {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 9999;
+    }
+
+    .whatsapp-floating a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #25d366;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+      color: #fff;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .whatsapp-floating a span {
+      position: absolute;
+      right: 70px;
+      background: #ffffff;
+      color: #111;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.16);
+      white-space: nowrap;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      font-size: 0.78rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #e5e7eb;
+      text-decoration: underline;
+      font-size: 0.78rem;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        order: -1;
+        margin-bottom: 1.3rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .benefits-list {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          MV ENDODONTIA
+          <span>Dra. Maria Vitória Avólio</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#faq">Dúvidas</a>
+          <a href="#localizacao">Localização</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              <span>⚡ Urgência em tratamento de canal</span>
+            </div>
+            <h1 class="hero-title">Tratamento de canal em São Paulo, com acolhimento e sem dor.</h1>
+            <p class="hero-subtitle">
+              Atendimento particular com endodontista especialista, em consultório moderno na Av. Nove de Julho.
+              Avaliação rápida para alívio da dor e definição do melhor tratamento.
+            </p>
+            <ul class="hero-list">
+              <li><span class="bullet">•</span> Dor de dente intensa, sensibilidade ao mastigar ou à temperatura.</li>
+              <li><span class="bullet">•</span> Indicação de tratamento de canal pelo seu dentista e busca por especialista.</li>
+              <li><span class="bullet">•</span> Inchaço, trauma ou histórico de canal mal sucedido.</li>
+            </ul>
+
+            <div class="hero-cta-group">
+              <a
+                class="btn-primary"
+                href="https://wa.me/5511994802149?text=Ol%C3%A1%21%20Meu%20nome%20%C3%A9%20___%2C%20gostaria%20de%20marcar%20uma%20consulta%20para%20avalia%C3%A7%C3%A3o."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                💬 Agendar consulta pelo WhatsApp
+              </a>
+              <a href="#faq" class="btn-secondary">Ver dúvidas frequentes</a>
+            </div>
+            <p class="hero-note">
+              Atendimento de segunda a sexta das 08h às 19h, e sábado das 09h às 12h.
+            </p>
+          </div>
+
+          <div class="hero-photo">
+            <div class="hero-photo-inner">
+              <div class="photo-placeholder">
+                <!-- Aqui você pode substituir por uma <img src="..."> -->
+                Foto da Dra. Maria Vitória ou do consultório (substitua este bloco por uma imagem).
+              </div>
+              <div class="hero-photo-caption">
+                <h2>Dra. Maria Vitória Avólio</h2>
+                <p>Cirurgiã-dentista com atuação focada em endodontia (tratamento de canal) e acolhimento ao paciente.</p>
+                <div class="tag-pill">
+                  <span>🩺</span> Tratamento de canal particular em São Paulo – Jardim Paulista
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUEM É / RESUMO -->
+    <section id="para-quem">
+      <div class="container">
+        <h2 class="section-title">Para quem é essa consulta?</h2>
+        <p class="section-subtitle">
+          Essa avaliação é para quem está com dor, desconforto ou já recebeu indicação de tratamento de canal
+          e deseja ser atendido por uma profissional que explique cada etapa com calma, priorizando seu conforto.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Dor de dente ou sensibilidade forte</h3>
+            <p>
+              Episódios de dor espontânea, pontadas, dor noturna, desconforto ao mastigar ou ao tomar algo quente/frio.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Indicação de canal pelo dentista</h3>
+            <p>
+              Você já fez radiografia ou passou por outro dentista e recebeu a recomendação de procurar um endodontista.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Casos mais complexos</h3>
+            <p>
+              Retratamento de canal, dentes com restaurações extensas, coroas, fraturas ou histórico de canal mal sucedido.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">Como funciona o seu atendimento</h2>
+        <p class="section-subtitle">
+          O objetivo é aliviar sua dor, explicar com clareza o que está acontecendo e realizar
+          o tratamento de forma segura, planejada e o mais tranquila possível.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <span>Etapa 1</span>
+            <strong>Consulta e diagnóstico</strong>
+            Avaliação clínica cuidadosa, análise do seu relato de dor e exame radiográfico quando necessário.
+          </div>
+          <div class="step">
+            <span>Etapa 2</span>
+            <strong>Planejamento e explicação</strong>
+            Explicação clara das opções de tratamento, tempo previsto, número de sessões e investimento.
+          </div>
+          <div class="step">
+            <span>Etapa 3</span>
+            <strong>Tratamento de canal</strong>
+            Realização do canal com técnicas modernas, anestesia eficaz e foco máximo em conforto e segurança.
+          </div>
+          <div class="step">
+            <span>Etapa 4</span>
+            <strong>Acompanhamento</strong>
+            Orientações após o procedimento e, quando necessário, retorno para controle e finalização da restauração.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais">
+      <div class="container">
+        <h2 class="section-title">Por que fazer seu tratamento de canal aqui?</h2>
+        <p class="section-subtitle">
+          Mais do que tratar um dente, a proposta é cuidar de você por inteiro: sua dor, seu medo, suas dúvidas
+          e o seu momento de vida.
+        </p>
+
+        <div class="benefits-list">
+          <div>
+            <ul>
+              <li>✅ <strong>Acolhimento e escuta ativa:</strong> você é atendido como pessoa, não como mais um caso.</li>
+              <li>✅ <strong>Explicação simples e transparente:</strong> cada etapa é explicada de forma clara, sem termos difíceis.</li>
+              <li>✅ <strong>Planejamento individualizado:</strong> respeitando sua rotina, sua história e a condição do dente.</li>
+              <li>✅ <strong>Atendimento particular:</strong> foco em qualidade, tempo adequado em cada consulta e materiais de excelência.</li>
+              <li>✅ <strong>Localização privilegiada:</strong> consultório na Av. Nove de Julho, região nobre de São Paulo – Jardim Paulista.</li>
+            </ul>
+          </div>
+          <div class="highlight-box">
+            <h3>Sobre a Dra. Maria Vitória</h3>
+            <p>
+              Dentista apaixonada por endodontia e por c
