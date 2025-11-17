@@ -12,7 +12,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-16989951232');
   </script>
 
@@ -25,7 +24,7 @@
     }
 
     body {
-      background-color: #f6f7fb;
+      background-color: #f3f7ff; /* azul clarinho no fundo geral */
       color: #1f2933;
       line-height: 1.6;
     }
@@ -73,24 +72,6 @@
       text-transform: uppercase;
       color: #9aa3b5;
       margin-top: 0.1rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 0.9rem;
-      font-size: 0.87rem;
-    }
-
-    .nav-links a {
-      padding: 0.4rem 0.7rem;
-      border-radius: 999px;
-      transition: background 0.16s ease, color 0.16s ease;
-      color: #4b5563;
-    }
-
-    .nav-links a:hover {
-      background-color: #f3f4ff;
-      color: #0b74c9;
     }
 
     /* HERO */
@@ -198,20 +179,21 @@
       margin-top: 0.4rem;
     }
 
-    /* HERO FOTO NOVO LAYOUT */
+    /* FOTO HERO – layout mais clean, sem moldura pesada */
 
     .hero-photo {
       border-radius: 24px;
-      background: linear-gradient(145deg, #ffffff, #eef2ff);
-      padding: 1.1rem;
-      box-shadow: 0 12px 35px rgba(15,23,42,0.10);
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
     .hero-photo-inner {
       background: #ffffff;
       border-radius: 20px;
       overflow: hidden;
-      border: 1px solid #e5e7f0;
+      border: none;
+      box-shadow: 0 10px 28px rgba(15,23,42,0.14);
     }
 
     .hero-photo img {
@@ -239,18 +221,6 @@
       color: #6b7280;
     }
 
-    .tag-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: #eef5ff;
-      color: #2563eb;
-      font-size: 0.74rem;
-      margin-top: 0.45rem;
-    }
-
     /* SECTION BASE */
 
     section {
@@ -273,6 +243,27 @@
       color: #6b7280;
       margin-bottom: 1.5rem;
       max-width: 640px;
+    }
+
+    /* “PARA QUEM” COM VISUAL MAIS BONITO */
+
+    .section-illus {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-illus-circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      background: linear-gradient(145deg, #2563eb, #4f8df9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 26px rgba(37,99,235,0.4);
+      font-size: 2rem;
+      color: #ffffff;
     }
 
     /* CARDS / GRID */
@@ -336,45 +327,69 @@
       color: #111827;
     }
 
-    /* BENEFÍCIOS / DESTAQUE */
+    /* “POR QUE FAZER AQUI?” – layout novo com cards */
 
-    .benefits-list {
+    .benefit-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 1.5rem;
-      align-items: flex-start;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .benefits-list ul {
-      list-style: none;
+    .benefit-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.1rem;
+      border: 1px solid #dde6ff;
+      box-shadow: 0 6px 20px rgba(15,23,42,0.04);
       font-size: 0.9rem;
-      color: #4b5563;
     }
 
-    .benefits-list li {
-      margin-bottom: 0.5rem;
+    .benefit-card-header {
       display: flex;
-      gap: 0.45rem;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 0.35rem;
     }
 
-    .benefits-list li strong {
-      font-weight: 600;
+    .benefit-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #eef5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .benefit-card h3 {
+      font-size: 0.96rem;
       color: #111827;
     }
 
-    .highlight-box {
-      background: #111827;
-      color: #e5e7eb;
+    .benefit-card p {
+      color: #4b5563;
+      font-size: 0.88rem;
+      margin-top: 0.2rem;
+    }
+
+    .info-box {
+      background: #eef5ff;
       border-radius: 18px;
       padding: 1.2rem;
       font-size: 0.9rem;
-      box-shadow: 0 10px 28px rgba(15,23,42,0.35);
+      border: 1px solid #d4e2ff;
     }
 
-    .highlight-box h3 {
+    .info-box h3 {
       font-size: 1rem;
       margin-bottom: 0.4rem;
-      color: #f9fafb;
+      color: #111827;
+    }
+
+    .info-box p {
+      color: #4b5563;
     }
 
     /* DEPOIMENTOS */
@@ -405,26 +420,57 @@
       color: #111827;
     }
 
-    /* FAQ */
+    /* FAQ em accordion */
 
     .faq-item {
-      background: #ffffff;
       border-radius: 12px;
-      padding: 0.95rem 1rem;
       margin-bottom: 0.7rem;
       box-shadow: 0 4px 12px rgba(15,23,42,0.04);
       border: 1px solid #edf0fa;
+      background: #ffffff;
+      overflow: hidden;
     }
 
-    .faq-item h3 {
-      font-size: 0.96rem;
-      margin-bottom: 0.3rem;
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: none;
+      padding: 0.9rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 0.95rem;
       color: #111827;
     }
 
-    .faq-item p {
+    .faq-question span.label {
+      flex: 1;
+      padding-right: 0.8rem;
+    }
+
+    .faq-question span.toggle {
+      font-size: 1.2rem;
+      color: #9ca3af;
+      transition: transform 0.18s ease;
+    }
+
+    .faq-item.open .faq-question span.toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.22s ease;
+      padding: 0 1rem;
+    }
+
+    .faq-answer p {
       font-size: 0.88rem;
       color: #4b5563;
+      padding-bottom: 0.9rem;
     }
 
     /* LOCALIZAÇÃO */
@@ -538,7 +584,9 @@
         order: -1;
       }
 
-      .grid-3 {
+      .grid-3,
+      .benefit-grid,
+      .testimonials {
         grid-template-columns: 1fr;
       }
 
@@ -546,20 +594,8 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .benefits-list {
-        grid-template-columns: 1fr;
-      }
-
-      .testimonials {
-        grid-template-columns: 1fr;
-      }
-
       .location-grid {
         grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
       }
     }
 
@@ -583,13 +619,7 @@
           MV ENDODONTIA
           <span>Dra. Maria Vitória Avólio</span>
         </div>
-        <nav class="nav-links">
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#faq">Dúvidas</a>
-          <a href="#localizacao">Localização</a>
-        </nav>
+        <!-- Links do topo removidos conforme pedido -->
       </div>
     </div>
   </header>
@@ -630,16 +660,13 @@
             </p>
           </div>
 
-          <!-- FOTO 1.JPEG AQUI -->
+          <!-- FOTO 1.JPEG -->
           <div class="hero-photo">
             <div class="hero-photo-inner">
               <img src="1.jpeg" alt="Dra. Maria Vitória Avólio no consultório" />
               <div class="hero-photo-caption">
                 <h2>Dra. Maria Vitória Avólio</h2>
                 <p>Cirurgiã-dentista com atuação focada em endodontia (tratamento de canal) e acolhimento ao paciente.</p>
-                <div class="tag-pill">
-                  <span>🩺</span> Tratamento de canal particular – Jardim Paulista, São Paulo
-                </div>
               </div>
             </div>
           </div>
@@ -651,6 +678,12 @@
     <!-- PARA QUEM É -->
     <section id="para-quem">
       <div class="container">
+        <div class="section-illus">
+          <div class="section-illus-circle">
+            🦷
+          </div>
+        </div>
+
         <h2 class="section-title">Para quem é essa consulta?</h2>
         <p class="section-subtitle">
           Essa avaliação é para quem está com dor, desconforto ou já recebeu indicação de tratamento de canal
@@ -714,7 +747,7 @@
       </div>
     </section>
 
-    <!-- DIFERENCIAIS -->
+    <!-- POR QUE AQUI -->
     <section id="diferenciais">
       <div class="container">
         <h2 class="section-title">Por que fazer seu tratamento de canal aqui?</h2>
@@ -723,26 +756,45 @@
           e o seu momento de vida.
         </p>
 
-        <div class="benefits-list">
-          <div>
-            <ul>
-              <li>✅ <strong>Acolhimento e escuta ativa:</strong> você é atendido como pessoa, não como mais um caso.</li>
-              <li>✅ <strong>Explicação simples e transparente:</strong> cada etapa é explicada de forma clara, sem termos difíceis.</li>
-              <li>✅ <strong>Planejamento individualizado:</strong> respeitando sua rotina, sua história e a condição do dente.</li>
-              <li>✅ <strong>Atendimento particular:</strong> foco em qualidade, tempo adequado em cada consulta e materiais de excelência.</li>
-              <li>✅ <strong>Localização privilegiada:</strong> consultório na Av. Nove de Julho, região nobre de São Paulo – Jardim Paulista.</li>
-            </ul>
-          </div>
-          <div class="highlight-box">
-            <h3>Sobre a Dra. Maria Vitória</h3>
+        <div class="benefit-grid">
+          <div class="benefit-card">
+            <div class="benefit-card-header">
+              <div class="benefit-icon">🤍</div>
+              <h3>Acolhimento verdadeiro</h3>
+            </div>
             <p>
-              Dentista apaixonada por endodontia e por cuidar de pessoas, unindo técnica e sensibilidade em cada atendimento.
-              O objetivo é que você saia do consultório com menos dor, mais tranquilidade e clareza sobre o que foi feito.
-            </p>
-            <p style="margin-top: 0.6rem;">
-              Se você está inseguro(a), com medo do tratamento de canal ou já teve uma experiência ruim, aqui é um espaço para ser acolhido e tratado com respeito.
+              Você é ouvido(a) com atenção, sem pressa. A consulta é um espaço seguro para falar dos seus medos e dúvidas.
             </p>
           </div>
+          <div class="benefit-card">
+            <div class="benefit-card-header">
+              <div class="benefit-icon">🦷</div>
+              <h3>Técnica e delicadeza</h3>
+            </div>
+            <p>
+              Tratamento de canal com foco em preservar o dente, usar boas técnicas e cuidar do seu conforto do início ao fim.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-card-header">
+              <div class="benefit-icon">📍</div>
+              <h3>Atendimento particular</h3>
+            </div>
+            <p>
+              Mais tempo para cada paciente, materiais de qualidade, ambiente tranquilo e consultório bem localizado.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <h3>Sobre a Dra. Maria Vitória</h3>
+          <p>
+            Dentista apaixonada por endodontia e por cuidar de pessoas, unindo técnica e sensibilidade em cada atendimento.
+            O objetivo é que você saia do consultório com menos dor, mais tranquilidade e clareza sobre o que foi feito.
+          </p>
+          <p style="margin-top: 0.6rem;">
+            Se você está inseguro(a), com medo do tratamento de canal ou já teve uma experiência ruim, aqui é um espaço para ser acolhido e tratado com respeito.
+          </p>
         </div>
       </div>
     </section>
@@ -751,9 +803,6 @@
     <section id="depoimentos">
       <div class="container">
         <h2 class="section-title">O que os pacientes dizem</h2>
-        <p class="section-subtitle">
-          Depoimentos reais de pessoas que passaram por tratamento de canal e foram atendidas com cuidado, calma e atenção.
-        </p>
 
         <div class="testimonials">
           <div class="testimonial">
@@ -781,48 +830,73 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ EM ACCORDION -->
     <section id="faq">
       <div class="container">
         <h2 class="section-title">Dúvidas frequentes</h2>
 
         <div class="faq-item">
-          <h3>O tratamento de canal dói?</h3>
-          <p>
-            O procedimento é realizado com anestesia local e todo cuidado para que você não sinta dor durante o tratamento.
-            Podem haver desconfortos leves após a sessão, mas são controlados com medicação e orientações adequadas.
-          </p>
+          <button class="faq-question">
+            <span class="label">O tratamento de canal dói?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              O procedimento é realizado com anestesia local e todo cuidado para que você não sinta dor durante o tratamento.
+              Podem haver desconfortos leves após a sessão, mas são controlados com medicação e orientações adequadas.
+            </p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h3>Quantas sessões são necessárias?</h3>
-          <p>
-            Isso varia de acordo com o dente, o grau de inflamação ou infecção e se é um retratamento ou um canal novo.
-            Em muitos casos, é possível concluir em 1 ou 2 sessões, mas isso é definido após avaliação.
-          </p>
+          <button class="faq-question">
+            <span class="label">Quantas sessões são necessárias?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Isso varia de acordo com o dente, o grau de inflamação ou infecção e se é um retratamento ou um canal novo.
+              Em muitos casos, é possível concluir em 1 ou 2 sessões, mas isso é definido após avaliação.
+            </p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h3>Qual é o valor do tratamento de canal?</h3>
-          <p>
-            O investimento depende do tipo de dente (anterior, pré-molar, molar), da complexidade do caso e da necessidade de retratamento.
-            O valor exato é informado após a consulta, com transparência e explicação de todas as etapas.
-          </p>
+          <button class="faq-question">
+            <span class="label">Qual é o valor do tratamento de canal?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              O investimento depende do tipo de dente (anterior, pré-molar, molar), da complexidade do caso e da necessidade de retratamento.
+              O valor exato é informado após a consulta, com transparência e explicação de todas as etapas.
+            </p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h3>Atende por convênio ou apenas particular?</h3>
-          <p>
-            O atendimento é particular, com foco em qualidade, tempo adequado em cada paciente e liberdade para utilizar materiais e técnicas de excelência.
-          </p>
+          <button class="faq-question">
+            <span class="label">Atende por convênio ou apenas particular?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              O atendimento é particular, com foco em qualidade, tempo adequado em cada paciente e liberdade para utilizar materiais e técnicas de excelência.
+            </p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h3>Como agendo uma consulta?</h3>
-          <p>
-            Você pode clicar no botão de WhatsApp desta página, enviar a mensagem padrão ou escrever sua dúvida.
-            A equipe irá responder com os horários disponíveis e todas as orientações para o seu atendimento.
-          </p>
+          <button class="faq-question">
+            <span class="label">Como agendo uma consulta?</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Você pode clicar no botão de WhatsApp desta página, enviar a mensagem padrão ou escrever sua dúvida.
+              A equipe irá responder com os horários disponíveis e todas as orientações para o seu atendimento.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -912,6 +986,30 @@
   <script>
     // Atualiza ano automaticamente no rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lógica simples do accordion de FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        // Fecha todos antes
+        faqItems.forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        // Se não estava aberto, abre o clicado
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
   </script>
 </body>
 </html>
