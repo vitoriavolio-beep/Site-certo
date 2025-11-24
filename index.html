@@ -13,12 +13,12 @@
     :root {
       --bg: #f8f6f3;
       --bg-alt: #ffffff;
-      --primary: #b4885b;     /* dourado suave */
+      --primary: #b4885b;
       --primary-soft: #e3cfb4;
       --text: #262626;
       --text-soft: #5b5b5b;
       --border-soft: #e2ded7;
-      --accent: #6e8c9c;      /* azul acinzentado */
+      --accent: #6e8c9c;
       --radius-lg: 24px;
       --radius-md: 16px;
       --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.06);
@@ -55,22 +55,18 @@
       padding: 0 1.5rem;
     }
 
-    /* HEADER */
+    /* HEADER BEM SIMPLES */
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(16px);
-      background: rgba(248, 246, 243, 0.92);
-      border-bottom: 1px solid rgba(226, 222, 215, 0.7);
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-soft);
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.9rem 0;
+      padding: 0.75rem 0;
       gap: 1.25rem;
     }
 
@@ -92,7 +88,7 @@
       font-weight: 700;
       font-size: 0.95rem;
       color: #3b2b1b;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
     }
 
     .brand-text {
@@ -138,6 +134,17 @@
     .btn-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 18px 40px rgba(113, 63, 18, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-soft);
+      border: 1px solid rgba(180, 136, 91, 0.5);
+    }
+
+    .btn-outline:hover {
+      background: rgba(250, 246, 239, 0.9);
+      transform: translateY(-1px);
     }
 
     /* HERO */
@@ -516,10 +523,6 @@
       color: #e5e7eb;
     }
 
-    .testimonials .section-header {
-      text-align: left;
-    }
-
     .testimonials .section-title {
       color: #f9fafb;
     }
@@ -658,6 +661,12 @@
       background: #ffffff;
     }
 
+    /* LOCALIZAÇÃO / MAPA NO FINAL */
+
+    .localizacao {
+      background: radial-gradient(circle at bottom, #f2ebe0 0, #fdfbf8 40%, #ffffff 100%);
+    }
+
     .map-card {
       background: #0f172a;
       border-radius: var(--radius-lg);
@@ -696,17 +705,8 @@
       font-size: 0.8rem;
       color: #9ca3af;
       min-height: 220px;
-    }
-
-    .map-placeholder span {
-      opacity: 0.9;
-      padding: 0 1.2rem;
       text-align: center;
-    }
-
-    /* LOCALIZAÇÃO (seção do mapa no final) */
-    .localizacao {
-      background: radial-gradient(circle at bottom, #f2ebe0 0, #fdfbf8 40%, #ffffff 100%);
+      padding: 0 1.2rem;
     }
 
     /* FOOTER */
@@ -756,10 +756,6 @@
       .hero-card {
         order: -1;
       }
-
-      .section-header {
-        text-align: left;
-      }
     }
 
     @media (max-width: 768px) {
@@ -773,7 +769,7 @@
       }
 
       .header-inner {
-        padding: 0.75rem 0;
+        padding: 0.6rem 0;
       }
 
       .btn-primary {
@@ -785,7 +781,7 @@
 </head>
 
 <body>
-  <!-- HEADER -->
+  <!-- HEADER SIMPLES -->
   <header>
     <div class="container header-inner">
       <a href="#topo" class="brand">
@@ -1238,10 +1234,8 @@
             <span class="badge">Região dos Jardins · SP</span>
           </div>
           <div class="map-placeholder">
-            <span>
-              Aqui você pode inserir um mapa do Google Maps com o endereço da clínica.<br>
-              Exemplo de embed: incorporar o mapa gerado no Google Maps diretamente neste espaço.
-            </span>
+            Aqui você pode inserir um mapa do Google Maps com o endereço da clínica.<br>
+            Exemplo: incorporar o código de embed gerado no Google Maps neste espaço.
           </div>
         </div>
       </div>
@@ -1262,7 +1256,6 @@
   </footer>
 
   <script>
-    // ano automático
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
   </script>
 </body>
