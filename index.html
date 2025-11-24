@@ -4,20 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avolio Odontologia | Consultório Odontológico em São Paulo</title>
-  <meta name="description" content="Avolio Odontologia – consultório odontológico em São Paulo com foco em endodontia e atendimento humanizado. Agende sua avaliação.">
+  <meta name="description" content="Avolio Odontologia – consultório odontológico em São Paulo com foco em endodontia e atendimento humanizado.">
 
   <style>
     :root {
-      --bg-page: #f5f5f7;
+      --bg-page: #f7f7f8;
       --bg-card: #ffffff;
       --primary: #b4885b;
-      --primary-soft: #f3e5d6;
       --text: #222222;
       --text-soft: #666666;
-      --border: #e0e0e5;
-      --radius-lg: 20px;
-      --radius-md: 12px;
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --border: #e3e3e7;
+      --radius-lg: 16px;
+      --radius-md: 10px;
       --max-width: 1040px;
     }
 
@@ -46,7 +44,7 @@
       padding: 0 16px;
     }
 
-    /* HEADER */
+    /* HEADER MINIMAL */
 
     header {
       background: #ffffff;
@@ -57,11 +55,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
+      padding: 12px 0;
     }
 
     .logo {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -80,52 +78,46 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 8px 16px;
+      padding: 7px 14px;
       border-radius: 999px;
-      border: 1px solid transparent;
-      font-size: 0.85rem;
+      border: 1px solid var(--primary);
+      font-size: 0.82rem;
       font-weight: 500;
       cursor: pointer;
-      transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease,
-        border-color 0.15s ease, transform 0.1s ease;
+      background: transparent;
+      color: var(--primary);
       white-space: nowrap;
+      transition: background 0.15s ease, color 0.15s ease;
     }
 
-    .btn-primary {
+    .btn:hover {
       background: var(--primary);
       color: #ffffff;
-      box-shadow: 0 8px 20px rgba(180, 136, 91, 0.35);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 26px rgba(180, 136, 91, 0.4);
-    }
-
-    .btn-outline {
-      background: transparent;
+    .btn-secondary {
       border-color: var(--border);
       color: var(--text-soft);
     }
 
-    .btn-outline:hover {
+    .btn-secondary:hover {
       border-color: var(--primary);
       color: var(--primary);
       background: #ffffff;
     }
 
-    /* SEÇÕES */
+    /* SEÇÕES BASE */
 
     main {
-      padding: 32px 0 40px;
+      padding: 28px 0 36px;
     }
 
     section {
-      padding: 32px 0;
+      padding: 26px 0;
     }
 
     .section-header {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .section-kicker {
@@ -133,13 +125,13 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--text-soft);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .section-title {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .section-subtitle {
@@ -148,36 +140,29 @@
       max-width: 420px;
     }
 
-    /* HERO */
+    /* HERO MINIMAL */
 
     .hero {
-      padding-top: 40px;
+      padding-top: 30px;
     }
 
     .hero-inner {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
-      gap: 24px;
+      gap: 20px;
       align-items: center;
     }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #ffffff;
-      border: 1px solid var(--border);
       font-size: 0.76rem;
       color: var(--text-soft);
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .hero-title {
-      font-size: 2rem;
-      line-height: 1.2;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      line-height: 1.25;
+      margin-bottom: 8px;
       letter-spacing: 0.01em;
     }
 
@@ -186,17 +171,17 @@
     }
 
     .hero-text {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--text-soft);
       max-width: 420px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
+      gap: 8px;
+      margin-bottom: 10px;
     }
 
     .hero-note {
@@ -207,28 +192,27 @@
     .hero-card {
       background: var(--bg-card);
       border-radius: var(--radius-lg);
-      padding: 18px 18px 16px;
+      padding: 14px 14px 12px;
       border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
       font-size: 0.85rem;
     }
 
     .hero-card-title {
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .hero-card-text {
       color: var(--text-soft);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-card-list {
       list-style: none;
       display: grid;
-      gap: 4px;
+      gap: 3px;
       color: var(--text-soft);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-card-list li::before {
@@ -242,30 +226,31 @@
       color: var(--text-soft);
     }
 
+    /* CARD BASE */
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
     /* SOBRE */
 
     .sobre-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 20px;
+      gap: 16px;
       align-items: flex-start;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 18px 18px 16px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
-      font-size: 0.9rem;
-      color: var(--text-soft);
     }
 
     .sobre-list {
       list-style: none;
       display: grid;
-      gap: 6px;
-      margin-top: 8px;
+      gap: 5px;
+      margin-top: 6px;
       font-size: 0.9rem;
     }
 
@@ -276,7 +261,7 @@
 
     .doc-name {
       font-weight: 600;
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       margin-bottom: 2px;
       color: var(--text);
     }
@@ -286,7 +271,7 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--text-soft);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     /* SERVIÇOS */
@@ -294,21 +279,21 @@
     .servicos-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 8px;
+      gap: 14px;
+      margin-top: 6px;
     }
 
     .servico-card {
       background: var(--bg-card);
       border-radius: var(--radius-md);
-      padding: 14px 14px 12px;
+      padding: 12px 12px 10px;
       border: 1px solid var(--border);
       font-size: 0.86rem;
       color: var(--text-soft);
     }
 
     .servico-titulo {
-      font-size: 0.95rem;
+      font-size: 0.93rem;
       font-weight: 600;
       margin-bottom: 4px;
       color: var(--text);
@@ -331,18 +316,17 @@
 
     .contato-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-      gap: 18px;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr);
+      gap: 16px;
       align-items: flex-start;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
     .contato-bloco {
       background: var(--bg-card);
       border-radius: var(--radius-lg);
-      padding: 16px 16px 14px;
+      padding: 12px 12px 10px;
       border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
       font-size: 0.88rem;
       color: var(--text-soft);
     }
@@ -390,12 +374,12 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
+      background: #ffffff;
     }
 
     .map-wrapper iframe {
       width: 100%;
-      height: 260px;
+      height: 240px;
       border: 0;
       display: block;
     }
@@ -405,10 +389,10 @@
     footer {
       border-top: 1px solid var(--border);
       background: #ffffff;
-      padding: 14px 0 18px;
+      padding: 12px 0 16px;
       font-size: 0.78rem;
       color: var(--text-soft);
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .footer-inner {
@@ -440,11 +424,11 @@
 
     @media (max-width: 720px) {
       main {
-        padding-top: 24px;
+        padding-top: 22px;
       }
 
       section {
-        padding: 24px 0;
+        padding: 22px 0;
       }
 
       .servicos-grid {
@@ -456,11 +440,11 @@
       }
 
       .logo {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
       }
 
       .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -475,7 +459,7 @@
           AVOLIO ODONTOLOGIA
           <span>Endodontia · Clínica Geral</span>
         </div>
-        <a class="btn btn-primary"
+        <a class="btn"
            href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
            target="_blank" rel="noopener noreferrer">
           Agendar pelo WhatsApp
@@ -493,20 +477,19 @@
             <div class="hero-badge">Consultório odontológico · Jardim Paulista</div>
             <h1 class="hero-title">
               Tratamento de canal e cuidado
-              <span>sem pressa</span>, do jeito que você merece.
+              <span>sem pressa</span>.
             </h1>
             <p class="hero-text">
-              Na Avolio Odontologia, cada paciente é atendido com calma,
-              explicação clara e foco em conforto durante todo o tratamento.
+              Atendimento calmo, explicação simples e foco em conforto durante todo o procedimento.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary"
+              <a class="btn"
                  href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
                  target="_blank" rel="noopener noreferrer">
                 Agendar avaliação
               </a>
-              <a class="btn btn-outline" href="#contato">
+              <a class="btn btn-secondary" href="#contato">
                 Ver endereço e horários
               </a>
             </div>
@@ -520,15 +503,15 @@
             <div class="hero-card-title">Avolio Odontologia</div>
             <p class="hero-card-text">
               Consultório odontológico em São Paulo com foco em endodontia,
-              prevenção e tratamentos clínicos essenciais.
+              cuidados clínicos essenciais e acompanhamento próximo.
             </p>
             <ul class="hero-card-list">
-              <li>Atendimentos com hora marcada, sem sala de espera lotada.</li>
-              <li>Explicação simples sobre o diagnóstico e opções de tratamento.</li>
-              <li>Ambiente tranquilo, pensado para reduzir a ansiedade no consultório.</li>
+              <li>Atendimento com hora marcada.</li>
+              <li>Explicação clara sobre diagnóstico e tratamento.</li>
+              <li>Ambiente enxuto e tranquilo.</li>
             </ul>
             <div class="hero-card-meta">
-              Avenida Nove de Julho, 3229 – cj. 1506 · Jardim Paulista · São Paulo – SP
+              Av. Nove de Julho, 3229 – cj. 1506 · Jardim Paulista · São Paulo – SP
             </div>
           </aside>
         </div>
@@ -542,20 +525,20 @@
           <div class="section-kicker">Sobre</div>
           <h2 class="section-title">A clínica</h2>
           <p class="section-subtitle">
-            Um consultório enxuto, com atendimento individualizado e foco em relação de confiança.
+            Um consultório simples, organizado e pensado para atendimento individualizado.
           </p>
         </div>
 
         <div class="sobre-grid">
           <div class="card">
             <p>
-              A Avolio Odontologia está localizada na região dos Jardins, em São Paulo,
+              A Avolio Odontologia está na região dos Jardins, em São Paulo,
               com fácil acesso pela Avenida Nove de Julho.
             </p>
             <ul class="sobre-list">
-              <li><strong>Endereço:</strong> Avenida Nove de Julho, 3229 – Conjunto 1506</li>
+              <li><strong>Endereço:</strong> Av. Nove de Julho, 3229 – Conj. 1506</li>
               <li><strong>Bairro:</strong> Jardim Paulista · São Paulo – SP</li>
-              <li><strong>Agendamento:</strong> realizado exclusivamente por WhatsApp ou telefone</li>
+              <li><strong>Agendamento:</strong> via WhatsApp ou telefone</li>
             </ul>
           </div>
 
@@ -563,12 +546,8 @@
             <div class="doc-name">Dra. Maria Vitória Bello Avolio</div>
             <div class="doc-meta">Cirurgiã-dentista · Especialista em Endodontia</div>
             <p>
-              Atuação com foco em tratamento de canal, alívio de dor e acompanhamento clínico,
-              sempre alinhando técnica, clareza na comunicação e cuidado com o paciente.
-            </p>
-            <p style="margin-top:6px;">
-              Cada plano de tratamento é pensado individualmente, respeitando a história,
-              rotina e expectativas de quem está na cadeira.
+              Atuação focada em tratamento de canal, alívio de dor e
+              acompanhamento clínico, sempre com comunicação clara e respeito ao tempo do paciente.
             </p>
           </div>
         </div>
@@ -582,7 +561,7 @@
           <div class="section-kicker">Serviços</div>
           <h2 class="section-title">Principais atendimentos</h2>
           <p class="section-subtitle">
-            Tratamentos essenciais para saúde bucal, com foco em endodontia e clínica geral.
+            Cuidados essenciais para saúde bucal, com foco em endodontia.
           </p>
         </div>
 
@@ -590,37 +569,36 @@
           <div class="servico-card">
             <div class="servico-titulo">Endodontia (tratamento de canal)</div>
             <p>
-              Tratamentos de canal em dentes anteriores e posteriores,
-              com foco em conforto e controle de dor.
+              Procedimentos para preservar dentes com inflamação ou infecção pulpar.
             </p>
             <ul class="servico-list">
               <li>Tratamento de canal</li>
               <li>Retratamento de canal</li>
-              <li>Alívio de dor de origem dentária</li>
+              <li>Controle de dor de origem dentária</li>
             </ul>
           </div>
 
           <div class="servico-card">
             <div class="servico-titulo">Clínica geral</div>
             <p>
-              Cuidados básicos e acompanhamento da saúde bucal ao longo do tempo.
+              Atendimentos básicos para manutenção da saúde bucal.
             </p>
             <ul class="servico-list">
               <li>Avaliação clínica</li>
               <li>Restaurações</li>
-              <li>Encaminhamento para outras especialidades quando necessário</li>
+              <li>Encaminhamento quando necessário</li>
             </ul>
           </div>
 
           <div class="servico-card">
-            <div class="servico-titulo">Cuidados complementares</div>
+            <div class="servico-titulo">Orientação e prevenção</div>
             <p>
-              Orientações simples e práticas para manter seus resultados em casa.
+              Reforço de cuidados diários e acompanhamento após tratamentos.
             </p>
             <ul class="servico-list">
-              <li>Orientação de higiene bucal</li>
-              <li>Acompanhamento após tratamentos</li>
-              <li>Avaliação periódica</li>
+              <li>Orientação de higiene</li>
+              <li>Acompanhamento periódico</li>
+              <li>Revisão de tratamentos</li>
             </ul>
           </div>
         </div>
@@ -634,7 +612,7 @@
           <div class="section-kicker">Contato</div>
           <h2 class="section-title">Agendamento e localização</h2>
           <p class="section-subtitle">
-            Entre em contato para agendar sua avaliação ou enviar seus exames para análise.
+            Entre em contato para agendar sua avaliação ou enviar exames para análise.
           </p>
         </div>
 
@@ -653,7 +631,7 @@
             <div class="contato-linha">
               <div class="contato-label">Endereço</div>
               <div class="contato-valor">
-                Avenida Nove de Julho, 3229 – Conjunto 1506<br>
+                Av. Nove de Julho, 3229 – Conj. 1506<br>
                 Jardim Paulista · São Paulo – SP
               </div>
             </div>
@@ -708,4 +686,3 @@
   </script>
 </body>
 </html>
-
