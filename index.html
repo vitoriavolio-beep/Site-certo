@@ -237,7 +237,31 @@
       color: var(--text-soft);
     }
 
-    /* SOBRE */
+    /* GRID 2 COLUNAS GENÉRICO */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 16px;
+      align-items: flex-start;
+      margin-top: 6px;
+    }
+
+    .list-simple {
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      font-size: 0.88rem;
+      color: var(--text-soft);
+    }
+
+    .list-simple li::before {
+      content: "• ";
+      color: var(--primary);
+      margin-right: 2px;
+    }
+
+    /* SOBRE CLÍNICA */
 
     .sobre-grid {
       display: grid;
@@ -312,31 +336,7 @@
       color: var(--primary);
     }
 
-    /* LAYOUT 2 COLUNAS GENÉRICO */
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 16px;
-      align-items: flex-start;
-      margin-top: 6px;
-    }
-
-    .list-simple {
-      list-style: none;
-      display: grid;
-      gap: 4px;
-      font-size: 0.88rem;
-      color: var(--text-soft);
-    }
-
-    .list-simple li::before {
-      content: "• ";
-      color: var(--primary);
-      margin-right: 2px;
-    }
-
-    /* FAQ */
+    /* FAQ (accordion) */
 
     .faq-grid {
       display: grid;
@@ -349,16 +349,50 @@
       background: var(--bg-card);
       border-radius: var(--radius-md);
       border: 1px solid var(--border);
-      padding: 10px 10px 8px;
       font-size: 0.86rem;
       color: var(--text-soft);
+      overflow: hidden;
+    }
+
+    .faq-header {
+      width: 100%;
+      padding: 10px 12px;
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      font: inherit;
+      color: var(--text);
     }
 
     .faq-pergunta {
       font-weight: 600;
       font-size: 0.9rem;
-      margin-bottom: 3px;
-      color: var(--text);
+    }
+
+    .faq-icon {
+      font-size: 1rem;
+      line-height: 1;
+      transition: transform 0.15s ease;
+    }
+
+    .faq-body {
+      padding: 0 12px 10px;
+      display: none;
+      border-top: 1px solid var(--border);
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    .faq-item.open .faq-body {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg); /* vira um "x" ao abrir */
     }
 
     /* CONTATO + MAPA */
@@ -506,7 +540,7 @@
 
 <body>
   <!-- HEADER -->
-  <header>
+  <header id="topo">
     <div class="container">
       <div class="header-inner">
         <div class="logo">
@@ -745,67 +779,97 @@
       </div>
     </section>
 
-    <!-- PERGUNTAS FREQUENTES -->
+    <!-- PERGUNTAS FREQUENTES (FAQ) -->
     <section id="faq">
       <div class="container">
         <div class="section-header">
           <div class="section-kicker">Perguntas frequentes</div>
           <h2 class="section-title">Dúvidas comuns dos pacientes</h2>
           <p class="section-subtitle">
-            Algumas respostas rápidas para perguntas que quase sempre aparecem no consultório.
+            Clique nas perguntas abaixo para ver as respostas.
           </p>
         </div>
 
         <div class="faq-grid">
           <div class="faq-item">
-            <div class="faq-pergunta">1. Tratamento de canal dói?</div>
-            <p>
-              O objetivo do tratamento é justamente aliviar a dor. Com anestesia adequada
-              e técnica correta, o procedimento é bem tolerado. Desconfortos leves podem
-              ocorrer após a sessão e são controlados com medicação simples.
-            </p>
+            <button class="faq-header" type="button">
+              <span class="faq-pergunta">1. Tratamento de canal dói?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                O objetivo do tratamento é justamente aliviar a dor. Com anestesia adequada
+                e técnica correta, o procedimento é bem tolerado. Desconfortos leves podem
+                ocorrer após a sessão e são controlados com medicação simples.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-pergunta">2. A clínica atende convênio?</div>
-            <p>
-              O atendimento é <strong>particular</strong>. Se desejar, você pode verificar
-              com o seu plano a possibilidade de reembolso, conforme contrato com a operadora.
-            </p>
+            <button class="faq-header" type="button">
+              <span class="faq-pergunta">2. A clínica atende convênio?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                O atendimento é <strong>particular</strong>. Se desejar, você pode verificar
+                com o seu plano a possibilidade de reembolso, conforme contrato com a operadora.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-pergunta">3. Quanto tempo dura um tratamento de canal?</div>
-            <p>
-              Depende do dente, da complexidade e da presença (ou não) de infecção.
-              Alguns casos podem ser resolvidos em sessão única; outros exigem mais visitas.
-              Isso é alinhado na avaliação.
-            </p>
+            <button class="faq-header" type="button">
+              <span class="faq-pergunta">3. Quanto tempo dura um tratamento de canal?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                Depende do dente, da complexidade e da presença (ou não) de infecção.
+                Alguns casos podem ser resolvidos em sessão única; outros exigem mais visitas.
+                Isso é alinhado na avaliação.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-pergunta">4. Tenho muito medo de dentista, como funciona?</div>
-            <p>
-              O atendimento é feito com calma, explicando cada passo antes de iniciar.
-              Você pode sinalizar pausas durante o procedimento, e tudo é conduzido
-              respeitando seus limites e tempo.
-            </p>
+            <button class="faq-header" type="button">
+              <span class="faq-pergunta">4. Tenho muito medo de dentista, como funciona?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                O atendimento é feito com calma, explicando cada passo antes de iniciar.
+                Você pode sinalizar pausas durante o procedimento, e tudo é conduzido
+                respeitando seus limites e tempo.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-pergunta">5. Como faço em caso de dor ou urgência?</div>
-            <p>
-              Entre em contato pelo WhatsApp da clínica explicando o que está sentindo.
-              Sempre que possível, avaliamos a possibilidade de encaixe para urgência.
-            </p>
+            <button class="faq-header" type="button">
+              <span class="faq-pergunta">5. Como faço em caso de dor ou urgência?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                Entre em contato pelo WhatsApp da clínica explicando o que está sentindo.
+                Sempre que possível, avaliamos a possibilidade de encaixe para urgência.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-pergunta">6. Preciso levar exames na primeira consulta?</div>
-            <p>
-              Se você já tiver radiografia ou tomografia recente, é interessante trazer.
-              Caso não tenha, avaliamos na consulta se haverá necessidade de solicitar exames.
-            </p>
+            <button class="faq-header" type="button">
+              <span class="faq-pergunta">6. Preciso levar exames na primeira consulta?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>
+                Se você já tiver radiografia ou tomografia recente, é interessante trazer.
+                Caso não tenha, avaliamos na consulta se haverá necessidade de solicitar exames.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -889,7 +953,29 @@
   </footer>
 
   <script>
+    // ano no rodapé
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+    // FAQ accordion
+    const faqHeaders = document.querySelectorAll('.faq-header');
+
+    faqHeaders.forEach((header) => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        // fecha os outros
+        document.querySelectorAll('.faq-item.open').forEach((openItem) => {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+          }
+        });
+
+        // alterna o atual
+        item.classList.toggle('open', !isOpen);
+      });
+    });
   </script>
 </body>
 </html>
+
