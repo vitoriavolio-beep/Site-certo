@@ -312,6 +312,55 @@
       color: var(--primary);
     }
 
+    /* LAYOUT 2 COLUNAS GENÉRICO */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 16px;
+      align-items: flex-start;
+      margin-top: 6px;
+    }
+
+    .list-simple {
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      font-size: 0.88rem;
+      color: var(--text-soft);
+    }
+
+    .list-simple li::before {
+      content: "• ";
+      color: var(--primary);
+      margin-right: 2px;
+    }
+
+    /* FAQ */
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 10px 10px 8px;
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    .faq-pergunta {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 3px;
+      color: var(--text);
+    }
+
     /* CONTATO + MAPA */
 
     .contato-layout {
@@ -413,12 +462,17 @@
     @media (max-width: 900px) {
       .hero-inner,
       .sobre-grid,
-      .contato-layout {
+      .contato-layout,
+      .two-col {
         grid-template-columns: minmax(0, 1fr);
       }
 
       .hero-card {
         order: -1;
+      }
+
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
@@ -519,7 +573,7 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
+    <!-- SOBRE A CLÍNICA -->
     <section id="sobre">
       <div class="container">
         <div class="section-header">
@@ -545,23 +599,19 @@
           </div>
 
           <div class="card">
-            <div class="doc-name">Dra. Maria Vitória Bello Avolio</div>
-            <div class="doc-meta">Cirurgiã-dentista · Especialista em Endodontia</div>
+            <div class="doc-name">Coordenação clínica</div>
+            <div class="doc-meta">Atendimento individualizado</div>
             <p>
-              Atua na área de endodontia e clínica, coordenando o cuidado dos pacientes e,
-              quando necessário, integrando o tratamento com outras especialidades
-              por meio de parceiros de confiança.
-            </p>
-            <p style="margin-top:6px;">
-              O objetivo é oferecer uma experiência paciente por paciente,
-              com tempo para ouvir, explicar e planejar com calma.
+              A condução dos casos é feita de forma próxima, com avaliação detalhada,
+              explicação simples e, quando necessário, integração com outras
+              especialidades por meio de profissionais parceiros.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS -->
+    <!-- SERVIÇOS GERAIS -->
     <section id="servicos">
       <div class="container">
         <div class="section-header">
@@ -608,6 +658,154 @@
               <li>Ajustes estéticos em resina</li>
               <li>Reabilitação com especialistas parceiros (próteses, facetas etc.)</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENDODONTIA MICROSCÓPICA -->
+    <section id="endodontia-microscopica">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Endodontia microscópica</div>
+          <h2 class="section-title">Tratamento de canal com microscópio</h2>
+          <p class="section-subtitle">
+            Mais precisão, segurança e preservação da estrutura dentária em casos simples e complexos.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <p>
+              A Avolio Odontologia conta com <strong>microscópio clínico</strong> para
+              procedimentos endodônticos, permitindo uma visão ampliada dos canais
+              radiculares e detalhes internos do dente que não são visíveis a olho nu.
+            </p>
+            <p style="margin-top:6px;">
+              Essa tecnologia é especialmente importante em retratamentos, canais
+              muito finos, calcificados ou com anatomias mais complexas.
+            </p>
+          </div>
+
+          <div class="card">
+            <ul class="list-simple">
+              <li>Melhor visualização da anatomia interna do dente.</li>
+              <li>Maior precisão na localização e instrumentação dos canais.</li>
+              <li>Preservação de mais estrutura dentária sadia.</li>
+              <li>Auxílio na remoção de materiais antigos e pinos.</li>
+              <li>Suporte em casos complexos e retratamentos.</li>
+            </ul>
+            <p style="margin-top:8px; font-size:0.84rem;">
+              Sempre que houver indicação de uso do microscópio, isso é explicado ao paciente
+              durante a avaliação, junto com as opções de tratamento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM EU SOU -->
+    <section id="quem-sou">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Quem eu sou</div>
+          <h2 class="section-title">Dra. Maria Vitória Bello Avolio</h2>
+          <p class="section-subtitle">
+            Odontologia com técnica, responsabilidade e muito respeito pela história de cada paciente.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="doc-name">Cirurgiã-dentista · Endodontista</div>
+            <div class="doc-meta">Atendimento humanizado · Foco em escuta</div>
+            <p>
+              Sou a Maria Vitória, cirurgiã-dentista e especialista em Endodontia.
+              Ao longo da minha trajetória clínica, percebi que o que mais marca
+              uma experiência no consultório não é apenas o procedimento em si,
+              mas a forma como o paciente é acolhido.
+            </p>
+            <p style="margin-top:6px;">
+              Por isso, aqui na Avolio Odontologia, meu compromisso é unir
+              <strong>técnica atualizada</strong> com uma comunicação simples,
+              transparente e gentil, para que você se sinta seguro(a) em cada etapa.
+            </p>
+          </div>
+
+          <div class="card">
+            <ul class="list-simple">
+              <li>Formação em Odontologia e especialização em Endodontia.</li>
+              <li>Atuação focada em tratamento de canal e clínica.</li>
+              <li>Constante atualização em cursos e congressos.</li>
+              <li>Olhar atento para a história, as queixas e os medos de cada paciente.</li>
+              <li>Valorização de um atendimento mais calmo, sem pressa.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Perguntas frequentes</div>
+          <h2 class="section-title">Dúvidas comuns dos pacientes</h2>
+          <p class="section-subtitle">
+            Algumas respostas rápidas para perguntas que quase sempre aparecem no consultório.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-pergunta">1. Tratamento de canal dói?</div>
+            <p>
+              O objetivo do tratamento é justamente aliviar a dor. Com anestesia adequada
+              e técnica correta, o procedimento é bem tolerado. Desconfortos leves podem
+              ocorrer após a sessão e são controlados com medicação simples.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-pergunta">2. A clínica atende convênio?</div>
+            <p>
+              O atendimento é <strong>particular</strong>. Se desejar, você pode verificar
+              com o seu plano a possibilidade de reembolso, conforme contrato com a operadora.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-pergunta">3. Quanto tempo dura um tratamento de canal?</div>
+            <p>
+              Depende do dente, da complexidade e da presença (ou não) de infecção.
+              Alguns casos podem ser resolvidos em sessão única; outros exigem mais visitas.
+              Isso é alinhado na avaliação.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-pergunta">4. Tenho muito medo de dentista, como funciona?</div>
+            <p>
+              O atendimento é feito com calma, explicando cada passo antes de iniciar.
+              Você pode sinalizar pausas durante o procedimento, e tudo é conduzido
+              respeitando seus limites e tempo.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-pergunta">5. Como faço em caso de dor ou urgência?</div>
+            <p>
+              Entre em contato pelo WhatsApp da clínica explicando o que está sentindo.
+              Sempre que possível, avaliamos a possibilidade de encaixe para urgência.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-pergunta">6. Preciso levar exames na primeira consulta?</div>
+            <p>
+              Se você já tiver radiografia ou tomografia recente, é interessante trazer.
+              Caso não tenha, avaliamos na consulta se haverá necessidade de solicitar exames.
+            </p>
           </div>
         </div>
       </div>
