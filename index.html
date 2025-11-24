@@ -114,56 +114,6 @@
       color: var(--text-soft);
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    nav a {
-      position: relative;
-      padding-bottom: 0.15rem;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 1px;
-      width: 0;
-      background: var(--primary);
-      transition: width 0.22s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .pill-info {
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid rgba(180, 136, 91, 0.45);
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      background: rgba(253, 248, 240, 0.9);
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      white-space: nowrap;
-    }
-
-    .pill-info span {
-      font-size: 0.9rem;
-    }
-
     .btn {
       border-radius: 999px;
       padding: 0.55rem 1.35rem;
@@ -188,25 +138,6 @@
     .btn-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 18px 40px rgba(113, 63, 18, 0.4);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text-soft);
-      border: 1px solid rgba(180, 136, 91, 0.5);
-    }
-
-    .btn-outline:hover {
-      background: rgba(250, 246, 239, 0.9);
-      transform: translateY(-1px);
-    }
-
-    .menu-toggle {
-      display: none;
-      border: none;
-      background: none;
-      font-size: 1.4rem;
-      cursor: pointer;
     }
 
     /* HERO */
@@ -764,11 +695,18 @@
       justify-content: center;
       font-size: 0.8rem;
       color: #9ca3af;
-      min-height: 180px;
+      min-height: 220px;
     }
 
     .map-placeholder span {
       opacity: 0.9;
+      padding: 0 1.2rem;
+      text-align: center;
+    }
+
+    /* LOCALIZAÇÃO (seção do mapa no final) */
+    .localizacao {
+      background: radial-gradient(circle at bottom, #f2ebe0 0, #fdfbf8 40%, #ffffff 100%);
     }
 
     /* FOOTER */
@@ -824,35 +762,6 @@
       }
     }
 
-    @media (max-width: 860px) {
-      nav {
-        position: fixed;
-        inset: 60px 0 auto 0;
-        background: rgba(248, 246, 243, 0.98);
-        padding: 0.9rem 1.5rem 0.9rem;
-        display: none;
-        flex-direction: column;
-        gap: 0.8rem;
-        border-bottom: 1px solid rgba(226, 222, 215, 0.9);
-      }
-
-      nav.open {
-        display: flex;
-      }
-
-      .header-actions {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .hero {
-        padding-top: 2.1rem;
-      }
-    }
-
     @media (max-width: 768px) {
       section {
         padding: 2.6rem 0;
@@ -861,6 +770,15 @@
       .cards-grid,
       .testimonials-grid {
         grid-template-columns: minmax(0, 1fr);
+      }
+
+      .header-inner {
+        padding: 0.75rem 0;
+      }
+
+      .btn-primary {
+        padding-inline: 1rem;
+        font-size: 0.82rem;
       }
     }
   </style>
@@ -878,27 +796,11 @@
         </div>
       </a>
 
-      <button class="menu-toggle" aria-label="Abrir menu">
-        ☰
-      </button>
-
-      <nav id="main-nav">
-        <a href="#sobre">Sobre</a>
-        <a href="#especialidades">Especialidades</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-
-      <div class="header-actions">
-        <div class="pill-info">
-          <span>📍</span> Jardins · São Paulo – SP
-        </div>
-        <a class="btn btn-primary" href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
-          target="_blank" rel="noopener noreferrer">
-          Agendar pelo WhatsApp
-        </a>
-      </div>
+      <a class="btn btn-primary"
+         href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
+         target="_blank" rel="noopener noreferrer">
+        Agendar pelo WhatsApp
+      </a>
     </div>
   </header>
 
@@ -921,13 +823,14 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
-              target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-primary"
+               href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
+               target="_blank" rel="noopener noreferrer">
               Agendar avaliação
               <span>↗</span>
             </a>
-            <a class="btn btn-outline" href="#especialidades">
-              Ver especialidades
+            <a class="btn btn-outline" href="#contato">
+              Ver formas de contato
             </a>
           </div>
 
@@ -1307,23 +1210,38 @@
                 Este formulário é ilustrativo. Para agendar, o contato oficial é realizado pelo WhatsApp da clínica.
               </small>
             </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="map-card" style="margin-top:1rem;">
-              <div class="map-card-header">
-                <div>
-                  <strong>Como chegar</strong>
-                  <div style="font-size:0.78rem; color:#9ca3af;">
-                    Avenida Nove de Julho, 3229 – cj. 1506 · Jardim Paulista
-                  </div>
-                </div>
-                <span class="badge">Região dos Jardins · SP</span>
-              </div>
-              <div class="map-placeholder">
-                <span>
-                  Aqui você pode inserir um mapa do Google Maps com o endereço da clínica.
-                </span>
+    <!-- LOCALIZAÇÃO / MAPA NO FINAL -->
+    <section id="localizacao" class="localizacao">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Localização</div>
+          <h2 class="section-title">Como chegar à Avolio Odontologia</h2>
+          <p class="section-subtitle">
+            Estamos na região dos Jardins, com fácil acesso pela Avenida Nove de Julho.
+            Você pode usar aplicativos de mapa buscando pelo endereço completo do consultório.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-card-header">
+            <div>
+              <strong>Avenida Nove de Julho, 3229 – cj. 1506</strong>
+              <div style="font-size:0.78rem; color:#9ca3af;">
+                Jardim Paulista · São Paulo – SP
               </div>
             </div>
+            <span class="badge">Região dos Jardins · SP</span>
+          </div>
+          <div class="map-placeholder">
+            <span>
+              Aqui você pode inserir um mapa do Google Maps com o endereço da clínica.<br>
+              Exemplo de embed: incorporar o mapa gerado no Google Maps diretamente neste espaço.
+            </span>
           </div>
         </div>
       </div>
@@ -1346,21 +1264,6 @@
   <script>
     // ano automático
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
-
-    // menu mobile
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.getElementById('main-nav');
-
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-
-    // fechar menu ao clicar em link (mobile)
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-      });
-    });
   </script>
 </body>
 </html>
