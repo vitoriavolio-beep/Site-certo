@@ -14,7 +14,6 @@
       --bg: #f8f6f3;
       --bg-alt: #ffffff;
       --primary: #b4885b;
-      --primary-soft: #e3cfb4;
       --text: #262626;
       --text-soft: #5b5b5b;
       --border-soft: #e2ded7;
@@ -38,14 +37,14 @@
       line-height: 1.6;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     a {
       text-decoration: none;
       color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
@@ -55,7 +54,7 @@
       padding: 0 1.5rem;
     }
 
-    /* HEADER BEM SIMPLES */
+    /* HEADER – SÓ O BOTÃO À DIREITA */
 
     header {
       background: #ffffff;
@@ -64,55 +63,14 @@
 
     .header-inner {
       display: flex;
+      justify-content: flex-end;
       align-items: center;
-      justify-content: space-between;
       padding: 0.75rem 0;
-      gap: 1.25rem;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid rgba(180, 136, 91, 0.45);
-      background: radial-gradient(circle at 20% 0, #fdf8f2, #d8b58b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #3b2b1b;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
-
-    .brand-text strong {
-      font-size: 1rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
-    .brand-text span {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
     }
 
     .btn {
       border-radius: 999px;
-      padding: 0.55rem 1.35rem;
+      padding: 0.55rem 1.4rem;
       font-size: 0.88rem;
       font-weight: 500;
       cursor: pointer;
@@ -150,7 +108,7 @@
     /* HERO */
 
     .hero {
-      padding: 3.4rem 0 4.2rem;
+      padding: 3.2rem 0 4rem;
     }
 
     .hero-grid {
@@ -227,11 +185,11 @@
     }
 
     .hero-card {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       padding: 1.6rem 1.5rem;
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(209, 213, 219, 0.5);
+      border: 1px solid rgba(209, 213, 219, 0.6);
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -693,20 +651,17 @@
       font-size: 0.74rem;
     }
 
-    .map-placeholder {
+    .map-embed {
       margin-top: 0.45rem;
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid rgba(31, 41, 55, 0.9);
-      background: linear-gradient(135deg, #111827, #020617);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: #9ca3af;
-      min-height: 220px;
-      text-align: center;
-      padding: 0 1.2rem;
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 260px;
+      border: 0;
     }
 
     /* FOOTER */
@@ -781,17 +736,9 @@
 </head>
 
 <body>
-  <!-- HEADER SIMPLES -->
+  <!-- HEADER: SÓ O BOTÃO -->
   <header>
     <div class="container header-inner">
-      <a href="#topo" class="brand">
-        <div class="brand-mark">AO</div>
-        <div class="brand-text">
-          <strong>Avolio Odontologia</strong>
-          <span>Endodontia & Especialidades</span>
-        </div>
-      </a>
-
       <a class="btn btn-primary"
          href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
          target="_blank" rel="noopener noreferrer">
@@ -865,7 +812,7 @@
           <div class="hero-badges">
             <div class="hero-badge">Endodontia (tratamento de canal)</div>
             <div class="hero-badge">Odontologia Estética</div>
-            <div class="hero-badge">Reabilitação Oral</div>
+            <div class="hero-badge">Odontologia Clínica</div>
           </div>
         </aside>
       </div>
@@ -1018,40 +965,28 @@
               <span class="icon">🤍</span>
               <div>
                 <h4>Escuta atenta e explicação clara</h4>
-                <p>
-                  Você entende o que será feito, por quê, quais são as opções e
-                  o que esperar de cada etapa do tratamento.
-                </p>
+                <p>Você entende o que será feito, por quê, quais são as opções e o que esperar de cada etapa do tratamento.</p>
               </div>
             </li>
             <li class="diferenciais-item">
               <span class="icon">🧭</span>
               <div>
                 <h4>Planejamento individualizado</h4>
-                <p>
-                  Cada caso é único. O plano de tratamento é montado de acordo
-                  com a sua rotina, queixas, histórico e prioridades.
-                </p>
+                <p>Cada caso é único. O plano de tratamento é montado de acordo com a sua rotina, queixas, histórico e prioridades.</p>
               </div>
             </li>
             <li class="diferenciais-item">
               <span class="icon">🌿</span>
               <div>
                 <h4>Ambiente calmo e reservado</h4>
-                <p>
-                  Consultório com atendimento por horário, sem salas lotadas, e
-                  com tempo adequado para você ser atendido(a) sem pressa.
-                </p>
+                <p>Consultório com atendimento por horário, sem salas lotadas, e com tempo adequado para você ser atendido(a) sem pressa.</p>
               </div>
             </li>
             <li class="diferenciais-item">
               <span class="icon">📸</span>
               <div>
                 <h4>Documentação fotográfica</h4>
-                <p>
-                  Sempre que necessário, fotos são utilizadas para planejamento,
-                  acompanhamento de resultados e explicação do caso ao paciente.
-                </p>
+                <p>Sempre que necessário, fotos são utilizadas para planejamento, acompanhamento de resultados e explicação do caso ao paciente.</p>
               </div>
             </li>
           </ul>
@@ -1088,8 +1023,7 @@
           <h2 class="section-title">O que os pacientes dizem</h2>
           <p class="section-subtitle">
             Depoimentos fictícios para ilustrar a experiência de quem passa
-            pelo consultório enquanto os relatos reais ainda não são
-            cadastrados.
+            pelo consultório enquanto os relatos reais ainda não são cadastrados.
           </p>
         </div>
 
@@ -1211,7 +1145,7 @@
       </div>
     </section>
 
-    <!-- LOCALIZAÇÃO / MAPA NO FINAL -->
+    <!-- LOCALIZAÇÃO / MAPA -->
     <section id="localizacao" class="localizacao">
       <div class="container">
         <div class="section-header">
@@ -1233,9 +1167,14 @@
             </div>
             <span class="badge">Região dos Jardins · SP</span>
           </div>
-          <div class="map-placeholder">
-            Aqui você pode inserir um mapa do Google Maps com o endereço da clínica.<br>
-            Exemplo: incorporar o código de embed gerado no Google Maps neste espaço.
+
+          <div class="map-embed">
+            <!-- MAPA GOOGLE MAPS EMBED -->
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229+São+Paulo&output=embed">
+            </iframe>
           </div>
         </div>
       </div>
@@ -1260,3 +1199,4 @@
   </script>
 </body>
 </html>
+
