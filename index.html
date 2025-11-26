@@ -2,37 +2,44 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avolio Odontologia | Clínica Odontológica em São Paulo</title>
-  <meta name="description" content="Avolio Odontologia – clínica odontológica particular em São Paulo com foco em prevenção, clínica geral, endodontia microscópica, estética e reabilitação. Atendimento calmo e humanizado.">
-
+  <title>Avolio Odontologia · Endodontia Microscópica em São Paulo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Avolio Odontologia – clínica odontológica em São Paulo com foco em endodontia microscópica, tratamentos de canal avançados e atendimento humanizado."
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-page: #faf7f3;
+      --bg-page: #f8f5f0;
       --bg-card: #ffffff;
-      --primary: #c49a6c;
-      --primary-soft: #e9ddcf;
-      --text: #24211e;
-      --text-soft: #6f6861;
-      --border: #e3d9ce;
+      --primary: #c59a5a;
+      --primary-dark: #a17a3f;
+      --accent: #1f2933;
+      --text: #111827;
+      --muted: #6b7280;
+      --border-soft: #e5e7eb;
       --radius-lg: 18px;
-      --radius-md: 12px;
-      --max-width: 1080px;
-      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
+      --shadow-soft: 0 14px 35px rgba(15, 23, 42, 0.09);
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: radial-gradient(circle at top left, #f4eadc 0, #faf7f3 40%, #faf7f3 100%);
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #fdfaf5 0, #f5f1ea 40%, #f8f5f0 100%);
       color: var(--text);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     a {
@@ -40,1059 +47,1181 @@
       text-decoration: none;
     }
 
-    .container {
-      max-width: var(--max-width);
+    /* LAYOUT BASE */
+
+    .page {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0 16px;
+      padding: 0 1.5rem 3rem;
     }
 
-    /* HEADER */
-
     header {
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(227, 217, 206, 0.6);
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 40;
+      backdrop-filter: blur(16px);
+      background: rgba(248, 245, 240, 0.95);
+      border-bottom: 1px solid rgba(209, 213, 219, 0.4);
     }
 
     .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 0;
+      gap: 1.5rem;
     }
 
-    .logo {
-      font-size: 1rem;
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--primary);
+      background: #fff;
+    }
+
+    .logo-text-main {
       font-weight: 600;
-      letter-spacing: 0.18em;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
-    .logo span {
-      display: block;
-      font-size: 0.7rem;
+    .logo-text-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--muted);
       font-weight: 400;
-      letter-spacing: 0.22em;
-      color: var(--text-soft);
-      margin-top: 2px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.3rem;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 8px 16px;
       border-radius: 999px;
-      border: 1px solid var(--primary);
-      font-size: 0.85rem;
-      font-weight: 500;
+      padding: 0.6rem 1.4rem;
+      border: none;
       cursor: pointer;
-      background: var(--primary);
-      color: #ffffff;
+      font-weight: 500;
+      font-size: 0.9rem;
+      gap: 0.4rem;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
       white-space: nowrap;
-      gap: 6px;
-      box-shadow: 0 6px 18px rgba(196, 154, 108, 0.35);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
     }
 
-    .btn:hover {
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(197, 154, 90, 0.35);
+    }
+
+    .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 22px rgba(196, 154, 108, 0.45);
-      background: #b58456;
+      box-shadow: 0 16px 35px rgba(197, 154, 90, 0.45);
     }
 
-    .btn-secondary {
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(209, 213, 219, 0.8);
+      color: var(--accent);
+    }
+
+    .btn-ghost:hover {
       background: #fff;
-      color: var(--primary);
-      border-color: var(--primary-soft);
-      box-shadow: none;
-    }
-
-    .btn-secondary:hover {
-      background: var(--primary-soft);
-      box-shadow: none;
+      transform: translateY(-1px);
     }
 
     .btn-icon {
-      font-size: 1rem;
-      line-height: 1;
-    }
-
-    main {
-      padding: 28px 0 40px;
-    }
-
-    section {
-      padding: 28px 0;
-    }
-
-    .section-header {
-      margin-bottom: 16px;
-    }
-
-    .section-kicker {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 2px;
-    }
-
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-
-    .section-subtitle {
-      font-size: 0.92rem;
-      color: var(--text-soft);
-      max-width: 440px;
+      font-size: 1.1rem;
     }
 
     /* HERO */
 
     .hero {
-      padding-top: 32px;
+      padding: 3.5rem 0 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.5rem;
+      align-items: center;
     }
 
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 22px;
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--primary-dark);
+      margin-bottom: 0.6rem;
+      display: inline-flex;
       align-items: center;
+      gap: 0.55rem;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--primary-dark);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.05rem, 3vw, 2.6rem);
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 span {
+      color: var(--primary-dark);
+    }
+
+    .hero-subtitle {
+      font-size: 0.97rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      max-width: 32rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--muted);
     }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      padding: 4px 10px;
+      padding: 0.3rem 0.7rem;
       border-radius: 999px;
-      border: 1px solid rgba(227, 217, 206, 0.9);
-      background: rgba(255, 255, 255, 0.9);
-      margin-bottom: 10px;
+      border: 1px solid rgba(209, 213, 219, 0.9);
+      background: rgba(255, 255, 255, 0.8);
     }
 
-    .hero-badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #32b768;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-      line-height: 1.2;
-      margin-bottom: 10px;
-      letter-spacing: 0.01em;
-    }
-
-    .hero-title span {
-      color: var(--primary);
-    }
-
-    .hero-text {
-      font-size: 0.98rem;
-      color: var(--text-soft);
-      max-width: 480px;
-      margin-bottom: 16px;
-    }
-
-    .hero-bullets {
-      list-style: none;
-      display: grid;
-      gap: 4px;
-      font-size: 0.86rem;
-      color: var(--text-soft);
-      margin-bottom: 14px;
-    }
-
-    .hero-bullets li::before {
-      content: "• ";
-      color: var(--primary);
-      margin-right: 2px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-soft);
+    .hero-right {
+      position: relative;
     }
 
     .hero-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 22px;
-      padding: 16px 16px 14px;
-      border: 1px solid rgba(227, 217, 206, 0.9);
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 28px;
+      padding: 1.4rem 1.6rem;
       box-shadow: var(--shadow-soft);
-      font-size: 0.9rem;
+      border: 1px solid rgba(229, 231, 235, 0.9);
     }
 
-    .hero-card-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-      font-size: 0.95rem;
+    .hero-card h2 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
     }
 
-    .hero-card-text {
-      color: var(--text-soft);
-      margin-bottom: 8px;
+    .hero-card p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
     }
 
-    .hero-card-meta {
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .hero-box {
+      border-radius: 16px;
+      padding: 0.6rem 0.7rem;
+      background: #fefdfb;
+      border: 1px solid rgba(229, 231, 235, 0.9);
       font-size: 0.8rem;
-      color: var(--text-soft);
-      margin-bottom: 6px;
     }
 
-    .hero-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-      font-size: 0.78rem;
+    .hero-box strong {
+      display: block;
+      font-size: 0.86rem;
+      margin-bottom: 0.2rem;
     }
 
-    .hero-tag {
-      padding: 3px 8px;
+    .hero-floating-tag {
+      position: absolute;
+      right: -0.3rem;
+      bottom: -0.8rem;
+      background: #111827;
+      color: #f9fafb;
+      padding: 0.4rem 0.8rem;
       border-radius: 999px;
-      border: 1px solid var(--primary-soft);
-      background: #fdf9f3;
-      color: var(--text-soft);
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
     }
 
-    /* CARD BASE / GRID 2 COLUNAS */
+    .hero-floating-tag span {
+      font-size: 0.92rem;
+    }
+
+    /* SEÇÕES */
+
+    section {
+      margin-top: 2.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 26rem;
+    }
+
+    /* ESPECIALIDADES */
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
 
     .card {
       background: var(--bg-card);
       border-radius: var(--radius-lg);
-      padding: 14px 14px 12px;
-      border: 1px solid var(--border);
-      font-size: 0.9rem;
-      color: var(--text-soft);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 16px;
-      align-items: flex-start;
-      margin-top: 6px;
-    }
-
-    .list-simple {
-      list-style: none;
-      display: grid;
-      gap: 4px;
-      font-size: 0.88rem;
-      color: var(--text-soft);
-    }
-
-    .list-simple li::before {
-      content: "• ";
-      color: var(--primary);
-      margin-right: 2px;
-    }
-
-    /* SOBRE */
-
-    .sobre-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .sobre-list {
-      list-style: none;
-      display: grid;
-      gap: 5px;
-      margin-top: 6px;
-      font-size: 0.9rem;
-    }
-
-    .sobre-list li strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .doc-name {
-      font-weight: 600;
-      font-size: 0.96rem;
-      margin-bottom: 2px;
-      color: var(--text);
-    }
-
-    .doc-meta {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 6px;
-    }
-
-    /* SERVIÇOS */
-
-    .servicos-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 8px;
-    }
-
-    .servico-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      padding: 12px 12px 10px;
-      border: 1px solid var(--border);
+      padding: 1rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
       font-size: 0.86rem;
-      color: var(--text-soft);
+    }
+
+    .card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary-dark);
+      background: #fdf5e7;
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      margin-top: 0.4rem;
+      padding-left: 1.1rem;
+      color: var(--muted);
+    }
+
+    .card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* ENDODONTIA MICROSCÓPICA */
+
+    .endo-highlight {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1.7rem;
+      align-items: center;
+      background: linear-gradient(135deg, #111827 0%, #27272f 60%, #3f3f46 100%);
+      border-radius: 26px;
+      padding: 1.7rem 1.8rem;
+      color: #f9fafb;
       box-shadow: var(--shadow-soft);
     }
 
-    .servico-titulo {
-      font-size: 0.93rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: var(--text);
+    .endo-highlight h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
     }
 
-    .servico-list {
-      list-style: none;
-      margin-top: 4px;
+    .endo-highlight p {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      margin-bottom: 0.8rem;
+    }
+
+    .endo-list {
       display: grid;
-      gap: 3px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
       font-size: 0.84rem;
     }
 
-    .servico-list li::before {
-      content: "– ";
-      color: var(--primary);
+    .endo-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
     }
 
-    /* FAQ (accordion) */
+    .endo-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--primary);
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
 
-    .faq-grid {
+    .endo-right {
+      background: rgba(15, 23, 42, 0.75);
+      border-radius: 18px;
+      padding: 1rem;
+      border: 1px solid rgba(75, 85, 99, 0.8);
+      font-size: 0.82rem;
+    }
+
+    .endo-right h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .endo-right-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .endo-tag {
+      display: inline-flex;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(156, 163, 175, 0.8);
+      font-size: 0.72rem;
+      margin-top: 0.3rem;
+      color: #e5e7eb;
+    }
+
+    /* QUEM SOMOS */
+
+    .about {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 8px;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: 1.6rem;
+      align-items: start;
     }
 
-    .faq-item {
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      font-size: 0.86rem;
-      color: var(--text-soft);
-      overflow: hidden;
+    .about-photo {
+      border-radius: 22px;
+      background: linear-gradient(145deg, #fdf5e7 0%, #f3e7d4 45%, #f8f5f0 100%);
+      padding: 1.2rem;
       box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
     }
 
-    .faq-header {
-      width: 100%;
-      padding: 10px 12px;
-      border: none;
-      background: transparent;
+    .about-photo-inner {
+      border-radius: 18px;
+      border: 1px dashed rgba(209, 213, 219, 0.9);
+      padding: 1.5rem 1rem;
+    }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 999px;
+      margin: 0 auto 0.8rem;
+      background: radial-gradient(circle at 30% 20%, #fdf5e7 0, #f2e2c8 40%, #e5d1ba 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: var(--accent);
+    }
+
+    .about-text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .about-text p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    .about-meta strong {
+      color: var(--accent);
+    }
+
+    /* FAQ */
+
+    .faq {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    details {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid var(--border-soft);
+      padding: 0.7rem 0.9rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.02);
+      font-size: 0.86rem;
+    }
+
+    details + details {
+      margin-top: 0.6rem;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      cursor: pointer;
-      text-align: left;
-      font: inherit;
-      color: var(--text);
+      gap: 1rem;
+      font-weight: 500;
     }
 
-    .faq-pergunta {
-      font-weight: 600;
-      font-size: 0.9rem;
+    summary::-webkit-details-marker {
+      display: none;
     }
 
     .faq-icon {
       font-size: 1rem;
-      line-height: 1;
-      transition: transform 0.15s ease;
+      color: var(--primary-dark);
+      flex-shrink: 0;
     }
 
-    .faq-body {
-      padding: 0 12px 10px;
-      display: none;
-      border-top: 1px solid var(--border);
+    details[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      margin-top: 0.5rem;
+      color: var(--muted);
+    }
+
+    .faq-side {
       font-size: 0.86rem;
-      color: var(--text-soft);
+      color: var(--muted);
+      background: #fff;
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.03);
     }
 
-    .faq-item.open .faq-body {
-      display: block;
+    .faq-side-rows {
+      margin-top: 0.7rem;
+      font-size: 0.84rem;
     }
 
-    .faq-item.open .faq-icon {
-      transform: rotate(45deg); /* vira um "x" ao abrir */
+    .faq-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.2rem;
     }
 
-    /* CONTATO + MAPA */
+    /* CONTATO */
 
-    .contato-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr);
-      gap: 16px;
-      align-items: flex-start;
-      margin-top: 8px;
-    }
-
-    .contato-bloco {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 12px 12px 10px;
-      border: 1px solid var(--border);
-      font-size: 0.88rem;
-      color: var(--text-soft);
+    .contact-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.2rem 1.1rem;
+      border: 1px solid var(--border-soft);
       box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1rem;
+      font-size: 0.88rem;
     }
 
-    .contato-linha {
-      margin-bottom: 8px;
+    .contact-grid {
+      margin-top: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.5rem;
     }
 
-    .contato-label {
-      font-size: 0.78rem;
+    .contact-item span {
+      display: block;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 2px;
+      color: var(--muted);
+      margin-bottom: 0.1rem;
     }
 
-    .contato-valor {
-      font-size: 0.9rem;
-      color: var(--text);
+    .contact-item strong {
+      font-weight: 500;
     }
 
-    .contato-valor a {
-      color: var(--primary);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
+    .contact-note {
       font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
     }
 
-    .tag {
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 3px 8px;
-      background: #fdf9f3;
-      color: var(--text-soft);
+    .mini-form {
+      display: grid;
+      gap: 0.5rem;
     }
+
+    .mini-form label {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .mini-form input,
+    .mini-form textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border-soft);
+      padding: 0.45rem 0.6rem;
+      font-size: 0.82rem;
+      font-family: inherit;
+      outline: none;
+      background: #f9fafb;
+    }
+
+    .mini-form textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    .mini-form input:focus,
+    .mini-form textarea:focus {
+      border-color: var(--primary);
+      background: #fff;
+    }
+
+    .mini-form button {
+      margin-top: 0.2rem;
+      width: 100%;
+    }
+
+    /* MAPA + FOOTER */
 
     .map-wrapper {
-      border-radius: var(--radius-lg);
+      margin-top: 2rem;
+      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      background: #ffffff;
-      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
     }
 
     .map-wrapper iframe {
       width: 100%;
-      height: 260px;
+      height: 320px;
       border: 0;
-      display: block;
     }
-
-    /* FOOTER */
 
     footer {
-      border-top: 1px solid rgba(227, 217, 206, 0.6);
-      background: rgba(255, 255, 255, 0.9);
-      padding: 12px 0 16px;
+      padding-top: 1.2rem;
       font-size: 0.78rem;
-      color: var(--text-soft);
-      margin-top: 10px;
+      color: var(--muted);
+      text-align: center;
     }
 
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
+    footer a {
+      color: var(--primary-dark);
+      font-weight: 500;
     }
 
-    .footer-inner a {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    /* BOTÃO FLUTUANTE WHATSAPP */
+    /* WHATSAPP FLUTUANTE */
 
     .whatsapp-float {
       position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 40;
-    }
-
-    .whatsapp-float a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 10px 14px;
+      right: 1.4rem;
+      bottom: 1.2rem;
+      width: 54px;
+      height: 54px;
       border-radius: 999px;
       background: #25d366;
-      color: #ffffff;
-      font-size: 0.86rem;
-      font-weight: 600;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
-      border: none;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.8rem;
+      box-shadow: 0 18px 38px rgba(22, 163, 74, 0.55);
+      z-index: 50;
     }
 
-    .whatsapp-float a:hover {
+    .whatsapp-float:hover {
       transform: translateY(-1px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-      background: #1ebe5b;
-    }
-
-    .whatsapp-icon {
-      font-size: 1.1rem;
-      line-height: 1;
     }
 
     /* RESPONSIVO */
 
-    @media (max-width: 900px) {
-      .hero-inner,
-      .sobre-grid,
-      .contato-layout,
-      .two-col {
+    @media (max-width: 880px) {
+      nav {
+        display: none;
+      }
+      .hero,
+      .endo-highlight,
+      .about,
+      .faq,
+      .contact-card {
         grid-template-columns: minmax(0, 1fr);
       }
-
-      .hero-card {
-        order: -1;
-      }
-
-      .faq-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .grid-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 720px) {
-      main {
-        padding-top: 20px;
+    @media (max-width: 640px) {
+      .page {
+        padding-inline: 1.1rem;
       }
-
-      section {
-        padding: 24px 0;
+      .hero {
+        padding-top: 2.4rem;
       }
-
-      .servicos-grid {
+      .grid-cards {
         grid-template-columns: minmax(0, 1fr);
       }
-
-      .header-inner {
-        padding: 8px 0;
+      .hero-card {
+        border-radius: 22px;
       }
-
-      .logo {
-        font-size: 0.9rem;
-      }
-
-      .hero-title {
-        font-size: 1.6rem;
-      }
-
-      .whatsapp-float a span.whatsapp-text {
-        display: none; /* deixa só o ícone no mobile */
+      .map-wrapper iframe {
+        height: 260px;
       }
     }
   </style>
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header id="topo">
-    <div class="container">
-      <div class="header-inner">
-        <div class="logo">
-          AVOLIO ODONTOLOGIA
-          <span>Clínica Odontológica</span>
+  <header>
+    <div class="header-inner">
+      <div class="logo-area">
+        <div class="logo-mark">AV</div>
+        <div>
+          <div class="logo-text-main">Avolio Odontologia</div>
+          <div class="logo-text-sub">Endodontia Microscópica · Jardins</div>
         </div>
-        <a class="btn"
-           href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
-           target="_blank" rel="noopener noreferrer">
-          <span class="btn-icon">💬</span>
-          <span>Agendar pelo WhatsApp</span>
-        </a>
       </div>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#endodontia">Endodontia Microscópica</a>
+        <a href="#dra">Dra. Maria Vitória</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a
+        href="https://wa.me/5511994802149?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta."
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="btn-icon">🟢</span>
+        Agendar no WhatsApp
+      </a>
     </div>
   </header>
 
-  <main>
+  <main class="page">
     <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-inner">
-          <div>
-            <div class="hero-badge">
-              <span class="hero-badge-dot"></span>
-              Clínica particular · Jardim Paulista
+    <section id="inicio" class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Odontologia especializada em São Paulo · Jardins</div>
+        <h1>
+          Tratamentos de canal sem drama,<br />
+          com <span>tecnologia e acolhimento.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Na Avolio Odontologia, sua dor é prioridade. Cuidamos de cada dente com atenção aos detalhes,
+          endodontia microscópica e um atendimento calmo, humano e explicado passo a passo.
+        </p>
+        <div class="hero-cta">
+          <a
+            href="https://wa.me/5511994802149?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="btn-icon">💬</span>
+            Agendar avaliação
+          </a>
+          <a href="#contato" class="btn btn-ghost">
+            Ver horários e endereço
+          </a>
+        </div>
+        <div class="hero-badges">
+          <div class="hero-badge">Dor de dente e urgências</div>
+          <div class="hero-badge">Endodontia microscópica</div>
+          <div class="hero-badge">Atendimento individualizado</div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <h2>Endodontia para quem quer resolver de vez.</h2>
+          <p>
+            Focamos em salvar dentes, aliviar dor e devolver tranquilidade. Mais precisão, menos
+            improviso.
+          </p>
+          <div class="hero-highlights">
+            <div class="hero-box">
+              <strong>Microscópio operatório</strong>
+              Visualização ampliada dos canais, mais segurança e preservação da estrutura dentária.
             </div>
-            <h1 class="hero-title">
-              Tratamento de canal,
-              <span>estética</span> e rotina
-              com calma e <span>respeito ao seu tempo</span>.
-            </h1>
-            <p class="hero-text">
-              Se você sente dor, medo de dentista ou quer cuidar da aparência do sorriso,
-              aqui o atendimento é feito sem pressa, com explicação simples e foco em conforto.
-            </p>
-
-            <ul class="hero-bullets">
-              <li>Atendimento particular com hora marcada.</li>
-              <li>Endodontia microscópica para casos simples e complexos.</li>
-              <li>Clínica geral e cuidados estéticos do dia a dia.</li>
-            </ul>
-
-            <div class="hero-actions">
-              <a class="btn"
-                 href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20odontológica."
-                 target="_blank" rel="noopener noreferrer">
-                <span class="btn-icon">📲</span>
-                <span>Quero agendar minha avaliação</span>
-              </a>
-              <a class="btn btn-secondary" href="#contato">
-                Ver endereço e horários
-              </a>
+            <div class="hero-box">
+              <strong>Tecnologia atualizada</strong>
+              Motores rotatórios, obturação aquecida e materiais de alta performance.
             </div>
-
-            <p class="hero-note">
-              Prevenção · Clínica geral · Endodontia microscópica · Estética · Reabilitação
-            </p>
+            <div class="hero-box">
+              <strong>Ambiente acolhedor</strong>
+              Explicações claras, tempo para tirar dúvidas e respeito ao seu ritmo.
+            </div>
+            <div class="hero-box">
+              <strong>Foco na experiência</strong>
+              Da primeira conversa ao pós-tratamento, você é acompanhado de perto.
+            </div>
           </div>
-
-          <aside class="hero-card" aria-label="Resumo da clínica">
-            <div class="hero-card-title">Avolio Odontologia</div>
-            <p class="hero-card-text">
-              Clínica odontológica particular em São Paulo, voltada para quem busca
-              atendimento mais calmo, detalhado e individualizado.
-            </p>
-            <div class="hero-card-meta">
-              Av. Nove de Julho, 3229 – cj. 1506<br>
-              Jardim Paulista · São Paulo – SP
-            </div>
-            <div class="hero-card-tags">
-              <span class="hero-tag">Tratamento de canal com microscópio</span>
-              <span class="hero-tag">Consultas sem aglomeração</span>
-              <span class="hero-tag">Atendimento humanizado</span>
-            </div>
-          </aside>
+        </div>
+        <div class="hero-floating-tag">
+          <span>📍</span>
+          5 min. da Av. Paulista – Jardins
         </div>
       </div>
     </section>
 
-    <!-- SOBRE A CLÍNICA -->
-    <section id="sobre">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Sobre a clínica</div>
-          <h2 class="section-title">Um consultório pensado para um paciente por vez</h2>
-          <p class="section-subtitle">
-            Ambiente tranquilo, organizado e com tempo reservado para te ouvir e cuidar de você com calma.
-          </p>
-        </div>
-
-        <div class="sobre-grid">
-          <div class="card">
-            <p>
-              A Avolio Odontologia está na região dos Jardins, em São Paulo,
-              com fácil acesso pela Avenida Nove de Julho. Aqui você encontra
-              desde consultas de rotina até tratamentos de canal e procedimentos estéticos.
-            </p>
-            <ul class="sobre-list">
-              <li><strong>Endereço:</strong> Av. Nove de Julho, 3229 – Conj. 1506</li>
-              <li><strong>Bairro:</strong> Jardim Paulista · São Paulo – SP</li>
-              <li><strong>Perfil:</strong> Clínica particular, com hora marcada e ambiente acolhedor</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="doc-name">Coordenação clínica</div>
-            <div class="doc-meta">Planejamento claro · Comunicação simples</div>
-            <p>
-              Cada caso é avaliado de forma individual, explicando o que está acontecendo,
-              quais as opções de tratamento e como será cada etapa. A ideia é que você
-              entenda o plano e se sinta seguro(a) antes de qualquer procedimento.
-            </p>
-          </div>
-        </div>
+    <!-- ESPECIALIDADES -->
+    <section id="especialidades">
+      <div class="section-header">
+        <h2 class="section-title">Especialidades da clínica</h2>
+        <p class="section-subtitle">
+          Cuidamos desde o atendimento básico até tratamentos de canal complexos, com olhar global
+          para sua saúde bucal.
+        </p>
       </div>
-    </section>
 
-    <!-- SERVIÇOS GERAIS -->
-    <section id="servicos">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Serviços</div>
-          <h2 class="section-title">Do básico ao tratamento de canal</h2>
-          <p class="section-subtitle">
-            Cuidados do dia a dia e procedimentos específicos em um único consultório.
+      <div class="grid-cards">
+        <article class="card">
+          <div class="chip">Clínica geral</div>
+          <h3>Check-up e prevenção</h3>
+          <p>
+            Limpezas, restaurações e acompanhamento periódico para manter sua saúde bucal em dia.
           </p>
-        </div>
+          <ul>
+            <li>Limpeza e profilaxia</li>
+            <li>Restaurações estéticas</li>
+            <li>Orientação de higiene</li>
+          </ul>
+        </article>
 
-        <div class="servicos-grid">
-          <div class="servico-card">
-            <div class="servico-titulo">Prevenção & clínica geral</div>
-            <p>
-              Consultas de rotina e cuidados essenciais para manter a saúde bucal em dia.
-            </p>
-            <ul class="servico-list">
-              <li>Avaliação clínica completa</li>
-              <li>Limpeza e profilaxia</li>
-              <li>Restaurações em resina</li>
-              <li>Orientação de higiene</li>
-            </ul>
-          </div>
+        <article class="card">
+          <div class="chip">Endodontia</div>
+          <h3>Tratamento de canal</h3>
+          <p>
+            Tratamentos de canal e retratamentos com precisão, conforto e foco em preservar o dente.
+          </p>
+          <ul>
+            <li>Dor de dente aguda</li>
+            <li>Canal inflamado ou infeccionado</li>
+            <li>Retratamento de canal</li>
+          </ul>
+        </article>
 
-          <div class="servico-card">
-            <div class="servico-titulo">Endodontia (tratamento de canal)</div>
-            <p>
-              Tratamentos voltados à preservação de dentes com inflamação ou infecção pulpar.
-            </p>
-            <ul class="servico-list">
-              <li>Tratamento de canal</li>
-              <li>Retratamento de canal</li>
-              <li>Alívio de dor de origem dentária</li>
-            </ul>
-          </div>
+        <article class="card">
+          <div class="chip">Estética</div>
+          <h3>Harmonia do sorriso</h3>
+          <p>
+            Procedimentos para melhorar cor e forma dos dentes, sempre respeitando a naturalidade.
+          </p>
+          <ul>
+            <li>Clareamento dental</li>
+            <li>Restaurações em resina</li>
+            <li>Adequação estética pós-canal</li>
+          </ul>
+        </article>
 
-          <div class="servico-card">
-            <div class="servico-titulo">Estética & reabilitação</div>
-            <p>
-              Procedimentos para harmonizar função e aparência do sorriso.
-            </p>
-            <ul class="servico-list">
-              <li>Clareamento dental supervisionado</li>
-              <li>Ajustes estéticos em resina</li>
-              <li>Reabilitação com especialistas parceiros (próteses, facetas etc.)</li>
-            </ul>
-          </div>
-        </div>
+        <article class="card">
+          <div class="chip">Urgência</div>
+          <h3>Dor de dente e trauma</h3>
+          <p>
+            Atendimento focado em aliviar dor de forma segura e planejar a sequência de tratamento.
+          </p>
+          <ul>
+            <li>Dor intensa ao mastigar</li>
+            <li>Inchaço e sensibilidade</li>
+            <li>Acidentes com fratura dentária</li>
+          </ul>
+        </article>
       </div>
     </section>
 
     <!-- ENDODONTIA MICROSCÓPICA -->
-    <section id="endodontia-microscopica">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Endodontia microscópica</div>
-          <h2 class="section-title">Tratamento de canal com microscópio</h2>
-          <p class="section-subtitle">
-            Mais precisão, segurança e preservação da estrutura dentária em casos simples e complexos.
+    <section id="endodontia">
+      <div class="section-header">
+        <h2 class="section-title">Endodontia microscópica</h2>
+        <p class="section-subtitle">
+          Tratamentos de canal realizados com microscópio operatório, trazendo visão ampliada dos
+          canais e mais segurança em cada passo.
+        </p>
+      </div>
+
+      <div class="endo-highlight">
+        <div>
+          <h2>Por que tratar o canal com microscópio?</h2>
+          <p>
+            O microscópio operatório permite visualizar detalhes internos do dente que a olho nu
+            passariam despercebidos. Isso significa mais controle, melhor limpeza dos canais e
+            aumento da chance de sucesso em longo prazo.
           </p>
+          <div class="endo-list">
+            <div class="endo-list-item">
+              <div class="endo-dot"></div>
+              <div>Maior precisão na localização de canais finos e curvos.</div>
+            </div>
+            <div class="endo-list-item">
+              <div class="endo-dot"></div>
+              <div>Preservação de mais estrutura dentária saudável.</div>
+            </div>
+            <div class="endo-list-item">
+              <div class="endo-dot"></div>
+              <div>Auxílio em retratamentos e casos considerados complexos.</div>
+            </div>
+            <div class="endo-list-item">
+              <div class="endo-dot"></div>
+              <div>Melhor avaliação de trincas, perfurações e fraturas radiculares.</div>
+            </div>
+          </div>
         </div>
 
-        <div class="two-col">
-          <div class="card">
-            <p>
-              A Avolio Odontologia conta com <strong>microscópio clínico</strong> para
-              procedimentos endodônticos, permitindo uma visão ampliada dos canais
-              radiculares e detalhes internos do dente que não são visíveis a olho nu.
-            </p>
-            <p style="margin-top:6px;">
-              Essa tecnologia é especialmente importante em retratamentos, canais
-              muito finos, calcificados ou com anatomias mais complexas, aumentando
-              a previsibilidade do resultado.
+        <aside class="endo-right">
+          <h3>Indicações mais comuns</h3>
+          <div class="endo-right-row">
+            <span>Dor de dente persistente</span>
+            <span>✔</span>
+          </div>
+          <div class="endo-right-row">
+            <span>Canal que já tratou e voltou a doer</span>
+            <span>✔</span>
+          </div>
+          <div class="endo-right-row">
+            <span>Raízes muito curvadas ou calcificadas</span>
+            <span>✔</span>
+          </div>
+          <div class="endo-right-row">
+            <span>Dentes com pino ou coroas extensas</span>
+            <span>✔</span>
+          </div>
+          <span class="endo-tag">Atendimento por agendamento · Tempo reservado só para você</span>
+        </aside>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section id="dra">
+      <div class="section-header">
+        <h2 class="section-title">Quem cuida de você</h2>
+        <p class="section-subtitle">
+          Acolhimento, escuta e técnica caminham juntos. Cada caso é planejado com calma, pensando
+          no que faz sentido para a sua realidade.
+        </p>
+      </div>
+
+      <div class="about">
+        <div class="about-photo">
+          <div class="about-photo-inner">
+            <div class="avatar">MV</div>
+            <div><strong>Dra. Maria Vitória Bello Avolio</strong></div>
+            <div>Cirurgiã-dentista · CRO-SP (insira o número)</div>
+            <p style="margin-top:0.6rem;">
+              “Odontologia, para mim, é sobre aliviar dor, devolver confiança e fazer o paciente se
+              sentir respeitado em cada etapa do tratamento.”
             </p>
           </div>
+        </div>
 
-          <div class="card">
-            <ul class="list-simple">
-              <li>Melhor visualização da anatomia interna do dente.</li>
-              <li>Maior precisão na localização e instrumentação dos canais.</li>
-              <li>Preservação de mais estrutura dentária sadia.</li>
-              <li>Auxílio na remoção de materiais antigos e pinos.</li>
-              <li>Suporte em casos complexos e retratamentos.</li>
-            </ul>
-            <p style="margin-top:8px; font-size:0.84rem;">
-              Na avaliação, você é orientado(a) se há indicação de uso do microscópio,
-              quais os benefícios para o seu caso e como será o passo a passo do tratamento.
-            </p>
+        <div class="about-text">
+          <h3>Dra. Maria Vitória Bello Avolio</h3>
+          <p>
+            A Dra. Maria Vitória é cirurgiã-dentista formada pela
+            <strong>Universidade Estadual de Campinas (UNICAMP)</strong>, uma das instituições mais
+            reconhecidas da odontologia brasileira.
+          </p>
+          <p>
+            Após a graduação, especializou-se em
+            <strong>Endodontia pela São Leopoldo Mandic</strong>, desenvolvendo domínio técnico em
+            tratamentos de canal, retratamentos, diagnóstico de dor orofacial e terapias
+            endodônticas de alta complexidade.
+          </p>
+          <p>
+            Seu trabalho é pautado em acolhimento, clareza nas explicações e precisão clínica.
+            Durante o atendimento, utiliza tecnologias modernas — incluindo microscópio operatório,
+            motor rotatório, sistemas de obturação termoplastificada e protocolos atualizados — para
+            oferecer tratamentos seguros, confortáveis e previsíveis.
+          </p>
+          <p>
+            Cada paciente é atendido de forma individualizada, com tempo reservado para entender a
+            história, as queixas e as expectativas, sempre buscando devolver saúde, função e
+            tranquilidade.
+          </p>
+
+          <div class="about-meta">
+            <div><strong>Formação:</strong> Odontologia – UNICAMP</div>
+            <div><strong>Especialidade:</strong> Endodontia – São Leopoldo Mandic</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- QUEM EU SOU -->
-    <section id="quem-sou">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Quem eu sou</div>
-          <h2 class="section-title">Dra. Maria Vitória Bello Avolio</h2>
-          <p class="section-subtitle">
-            Técnica, responsabilidade e um cuidado real com a sua experiência no consultório.
-          </p>
-        </div>
-
-        <div class="two-col">
-          <div class="card">
-            <div class="doc-name">Cirurgiã-dentista · Especialista em Endodontia</div>
-            <div class="doc-meta">Atendimento humanizado · Foco em escuta</div>
-            <p>
-              Sou a Maria Vitória, cirurgiã-dentista e especialista em Endodontia.
-              Acredito que ir ao dentista não precisa ser uma experiência de medo ou pressa.
-              Por isso, organizo a agenda para te atender com tempo, explicando cada etapa.
-            </p>
-            <p style="margin-top:6px;">
-              Aqui você pode falar sobre suas dores, receios e expectativas com liberdade.
-              Meu compromisso é unir <strong>odontologia bem feita</strong> com uma postura
-              acolhedora e transparente.
-            </p>
-          </div>
-
-          <div class="card">
-            <ul class="list-simple">
-              <li>Formação em Odontologia e especialização em Endodontia.</li>
-              <li>Atuação focada em tratamento de canal, clínica e acompanhamento continuado.</li>
-              <li>Atualização constante em cursos, especializações e congressos.</li>
-              <li>Olhar atento para o histórico, as queixas e os medos de cada paciente.</li>
-              <li>Atendimento pensado para ser mais calmo, sem aglomeração na recepção.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PERGUNTAS FREQUENTES (FAQ) -->
+    <!-- FAQ -->
     <section id="faq">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Perguntas frequentes</div>
-          <h2 class="section-title">Dúvidas comuns dos pacientes</h2>
-          <p class="section-subtitle">
-            Clique nas perguntas abaixo para ver as respostas.
+      <div class="section-header">
+        <h2 class="section-title">Dúvidas frequentes</h2>
+        <p class="section-subtitle">
+          Algumas das perguntas que mais aparecem no consultório. Se ainda ficar algo sem resposta,
+          mande uma mensagem no WhatsApp.
+        </p>
+      </div>
+
+      <div class="faq">
+        <div>
+          <details>
+            <summary>
+              O tratamento de canal dói?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Hoje, com técnicas modernas de anestesia e planejamento adequado, o tratamento de
+              canal tende a ser bem mais confortável do que muitas pessoas imaginam. O objetivo é
+              justamente aliviar a dor, não causar mais.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Em quantas consultas o canal fica pronto?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Depende do caso. Alguns dentes podem ser tratados em uma única sessão, enquanto outros
+              — especialmente quando há infecção mais extensa ou retratamento — podem exigir
+              consultas adicionais. Tudo é explicado antes de começar.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Quando devo procurar um endodontista?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Sinais importantes: dor ao mastigar, sensibilidade forte ao quente ou frio, dor que
+              acorda à noite, inchaço na gengiva, histórico de trauma ou canal que já foi tratado e
+              voltou a incomodar. Quanto antes avaliar, melhor o prognóstico.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              A clínica atende convênios?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              O atendimento é <strong>particular</strong>, o que permite usar materiais e tecnologias
+              sem limitações de convênio e reservar o tempo necessário para cada caso. Se desejar,
+              você pode solicitar nota fiscal para reembolso conforme regras do seu plano.
+            </p>
+          </details>
+        </div>
+
+        <aside class="faq-side">
+          <strong>Informações rápidas</strong>
+          <p style="margin-top:0.4rem;">
+            Se você está com dor ou suspeita de precisar de canal, entre em contato pelo WhatsApp.
+            Avaliaremos seu caso com prioridade.
           </p>
-        </div>
-
-        <div class="faq-grid">
-          <div class="faq-item">
-            <button class="faq-header" type="button">
-              <span class="faq-pergunta">1. Tratamento de canal dói?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body">
-              <p>
-                O objetivo do tratamento é justamente aliviar a dor. Com anestesia adequada
-                e técnica correta, o procedimento é bem tolerado. Desconfortos leves podem
-                ocorrer após a sessão e costumam ser controlados com medicação simples.
-              </p>
+          <div class="faq-side-rows">
+            <div class="faq-row">
+              <span>Atendimento</span>
+              <span>Seg a Sex</span>
+            </div>
+            <div class="faq-row">
+              <span>Horário</span>
+              <span>08h às 19h</span>
+            </div>
+            <div class="faq-row">
+              <span>Sábados</span>
+              <span>09h às 12h</span>
+            </div>
+            <div class="faq-row">
+              <span>Bairro</span>
+              <span>Jardim Paulista</span>
             </div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-header" type="button">
-              <span class="faq-pergunta">2. A clínica atende convênio?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body">
-              <p>
-                O atendimento é <strong>particular</strong>. Caso você tenha plano odontológico
-                ou de saúde, é possível verificar diretamente com a operadora sobre reembolso,
-                de acordo com seu contrato.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-header" type="button">
-              <span class="faq-pergunta">3. Quanto tempo dura um tratamento de canal?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body">
-              <p>
-                Depende do dente, da complexidade e da presença (ou não) de infecção.
-                Alguns casos podem ser resolvidos em sessão única; outros exigem mais visitas.
-                Tudo é alinhado na avaliação inicial, para você saber o que esperar.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-header" type="button">
-              <span class="faq-pergunta">4. Tenho muito medo de dentista, como funciona?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body">
-              <p>
-                O atendimento é feito com calma, explicando cada passo antes de iniciar.
-                Você pode combinar sinais para pedir pausa, tirar dúvidas durante o procedimento
-                e tudo é feito respeitando o seu tempo e limite.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-header" type="button">
-              <span class="faq-pergunta">5. Como faço em caso de dor ou urgência?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body">
-              <p>
-                Envie uma mensagem pelo WhatsApp da clínica contando o que está sentindo.
-                Sempre que possível, é avaliada a possibilidade de encaixe para urgência
-                ou orientação até a consulta.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-header" type="button">
-              <span class="faq-pergunta">6. Preciso levar exames na primeira consulta?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body">
-              <p>
-                Se você já tiver radiografia ou tomografia recente, é interessante trazer.
-                Caso não tenha, na avaliação é visto se há necessidade de solicitar exames
-                complementares antes de iniciar o tratamento.
-              </p>
-            </div>
-          </div>
-        </div>
+          <p class="contact-note" style="margin-top:0.6rem;">
+            Clique em <strong>“Agendar no WhatsApp”</strong> para falar diretamente com a clínica e
+            receber orientações personalizadas.
+          </p>
+        </aside>
       </div>
     </section>
 
-    <!-- CONTATO + MAPA -->
+    <!-- CONTATO -->
     <section id="contato">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Contato</div>
-          <h2 class="section-title">Agendamento e localização</h2>
-          <p class="section-subtitle">
-            Agende sua consulta de rotina, avaliação estética ou tratamento de canal.
+      <div class="section-header">
+        <h2 class="section-title">Horários e contato</h2>
+        <p class="section-subtitle">
+          Estamos em uma região de fácil acesso, próximo à Av. Paulista e importantes vias de São
+          Paulo.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div>
+          <h3>Informações da clínica</h3>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <span>Endereço</span>
+              <strong>Av. Nove de Julho, 3229 – cj. 1506</strong><br />
+              Jardim Paulista · São Paulo – SP
+            </div>
+            <div class="contact-item">
+              <span>WhatsApp</span>
+              <strong>(11) 99480-2149</strong>
+            </div>
+            <div class="contact-item">
+              <span>Horário de atendimento</span>
+              <strong>Seg a Sex: 08h às 19h</strong><br />
+              Sábado: 09h às 12h
+            </div>
+            <div class="contact-item">
+              <span>E-mail</span>
+              <strong>vitoriavolio@gmail.com</strong>
+            </div>
+          </div>
+          <p class="contact-note">
+            Atendimentos por <strong>agendamento</strong>, com tempo reservado para cada paciente.
+            Em casos de dor aguda, entre em contato para encaixe em caráter de urgência.
           </p>
         </div>
 
-        <div class="contato-layout">
-          <div class="contato-bloco">
-            <div class="contato-linha">
-              <div class="contato-label">WhatsApp / telefone</div>
-              <div class="contato-valor">
-                <a href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20na%20Avolio%20Odontologia."
-                   target="_blank" rel="noopener noreferrer">
-                  (11) 99480-2149
-                </a>
-              </div>
+        <div>
+          <h3>Pré-agende pelo site</h3>
+          <p class="contact-note" style="margin-top:0.2rem;">
+            Envie seus dados e entraremos em contato para confirmar dia e horário.
+          </p>
+          <form class="mini-form" onsubmit="event.preventDefault(); alert('Obrigado! Sua mensagem foi registrada. Para agilizar, você também pode nos chamar no WhatsApp.');">
+            <div>
+              <label for="nome">Nome completo</label>
+              <input id="nome" type="text" placeholder="Digite seu nome" required />
             </div>
-
-            <div class="contato-linha">
-              <div class="contato-label">Endereço</div>
-              <div class="contato-valor">
-                Av. Nove de Julho, 3229 – Conj. 1506<br>
-                Jardim Paulista · São Paulo – SP
-              </div>
+            <div>
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input id="telefone" type="tel" placeholder="(11) 9XXXX-XXXX" required />
             </div>
-
-            <div class="contato-linha">
-              <div class="contato-label">Horário de atendimento</div>
-              <div class="contato-valor">
-                Segunda a sexta: 08h às 19h<br>
-                Sábado: 09h às 12h
-              </div>
+            <div>
+              <label for="mensagem">Motivo do contato</label>
+              <textarea id="mensagem" placeholder="Dor de dente, tratamento de canal, avaliação..."></textarea>
             </div>
-
-            <div class="contato-linha">
-              <div class="contato-label">Informações gerais</div>
-              <div class="tag-row">
-                <span class="tag">Atendimento particular</span>
-                <span class="tag">Com hora marcada</span>
-                <span class="tag">Possível encaixe para urgências</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="map-wrapper" aria-label="Mapa da clínica">
-            <iframe
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229+São+Paulo&output=embed">
-            </iframe>
-          </div>
+            <button type="submit" class="btn btn-primary">
+              Enviar pré-agendamento
+            </button>
+          </form>
         </div>
       </div>
+
+      <!-- MAPA -->
+      <div class="map-wrapper" id="localizacao">
+        <!-- Substitua o src por um embed atualizado do Google Maps, se quiser -->
+        <iframe
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.403930567433!2d-46.658!3d-23.553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAvenida%20Nove%20de%20Julho%2C%203229%20-%20Jardim%20Paulista!5e0!3m2!1spt-BR!2sbr!4v0000000000000"
+        ></iframe>
+      </div>
     </section>
+
+    <footer>
+      © <span id="ano-atual"></span> Avolio Odontologia · Todos os direitos reservados. <br />
+      Site institucional desenvolvido para facilitar o contato entre pacientes e clínica.
+    </footer>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div>
-          © <span id="ano-atual"></span> Avolio Odontologia. Todos os direitos reservados.
-        </div>
-        <div>
-          CR0-SP (insira o número) ·
-          <a href="#topo">voltar ao topo</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <div class="whatsapp-float">
-    <a href="https://wa.me/5511994802149?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20na%20Avolio%20Odontologia."
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Conversar pelo WhatsApp">
-      <span class="whatsapp-icon">🟢</span>
-      <span class="whatsapp-text">Falar no WhatsApp</span>
-    </a>
-  </div>
+  <!-- BOTÃO WHATSAPP FLUTUANTE -->
+  <a
+    href="https://wa.me/5511994802149?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Agendar consulta pelo WhatsApp"
+  >
+    ☻
+  </a>
 
   <script>
-    // ano no rodapé
-    document.getElementById('ano-atual').textContent = new Date().getFullYear();
-
-    // FAQ accordion
-    const faqHeaders = document.querySelectorAll('.faq-header');
-
-    faqHeaders.forEach((header) => {
-      header.addEventListener('click', () => {
-        const item = header.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-
-        // fecha os outros
-        document.querySelectorAll('.faq-item.open').forEach((openItem) => {
-          if (openItem !== item) {
-            openItem.classList.remove('open');
-          }
-        });
-
-        // alterna o atual
-        item.classList.toggle('open', !isOpen);
-      });
-    });
+    // Atualiza ano do rodapé automaticamente
+    document.getElementById("ano-atual").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
