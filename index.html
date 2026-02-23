@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Avolio Odontologia | Tratamento de Canal em SP</title>
+  <title>Avolio Odontologia | Canal em São Paulo</title>
   <meta name="description" content="Tratamento de canal com microscópio no Jardim Paulista (SP). Atendimento acolhedor e preciso. Agende pelo WhatsApp." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,19 +12,20 @@
 
   <style>
     :root{
-      --bg:#f6f5f2;
-      --card:#ffffff;
-      --ink:#0f0f10;
-      --muted:rgba(15,15,16,.65);
-      --line:rgba(15,15,16,.10);
-      --shadow:0 20px 55px rgba(0,0,0,.10);
+      --bg:#f7f7f6;
+      --paper:#ffffff;
+      --ink:#0c0d0f;
+      --muted:rgba(12,13,15,.66);
+      --line:rgba(12,13,15,.10);
+      --shadow:0 26px 70px rgba(0,0,0,.10);
       --radius:22px;
 
-      --brand:#c99545;
-      --brand2:#f2c97f;
-      --brand-ink:#1a1206;
+      /* quase nada de dourado: só detalhe */
+      --accent:#b98a3f;
+      --accent2:#f0d39b;
+      --accent-ink:#1a1206;
 
-      --max:980px;
+      --max:920px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -32,10 +33,10 @@
     body{
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--ink);
-      line-height:1.55;
+      line-height:1.6;
       background:
-        radial-gradient(1100px 700px at 18% -10%, rgba(201,149,69,.14), transparent 60%),
-        radial-gradient(900px 650px at 110% 10%, rgba(15,15,16,.06), transparent 55%),
+        radial-gradient(900px 480px at 15% -10%, rgba(185,138,63,.08), transparent 55%),
+        radial-gradient(900px 520px at 110% 0%, rgba(12,13,15,.06), transparent 55%),
         var(--bg);
     }
     a{color:inherit;text-decoration:none}
@@ -45,13 +46,12 @@
     header{
       position:sticky;top:0;z-index:50;
       backdrop-filter: blur(14px);
-      background:rgba(246,245,242,.82);
-      border-bottom:1px solid rgba(15,15,16,.06);
+      background:rgba(247,247,246,.80);
+      border-bottom:1px solid rgba(12,13,15,.06);
     }
     .topbar{
       display:flex;align-items:center;justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
+      gap:14px;padding:14px 0;
     }
     .brand{
       display:flex;flex-direction:column;gap:2px;
@@ -68,203 +68,176 @@
       gap:10px;border-radius:999px;
       padding:11px 16px;
       font-weight:800;font-size:.92rem;
-      border:1px solid transparent;
+      border:1px solid rgba(12,13,15,.10);
+      background:rgba(255,255,255,.72);
       transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
       white-space:nowrap;
     }
+    .btn:hover{background:rgba(255,255,255,.95);transform:translateY(-1px)}
     .btn-primary{
-      background:linear-gradient(135deg,var(--brand2),var(--brand));
-      color:var(--brand-ink);
+      border-color:transparent;
+      background:linear-gradient(135deg,var(--accent2),var(--accent));
+      color:var(--accent-ink);
       box-shadow:0 14px 34px rgba(0,0,0,.14);
     }
-    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 18px 44px rgba(0,0,0,.18)}
-    .btn-ghost{
-      background:rgba(255,255,255,.70);
-      border-color:rgba(15,15,16,.10);
-      color:var(--ink);
-    }
-    .btn-ghost:hover{background:rgba(255,255,255,.95)}
+    .btn-primary:hover{box-shadow:0 18px 44px rgba(0,0,0,.18)}
 
-    /* Layout blocks */
+    /* Page */
     main{padding:28px 0 46px}
-    .card{
-      background:rgba(255,255,255,.86);
-      border:1px solid rgba(15,15,16,.08);
+    .sheet{
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(12,13,15,.08);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
     }
-    .section{
-      padding:22px;
-      border-top:1px solid rgba(15,15,16,.08);
-    }
-    .section:first-child{border-top:none}
 
-    /* Hero */
-    .hero{
-      padding:26px 22px 18px;
-      background:
-        radial-gradient(700px 280px at 15% 0%, rgba(201,149,69,.18), transparent 60%),
-        rgba(255,255,255,.86);
-    }
-    .pill{
+    /* Continuous layout (no “picotado”) */
+    .content{padding:28px 24px}
+    .content > * + *{margin-top:22px}
+
+    .kicker{
       display:inline-flex;align-items:center;gap:10px;
-      padding:7px 12px;border-radius:999px;
-      border:1px solid rgba(15,15,16,.10);
+      color:rgba(12,13,15,.72);
+      font-size:.82rem;
+      border:1px solid rgba(12,13,15,.10);
+      border-radius:999px;
+      padding:7px 12px;
       background:rgba(255,255,255,.70);
-      font-size:.78rem;color:var(--muted);
-      width:fit-content;margin-bottom:14px;
+      width:fit-content;
     }
     .dot{
       width:10px;height:10px;border-radius:999px;
-      background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18);
+      background:#22c55e;
+      box-shadow:0 0 0 4px rgba(34,197,94,.18);
     }
+
     h1{
-      font-size:clamp(2.05rem, 3.6vw, 2.65rem);
-      line-height:1.10;
+      font-size:clamp(2.1rem, 3.7vw, 2.75rem);
+      line-height:1.08;
       letter-spacing:-.03em;
-      margin-bottom:10px;
       max-width:26ch;
     }
     .lead{
       color:var(--muted);
       font-size:1.02rem;
       max-width:72ch;
-      margin-bottom:14px;
     }
-    .hero-cta{
-      display:flex;gap:10px;flex-wrap:wrap;
-      margin-top:8px;
-    }
-    .fine{
+
+    .cta{
+      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
       margin-top:10px;
-      font-size:.82rem;color:var(--muted);
+    }
+    .note{font-size:.84rem;color:var(--muted)}
+
+    /* Single clean divider */
+    .divider{
+      height:1px;background:rgba(12,13,15,.10);
+      margin:4px 0;
     }
 
-    /* Highlights */
-    .highlights{
+    /* Two-column only where it helps (still not “blocky”) */
+    .two{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:12px;
+      grid-template-columns: 1.05fr .95fr;
+      gap:18px;
+      align-items:start;
     }
-    .hitem{
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(15,15,16,.08);
-      border-radius:18px;
-      padding:14px;
-    }
-    .hitem strong{display:block;font-size:.95rem;font-weight:900;margin-bottom:6px}
-    .hitem p{font-size:.88rem;color:var(--muted)}
 
-    /* Titles */
-    .title{
-      font-size:1.15rem;
+    .section-title{
       font-weight:900;
       letter-spacing:-.02em;
+      font-size:1.1rem;
       margin-bottom:8px;
     }
-    .sub{color:var(--muted);font-size:.92rem;margin-bottom:12px}
+    .p{color:rgba(12,13,15,.78);font-size:.95rem}
 
-    /* About */
-    .about{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:12px;
+    .bullets{
+      margin-top:10px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      color:rgba(12,13,15,.80);
+      font-size:.92rem;
     }
-    .about-box{
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(15,15,16,.08);
-      border-radius:18px;
-      padding:14px;
-    }
-    .about-box b{font-weight:900}
-    .list{
-      list-style:none;
-      display:flex;flex-direction:column;gap:8px;
-      margin-top:12px;
-    }
-    .list li{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:rgba(15,15,16,.80)}
-    .tick{
+    .bullets div{display:flex;gap:10px;align-items:flex-start}
+    .check{
       width:22px;height:22px;border-radius:999px;
-      background:rgba(201,149,69,.18);
+      background:rgba(12,13,15,.06);
       display:flex;align-items:center;justify-content:center;
-      flex:0 0 22px;margin-top:2px;
+      flex:0 0 22px;
+      margin-top:2px;
       font-size:.95rem;
     }
 
-    /* Steps */
-    .steps{display:flex;flex-direction:column;gap:10px}
-    .step{
-      display:flex;gap:12px;align-items:flex-start;
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(15,15,16,.08);
-      border-radius:18px;
-      padding:12px 14px;
+    /* FAQ minimal */
+    .faq{
+      display:flex;flex-direction:column;gap:10px;
+      border-top:1px solid rgba(12,13,15,.10);
+      padding-top:16px;
     }
-    .num{
-      width:28px;height:28px;border-radius:999px;
-      background:var(--ink);color:var(--bg);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:900;font-size:.82rem;flex:0 0 28px;margin-top:1px;
+    details{
+      border:1px solid rgba(12,13,15,.10);
+      border-radius:16px;
+      background:rgba(255,255,255,.70);
+      padding:10px 12px;
     }
-    .step strong{display:block;font-weight:900;font-size:.92rem;margin-bottom:2px}
-    .step p{color:var(--muted);font-size:.88rem}
-
-    /* FAQ */
-    .faq{display:flex;flex-direction:column;gap:10px}
-    .faq-item{
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(15,15,16,.08);
-      border-radius:18px;
-      overflow:hidden;
-    }
-    .q{
-      width:100%;
-      background:transparent;border:none;
-      padding:12px 14px;
-      display:flex;justify-content:space-between;align-items:center;
+    summary{
       cursor:pointer;
-      font-weight:900;font-size:.94rem;
-      text-align:left;
+      font-weight:800;
+      font-size:.94rem;
+      list-style:none;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;
     }
-    .plus{
-      width:30px;height:30px;border-radius:999px;
-      display:flex;align-items:center;justify-content:center;
-      border:1px solid rgba(15,15,16,.10);
-      background:rgba(255,255,255,.8);
-      transition:transform .18s ease;
-      flex:0 0 30px;
-    }
-    .a{max-height:0;opacity:0;overflow:hidden;transition:max-height .22s ease, opacity .22s ease;padding:0 14px}
-    .a p{padding:0 0 12px;color:var(--muted);font-size:.88rem}
-    .faq-item.active .a{opacity:1}
-    .faq-item.active .plus{transform:rotate(45deg)}
+    summary::-webkit-details-marker{display:none}
+    .ans{padding:10px 2px 2px;color:var(--muted);font-size:.9rem}
 
     /* Location */
-    .location{
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(15,15,16,.08);
+    .loc{
+      border-top:1px solid rgba(12,13,15,.10);
+      padding-top:16px;
+    }
+    .loc-line{
+      display:flex;flex-wrap:wrap;gap:10px;
+      color:rgba(12,13,15,.78);
+      font-size:.92rem;
+      margin-top:8px;
+    }
+    .tag{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(12,13,15,.10);
+      background:rgba(255,255,255,.70);
+    }
+    .map{
+      margin-top:12px;
+      border:1px solid rgba(12,13,15,.10);
       border-radius:18px;
       overflow:hidden;
+      height:280px;
+      background:#fff;
     }
-    .loc-info{padding:14px}
-    .loc-info p{font-size:.9rem;color:var(--muted)}
-    .map{height:280px;border-top:1px solid rgba(15,15,16,.08)}
     .map iframe{width:100%;height:100%;border:0}
 
-    /* Footer CTA */
-    .footer-cta{
-      text-align:center;
-      padding:26px 18px;
-      background:rgba(15,15,16,.92);
-      color:var(--bg);
-      border-radius:var(--radius);
+    /* Final CTA (simple) */
+    .final{
+      margin-top:10px;
+      padding:18px 18px;
+      background:rgba(12,13,15,.92);
+      color:rgba(255,255,255,.92);
+      border-radius:18px;
       border:1px solid rgba(255,255,255,.10);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
     }
-    .footer-cta h2{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;margin-bottom:8px}
-    .footer-cta p{color:rgba(246,245,242,.80);margin-bottom:14px}
+    .final strong{font-size:1.05rem;font-weight:900;letter-spacing:-.01em}
+    .final span{color:rgba(255,255,255,.72);font-size:.92rem}
 
-    /* WhatsApp floating */
+    /* Floating WhatsApp */
     .wa{
       position:fixed;right:16px;bottom:16px;z-index:60;
     }
@@ -287,17 +260,16 @@
 
     @media (max-width: 860px){
       header{position:static}
-      .hero{padding:22px 16px 16px}
-      .section{padding:18px 16px}
-      .highlights{grid-template-columns:1fr}
-      .hero-cta .btn{width:100%}
+      .content{padding:22px 16px}
+      .two{grid-template-columns:1fr}
+      .cta .btn{width:100%}
       h1{max-width:unset}
+      .final{justify-content:center;text-align:center}
     }
   </style>
 </head>
 
 <body>
-  <!-- WhatsApp floating -->
   <div class="wa">
     <a target="_blank" aria-label="WhatsApp"
       href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">☎</a>
@@ -321,166 +293,94 @@
 
   <main>
     <div class="container">
+      <div class="sheet">
 
-      <!-- ONE CLEAN CARD (everything in order) -->
-      <div class="card">
-
-        <!-- HERO -->
-        <div class="hero" id="topo">
-          <div class="pill"><span class="dot"></span> Atendimento com hora marcada em São Paulo</div>
+        <div class="content">
+          <!-- HERO -->
+          <div class="kicker"><span class="dot"></span> Atendimento com hora marcada em São Paulo</div>
           <h1>Canal com microscópio e cuidado humano — sem pressa, com conforto.</h1>
           <p class="lead">
             Você entende o diagnóstico e o plano antes de começar. Atendimento acolhedor e técnico para aliviar a dor e preservar seu dente.
           </p>
 
-          <div class="hero-cta">
+          <div class="cta">
             <a class="btn btn-primary" target="_blank"
               href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
               Agendar agora
             </a>
-            <a class="btn btn-ghost" href="#local">Ver localização</a>
+            <a class="btn" href="#local">Ver localização</a>
           </div>
 
-          <div class="fine">
+          <div class="note">
             * Em muitos casos, a dor melhora já na primeira sessão. Cada caso é avaliado individualmente.
           </div>
-        </div>
 
-        <!-- HIGHLIGHTS -->
-        <div class="section">
-          <div class="highlights">
-            <div class="hitem">
-              <strong>🔬 Microscópio na endodontia</strong>
-              <p>Mais precisão para localizar canais e tratar detalhes com segurança.</p>
-            </div>
-            <div class="hitem">
-              <strong>🧊 Controle da dor</strong>
-              <p>Condução calma e respeitosa — ideal para quem tem medo de dentista.</p>
-            </div>
-            <div class="hitem">
-              <strong>💬 Plano transparente</strong>
-              <p>Diagnóstico, sessões e proposta explicados com clareza antes de iniciar.</p>
-            </div>
-          </div>
-        </div>
+          <div class="divider"></div>
 
-        <!-- ABOUT -->
-        <div class="section" id="sobre">
-          <div class="title">Quem sou eu</div>
-          <div class="sub">Um atendimento técnico, mas principalmente humano.</div>
-
-          <div class="about">
-            <div class="about-box">
-              <p>
-                <b>Dra. Maria Vitória Bello Avolio</b> — endodontia (tratamento de canal) no Jardim Paulista, São Paulo.
+          <!-- ABOUT + DIFFERENTIALS (continuous, not boxed) -->
+          <div class="two">
+            <div>
+              <div class="section-title">Quem sou eu</div>
+              <p class="p">
+                <b>Dra. Maria Vitória Bello Avolio</b> — Endodontia (tratamento de canal) no Jardim Paulista, São Paulo.
                 Eu atendo pacientes com dor, ansiedade ou experiências ruins anteriores.
-                Minha prioridade é te deixar seguro(a): explicar com clareza, atender sem pressa e com precisão.
+                Minha prioridade é te deixar seguro(a): explicar com clareza, atender com calma e usar técnica para dar previsibilidade ao seu tratamento.
               </p>
 
-              <ul class="list">
-                <li><div class="tick">✅</div><div><b>Sem pressa:</b> você entende cada etapa antes de começar.</div></li>
-                <li><div class="tick">✅</div><div><b>Precisão:</b> microscópio + instrumentação mecanizada + protocolos modernos.</div></li>
-                <li><div class="tick">✅</div><div><b>Acolhimento:</b> respeito, calma e zero julgamento.</div></li>
-              </ul>
+              <div class="bullets" aria-label="Diferenciais">
+                <div><div class="check">✓</div><div><b>Sem pressa:</b> você entende cada etapa antes de começar.</div></div>
+                <div><div class="check">✓</div><div><b>Precisão:</b> microscópio e protocolos modernos de endodontia.</div></div>
+                <div><div class="check">✓</div><div><b>Acolhimento:</b> respeito, calma e zero julgamento.</div></div>
+              </div>
+            </div>
 
-              <div class="hero-cta" style="margin-top:14px">
+            <div>
+              <div class="section-title">Como funciona</div>
+              <p class="p">
+                Um fluxo simples, do WhatsApp ao tratamento — sem confusão.
+              </p>
+              <div class="bullets">
+                <div><div class="check">1</div><div><b>WhatsApp:</b> você descreve o sintoma e recebe orientação inicial.</div></div>
+                <div><div class="check">2</div><div><b>Avaliação:</b> exame clínico + imagem (quando necessário).</div></div>
+                <div><div class="check">3</div><div><b>Plano claro:</b> sessões, etapas e proposta antes de iniciar.</div></div>
+              </div>
+
+              <div class="cta" style="margin-top:12px">
                 <a class="btn btn-primary" target="_blank"
                   href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA.">
-                  Agendar com a doutora
-                </a>
-                <a class="btn btn-ghost" target="_blank"
-                  href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20posso%20te%20explicar%20meu%20caso%20rapidinho%3F">
-                  Tirar uma dúvida
+                  Falar com a doutora
                 </a>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- HOW IT WORKS -->
-        <div class="section" id="como">
-          <div class="title">Como funciona</div>
-          <div class="sub">Do WhatsApp ao tratamento — simples e previsível.</div>
+          <!-- FAQ minimal -->
+          <div class="faq" id="duvidas">
+            <div class="section-title">Perguntas frequentes</div>
 
-          <div class="steps">
-            <div class="step">
-              <div class="num">1</div>
-              <div>
-                <strong>WhatsApp</strong>
-                <p>Você descreve o sintoma e recebe orientação inicial.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">2</div>
-              <div>
-                <strong>Avaliação</strong>
-                <p>Exame clínico + radiografia/tomografia (quando necessário).</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">3</div>
-              <div>
-                <strong>Plano claro</strong>
-                <p>Você entende opções, sessões e proposta antes de começar.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">4</div>
-              <div>
-                <strong>Tratamento</strong>
-                <p>Foco em aliviar a dor, desinfetar os canais e preservar o dente.</p>
-              </div>
-            </div>
+            <details>
+              <summary>Tratamento de canal dói? <span>＋</span></summary>
+              <div class="ans">O objetivo é que não. Com anestesia local e condução tranquila, a maioria dos pacientes realiza o procedimento sem dor.</div>
+            </details>
+
+            <details>
+              <summary>Quantas sessões são necessárias? <span>＋</span></summary>
+              <div class="ans">Depende do dente e do grau de inflamação/infeção. Alguns casos resolvem em 1 sessão, outros precisam de 2 ou mais.</div>
+            </details>
+
+            <details>
+              <summary>Vou precisar de tomografia? <span>＋</span></summary>
+              <div class="ans">Em alguns casos, sim (ex.: retratamentos/anatomias complexas). Quando indicada, você entende claramente o motivo.</div>
+            </details>
           </div>
-        </div>
 
-        <!-- FAQ -->
-        <div class="section" id="duvidas">
-          <div class="title">Perguntas frequentes</div>
-          <div class="sub">Clique para abrir.</div>
-
-          <div class="faq">
-            <div class="faq-item">
-              <button class="q" type="button">
-                <span>Tratamento de canal dói?</span>
-                <span class="plus">+</span>
-              </button>
-              <div class="a">
-                <p>O objetivo é que não. Com anestesia local e condução calma, a maioria dos pacientes faz o procedimento sem dor.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="q" type="button">
-                <span>Quantas sessões são necessárias?</span>
-                <span class="plus">+</span>
-              </button>
-              <div class="a">
-                <p>Depende do dente e do grau de inflamação/infeção. Alguns casos resolvem em 1 sessão, outros precisam de 2 ou mais.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="q" type="button">
-                <span>Vou precisar de tomografia?</span>
-                <span class="plus">+</span>
-              </button>
-              <div class="a">
-                <p>Em alguns casos, sim (ex.: retratamentos/anatomias complexas). Quando indicada, você entende claramente o motivo.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- LOCATION -->
-        <div class="section" id="local">
-          <div class="title">Localização</div>
-          <div class="sub">Av. Nove de Julho 3229, conj. 1506 · Jardim Paulista · São Paulo/SP</div>
-
-          <div class="location">
-            <div class="loc-info">
-              <p><b>Horários:</b> Seg–Sex 08h–19h · Sáb 09h–12h (agendamento)</p>
-              <p><b>WhatsApp:</b> (11) 99480-2149</p>
+          <!-- LOCATION -->
+          <div class="loc" id="local">
+            <div class="section-title">Localização</div>
+            <div class="loc-line">
+              <div class="tag"><b>Endereço:</b> Av. Nove de Julho 3229, conj. 1506</div>
+              <div class="tag"><b>Horários:</b> Seg–Sex 08h–19h · Sáb 09h–12h</div>
+              <div class="tag"><b>WhatsApp:</b> (11) 99480-2149</div>
             </div>
 
             <div class="map">
@@ -491,19 +391,20 @@
                 aria-label="Mapa do consultório">
               </iframe>
             </div>
+
+            <div class="final" style="margin-top:14px">
+              <div>
+                <strong>Está com dor agora?</strong><br>
+                <span>Chama no WhatsApp e vamos encaixar o melhor horário para avaliação.</span>
+              </div>
+              <a class="btn btn-primary" target="_blank"
+                href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20preciso%20de%20avalia%C3%A7%C3%A3o%20o%20quanto%20antes.%20Estou%20com%20dor%20de%20dente.">
+                Falar no WhatsApp
+              </a>
+            </div>
           </div>
+
         </div>
-
-      </div>
-
-      <!-- FINAL CTA -->
-      <div style="margin-top:14px" class="footer-cta">
-        <h2>Está com dor agora?</h2>
-        <p>Chama no WhatsApp e vamos encaixar o melhor horário para sua avaliação.</p>
-        <a class="btn btn-primary" target="_blank"
-          href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20preciso%20de%20avalia%C3%A7%C3%A3o%20o%20quanto%20antes.%20Estou%20com%20dor%20de%20dente.">
-          Falar no WhatsApp agora
-        </a>
       </div>
 
       <footer>
@@ -511,31 +412,7 @@
           Avolio Odontologia · Jardim Paulista — São Paulo/SP
         </div>
       </footer>
-
     </div>
   </main>
-
-  <script>
-    // FAQ accordion (one open at a time)
-    document.querySelectorAll(".faq-item").forEach((item) => {
-      const btn = item.querySelector(".q");
-      const ans = item.querySelector(".a");
-
-      btn.addEventListener("click", () => {
-        const isOpen = item.classList.contains("active");
-
-        document.querySelectorAll(".faq-item").forEach((other) => {
-          other.classList.remove("active");
-          const a = other.querySelector(".a");
-          if (a) a.style.maxHeight = null;
-        });
-
-        if (!isOpen) {
-          item.classList.add("active");
-          ans.style.maxHeight = ans.scrollHeight + "px";
-        }
-      });
-    });
-  </script>
 </body>
 </html>
