@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Avolio Odontologia | Tratamento de Canal em São Paulo</title>
-  <meta name="description" content="Tratamento de canal com microscópio em São Paulo (Jardim Paulista). Atendimento acolhedor, foco no controle da dor. Agende pelo WhatsApp." />
+  <meta name="description" content="Tratamento de canal com microscópio em São Paulo (Jardim Paulista). Atendimento acolhedor e preciso. Agende pelo WhatsApp." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,27 +14,27 @@
     :root{
       --bg:#f6f5f2;
       --surface:#ffffff;
-      --ink:#111111;
-      --muted:rgba(17,17,17,.68);
-      --line:rgba(17,17,17,.10);
-      --shadow:0 20px 50px rgba(0,0,0,.10);
-      --radius:22px;
+      --ink:#0f0f0f;
+      --muted:rgba(15,15,15,.66);
+      --line:rgba(15,15,15,.10);
+      --shadow:0 20px 55px rgba(0,0,0,.10);
+      --radius:24px;
 
       --brand:#c99545;
       --brand-ink:#1a1206;
 
-      --max:980px;
+      --max:1040px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(1000px 650px at 18% -10%, rgba(201,149,69,.14), transparent 60%),
-        radial-gradient(900px 650px at 110% 10%, rgba(17,17,17,.06), transparent 55%),
-        var(--bg);
       color:var(--ink);
       line-height:1.55;
+      background:
+        radial-gradient(1100px 700px at 18% -10%, rgba(201,149,69,.16), transparent 60%),
+        radial-gradient(900px 650px at 110% 10%, rgba(15,15,15,.06), transparent 55%),
+        var(--bg);
     }
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
@@ -44,7 +44,7 @@
       position:sticky;top:0;z-index:50;
       backdrop-filter: blur(12px);
       background:rgba(246,245,242,.88);
-      border-bottom:1px solid rgba(17,17,17,.06);
+      border-bottom:1px solid rgba(15,15,15,.06);
     }
     .topbar{
       display:flex;align-items:center;justify-content:space-between;
@@ -70,39 +70,43 @@
       user-select:none;white-space:nowrap;
     }
     .btn-primary{
-      background:linear-gradient(135deg, #e0b35b, var(--brand));
+      background:linear-gradient(135deg, #f2c97f, var(--brand));
       color:var(--brand-ink);
       box-shadow:0 12px 28px rgba(0,0,0,.12);
     }
-    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 36px rgba(0,0,0,.16)}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 38px rgba(0,0,0,.16)}
     .btn-ghost{
       background:rgba(255,255,255,.65);
-      border-color:rgba(17,17,17,.10);
+      border-color:rgba(15,15,15,.10);
       color:var(--ink);
     }
-    .btn-ghost:hover{background:rgba(255,255,255,.9)}
-    .btn small{font-weight:500;font-size:.78rem;opacity:.85}
+    .btn-ghost:hover{background:rgba(255,255,255,.92)}
+    .btn small{font-weight:500;font-size:.78rem;opacity:.86}
 
-    /* HERO (single column + centered) */
-    .hero{padding:54px 0 22px}
+    /* Hero */
+    .hero{padding:56px 0 22px}
     .hero-wrap{
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(17,17,17,.08);
+      background:rgba(255,255,255,.80);
+      border:1px solid rgba(15,15,15,.08);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
+      position:relative;
     }
-    .hero-inner{
-      padding:26px 22px;
+    .hero-wrap:before{
+      content:"";
+      position:absolute;inset:-2px;
       background:
-        radial-gradient(800px 320px at 20% 0%, rgba(201,149,69,.18), transparent 55%),
-        rgba(255,255,255,.70);
+        radial-gradient(520px 220px at 20% 0%, rgba(201,149,69,.22), transparent 58%),
+        radial-gradient(520px 220px at 80% 0%, rgba(15,15,15,.07), transparent 55%);
+      pointer-events:none;
     }
+    .hero-inner{position:relative;padding:26px 22px 18px}
     .pill{
       display:inline-flex;align-items:center;gap:10px;
       padding:6px 12px;border-radius:999px;
-      border:1px solid rgba(17,17,17,.10);
-      background:rgba(255,255,255,.75);
+      border:1px solid rgba(15,15,15,.10);
+      background:rgba(255,255,255,.78);
       font-size:.78rem;color:var(--muted);
       width:fit-content;margin-bottom:14px;
     }
@@ -111,58 +115,57 @@
       background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18);
     }
     h1{
-      font-size:clamp(2.15rem, 3.3vw, 2.75rem);
-      line-height:1.12;
+      font-size:clamp(2.2rem, 3.4vw, 2.85rem);
+      line-height:1.10;
       letter-spacing:-.02em;
       margin-bottom:12px;
-      max-width:22ch;
+      max-width:24ch;
     }
     .lead{
       color:var(--muted);
       font-size:1.02rem;
-      max-width:62ch;
+      max-width:64ch;
       margin-bottom:18px;
     }
     .hero-grid{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin:18px 0 18px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap:12px;
+      margin:18px 0 16px;
     }
     .mini-card{
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(17,17,17,.08);
+      background:rgba(255,255,255,.82);
+      border:1px solid rgba(15,15,15,.08);
       border-radius:18px;
       padding:14px;
     }
-    .mini-top{
-      display:flex;gap:10px;align-items:center;margin-bottom:8px
-    }
+    .mini-top{display:flex;gap:10px;align-items:center;margin-bottom:8px}
     .badge{
       width:36px;height:36px;border-radius:14px;
-      background:rgba(17,17,17,.06);
+      background:rgba(15,15,15,.06);
       display:flex;align-items:center;justify-content:center;
       font-size:1.1rem;
     }
     .mini-card h3{font-size:.98rem;font-weight:700;margin-bottom:4px}
     .mini-card p{font-size:.88rem;color:var(--muted)}
-    .cta{
-      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
-      margin-top:14px;
-    }
+    .cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
     .fineprint{margin-top:10px;font-size:.82rem;color:var(--muted)}
     .hero-footer{
+      position:relative;
       padding:14px 22px;
-      border-top:1px solid rgba(17,17,17,.08);
+      border-top:1px solid rgba(15,15,15,.08);
       display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;
-      background:rgba(255,255,255,.70);
-      font-size:.86rem;color:rgba(17,17,17,.78);
+      background:rgba(255,255,255,.72);
+      font-size:.86rem;color:rgba(15,15,15,.76);
     }
-    .hero-footer b{color:rgba(17,17,17,.92)}
+    .hero-footer b{color:rgba(15,15,15,.92)}
 
     /* Sections */
-    section{padding:30px 0}
-    .section-title{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+    section{padding:32px 0}
+    .section-title{
+      font-size:1.25rem;font-weight:700;letter-spacing:-.01em;
+      margin-bottom:8px;
+    }
     .section-sub{color:var(--muted);font-size:.94rem;margin-bottom:16px}
 
     /* Feature grid */
@@ -173,7 +176,7 @@
     }
     .box{
       background:rgba(255,255,255,.85);
-      border:1px solid rgba(17,17,17,.08);
+      border:1px solid rgba(15,15,15,.08);
       border-radius:18px;
       padding:14px;
     }
@@ -181,17 +184,101 @@
     .box h4{font-size:.96rem;font-weight:700;margin-bottom:4px}
     .box p{font-size:.88rem;color:var(--muted)}
 
+    /* About */
+    .about{
+      display:grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .about-card{
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(15,15,15,.08);
+      border-radius:var(--radius);
+      box-shadow:0 18px 44px rgba(0,0,0,.08);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .about-card:before{
+      content:"";
+      position:absolute;inset:-2px;
+      background:radial-gradient(520px 240px at 15% 0%, rgba(201,149,69,.18), transparent 55%);
+      pointer-events:none;
+    }
+    .about-inner{position:relative}
+    .about-tag{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(15,15,15,.10);
+      background:rgba(255,255,255,.75);
+      width:fit-content;
+      margin-bottom:10px;
+    }
+    .about-tag i{
+      width:9px;height:9px;border-radius:999px;background:var(--brand);
+      display:inline-block;
+    }
+    .about-name{font-size:1.12rem;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+    .about-role{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+    .about-text{font-size:.92rem;color:rgba(15,15,15,.82);margin-bottom:10px}
+    .about-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:10px}
+    .about-list li{
+      display:flex;gap:10px;align-items:flex-start;
+      font-size:.9rem;color:rgba(15,15,15,.82);
+    }
+    .tick{
+      width:22px;height:22px;border-radius:999px;
+      background:rgba(201,149,69,.18);
+      display:flex;align-items:center;justify-content:center;
+      flex:0 0 22px;margin-top:2px;
+      font-size:.95rem;
+    }
+
+    /* About photo placeholder */
+    .photo{
+      background:rgba(255,255,255,.70);
+      border:1px solid rgba(15,15,15,.08);
+      border-radius:var(--radius);
+      overflow:hidden;
+      position:relative;
+      min-height:280px;
+      display:flex;align-items:flex-end;justify-content:flex-start;
+      padding:16px;
+    }
+    .photo:before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(800px 420px at 10% 0%, rgba(201,149,69,.22), transparent 55%),
+        linear-gradient(180deg, rgba(15,15,15,.05), rgba(15,15,15,.12));
+    }
+    .photo-inner{position:relative}
+    .photo-title{font-weight:800;font-size:1.05rem;color:rgba(255,255,255,.92);margin-bottom:6px}
+    .photo-sub{font-size:.88rem;color:rgba(255,255,255,.78);max-width:44ch}
+    .photo-chip{
+      display:inline-flex;align-items:center;gap:8px;
+      margin-top:10px;
+      padding:6px 10px;border-radius:999px;
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.18);
+      color:rgba(255,255,255,.88);
+      font-size:.82rem;
+      width:fit-content;
+    }
+
     /* Steps */
     .steps{
       background:rgba(255,255,255,.72);
-      border:1px solid rgba(17,17,17,.08);
+      border:1px solid rgba(15,15,15,.08);
       border-radius:var(--radius);
       padding:14px;
     }
     .step{
       display:flex;gap:12px;align-items:flex-start;
       padding:12px 8px;
-      border-bottom:1px dashed rgba(17,17,17,.14);
+      border-bottom:1px dashed rgba(15,15,15,.14);
     }
     .step:last-child{border-bottom:none}
     .num{
@@ -207,7 +294,7 @@
     .faq{display:flex;flex-direction:column;gap:10px}
     .faq-item{
       background:rgba(255,255,255,.85);
-      border:1px solid rgba(17,17,17,.08);
+      border:1px solid rgba(15,15,15,.08);
       border-radius:18px;
       overflow:hidden;
     }
@@ -221,9 +308,9 @@
     }
     .plus{
       width:30px;height:30px;border-radius:999px;
-      border:1px solid rgba(17,17,17,.10);
+      border:1px solid rgba(15,15,15,.10);
       display:flex;align-items:center;justify-content:center;
-      font-size:1.05rem;color:rgba(17,17,17,.72);
+      font-size:1.05rem;color:rgba(15,15,15,.72);
       transition:transform .18s ease;
       flex:0 0 30px;
       background:rgba(255,255,255,.6);
@@ -240,25 +327,25 @@
     /* Location */
     .location{
       background:rgba(255,255,255,.85);
-      border:1px solid rgba(17,17,17,.08);
+      border:1px solid rgba(15,15,15,.08);
       border-radius:var(--radius);
       overflow:hidden;
     }
     .loc-info{padding:14px 14px 10px}
     .loc-info p{font-size:.92rem;color:var(--muted)}
-    .map{height:260px;border-top:1px solid rgba(17,17,17,.08)}
+    .map{height:260px;border-top:1px solid rgba(15,15,15,.08)}
     .map iframe{width:100%;height:100%;border:0}
 
     /* Final CTA */
     .final{
       border-radius:var(--radius);
-      padding:22px 16px;
-      background:rgba(17,17,17,.92);
+      padding:24px 16px;
+      background:rgba(15,15,15,.92);
       border:1px solid rgba(255,255,255,.10);
       text-align:center;
       color:var(--bg);
     }
-    .final h2{font-size:1.35rem;letter-spacing:-.01em;margin-bottom:8px}
+    .final h2{font-size:1.38rem;letter-spacing:-.01em;margin-bottom:8px}
     .final p{color:rgba(246,245,242,.82);font-size:.95rem;margin-bottom:14px}
     .final .btn-primary{background:linear-gradient(135deg,#f2c97f,#e0b35b)}
     .final .btn-primary:hover{box-shadow:0 18px 40px rgba(0,0,0,.22)}
@@ -283,14 +370,16 @@
       font-size:.82rem;color:var(--muted);
     }
 
-    @media (max-width: 860px){
+    @media (max-width: 980px){
       header{position:static}
-      .hero-inner{padding:22px 16px}
+      .hero-inner{padding:22px 16px 16px}
       .hero-footer{padding:12px 16px}
       .hero-grid{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
       .cta .btn{width:100%}
       h1{max-width:unset}
+      .photo{min-height:220px}
     }
   </style>
 </head>
@@ -318,7 +407,7 @@
   </header>
 
   <main>
-    <!-- HERO (no sidebar) -->
+    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="hero-wrap">
@@ -350,6 +439,16 @@
                   </div>
                 </div>
               </div>
+
+              <div class="mini-card">
+                <div class="mini-top">
+                  <div class="badge">💬</div>
+                  <div>
+                    <h3>Consulta transparente</h3>
+                    <p>Explicação simples, sem pressa e sem julgamentos.</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="cta">
@@ -375,6 +474,59 @@
             <div><b>Seg–Sex</b> 08h–19h · <b>Sáb</b> 09h–12h</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (Quem sou eu) -->
+    <section>
+      <div class="container">
+        <div class="section-title">Quem sou eu</div>
+        <div class="section-sub">Um atendimento técnico, mas principalmente humano.</div>
+
+        <div class="about">
+          <!-- Foto / bloco visual (substitua por uma foto real depois) -->
+          <div class="photo" aria-label="Foto da Dra. Maria Vitória">
+            <div class="photo-inner">
+              <div class="photo-title">Dra. Maria Vitória Bello Avolio</div>
+              <div class="photo-sub">
+                Endodontia (tratamento de canal) com microscópio • Jardim Paulista, São Paulo.
+              </div>
+              <div class="photo-chip">📸 Trocar por foto real depois</div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-inner">
+              <div class="about-tag"><i></i> Sobre a profissional</div>
+              <div class="about-name">Cuidar da sua dor com calma e precisão.</div>
+              <div class="about-role">Atendimento individual, explicação simples e foco em preservar o dente.</div>
+
+              <p class="about-text">
+                Eu atendo pacientes que chegam com dor intensa, ansiedade ou experiências ruins anteriores.
+                Minha prioridade é te deixar seguro(a): explicar o diagnóstico, conduzir o atendimento com calma
+                e usar técnica para trazer previsibilidade ao tratamento.
+              </p>
+
+              <ul class="about-list">
+                <li><div class="tick">✅</div><div><b>Sem pressa:</b> você entende cada etapa antes de começar.</div></li>
+                <li><div class="tick">✅</div><div><b>Precisão:</b> endodontia microscópica e protocolos modernos.</div></li>
+                <li><div class="tick">✅</div><div><b>Respeito:</b> atendimento acolhedor, sem julgamentos.</div></li>
+              </ul>
+
+              <div class="cta" style="margin-top:14px">
+                <a class="btn btn-primary" target="_blank"
+                   href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA.">
+                  Agendar com a doutora <small>WhatsApp</small>
+                </a>
+                <a class="btn btn-ghost" target="_blank"
+                   href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20posso%20te%20explicar%20meu%20caso%20rapidinho%3F">
+                  Tirar uma dúvida
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
