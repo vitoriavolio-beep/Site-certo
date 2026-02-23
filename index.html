@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Avolio Odontologia | Canal em São Paulo</title>
-  <meta name="description" content="Tratamento de canal com microscópio no Jardim Paulista (SP). Atendimento acolhedor e preciso. Agende pelo WhatsApp." />
+  <title>Avolio Odontologia | Tratamento de Canal em São Paulo</title>
+  <meta name="description" content="Tratamento de canal com microscópio no Jardim Paulista (SP). Atendimento acolhedor, preciso e sem pressa. Agende pelo WhatsApp." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +12,17 @@
 
   <style>
     :root{
-      --bg:#f7f7f6;
+      --bg:#f6f6f4;
       --paper:#ffffff;
-      --ink:#0c0d0f;
-      --muted:rgba(12,13,15,.66);
-      --line:rgba(12,13,15,.10);
-      --shadow:0 26px 70px rgba(0,0,0,.10);
+      --ink:#0b0c0f;
+      --muted:rgba(11,12,15,.62);
+      --hair:rgba(11,12,15,.10);
+      --shadow:0 24px 70px rgba(0,0,0,.10);
       --radius:22px;
 
-      /* quase nada de dourado: só detalhe */
-      --accent:#b98a3f;
-      --accent2:#f0d39b;
-      --accent-ink:#1a1206;
-
-      --max:920px;
+      /* acento: quase imperceptível */
+      --accent:#b08a3a; /* só p/ hover + linha fina */
+      --max:980px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -33,238 +30,278 @@
     body{
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--ink);
-      line-height:1.6;
       background:
-        radial-gradient(900px 480px at 15% -10%, rgba(185,138,63,.08), transparent 55%),
-        radial-gradient(900px 520px at 110% 0%, rgba(12,13,15,.06), transparent 55%),
+        radial-gradient(1200px 600px at 10% -10%, rgba(176,138,58,.07), transparent 55%),
+        radial-gradient(1000px 700px at 110% 10%, rgba(11,12,15,.06), transparent 55%),
         var(--bg);
+      line-height:1.6;
     }
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
     /* Header */
     header{
-      position:sticky;top:0;z-index:50;
+      position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
-      background:rgba(247,247,246,.80);
-      border-bottom:1px solid rgba(12,13,15,.06);
+      background:rgba(246,246,244,.82);
+      border-bottom:1px solid rgba(11,12,15,.06);
     }
     .topbar{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:14px;padding:14px 0;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:16px;
     }
     .brand{
-      display:flex;flex-direction:column;gap:2px;
-      font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+      display:flex; flex-direction:column; gap:2px;
+      font-weight:800; letter-spacing:.08em; text-transform:uppercase;
       font-size:.96rem;
     }
     .brand small{
-      font-weight:600;letter-spacing:0;text-transform:none;
-      color:var(--muted);font-size:.82rem;
+      letter-spacing:0; text-transform:none;
+      font-weight:600; font-size:.82rem; color:var(--muted);
     }
 
+    /* Buttons */
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      gap:10px;border-radius:999px;
+      display:inline-flex; align-items:center; justify-content:center;
       padding:11px 16px;
-      font-weight:800;font-size:.92rem;
-      border:1px solid rgba(12,13,15,.10);
-      background:rgba(255,255,255,.72);
-      transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+      border-radius:999px;
+      border:1px solid rgba(11,12,15,.12);
+      background:rgba(255,255,255,.75);
+      font-weight:800; font-size:.92rem;
+      transition:transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
       white-space:nowrap;
     }
-    .btn:hover{background:rgba(255,255,255,.95);transform:translateY(-1px)}
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.95)}
     .btn-primary{
-      border-color:transparent;
-      background:linear-gradient(135deg,var(--accent2),var(--accent));
-      color:var(--accent-ink);
-      box-shadow:0 14px 34px rgba(0,0,0,.14);
+      border-color:rgba(11,12,15,.14);
+      background:var(--ink);
+      color:var(--paper);
+      box-shadow:0 16px 40px rgba(0,0,0,.18);
     }
-    .btn-primary:hover{box-shadow:0 18px 44px rgba(0,0,0,.18)}
+    .btn-primary:hover{box-shadow:0 22px 56px rgba(0,0,0,.22)}
+    .btn-link{
+      border-color:transparent;
+      background:transparent;
+      font-weight:800;
+      color:rgba(11,12,15,.78);
+      padding:11px 10px;
+    }
+    .btn-link:hover{background:transparent; transform:none; color:var(--accent)}
 
-    /* Page */
+    /* Layout card */
     main{padding:28px 0 46px}
     .sheet{
-      background:rgba(255,255,255,.88);
-      border:1px solid rgba(12,13,15,.08);
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(11,12,15,.08);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
     }
 
-    /* Continuous layout (no “picotado”) */
-    .content{padding:28px 24px}
-    .content > * + *{margin-top:22px}
+    /* Spacing */
+    .pad{padding:34px 28px}
+    .divider{height:1px;background:var(--hair)}
 
+    /* HERO */
+    .hero{
+      padding:38px 28px 26px;
+      background:
+        radial-gradient(900px 420px at 20% 0%, rgba(176,138,58,.09), transparent 60%),
+        rgba(255,255,255,.82);
+    }
     .kicker{
-      display:inline-flex;align-items:center;gap:10px;
-      color:rgba(12,13,15,.72);
-      font-size:.82rem;
-      border:1px solid rgba(12,13,15,.10);
-      border-radius:999px;
-      padding:7px 12px;
-      background:rgba(255,255,255,.70);
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:.82rem; color:rgba(11,12,15,.68);
+      border:1px solid rgba(11,12,15,.10);
+      background:rgba(255,255,255,.65);
+      padding:7px 12px; border-radius:999px;
       width:fit-content;
     }
     .dot{
-      width:10px;height:10px;border-radius:999px;
+      width:10px; height:10px; border-radius:999px;
       background:#22c55e;
       box-shadow:0 0 0 4px rgba(34,197,94,.18);
     }
-
     h1{
-      font-size:clamp(2.1rem, 3.7vw, 2.75rem);
-      line-height:1.08;
+      margin-top:14px;
+      font-size:clamp(2.2rem, 3.8vw, 3.05rem);
+      line-height:1.06;
       letter-spacing:-.03em;
-      max-width:26ch;
+      max-width:24ch;
     }
     .lead{
+      margin-top:12px;
       color:var(--muted);
-      font-size:1.02rem;
+      font-size:1.03rem;
       max-width:72ch;
     }
-
     .cta{
-      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
-      margin-top:10px;
+      margin-top:18px;
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
     }
-    .note{font-size:.84rem;color:var(--muted)}
-
-    /* Single clean divider */
-    .divider{
-      height:1px;background:rgba(12,13,15,.10);
-      margin:4px 0;
+    .subnote{
+      margin-top:12px;
+      font-size:.86rem;
+      color:rgba(11,12,15,.58);
     }
 
-    /* Two-column only where it helps (still not “blocky”) */
-    .two{
+    /* Inline benefits (NOT cards) */
+    .inline{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap:18px;
-      align-items:start;
+      padding:26px 28px;
+    }
+    .inline-item{
+      padding-left:14px;
+      border-left:1px solid rgba(11,12,15,.12);
+    }
+    .inline-item:first-child{border-left:none;padding-left:0}
+    .inline-item strong{
+      display:block;
+      font-weight:900;
+      letter-spacing:-.01em;
+      margin-bottom:6px;
+    }
+    .inline-item span{
+      color:var(--muted);
+      font-size:.93rem;
+      display:block;
     }
 
-    .section-title{
+    /* Section headings */
+    .title{
+      font-size:1.15rem;
       font-weight:900;
       letter-spacing:-.02em;
-      font-size:1.1rem;
-      margin-bottom:8px;
+      margin-bottom:10px;
     }
-    .p{color:rgba(12,13,15,.78);font-size:.95rem}
+    .text{
+      color:rgba(11,12,15,.78);
+      font-size:.98rem;
+      max-width:78ch;
+    }
 
+    /* About block (clean, no boxes) */
+    .about{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:22px;
+      align-items:start;
+    }
     .bullets{
-      margin-top:10px;
+      margin-top:14px;
       display:flex;
       flex-direction:column;
-      gap:8px;
-      color:rgba(12,13,15,.80);
-      font-size:.92rem;
+      gap:10px;
+      color:rgba(11,12,15,.78);
+      font-size:.95rem;
     }
-    .bullets div{display:flex;gap:10px;align-items:flex-start}
-    .check{
+    .bullets div{
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .mark{
       width:22px;height:22px;border-radius:999px;
-      background:rgba(12,13,15,.06);
+      border:1px solid rgba(11,12,15,.14);
       display:flex;align-items:center;justify-content:center;
       flex:0 0 22px;
       margin-top:2px;
-      font-size:.95rem;
+      color:rgba(11,12,15,.82);
+      font-weight:900;
+      font-size:.9rem;
+      background:rgba(255,255,255,.65);
     }
-
-    /* FAQ minimal */
-    .faq{
-      display:flex;flex-direction:column;gap:10px;
-      border-top:1px solid rgba(12,13,15,.10);
-      padding-top:16px;
-    }
-    details{
-      border:1px solid rgba(12,13,15,.10);
-      border-radius:16px;
-      background:rgba(255,255,255,.70);
-      padding:10px 12px;
-    }
-    summary{
-      cursor:pointer;
-      font-weight:800;
-      font-size:.94rem;
-      list-style:none;
-      display:flex;align-items:center;justify-content:space-between;
-      gap:12px;
-    }
-    summary::-webkit-details-marker{display:none}
-    .ans{padding:10px 2px 2px;color:var(--muted);font-size:.9rem}
 
     /* Location */
-    .loc{
-      border-top:1px solid rgba(12,13,15,.10);
-      padding-top:16px;
-    }
-    .loc-line{
-      display:flex;flex-wrap:wrap;gap:10px;
-      color:rgba(12,13,15,.78);
+    .locline{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:10px;
+      color:rgba(11,12,15,.70);
       font-size:.92rem;
-      margin-top:8px;
     }
-    .tag{
-      padding:7px 10px;
+    .pill2{
+      padding:8px 10px;
       border-radius:999px;
-      border:1px solid rgba(12,13,15,.10);
+      border:1px solid rgba(11,12,15,.12);
       background:rgba(255,255,255,.70);
     }
     .map{
-      margin-top:12px;
-      border:1px solid rgba(12,13,15,.10);
+      margin-top:14px;
+      height:300px;
       border-radius:18px;
       overflow:hidden;
-      height:280px;
+      border:1px solid rgba(11,12,15,.12);
       background:#fff;
     }
     .map iframe{width:100%;height:100%;border:0}
 
-    /* Final CTA (simple) */
+    /* Final CTA (single, strong) */
     .final{
-      margin-top:10px;
-      padding:18px 18px;
-      background:rgba(12,13,15,.92);
-      color:rgba(255,255,255,.92);
+      padding:22px 28px 28px;
+    }
+    .banner{
       border-radius:18px;
-      border:1px solid rgba(255,255,255,.10);
+      border:1px solid rgba(11,12,15,.10);
+      background:rgba(255,255,255,.70);
+      padding:18px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:14px;
       flex-wrap:wrap;
+      position:relative;
     }
-    .final strong{font-size:1.05rem;font-weight:900;letter-spacing:-.01em}
-    .final span{color:rgba(255,255,255,.72);font-size:.92rem}
+    .banner:before{
+      content:"";
+      position:absolute;
+      left:18px; right:18px; top:0;
+      height:2px;
+      background:linear-gradient(90deg, transparent, rgba(176,138,58,.38), transparent);
+    }
+    .banner strong{
+      display:block;
+      font-size:1.05rem;
+      font-weight:900;
+      letter-spacing:-.01em;
+      margin-bottom:4px;
+    }
+    .banner span{
+      color:rgba(11,12,15,.62);
+      font-size:.93rem;
+    }
 
-    /* Floating WhatsApp */
+    /* WhatsApp floating */
     .wa{
-      position:fixed;right:16px;bottom:16px;z-index:60;
+      position:fixed; right:16px; bottom:16px; z-index:60;
     }
     .wa a{
       width:56px;height:56px;border-radius:999px;
       background:#25d366;color:#fff;
       display:flex;align-items:center;justify-content:center;
-      box-shadow:0 16px 40px rgba(0,0,0,.18);
+      box-shadow:0 16px 44px rgba(0,0,0,.18);
       font-size:1.7rem;
       transition:transform .12s ease, box-shadow .12s ease;
     }
-    .wa a:hover{transform:translateY(-1px);box-shadow:0 22px 52px rgba(0,0,0,.22)}
+    .wa a:hover{transform:translateY(-1px);box-shadow:0 22px 56px rgba(0,0,0,.22)}
 
     footer{
       padding:18px 0 0;
       text-align:center;
       font-size:.84rem;
-      color:var(--muted);
+      color:rgba(11,12,15,.58);
     }
 
-    @media (max-width: 860px){
+    @media (max-width: 900px){
       header{position:static}
-      .content{padding:22px 16px}
-      .two{grid-template-columns:1fr}
+      .hero{padding:30px 16px 22px}
+      .pad{padding:26px 16px}
+      .inline{grid-template-columns:1fr; padding:22px 16px; gap:14px}
+      .inline-item{border-left:none; padding-left:0; border-top:1px solid rgba(11,12,15,.10); padding-top:12px}
+      .inline-item:first-child{border-top:none;padding-top:0}
+      .about{grid-template-columns:1fr}
       .cta .btn{width:100%}
       h1{max-width:unset}
-      .final{justify-content:center;text-align:center}
+      .final{padding:18px 16px 24px}
     }
   </style>
 </head>
@@ -282,11 +319,13 @@
           Avolio Odontologia
           <small>Tratamento de canal • Jardim Paulista</small>
         </div>
-
-        <a class="btn btn-primary" target="_blank"
-          href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
-          Agendar no WhatsApp
-        </a>
+        <div style="display:flex;gap:10px;align-items:center">
+          <a class="btn btn-link" href="#local">Local</a>
+          <a class="btn btn-primary" target="_blank"
+            href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
+            Agendar no WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -295,12 +334,12 @@
     <div class="container">
       <div class="sheet">
 
-        <div class="content">
-          <!-- HERO -->
+        <!-- HERO -->
+        <section class="hero">
           <div class="kicker"><span class="dot"></span> Atendimento com hora marcada em São Paulo</div>
-          <h1>Canal com microscópio e cuidado humano — sem pressa, com conforto.</h1>
+          <h1>Canal com microscópio e atendimento humano, do jeito que você gostaria de ser atendido(a).</h1>
           <p class="lead">
-            Você entende o diagnóstico e o plano antes de começar. Atendimento acolhedor e técnico para aliviar a dor e preservar seu dente.
+            Diagnóstico claro, condução tranquila e foco em aliviar a dor com precisão — sem pressa e sem “empurrar” tratamento.
           </p>
 
           <div class="cta">
@@ -308,109 +347,102 @@
               href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
               Agendar agora
             </a>
-            <a class="btn" href="#local">Ver localização</a>
+            <a class="btn" href="#sobre">Quem sou eu</a>
           </div>
 
-          <div class="note">
-            * Em muitos casos, a dor melhora já na primeira sessão. Cada caso é avaliado individualmente.
+          <div class="subnote">
+            * Cada caso é individual. Quando possível, buscamos resolver com o menor número de sessões.
           </div>
+        </section>
 
-          <div class="divider"></div>
+        <div class="divider"></div>
 
-          <!-- ABOUT + DIFFERENTIALS (continuous, not boxed) -->
-          <div class="two">
+        <!-- BENEFITS (inline, not blocks) -->
+        <section class="inline" aria-label="Diferenciais">
+          <div class="inline-item">
+            <strong>Precisão</strong>
+            <span>Microscópio na endodontia para enxergar detalhes e trabalhar com mais segurança.</span>
+          </div>
+          <div class="inline-item">
+            <strong>Conforto</strong>
+            <span>Condução calma e respeitosa, especialmente para quem tem medo de dentista.</span>
+          </div>
+          <div class="inline-item">
+            <strong>Transparência</strong>
+            <span>Você entende o diagnóstico, o plano e o que será feito antes de iniciar.</span>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ABOUT -->
+        <section class="pad" id="sobre">
+          <div class="about">
             <div>
-              <div class="section-title">Quem sou eu</div>
-              <p class="p">
+              <div class="title">Quem sou eu</div>
+              <p class="text">
                 <b>Dra. Maria Vitória Bello Avolio</b> — Endodontia (tratamento de canal) no Jardim Paulista, São Paulo.
-                Eu atendo pacientes com dor, ansiedade ou experiências ruins anteriores.
-                Minha prioridade é te deixar seguro(a): explicar com clareza, atender com calma e usar técnica para dar previsibilidade ao seu tratamento.
+                Eu atendo muitos pacientes que chegam com dor, ansiedade ou experiências ruins anteriores.
+                Minha prioridade é te deixar seguro(a): explicar com clareza, atender sem pressa e usar técnica para trazer previsibilidade.
               </p>
-
-              <div class="bullets" aria-label="Diferenciais">
-                <div><div class="check">✓</div><div><b>Sem pressa:</b> você entende cada etapa antes de começar.</div></div>
-                <div><div class="check">✓</div><div><b>Precisão:</b> microscópio e protocolos modernos de endodontia.</div></div>
-                <div><div class="check">✓</div><div><b>Acolhimento:</b> respeito, calma e zero julgamento.</div></div>
-              </div>
             </div>
 
             <div>
-              <div class="section-title">Como funciona</div>
-              <p class="p">
-                Um fluxo simples, do WhatsApp ao tratamento — sem confusão.
-              </p>
+              <div class="title">Minha forma de atender</div>
               <div class="bullets">
-                <div><div class="check">1</div><div><b>WhatsApp:</b> você descreve o sintoma e recebe orientação inicial.</div></div>
-                <div><div class="check">2</div><div><b>Avaliação:</b> exame clínico + imagem (quando necessário).</div></div>
-                <div><div class="check">3</div><div><b>Plano claro:</b> sessões, etapas e proposta antes de iniciar.</div></div>
+                <div><span class="mark">✓</span><div><b>Sem pressa:</b> tempo de consulta de verdade.</div></div>
+                <div><span class="mark">✓</span><div><b>Objetivo:</b> aliviar a dor e preservar o dente.</div></div>
+                <div><span class="mark">✓</span><div><b>Respeito:</b> atendimento acolhedor, sem julgamento.</div></div>
               </div>
-
-              <div class="cta" style="margin-top:12px">
+              <div class="cta" style="margin-top:14px">
                 <a class="btn btn-primary" target="_blank"
                   href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA.">
-                  Falar com a doutora
+                  Agendar com a doutora
                 </a>
               </div>
             </div>
           </div>
+        </section>
 
-          <!-- FAQ minimal -->
-          <div class="faq" id="duvidas">
-            <div class="section-title">Perguntas frequentes</div>
+        <div class="divider"></div>
 
-            <details>
-              <summary>Tratamento de canal dói? <span>＋</span></summary>
-              <div class="ans">O objetivo é que não. Com anestesia local e condução tranquila, a maioria dos pacientes realiza o procedimento sem dor.</div>
-            </details>
+        <!-- LOCATION -->
+        <section class="pad" id="local">
+          <div class="title">Localização</div>
+          <p class="text">Av. Nove de Julho 3229, conjunto 1506 · Jardim Paulista · São Paulo/SP</p>
 
-            <details>
-              <summary>Quantas sessões são necessárias? <span>＋</span></summary>
-              <div class="ans">Depende do dente e do grau de inflamação/infeção. Alguns casos resolvem em 1 sessão, outros precisam de 2 ou mais.</div>
-            </details>
-
-            <details>
-              <summary>Vou precisar de tomografia? <span>＋</span></summary>
-              <div class="ans">Em alguns casos, sim (ex.: retratamentos/anatomias complexas). Quando indicada, você entende claramente o motivo.</div>
-            </details>
+          <div class="locline">
+            <div class="pill2"><b>Horários:</b> Seg–Sex 08h–19h · Sáb 09h–12h</div>
+            <div class="pill2"><b>WhatsApp:</b> (11) 99480-2149</div>
           </div>
 
-          <!-- LOCATION -->
-          <div class="loc" id="local">
-            <div class="section-title">Localização</div>
-            <div class="loc-line">
-              <div class="tag"><b>Endereço:</b> Av. Nove de Julho 3229, conj. 1506</div>
-              <div class="tag"><b>Horários:</b> Seg–Sex 08h–19h · Sáb 09h–12h</div>
-              <div class="tag"><b>WhatsApp:</b> (11) 99480-2149</div>
-            </div>
-
-            <div class="map">
-              <iframe
-                src="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229,+Jardim+Paulista,+S%C3%A3o+Paulo&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                aria-label="Mapa do consultório">
-              </iframe>
-            </div>
-
-            <div class="final" style="margin-top:14px">
-              <div>
-                <strong>Está com dor agora?</strong><br>
-                <span>Chama no WhatsApp e vamos encaixar o melhor horário para avaliação.</span>
-              </div>
-              <a class="btn btn-primary" target="_blank"
-                href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20preciso%20de%20avalia%C3%A7%C3%A3o%20o%20quanto%20antes.%20Estou%20com%20dor%20de%20dente.">
-                Falar no WhatsApp
-              </a>
-            </div>
+          <div class="map" aria-label="Mapa do consultório">
+            <iframe
+              src="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229,+Jardim+Paulista,+S%C3%A3o+Paulo&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
+        </section>
 
-        </div>
+        <!-- FINAL CTA -->
+        <section class="final">
+          <div class="banner">
+            <div>
+              <strong>Está com dor agora?</strong>
+              <span>Chame no WhatsApp e vamos encaixar o melhor horário para avaliação.</span>
+            </div>
+            <a class="btn btn-primary" target="_blank"
+              href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20preciso%20de%20avalia%C3%A7%C3%A3o%20o%20quanto%20antes.%20Estou%20com%20dor%20de%20dente.">
+              Falar no WhatsApp
+            </a>
+          </div>
+        </section>
+
       </div>
 
       <footer>
-        <div style="margin-top:14px">
-          Avolio Odontologia · Jardim Paulista — São Paulo/SP
-        </div>
+        <div style="margin-top:14px">Avolio Odontologia · Jardim Paulista — São Paulo/SP</div>
       </footer>
     </div>
   </main>
