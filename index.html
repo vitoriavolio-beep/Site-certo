@@ -17,14 +17,15 @@
       --ink:#0b0c0f;
       --muted:rgba(11,12,15,.62);
       --hair:rgba(11,12,15,.10);
-      --shadow:0 22px 60px rgba(0,0,0,.10);
-      --radius:20px;
+      --shadow:0 22px 70px rgba(0,0,0,.10);
+      --radius:22px;
 
-      /* acento bem discreto (mais “premium” do que dourado) */
-      --accent:#111317;
-      --accentSoft:rgba(17,19,23,.08);
+      /* acento: “luxo discreto” */
+      --accent:rgba(11,12,15,.92);
+      --soft:rgba(11,12,15,.06);
+      --soft2:rgba(255,255,255,.65);
 
-      --max:1060px;
+      --max:1100px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -33,15 +34,15 @@
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--ink);
       background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(11,12,15,.06), transparent 55%),
-        radial-gradient(1000px 700px at 110% 10%, rgba(11,12,15,.05), transparent 55%),
+        radial-gradient(1200px 650px at 10% -10%, rgba(11,12,15,.07), transparent 55%),
+        radial-gradient(1100px 760px at 110% 10%, rgba(11,12,15,.05), transparent 55%),
         var(--bg);
       line-height:1.6;
     }
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    /* Top */
+    /* Header */
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
@@ -53,14 +54,14 @@
       padding:14px 0; gap:14px;
     }
     .logo{
-      display:flex; align-items:center; gap:10px;
+      display:flex; align-items:center; gap:12px;
       font-weight:800; letter-spacing:.08em; text-transform:uppercase;
       font-size:.95rem;
     }
     .logo-badge{
-      width:34px;height:34px;border-radius:12px;
+      width:36px;height:36px;border-radius:14px;
       border:1px solid rgba(11,12,15,.12);
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.78);
       display:flex;align-items:center;justify-content:center;
       font-weight:900;
     }
@@ -74,13 +75,19 @@
       margin-top:2px;
     }
     .nav{
-      display:flex; gap:14px; align-items:center;
+      display:flex; gap:6px; align-items:center;
       color:rgba(11,12,15,.70);
-      font-weight:700;
+      font-weight:800;
       font-size:.9rem;
     }
-    .nav a{padding:10px 10px;border-radius:999px}
-    .nav a:hover{background:rgba(255,255,255,.70);border:1px solid rgba(11,12,15,.08);padding:9px 9px}
+    .nav a{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid transparent;
+    }
+    .nav a:hover{
+      background:rgba(255,255,255,.72);
+      border-color:rgba(11,12,15,.08);
+    }
 
     /* Buttons */
     .btn{
@@ -88,19 +95,19 @@
       padding:12px 16px;
       border-radius:999px;
       border:1px solid rgba(11,12,15,.12);
-      background:rgba(255,255,255,.75);
-      font-weight:800; font-size:.92rem;
+      background:rgba(255,255,255,.78);
+      font-weight:900; font-size:.92rem;
       transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
       white-space:nowrap;
     }
-    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.95)}
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.96)}
     .btn-primary{
       border-color:transparent;
       background:var(--accent);
       color:var(--paper);
-      box-shadow:0 16px 40px rgba(0,0,0,.18);
+      box-shadow:0 16px 44px rgba(0,0,0,.18);
     }
-    .btn-primary:hover{box-shadow:0 22px 56px rgba(0,0,0,.22)}
+    .btn-primary:hover{box-shadow:0 22px 58px rgba(0,0,0,.22)}
     .btn-ghost{
       background:transparent;
       border-color:rgba(11,12,15,.14);
@@ -116,13 +123,30 @@
       box-shadow:var(--shadow);
       overflow:hidden;
     }
-    .section{padding:34px 30px}
+    .section{padding:40px 34px}
     .divider{height:1px;background:var(--hair)}
+
+    /* Hero improved */
+    .hero{
+      padding:52px 34px 40px;
+      background:
+        radial-gradient(900px 420px at 12% 0%, rgba(11,12,15,.08), transparent 62%),
+        radial-gradient(800px 420px at 92% 20%, rgba(11,12,15,.06), transparent 62%),
+        rgba(255,255,255,.84);
+      position:relative;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      left:34px; right:34px; bottom:0;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(11,12,15,.12), transparent);
+    }
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
       padding:8px 12px;border-radius:999px;
       border:1px solid rgba(11,12,15,.10);
-      background:rgba(255,255,255,.65);
+      background:rgba(255,255,255,.70);
       color:rgba(11,12,15,.70);
       font-size:.82rem;
       width:fit-content;
@@ -132,19 +156,17 @@
       background:#22c55e;
       box-shadow:0 0 0 4px rgba(34,197,94,.18);
     }
-
-    /* Hero */
-    .hero{
-      padding:44px 30px 34px;
-      background:
-        radial-gradient(900px 420px at 15% 0%, rgba(11,12,15,.07), transparent 62%),
-        rgba(255,255,255,.84);
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:24px;
+      align-items:start;
+      margin-top:14px;
     }
     h1{
-      margin-top:14px;
-      font-size:clamp(2.25rem, 3.8vw, 3.15rem);
+      font-size:clamp(2.35rem, 3.9vw, 3.25rem);
       line-height:1.05;
-      letter-spacing:-.035em;
+      letter-spacing:-.04em;
       max-width:26ch;
     }
     .lead{
@@ -162,117 +184,138 @@
       color:rgba(11,12,15,.58);
       font-size:.86rem;
     }
-
-    /* “Locais” cards */
-    .cards{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:14px;
-      margin-top:14px;
+    .hero-side{
+      border:1px solid rgba(11,12,15,.10);
+      background:rgba(255,255,255,.70);
+      border-radius:18px;
+      padding:16px;
     }
+    .hero-side strong{
+      display:block;
+      font-weight:900;
+      letter-spacing:-.01em;
+      margin-bottom:10px;
+      font-size:1rem;
+    }
+    .hero-side .line{
+      display:flex;gap:10px;align-items:flex-start;
+      color:rgba(11,12,15,.76);
+      font-size:.92rem;
+      padding:10px 0;
+      border-top:1px solid rgba(11,12,15,.08);
+    }
+    .hero-side .line:first-of-type{border-top:none;padding-top:0}
+    .badge{
+      width:24px;height:24px;border-radius:10px;
+      background:var(--soft);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:900;
+      flex:0 0 24px;
+      margin-top:2px;
+    }
+
+    /* Cards */
     .card{
       border:1px solid rgba(11,12,15,.10);
       background:rgba(255,255,255,.75);
       border-radius:18px;
-      padding:16px;
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .card strong{
-      display:block;
-      font-weight:900;
-      letter-spacing:-.01em;
-      margin-bottom:6px;
-      font-size:1rem;
-    }
-    .card p{
-      color:var(--muted);
-      font-size:.92rem;
-      max-width:72ch;
-    }
-    .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .pill{
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(11,12,15,.12);
-      background:rgba(255,255,255,.70);
-      color:rgba(11,12,15,.76);
-      font-size:.88rem;
-      font-weight:700;
+      padding:18px;
     }
 
-    /* Titles */
     .title{
       font-weight:900;
       letter-spacing:-.02em;
-      font-size:1.28rem;
+      font-size:1.32rem;
       margin-bottom:10px;
     }
     .sub{
       color:var(--muted);
-      max-width:86ch;
+      max-width:90ch;
       font-size:.98rem;
     }
 
-    /* Social proof */
+    /* Location row improved */
+    .loc-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      margin-top:16px;
+    }
+    .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .pill{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(11,12,15,.12);
+      background:rgba(255,255,255,.72);
+      color:rgba(11,12,15,.76);
+      font-size:.88rem;
+      font-weight:800;
+    }
+    .map{
+      height:320px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(11,12,15,.10);
+      background:#fff;
+    }
+    .map iframe{width:100%;height:100%;border:0}
+
+    /* Social proof improved */
     .social{
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap:12px;
-      margin-top:14px;
+      margin-top:16px;
     }
     .quote{
       border:1px solid rgba(11,12,15,.10);
       background:rgba(255,255,255,.75);
       border-radius:18px;
-      padding:14px;
+      padding:16px;
     }
     .stars{letter-spacing:.18em;font-weight:900}
-    .quote p{color:rgba(11,12,15,.75);font-size:.92rem;margin-top:8px}
-    .quote small{display:block;margin-top:10px;color:rgba(11,12,15,.55);font-weight:700}
+    .quote p{color:rgba(11,12,15,.75);font-size:.92rem;margin-top:10px}
+    .quote small{display:block;margin-top:12px;color:rgba(11,12,15,.55);font-weight:800}
 
-    /* Areas list */
+    /* List improved */
     .list{
-      margin-top:14px;
+      margin-top:16px;
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:10px 18px;
+      gap:10px 14px;
       color:rgba(11,12,15,.76);
       font-size:.95rem;
     }
     .li{
       display:flex;gap:10px;align-items:flex-start;
-      padding:10px 12px;
+      padding:12px 12px;
       border:1px solid rgba(11,12,15,.08);
       background:rgba(255,255,255,.70);
       border-radius:16px;
     }
     .mark{
       width:22px;height:22px;border-radius:999px;
-      background:var(--accentSoft);
+      background:var(--soft);
       display:flex;align-items:center;justify-content:center;
       font-weight:900;
       flex:0 0 22px;
       margin-top:2px;
     }
 
-    /* About */
+    /* About improved */
     .about{
       display:grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 320px 1fr;
       gap:18px;
       align-items:start;
-      margin-top:14px;
+      margin-top:16px;
     }
     .photo{
-      height:320px;
+      height:360px;
       border-radius:18px;
       border:1px solid rgba(11,12,15,.10);
       background:
         radial-gradient(600px 320px at 20% 0%, rgba(11,12,15,.08), transparent 60%),
-        linear-gradient(180deg, rgba(11,12,15,.05), rgba(11,12,15,.12));
+        linear-gradient(180deg, rgba(11,12,15,.05), rgba(11,12,15,.14));
       position:relative;
       overflow:hidden;
     }
@@ -281,11 +324,12 @@
       padding:8px 10px;border-radius:999px;
       border:1px solid rgba(255,255,255,.20);
       background:rgba(255,255,255,.16);
-      color:rgba(255,255,255,.90);
-      font-weight:800;
+      color:rgba(255,255,255,.92);
+      font-weight:900;
       font-size:.86rem;
     }
-    .about p{color:rgba(11,12,15,.78);font-size:.98rem;max-width:90ch}
+    .about p{color:rgba(11,12,15,.78);font-size:1.00rem;max-width:92ch}
+
     .bullets{
       margin-top:12px;
       display:flex;
@@ -298,16 +342,16 @@
     .tick{
       width:22px;height:22px;border-radius:999px;
       border:1px solid rgba(11,12,15,.12);
-      background:rgba(255,255,255,.70);
+      background:rgba(255,255,255,.72);
       display:flex;align-items:center;justify-content:center;
       font-weight:900;
       flex:0 0 22px;
       margin-top:2px;
     }
 
-    /* Advantages */
+    /* Advantages improved */
     .adv{
-      margin-top:14px;
+      margin-top:16px;
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap:12px;
@@ -316,18 +360,18 @@
       border:1px solid rgba(11,12,15,.10);
       background:rgba(255,255,255,.75);
       border-radius:18px;
-      padding:14px;
+      padding:16px;
     }
-    .adv .box strong{display:block;font-weight:900;margin-bottom:6px}
+    .adv .box strong{display:block;font-weight:900;margin-bottom:8px}
     .adv .box span{color:var(--muted);font-size:.92rem;display:block}
 
     /* FAQ */
-    .faq{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+    .faq{margin-top:16px;display:flex;flex-direction:column;gap:10px}
     details{
       border:1px solid rgba(11,12,15,.10);
       background:rgba(255,255,255,.72);
       border-radius:18px;
-      padding:12px 14px;
+      padding:13px 14px;
     }
     summary{
       cursor:pointer;
@@ -337,17 +381,6 @@
     }
     summary::-webkit-details-marker{display:none}
     .ans{padding-top:10px;color:var(--muted);font-size:.92rem}
-
-    /* Map */
-    .map{
-      margin-top:14px;
-      height:320px;
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid rgba(11,12,15,.10);
-      background:#fff;
-    }
-    .map iframe{width:100%;height:100%;border:0}
 
     /* Final CTA */
     .final{
@@ -361,7 +394,7 @@
       gap:12px;
       flex-wrap:wrap;
       position:relative;
-      margin-top:14px;
+      margin-top:16px;
     }
     .final:before{
       content:"";
@@ -373,7 +406,7 @@
     .final strong{display:block;font-size:1.05rem;font-weight:900;margin-bottom:4px}
     .final span{color:rgba(11,12,15,.60);font-size:.93rem}
 
-    /* Floating WhatsApp */
+    /* WhatsApp floating */
     .wa{
       position:fixed; right:16px; bottom:16px; z-index:60;
     }
@@ -394,10 +427,12 @@
       color:rgba(11,12,15,.58);
     }
 
-    @media (max-width: 980px){
+    @media (max-width: 1020px){
       .nav{display:none}
-      .section{padding:26px 16px}
-      .hero{padding:34px 16px 26px}
+      .section{padding:28px 16px}
+      .hero{padding:38px 16px 28px}
+      .hero-grid{grid-template-columns:1fr}
+      .loc-grid{grid-template-columns:1fr}
       .social{grid-template-columns:1fr}
       .adv{grid-template-columns:1fr}
       .list{grid-template-columns:1fr}
@@ -410,7 +445,6 @@
 </head>
 
 <body>
-  <!-- WhatsApp floating -->
   <div class="wa">
     <a target="_blank" aria-label="WhatsApp"
       href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">☎</a>
@@ -419,13 +453,11 @@
   <header>
     <div class="container">
       <div class="topbar">
-        <div>
-          <div class="logo">
-            <div class="logo-badge">MV</div>
-            <div>
-              Avolio Odontologia
-              <small>Tratamento de canal • Jardim Paulista</small>
-            </div>
+        <div class="logo">
+          <div class="logo-badge">MV</div>
+          <div>
+            Avolio Odontologia
+            <small>Tratamento de canal • Jardim Paulista</small>
           </div>
         </div>
 
@@ -439,7 +471,7 @@
 
         <a class="btn btn-primary" target="_blank"
           href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
-          Agende sua consulta
+          Agendar
         </a>
       </div>
     </div>
@@ -452,21 +484,33 @@
         <!-- HERO -->
         <section class="hero">
           <div class="kicker"><span class="dot"></span> Atendimento com hora marcada em São Paulo</div>
-          <h1>Tratamento de canal com segurança, conforto e tecnologia.</h1>
-          <p class="lead">
-            Atendimento realizado pela <b>Dra. Maria Vitória Bello Avolio</b>, com foco em precisão, acolhimento e uma experiência tranquila do começo ao fim.
-          </p>
 
-          <div class="cta">
-            <a class="btn btn-primary" target="_blank"
-              href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
-              Agendar agora no WhatsApp
-            </a>
-            <a class="btn btn-ghost" href="#locais">Ver local de atendimento</a>
-          </div>
+          <div class="hero-grid">
+            <div>
+              <h1>Tratamento de canal com segurança, conforto e tecnologia.</h1>
+              <p class="lead">
+                Atendimento realizado pela <b>Dra. Maria Vitória Bello Avolio</b>, com foco em precisão e uma experiência tranquila do começo ao fim.
+              </p>
 
-          <div class="micro">
-            * Cada caso é avaliado individualmente. Quando indicado, buscamos reduzir o número de sessões com segurança.
+              <div class="cta">
+                <a class="btn btn-primary" target="_blank"
+                  href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
+                  Agendar no WhatsApp
+                </a>
+                <a class="btn btn-ghost" href="#locais">Ver localização</a>
+              </div>
+
+              <div class="micro">
+                * Cada caso é avaliado individualmente. Quando indicado, buscamos reduzir o número de sessões com segurança.
+              </div>
+            </div>
+
+            <aside class="hero-side" aria-label="Resumo rápido">
+              <strong>Resumo rápido</strong>
+              <div class="line"><div class="badge">1</div><div><b>Microscópio</b><br><span style="color:var(--muted)">Mais precisão nos detalhes.</span></div></div>
+              <div class="line"><div class="badge">2</div><div><b>Controle da dor</b><br><span style="color:var(--muted)">Condução tranquila e respeitosa.</span></div></div>
+              <div class="line"><div class="badge">3</div><div><b>Plano claro</b><br><span style="color:var(--muted)">Você entende antes de começar.</span></div></div>
+            </aside>
           </div>
         </section>
 
@@ -477,20 +521,18 @@
           <div class="title">Local de atendimento</div>
           <p class="sub">Fácil acesso no Jardim Paulista, São Paulo.</p>
 
-          <div class="cards">
+          <div class="loc-grid">
             <div class="card">
-              <div>
-                <strong>Jardim Paulista — São Paulo/SP</strong>
-                <p>Av. Nove de Julho 3229, conjunto 1506</p>
+              <strong style="display:block;font-weight:900;letter-spacing:-.01em;margin-bottom:6px">Jardim Paulista — São Paulo/SP</strong>
+              <p style="color:var(--muted);font-size:.95rem">Av. Nove de Julho 3229, conjunto 1506</p>
 
-                <div class="pillrow">
-                  <div class="pill"><b>Seg–Sex:</b> 08h–19h</div>
-                  <div class="pill"><b>Sáb:</b> 09h–12h</div>
-                  <div class="pill"><b>WhatsApp:</b> (11) 99480-2149</div>
-                </div>
+              <div class="pillrow">
+                <div class="pill"><b>Seg–Sex:</b> 08h–19h</div>
+                <div class="pill"><b>Sáb:</b> 09h–12h</div>
+                <div class="pill"><b>WhatsApp:</b> (11) 99480-2149</div>
               </div>
 
-              <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <div class="cta" style="margin-top:14px">
                 <a class="btn" target="_blank"
                   href="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229,+Jardim+Paulista,+S%C3%A3o+Paulo">
                   Abrir no mapa
@@ -501,13 +543,13 @@
                 </a>
               </div>
             </div>
-          </div>
 
-          <div class="map" aria-label="Mapa do consultório">
-            <iframe
-              src="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229,+Jardim+Paulista,+S%C3%A3o+Paulo&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map" aria-label="Mapa do consultório">
+              <iframe
+                src="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229,+Jardim+Paulista,+S%C3%A3o+Paulo&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </section>
 
@@ -515,8 +557,8 @@
 
         <!-- DEPOIMENTOS -->
         <section class="section" id="depoimentos">
-          <div class="title">Como é a experiência dos pacientes?</div>
-          <p class="sub">Avaliações reais você pode integrar depois (Google). Por enquanto, deixei placeholders elegantes.</p>
+          <div class="title">Avaliações</div>
+          <p class="sub">Depois podemos integrar avaliações do Google. Por enquanto, placeholders elegantes.</p>
 
           <div class="social">
             <div class="quote">
@@ -555,16 +597,9 @@
             <div class="li"><div class="mark">✓</div><div>Endodontia microscópica</div></div>
             <div class="li"><div class="mark">✓</div><div>Tratamento e retratamento de canal</div></div>
             <div class="li"><div class="mark">✓</div><div>Urgência endodôntica (alívio da dor)</div></div>
-            <div class="li"><div class="mark">✓</div><div>Localização de canais e anatomias complexas</div></div>
-            <div class="li"><div class="mark">✓</div><div>Remoção de pino/material protético (quando indicado)</div></div>
-            <div class="li"><div class="mark">✓</div><div>Selamento de perfurações e comunicações</div></div>
-          </div>
-
-          <div class="cta" style="margin-top:16px">
-            <a class="btn btn-primary" target="_blank"
-              href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20entender%20se%20meu%20caso%20%C3%A9%20canal%20e%20agendar%20avalia%C3%A7%C3%A3o.">
-              Consultar a especialista
-            </a>
+            <div class="li"><div class="mark">✓</div><div>Anatomias complexas e localização de canais</div></div>
+            <div class="li"><div class="mark">✓</div><div>Remoção de pino/material (quando indicado)</div></div>
+            <div class="li"><div class="mark">✓</div><div>Selamento de perfurações (quando indicado)</div></div>
           </div>
         </section>
 
@@ -606,7 +641,7 @@
 
         <!-- VANTAGENS -->
         <section class="section">
-          <div class="title">Vantagens do tratamento com a especialista</div>
+          <div class="title">Vantagens do tratamento</div>
           <p class="sub">O foco é aliviar a dor com segurança e preservar seu dente.</p>
 
           <div class="adv">
@@ -619,8 +654,8 @@
               <span>Técnicas e protocolos modernos para um tratamento preciso.</span>
             </div>
             <div class="box">
-              <strong>Preservação do dente</strong>
-              <span>O objetivo é manter seu dente natural sempre que possível.</span>
+              <strong>Preservação</strong>
+              <span>Manter seu dente natural sempre que possível.</span>
             </div>
           </div>
 
@@ -658,16 +693,11 @@
               <summary>Qual é o valor do tratamento? <span>＋</span></summary>
               <div class="ans">O valor depende da complexidade do caso e do dente tratado. Após avaliação, você recebe um plano claro com opções e condições.</div>
             </details>
-
-            <details>
-              <summary>Posso adiar o canal depois de aliviar a dor? <span>＋</span></summary>
-              <div class="ans">O alívio da dor pode ser temporário. Em muitos casos, adiar aumenta risco de infecção e complicações. O ideal é seguir o plano indicado após avaliação.</div>
-            </details>
           </div>
 
           <div class="cta" style="margin-top:16px">
             <a class="btn btn-primary" target="_blank"
-              href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20meu%20caso%20e%20quero%20agendar%20avalia%C3%A7%C3%A3o.">
+              href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20tenho%20uma%20d%C3%BAvida%20e%20quero%20agendar%20avalia%C3%A7%C3%A3o.">
               Falar com a doutora
             </a>
           </div>
