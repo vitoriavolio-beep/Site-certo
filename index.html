@@ -20,10 +20,8 @@
       --shadow:0 22px 70px rgba(0,0,0,.10);
       --radius:22px;
 
-      /* acento: “luxo discreto” */
       --accent:rgba(11,12,15,.92);
       --soft:rgba(11,12,15,.06);
-      --soft2:rgba(255,255,255,.65);
 
       --max:1100px;
     }
@@ -42,7 +40,6 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    /* Header */
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
@@ -89,7 +86,6 @@
       border-color:rgba(11,12,15,.08);
     }
 
-    /* Buttons */
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 16px;
@@ -114,7 +110,6 @@
       color:rgba(11,12,15,.86);
     }
 
-    /* Layout */
     main{padding:26px 0 44px}
     .sheet{
       background:rgba(255,255,255,.86);
@@ -126,9 +121,9 @@
     .section{padding:40px 34px}
     .divider{height:1px;background:var(--hair)}
 
-    /* Hero improved */
+    /* HERO clean (single column) */
     .hero{
-      padding:52px 34px 40px;
+      padding:56px 34px 40px;
       background:
         radial-gradient(900px 420px at 12% 0%, rgba(11,12,15,.08), transparent 62%),
         radial-gradient(800px 420px at 92% 20%, rgba(11,12,15,.06), transparent 62%),
@@ -156,24 +151,18 @@
       background:#22c55e;
       box-shadow:0 0 0 4px rgba(34,197,94,.18);
     }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:24px;
-      align-items:start;
-      margin-top:14px;
-    }
     h1{
+      margin-top:16px;
       font-size:clamp(2.35rem, 3.9vw, 3.25rem);
       line-height:1.05;
       letter-spacing:-.04em;
-      max-width:26ch;
+      max-width:28ch;
     }
     .lead{
       margin-top:12px;
       color:var(--muted);
       font-size:1.05rem;
-      max-width:78ch;
+      max-width:82ch;
     }
     .cta{
       margin-top:18px;
@@ -184,37 +173,7 @@
       color:rgba(11,12,15,.58);
       font-size:.86rem;
     }
-    .hero-side{
-      border:1px solid rgba(11,12,15,.10);
-      background:rgba(255,255,255,.70);
-      border-radius:18px;
-      padding:16px;
-    }
-    .hero-side strong{
-      display:block;
-      font-weight:900;
-      letter-spacing:-.01em;
-      margin-bottom:10px;
-      font-size:1rem;
-    }
-    .hero-side .line{
-      display:flex;gap:10px;align-items:flex-start;
-      color:rgba(11,12,15,.76);
-      font-size:.92rem;
-      padding:10px 0;
-      border-top:1px solid rgba(11,12,15,.08);
-    }
-    .hero-side .line:first-of-type{border-top:none;padding-top:0}
-    .badge{
-      width:24px;height:24px;border-radius:10px;
-      background:var(--soft);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:900;
-      flex:0 0 24px;
-      margin-top:2px;
-    }
 
-    /* Cards */
     .card{
       border:1px solid rgba(11,12,15,.10);
       background:rgba(255,255,255,.75);
@@ -234,7 +193,6 @@
       font-size:.98rem;
     }
 
-    /* Location row improved */
     .loc-grid{
       display:grid;
       grid-template-columns: 1.1fr .9fr;
@@ -259,7 +217,6 @@
     }
     .map iframe{width:100%;height:100%;border:0}
 
-    /* Social proof improved */
     .social{
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -276,7 +233,6 @@
     .quote p{color:rgba(11,12,15,.75);font-size:.92rem;margin-top:10px}
     .quote small{display:block;margin-top:12px;color:rgba(11,12,15,.55);font-weight:800}
 
-    /* List improved */
     .list{
       margin-top:16px;
       display:grid;
@@ -301,7 +257,6 @@
       margin-top:2px;
     }
 
-    /* About improved */
     .about{
       display:grid;
       grid-template-columns: 320px 1fr;
@@ -349,7 +304,6 @@
       margin-top:2px;
     }
 
-    /* Advantages improved */
     .adv{
       margin-top:16px;
       display:grid;
@@ -365,7 +319,6 @@
     .adv .box strong{display:block;font-weight:900;margin-bottom:8px}
     .adv .box span{color:var(--muted);font-size:.92rem;display:block}
 
-    /* FAQ */
     .faq{margin-top:16px;display:flex;flex-direction:column;gap:10px}
     details{
       border:1px solid rgba(11,12,15,.10);
@@ -382,7 +335,6 @@
     summary::-webkit-details-marker{display:none}
     .ans{padding-top:10px;color:var(--muted);font-size:.92rem}
 
-    /* Final CTA */
     .final{
       padding:22px 18px;
       border:1px solid rgba(11,12,15,.10);
@@ -406,7 +358,6 @@
     .final strong{display:block;font-size:1.05rem;font-weight:900;margin-bottom:4px}
     .final span{color:rgba(11,12,15,.60);font-size:.93rem}
 
-    /* WhatsApp floating */
     .wa{
       position:fixed; right:16px; bottom:16px; z-index:60;
     }
@@ -431,7 +382,6 @@
       .nav{display:none}
       .section{padding:28px 16px}
       .hero{padding:38px 16px 28px}
-      .hero-grid{grid-template-columns:1fr}
       .loc-grid{grid-template-columns:1fr}
       .social{grid-template-columns:1fr}
       .adv{grid-template-columns:1fr}
@@ -481,36 +431,23 @@
     <div class="container">
       <div class="sheet">
 
-        <!-- HERO -->
         <section class="hero">
           <div class="kicker"><span class="dot"></span> Atendimento com hora marcada em São Paulo</div>
+          <h1>Tratamento de canal com segurança, conforto e tecnologia.</h1>
+          <p class="lead">
+            Atendimento realizado pela <b>Dra. Maria Vitória Bello Avolio</b>, com foco em precisão e uma experiência tranquila do começo ao fim.
+          </p>
 
-          <div class="hero-grid">
-            <div>
-              <h1>Tratamento de canal com segurança, conforto e tecnologia.</h1>
-              <p class="lead">
-                Atendimento realizado pela <b>Dra. Maria Vitória Bello Avolio</b>, com foco em precisão e uma experiência tranquila do começo ao fim.
-              </p>
+          <div class="cta">
+            <a class="btn btn-primary" target="_blank"
+              href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
+              Agendar no WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#locais">Ver localização</a>
+          </div>
 
-              <div class="cta">
-                <a class="btn btn-primary" target="_blank"
-                  href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20de%20dente%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
-                  Agendar no WhatsApp
-                </a>
-                <a class="btn btn-ghost" href="#locais">Ver localização</a>
-              </div>
-
-              <div class="micro">
-                * Cada caso é avaliado individualmente. Quando indicado, buscamos reduzir o número de sessões com segurança.
-              </div>
-            </div>
-
-            <aside class="hero-side" aria-label="Resumo rápido">
-              <strong>Resumo rápido</strong>
-              <div class="line"><div class="badge">1</div><div><b>Microscópio</b><br><span style="color:var(--muted)">Mais precisão nos detalhes.</span></div></div>
-              <div class="line"><div class="badge">2</div><div><b>Controle da dor</b><br><span style="color:var(--muted)">Condução tranquila e respeitosa.</span></div></div>
-              <div class="line"><div class="badge">3</div><div><b>Plano claro</b><br><span style="color:var(--muted)">Você entende antes de começar.</span></div></div>
-            </aside>
+          <div class="micro">
+            * Cada caso é avaliado individualmente. Quando indicado, buscamos reduzir o número de sessões com segurança.
           </div>
         </section>
 
