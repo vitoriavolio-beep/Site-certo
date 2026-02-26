@@ -1,175 +1,238 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Avolio Odontologia | Jardim Paulista</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avolio Odontologia | Dra. Maria Vitória Bello Avolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg:#f4f6f5;
-      --sage:#e9f0ee;
-      --paper:#ffffff;
-      --ink:#1f2a2e;
-      --muted:#5c6b70;
-      --hair:rgba(31,42,46,.10);
-      --btn:#5b5f66;
-      --btnHover:#474b51;
-      --radius:18px;
-      --max:1080px;
-    }
+<style>
+:root{
+  --ink:#1f2a2e;
+  --muted:#6b7280;
+  --border:rgba(0,0,0,.08);
+  --btn:#2f3a40;
+  --btnHover:#1f2a2e;
+  --max:1100px;
+}
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:Inter,sans-serif;
-      background:var(--bg);
-      color:var(--ink);
-      line-height:1.6;
-    }
+*{box-sizing:border-box;margin:0;padding:0}
 
-    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+body{
+  font-family:Inter,sans-serif;
+  color:var(--ink);
+  background:#ffffff;
+  line-height:1.6;
+}
 
-    header{
-      position:sticky;
-      top:0;
-      background:rgba(244,246,245,.9);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--hair);
-      z-index:50;
-    }
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 20px;
+}
 
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:16px 0;
-    }
+/* HEADER */
+header{
+  padding:22px 0;
+  border-bottom:1px solid var(--border);
+}
 
-    .brand{
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      font-size:.95rem;
-    }
+.brand{
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:.95rem;
+}
 
-    .brand small{
-      display:block;
-      text-transform:none;
-      letter-spacing:0;
-      font-weight:600;
-      color:var(--muted);
-      font-size:.85rem;
-      margin-top:4px;
-    }
+.brand small{
+  display:block;
+  text-transform:none;
+  letter-spacing:0;
+  font-weight:600;
+  color:var(--muted);
+  font-size:.85rem;
+  margin-top:4px;
+}
 
-    .btn{
-      padding:11px 18px;
-      border-radius:999px;
-      background:var(--btn);
-      color:white;
-      font-weight:700;
-      font-size:.9rem;
-      border:none;
-      cursor:pointer;
-      transition:.2s ease;
-      text-decoration:none;
-    }
+/* HERO */
+.hero{
+  padding:60px 0 80px;
+}
 
-    .btn:hover{
-      background:var(--btnHover);
-      transform:translateY(-1px);
-    }
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
+}
 
-    main{padding:40px 0}
+h1{
+  font-size:clamp(2rem,3.5vw,3rem);
+  line-height:1.1;
+  margin-bottom:18px;
+  letter-spacing:-.03em;
+  max-width:25ch;
+}
 
-    .sheet{
-      background:var(--paper);
-      border:1px solid var(--hair);
-      border-radius:var(--radius);
-      box-shadow:0 18px 50px rgba(0,0,0,.06);
-      overflow:hidden;
-    }
+.lead{
+  color:var(--muted);
+  font-size:1.05rem;
+  margin-bottom:28px;
+  max-width:60ch;
+}
 
-    .hero{
-      padding:70px 40px;
-      background:linear-gradient(180deg, rgba(233,240,238,.35), rgba(255,255,255,0));
-    }
+.buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
 
-    h1{
-      font-size:clamp(2rem,3.5vw,3rem);
-      line-height:1.1;
-      margin-bottom:16px;
-      letter-spacing:-.03em;
-      max-width:26ch;
-    }
+.btn{
+  padding:12px 22px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:.9rem;
+  text-decoration:none;
+  transition:.2s ease;
+  border:1px solid var(--border);
+}
 
-    .lead{
-      color:var(--muted);
-      max-width:70ch;
-      margin-bottom:24px;
-      font-size:1rem;
-    }
+.btn-primary{
+  background:var(--btn);
+  color:#fff;
+  border:none;
+}
 
-    footer{
-      text-align:center;
-      margin-top:20px;
-      color:var(--muted);
-      font-size:.85rem;
-    }
+.btn-primary:hover{
+  background:var(--btnHover);
+  transform:translateY(-1px);
+}
 
-    @media(max-width:900px){
-      .hero{padding:50px 20px}
-      .btn{width:100%;text-align:center}
-    }
-  </style>
+.btn-secondary{
+  background:#fff;
+  color:var(--ink);
+}
+
+.btn-secondary:hover{
+  background:#f4f4f4;
+}
+
+/* IMAGE */
+.hero-image{
+  height:480px;
+  border-radius:18px;
+  overflow:hidden;
+  background:#f3f4f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#9ca3af;
+  font-weight:600;
+  font-size:.95rem;
+  border:1px solid var(--border);
+}
+
+/* SECTION */
+.section{
+  padding:80px 0;
+  border-top:1px solid var(--border);
+}
+
+.section h2{
+  font-size:1.8rem;
+  margin-bottom:18px;
+  letter-spacing:-.02em;
+}
+
+.section p{
+  color:var(--muted);
+  max-width:70ch;
+  font-size:1rem;
+}
+
+/* FOOTER */
+footer{
+  padding:40px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:.85rem;
+  border-top:1px solid var(--border);
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+  .hero-image{
+    height:350px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        Avolio Odontologia
-        <small>Dra. Maria Vitória Bello Avolio · Jardim Paulista</small>
-      </div>
-
-      <a class="btn" target="_blank"
-         href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
-        Agende sua consulta
-      </a>
+    <div class="brand">
+      Avolio Odontologia
+      <small>Dra. Maria Vitória Bello Avolio · Jardim Paulista</small>
     </div>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <div class="sheet">
 
-      <section class="hero">
-        <h1>Tratamento de canal com calma, precisão e acolhimento.</h1>
+    <section class="hero">
+      <div class="hero-grid">
 
-        <p class="lead">
-          Atendimento em endodontia com tecnologia moderna, explicação clara do diagnóstico
-          e condução tranquila do início ao fim.
-        </p>
+        <div>
+          <h1>Tratamento de canal com precisão e tranquilidade.</h1>
 
-        <a class="btn" target="_blank"
-           href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20estou%20com%20dor%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">
-          Agendar no WhatsApp
-        </a>
-      </section>
+          <p class="lead">
+            Atendimento em endodontia com tecnologia moderna e condução calma do início ao fim.
+            Clareza no diagnóstico e segurança em cada etapa do tratamento.
+          </p>
 
-    </div>
+          <div class="buttons">
+            <a class="btn btn-primary" target="_blank"
+               href="https://wa.me/5511994802149?text=Oi%20Dra.%20Maria%20Vit%C3%B3ria%2C%20quero%20agendar%20uma%20consulta.">
+               Agendar consulta
+            </a>
 
-    <footer>
-      © <span id="year"></span> Avolio Odontologia · São Paulo/SP
-    </footer>
+            <a class="btn btn-secondary"
+               href="https://www.google.com/maps?q=Avenida+Nove+de+Julho+3229,+Jardim+Paulista,+São+Paulo"
+               target="_blank">
+               Ver localização
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          Sua foto profissional ou do consultório aqui
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quem sou eu</h2>
+      <p>
+        Sou a Dra. Maria Vitória Bello Avolio, cirurgiã-dentista com foco em endodontia.
+        Meu atendimento é individualizado, sem pressa e com explicação clara de cada etapa.
+        O objetivo é que você se sinta seguro(a) e confiante durante todo o tratamento.
+      </p>
+    </section>
+
   </div>
 </main>
+
+<footer>
+  © <span id="year"></span> Avolio Odontologia · São Paulo/SP
+</footer>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
