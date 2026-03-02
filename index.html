@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dra. Maria Vitória Bello Avolio | Clínica Odontológica em São Paulo</title>
+  <title>Dra. Maria Vitória Avolio | Clínica Odontológica em São Paulo</title>
   <meta name="description" content="Avolio Odontologia — atendimento particular, acolhedor e com excelência técnica. Endodontia (canal), clínica geral e reabilitação. Jardim Paulista, São Paulo." />
   <meta name="theme-color" content="#ffffff" />
   <style>
@@ -12,11 +12,9 @@
       --ink:#0b0f17;
       --muted:#5b6472;
       --line:rgba(15, 23, 42, .10);
-      --card:rgba(255,255,255,.78);
       --shadow: 0 16px 40px rgba(2,6,23,.08);
       --shadow2: 0 10px 24px rgba(2,6,23,.10);
       --radius:22px;
-      --radius2:16px;
       --gold:#b89b5e;
       --gold2:#d8c08a;
       --max:1140px;
@@ -46,9 +44,7 @@
       display:flex; align-items:center; justify-content:space-between;
       gap:14px; padding:14px 0;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width:220px;
-    }
+    .brand{display:flex; align-items:center; gap:12px; min-width:220px;}
     .mark{
       width:38px; height:38px; border-radius:14px;
       background:
@@ -57,19 +53,11 @@
       box-shadow: 0 10px 22px rgba(184,155,94,.25);
       border:1px solid rgba(184,155,94,.35);
     }
-    .brand h1{
-      font-size:14px; line-height:1.1; margin:0;
-      letter-spacing:.2px;
-    }
-    .brand small{
-      display:block; margin-top:2px;
-      font-size:12px; color:var(--muted);
-      letter-spacing:.2px;
-    }
+    .brand h1{font-size:14px; line-height:1.1; margin:0; letter-spacing:.2px;}
+    .brand small{display:block; margin-top:2px; font-size:12px; color:var(--muted); letter-spacing:.2px;}
     .actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:12px 14px;
       border-radius:999px;
       border:1px solid var(--line);
@@ -79,6 +67,7 @@
       font-size:14px;
       transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
       white-space:nowrap;
+      cursor:pointer;
     }
     .btn:hover{transform: translateY(-1px); box-shadow:var(--shadow2); border-color: rgba(184,155,94,.35)}
     .btn.primary{
@@ -86,19 +75,11 @@
       background: linear-gradient(180deg, rgba(184,155,94,.95), rgba(216,192,138,.92));
       color:#1b1406;
     }
-    .btn.ghost{
-      background:rgba(255,255,255,.75);
-    }
+    .btn.ghost{background:rgba(255,255,255,.75);}
     .btn svg{width:18px; height:18px}
 
     /* HERO */
     .hero{padding:42px 0 14px}
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap:22px;
-      align-items:stretch;
-    }
     .hero-card{
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -111,7 +92,7 @@
     .hero-card:before{
       content:"";
       position:absolute; inset:-2px;
-      background: radial-gradient(500px 200px at 35% 0%, rgba(184,155,94,.18), transparent 65%);
+      background: radial-gradient(560px 230px at 35% 0%, rgba(184,155,94,.18), transparent 65%);
       pointer-events:none;
     }
     .kicker{
@@ -136,6 +117,7 @@
       letter-spacing:-.6px;
       position:relative;
       z-index:1;
+      max-width: 18ch;
     }
     .hero p{
       margin:0 0 18px 0;
@@ -144,54 +126,9 @@
       line-height:1.55;
       position:relative;
       z-index:1;
+      max-width: 66ch;
     }
     .hero-ctas{display:flex; gap:10px; flex-wrap:wrap; position:relative; z-index:1}
-
-    .hero-side{
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65));
-      box-shadow: var(--shadow);
-      padding:18px;
-      display:flex; flex-direction:column; gap:12px;
-      overflow:hidden;
-      position:relative;
-    }
-    .photo{
-      border-radius: 18px;
-      border:1px solid var(--line);
-      height:260px;
-      overflow:hidden;
-      background:
-        linear-gradient(135deg, rgba(184,155,94,.25), rgba(216,192,138,.16)),
-        url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80");
-      background-size:cover;
-      background-position:center;
-      box-shadow: 0 14px 30px rgba(2,6,23,.10);
-    }
-    .mini-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
-    }
-    .mini{
-      border-radius: 18px;
-      border:1px solid var(--line);
-      height:124px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.0)),
-        url("https://images.unsplash.com/photo-1606813909023-6a80a8d405b5?auto=format&fit=crop&w=1200&q=80");
-      background-size:cover;
-      background-position:center;
-      box-shadow: 0 12px 24px rgba(2,6,23,.08);
-    }
-    .mini.two{
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.0)),
-        url("https://images.unsplash.com/photo-1580281658628-5b34b02b04b1?auto=format&fit=crop&w=1200&q=80");
-      background-size:cover;
-      background-position:center;
-    }
 
     /* badges */
     .badges{
@@ -199,6 +136,8 @@
       grid-template-columns: repeat(3, 1fr);
       gap:10px;
       margin-top:16px;
+      position:relative;
+      z-index:1;
     }
     .badge{
       border:1px solid var(--line);
@@ -218,12 +157,8 @@
       display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
       margin-bottom:16px;
     }
-    .section-head h3{
-      margin:0;
-      font-size:26px;
-      letter-spacing:-.3px;
-    }
-    .section-head p{margin:0; color:var(--muted); max-width:56ch; line-height:1.55}
+    .section-head h3{margin:0; font-size:26px; letter-spacing:-.3px;}
+    .section-head p{margin:0; color:var(--muted); max-width:62ch; line-height:1.55}
 
     .grid{
       display:grid;
@@ -254,10 +189,7 @@
     }
 
     /* treatments */
-    .treat{
-      display:flex; gap:14px;
-      align-items:flex-start;
-    }
+    .treat{display:flex; gap:14px; align-items:flex-start;}
     .thumb{
       width:84px; height:84px;
       border-radius:18px;
@@ -272,16 +204,11 @@
     .treat li{margin:2px 0}
 
     /* testimonials */
-    .shots{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
+    .shots{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
     .shot{
       border-radius: var(--radius);
       border:1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65));
+      background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65));
       box-shadow: var(--shadow);
       overflow:hidden;
     }
@@ -338,10 +265,7 @@
       gap:14px;
       align-items:stretch;
     }
-    .field{
-      display:flex; flex-direction:column; gap:8px;
-      margin-top:10px;
-    }
+    .field{display:flex; flex-direction:column; gap:8px; margin-top:10px;}
     label{font-size:13px; color:var(--muted); font-weight:700}
     input, textarea{
       width:100%;
@@ -361,14 +285,11 @@
     }
     .foot a{text-decoration:underline}
 
-    /* responsive */
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .photo{height:240px}
       .badges{grid-template-columns:1fr}
       .shots{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-      .hero h2{font-size:38px}
+      .hero h2{font-size:38px; max-width: 22ch;}
       .brand{min-width:auto}
     }
   </style>
@@ -382,7 +303,7 @@
         <a class="brand" href="#topo" aria-label="Ir para o topo">
           <div class="mark" aria-hidden="true"></div>
           <div>
-            <h1>Dra. Maria Vitória Bello Avolio</h1>
+            <h1>Dra. Maria Vitória Avolio</h1>
             <small>Avolio Odontologia • São Paulo</small>
           </div>
         </a>
@@ -406,80 +327,61 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO (SEM COLUNA DIREITA) -->
   <main id="topo" class="hero">
     <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-card">
-          <div class="kicker">Atendimento particular • Odontologia com calma</div>
+      <div class="hero-card">
+        <div class="kicker">Atendimento particular • Odontologia com calma</div>
 
-          <h2>Devolvendo sua segurança de sorrir — com <span style="color:var(--gold);">alma e técnica</span>.</h2>
-          <p>
-            Um consultório pensado para quem quer clareza, acolhimento e excelência.
-            Aqui você entende o plano, as opções e o que faz sentido para o seu caso.
-          </p>
+        <h2>Devolvendo sua segurança de sorrir — com <span style="color:var(--gold);">alma e técnica</span>.</h2>
+        <p>
+          Um consultório pensado para quem quer clareza, acolhimento e excelência.
+          Aqui você entende o plano, as opções e o que faz sentido para o seu caso.
+        </p>
 
-          <div class="hero-ctas">
-            <a class="btn primary" href="https://wa.me/5511994802149" target="_blank" rel="noopener">
-              Agendar pelo WhatsApp
-            </a>
-            <a class="btn" href="#contato">
-              Enviar mensagem
-            </a>
+        <div class="hero-ctas">
+          <a class="btn primary" href="https://wa.me/5511994802149" target="_blank" rel="noopener">
+            Agendar pelo WhatsApp
+          </a>
+          <a class="btn" href="#contato">
+            Enviar mensagem
+          </a>
+        </div>
+
+        <div class="badges">
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9.5 10.5 11 12l3.5-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <b>Diagnóstico claro</b>
+              <span>Sem pressa, com explicação do começo ao fim.</span>
+            </div>
           </div>
 
-          <div class="badges">
-            <div class="badge">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M9.5 10.5 11 12l3.5-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <div>
-                <b>Diagnóstico claro</b>
-                <span>Sem pressa, com explicação do começo ao fim.</span>
-              </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z" fill="currentColor" opacity=".18"/>
+            </svg>
+            <div>
+              <b>Atendimento acolhedor</b>
+              <span>Para quem tem medo, trauma ou ansiedade.</span>
             </div>
+          </div>
 
-            <div class="badge">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z" fill="currentColor" opacity=".18"/>
-              </svg>
-              <div>
-                <b>Atendimento acolhedor</b>
-                <span>Para quem tem medo, trauma ou ansiedade.</span>
-              </div>
-            </div>
-
-            <div class="badge">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 8h10M7 12h6M7 16h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9l-4 2v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-              <div>
-                <b>Plano e opções</b>
-                <span>Você decide com informação e tranquilidade.</span>
-              </div>
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 8h10M7 12h6M7 16h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9l-4 2v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <b>Plano e opções</b>
+              <span>Você decide com informação e tranquilidade.</span>
             </div>
           </div>
         </div>
-
-        <aside class="hero-side">
-          <!-- Troque essas imagens por fotos suas/da clínica -->
-          <div class="photo" title="Foto principal do consultório"></div>
-          <div class="mini-grid">
-            <div class="mini" title="Foto detalhe 1"></div>
-            <div class="mini two" title="Foto detalhe 2"></div>
-          </div>
-          <div class="card soft" style="border-radius:18px; padding:14px;">
-            <b style="display:block; margin-bottom:6px;">Localização</b>
-            <div style="color:var(--muted); line-height:1.55; font-size:14px;">
-              Av. Nove de Julho, 3229 — Conj. 1506<br/>
-              Jardim Paulista • São Paulo
-            </div>
-            <div class="chip">Seg–Sex 08h–19h • Sáb 09h–12h</div>
-          </div>
-        </aside>
       </div>
     </div>
   </main>
@@ -490,7 +392,7 @@
       <div class="section-head">
         <div>
           <h3>Quem sou</h3>
-          <p>Sou a Dra. Maria Vitória Bello Avolio — cirurgiã-dentista com atuação em atendimento particular, unindo técnica, comunicação clara e cuidado humano.</p>
+          <p><b>Dra. Maria Vitória Avolio</b> — graduada pela <b>Unicamp</b>, especialista em <b>Endodontia</b>.</p>
         </div>
       </div>
 
@@ -656,7 +558,6 @@
         </div>
 
         <div class="card" style="grid-column: span 7; padding:0; overflow:hidden;">
-          <!-- Você pode trocar o src por outro embed do Google Maps -->
           <iframe
             title="Mapa"
             src="https://www.google.com/maps?q=Avenida%20Nove%20de%20Julho%203229%20conjunto%201506%20S%C3%A3o%20Paulo&output=embed"
@@ -773,7 +674,7 @@
   <footer class="foot">
     <div class="wrap" style="display:flex; gap:14px; justify-content:space-between; flex-wrap:wrap; align-items:center;">
       <div>
-        © <span id="y"></span> Avolio Odontologia • Dra. Maria Vitória Bello Avolio
+        © <span id="y"></span> Avolio Odontologia • Dra. Maria Vitória Avolio
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <a href="https://wa.me/5511994802149" target="_blank" rel="noopener">WhatsApp</a>
@@ -797,7 +698,6 @@
         `Nome: ${nome}\nTelefone: ${tel}\n\nMensagem:\n${msg}\n`
       );
 
-      // Troque pelo e-mail que você quer receber
       window.location.href = `mailto:vitoriavolio@gmail.com?subject=${subject}&body=${body}`;
       return false;
     }
