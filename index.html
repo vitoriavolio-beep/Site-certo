@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dra. Maria Vitória Avolio | Clínica Odontológica em São Paulo</title>
-  <meta name="description" content="Avolio Odontologia — atendimento particular, acolhedor e com excelência técnica. Endodontia (canal), clínica geral e reabilitação. Jardim Paulista, São Paulo." />
+  <title>Dra. Maria Vitória Avolio | Avolio Odontologia • São Paulo</title>
+  <meta name="description" content="Dra. Maria Vitória Avolio — Graduada pela UNICAMP, Especialista em Endodontia pela São Leopoldo Mandic. Atendimento particular no Jardim Paulista, São Paulo." />
   <meta name="theme-color" content="#ffffff" />
+
   <style>
     :root{
       --bg:#ffffff;
@@ -15,6 +16,7 @@
       --shadow: 0 16px 40px rgba(2,6,23,.08);
       --shadow2: 0 10px 24px rgba(2,6,23,.10);
       --radius:22px;
+      --radius2:16px;
       --gold:#b89b5e;
       --gold2:#d8c08a;
       --max:1140px;
@@ -34,6 +36,8 @@
 
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+
+    /* Topbar */
     .topbar{
       position:sticky; top:0; z-index:50;
       background:rgba(255,255,255,.78);
@@ -56,6 +60,7 @@
     .brand h1{font-size:14px; line-height:1.1; margin:0; letter-spacing:.2px;}
     .brand small{display:block; margin-top:2px; font-size:12px; color:var(--muted); letter-spacing:.2px;}
     .actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:12px 14px;
@@ -78,14 +83,14 @@
     .btn.ghost{background:rgba(255,255,255,.75);}
     .btn svg{width:18px; height:18px}
 
-    /* HERO */
-    .hero{padding:42px 0 14px}
+    /* Hero */
+    .hero{padding:42px 0 18px}
     .hero-card{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.70));
+      background: linear-gradient(180deg, rgba(255,255,255,.90), rgba(255,255,255,.70));
       box-shadow: var(--shadow);
-      padding:28px;
+      padding:30px;
       position:relative;
       overflow:hidden;
     }
@@ -117,7 +122,7 @@
       letter-spacing:-.6px;
       position:relative;
       z-index:1;
-      max-width: 18ch;
+      max-width: 20ch;
     }
     .hero p{
       margin:0 0 18px 0;
@@ -126,11 +131,11 @@
       line-height:1.55;
       position:relative;
       z-index:1;
-      max-width: 66ch;
+      max-width: 70ch;
     }
     .hero-ctas{display:flex; gap:10px; flex-wrap:wrap; position:relative; z-index:1}
 
-    /* badges */
+    /* Badges */
     .badges{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -151,7 +156,7 @@
     .badge b{display:block; font-size:13px; margin-bottom:3px}
     .badge span{display:block; font-size:12px; color:var(--muted); line-height:1.35}
 
-    /* sections */
+    /* Sections */
     section{padding:46px 0}
     .section-head{
       display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
@@ -188,7 +193,38 @@
       margin-top:10px;
     }
 
-    /* treatments */
+    /* About (Quem sou) */
+    .about{
+      display:grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .about-photo{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.78);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      min-height: 340px;
+      position:relative;
+    }
+    .about-photo:after{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(520px 240px at 20% 0%, rgba(184,155,94,.18), transparent 60%);
+      pointer-events:none;
+      mix-blend-mode:multiply;
+      opacity:.7;
+    }
+    .about-photo img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    /* Treatments */
     .treat{display:flex; gap:14px; align-items:flex-start;}
     .thumb{
       width:84px; height:84px;
@@ -203,7 +239,7 @@
     .treat ul{margin:10px 0 0 0; padding-left:16px; color:var(--muted); line-height:1.7}
     .treat li{margin:2px 0}
 
-    /* testimonials */
+    /* Testimonials */
     .shots{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
     .shot{
       border-radius: var(--radius);
@@ -216,21 +252,21 @@
       height:210px;
       background:
         linear-gradient(135deg, rgba(184,155,94,.18), rgba(216,192,138,.10)),
-        url("https://images.unsplash.com/photo-1527515637462-daf82e7320ea?auto=format&fit=crop&w=1400&q=80");
+        url("https://images.unsplash.com/photo-1588776813675-2d29b59581e8?auto=format&fit=crop&w=1400&q=80");
       background-size:cover;
       background-position:center;
     }
     .shot:nth-child(2) .img{
       background:
         linear-gradient(135deg, rgba(184,155,94,.18), rgba(216,192,138,.10)),
-        url("https://images.unsplash.com/photo-1588776813675-2d29b59581e8?auto=format&fit=crop&w=1400&q=80");
+        url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80");
       background-size:cover;
       background-position:center;
     }
     .shot:nth-child(3) .img{
       background:
         linear-gradient(135deg, rgba(184,155,94,.18), rgba(216,192,138,.10)),
-        url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80");
+        url("https://images.unsplash.com/photo-1527515637462-daf82e7320ea?auto=format&fit=crop&w=1400&q=80");
       background-size:cover;
       background-position:center;
     }
@@ -238,7 +274,7 @@
     .shot .txt b{display:block; margin-bottom:6px}
     .shot .txt span{color:var(--muted); line-height:1.6; font-size:14px}
 
-    /* FAQ accordion */
+    /* FAQ */
     details{
       border:1px solid var(--line);
       border-radius: 18px;
@@ -258,7 +294,7 @@
     summary .mut{font-weight:600; color:var(--muted); font-size:13px}
     details p{margin:10px 0 0 0; color:var(--muted); line-height:1.65}
 
-    /* contact */
+    /* Contact */
     .contact-grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -277,6 +313,8 @@
       outline:none;
     }
     textarea{min-height:120px; resize:vertical}
+
+    /* Footer */
     .foot{
       padding:26px 0 40px;
       border-top:1px solid var(--line);
@@ -285,11 +323,14 @@
     }
     .foot a{text-decoration:underline}
 
+    /* Responsive */
     @media (max-width: 980px){
       .badges{grid-template-columns:1fr}
       .shots{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-      .hero h2{font-size:38px; max-width: 22ch;}
+      .about{grid-template-columns:1fr}
+      .about-photo{min-height:260px}
+      .hero h2{font-size:38px; max-width: 24ch;}
       .brand{min-width:auto}
     }
   </style>
@@ -327,7 +368,7 @@
     </div>
   </header>
 
-  <!-- HERO (SEM COLUNA DIREITA) -->
+  <!-- HERO -->
   <main id="topo" class="hero">
     <div class="wrap">
       <div class="hero-card">
@@ -340,7 +381,7 @@
         </p>
 
         <div class="hero-ctas">
-          <a class="btn primary" href="https://wa.me/5511994802149" target="_blank" rel="noopener">
+          <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20Vi!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
             Agendar pelo WhatsApp
           </a>
           <a class="btn" href="#contato">
@@ -392,26 +433,33 @@
       <div class="section-head">
         <div>
           <h3>Quem sou</h3>
-          <p><b>Dra. Maria Vitória Avolio</b> — graduada pela <b>Unicamp</b>, especialista em <b>Endodontia</b>.</p>
+          <p>Formação sólida e atendimento humano — com foco em Endodontia.</p>
         </div>
       </div>
 
-      <div class="grid">
-        <div class="card" style="grid-column: span 7;">
-          <h4>Meu jeito de atender</h4>
-          <p>
-            Meu foco é que você se sinta seguro(a). Eu explico o diagnóstico, converso sobre alternativas e sigo um plano objetivo,
+      <div class="about">
+        <div class="card">
+          <h4>Dra. Maria Vitória Avolio</h4>
+          <p style="margin-top:6px;">
+            <b>Graduação em Odontologia</b> pela <b>UNICAMP</b>.<br/>
+            <b>Especialista em Endodontia</b> pela <b>São Leopoldo Mandic</b>.
+          </p>
+
+          <div class="chip">Endodontia • Atendimento particular</div>
+
+          <p style="margin-top:12px;">
+            Meu foco é que você se sinta seguro(a): explico o diagnóstico, apresento opções e seguimos um plano objetivo,
             sem pressa e sem julgamento.
           </p>
-          <div class="chip">Acolhimento + excelência</div>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20Vi!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
+            <a class="btn" href="#tratamentos">Ver tratamentos</a>
+          </div>
         </div>
 
-        <div class="card" style="grid-column: span 5;">
-          <h4>Para quem é</h4>
-          <p>
-            Para quem busca um consultório organizado, atendimento com calma e transparência — especialmente se você já teve experiências ruins.
-          </p>
-          <div class="chip">Atendimento personalizado</div>
+        <div class="about-photo" aria-label="Foto da Dra. Maria Vitória Avolio">
+          <img src="1.jpeg" alt="Dra. Maria Vitória Avolio" />
         </div>
       </div>
     </div>
@@ -481,7 +529,7 @@
             <div class="thumb" aria-hidden="true"></div>
             <div>
               <h4>Odontologia Integrada</h4>
-              <p>Quando precisa, você é encaminhado(a) e acompanhado(a) em conjunto — sem bagunça e sem “cada um fala uma coisa”.</p>
+              <p>Quando precisa, você é encaminhado(a) e acompanhado(a) em conjunto — com organização e continuidade.</p>
               <ul>
                 <li>Plano por etapas</li>
                 <li>Opções conforme prioridade</li>
@@ -496,13 +544,13 @@
     </div>
   </section>
 
-  <!-- DEPOIMENTOS -->
+  <!-- AVALIAÇÕES -->
   <section id="depoimentos">
     <div class="wrap">
       <div class="section-head">
         <div>
           <h3>Avaliações</h3>
-          <p>Espaço para depoimentos (você pode colocar prints reais depois, ou manter textos curtos).</p>
+          <p>Você pode trocar por prints reais depois. Por enquanto, textos curtos e elegantes.</p>
         </div>
       </div>
 
@@ -549,11 +597,11 @@
             Av. Nove de Julho, 3229 — Conj. 1506<br/>
             Jardim Paulista, São Paulo — SP
           </p>
-          <div class="chip">Atendimento: Seg–Sex 08h–19h • Sáb 09h–12h</div>
+          <div class="chip">Seg–Sex 08h–19h • Sáb 09h–12h</div>
 
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20Vi!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar</a>
             <a class="btn" href="#contato">Falar comigo</a>
-            <a class="btn primary" href="https://wa.me/5511994802149" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
 
@@ -634,7 +682,7 @@
           <h4>Me chame direto no WhatsApp</h4>
           <p>É o canal mais rápido para agendar e tirar dúvidas.</p>
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary" href="https://wa.me/5511994802149" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20Vi!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
             <a class="btn" href="tel:+5511994802149">Ligar</a>
           </div>
 
