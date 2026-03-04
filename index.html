@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -68,6 +69,9 @@
       border: 1px solid rgba(176,138,107,.22);
       box-shadow: 0 10px 24px rgba(176,138,107,.14);
       display:grid; place-items:center;
+      font-weight: 900;
+      color: rgba(139,107,81,.95);
+      letter-spacing: .5px;
     }
     .brand b{ display:block; font-size: 13px; letter-spacing: -.2px; }
     .brand span{ display:block; font-size: 12px; color: var(--muted2); margin-top: 2px; }
@@ -111,9 +115,7 @@
     }
 
     /* HERO - banner imagem + card central (tudo 1 coluna) */
-    .hero{
-      padding: 16px 0 0;
-    }
+    .hero{ padding: 16px 0 0; }
     .banner{
       border-radius: 22px;
       overflow:hidden;
@@ -127,10 +129,7 @@
         linear-gradient(180deg, rgba(28,26,23,.05), rgba(28,26,23,.35)),
         url("consultorio-topo.jpg") center/cover no-repeat;
     }
-    .heroCardWrap{
-      margin-top: -72px;
-      padding-bottom: 26px;
-    }
+    .heroCardWrap{ margin-top: -72px; padding-bottom: 26px; }
     .heroCard{
       background: rgba(255,255,255,.86);
       backdrop-filter: blur(10px);
@@ -218,11 +217,6 @@
       color: var(--muted);
       font-size: 13px;
     }
-    .divider{
-      height:1px;
-      background: rgba(176,138,107,.18);
-      margin: 10px 0 0;
-    }
 
     /* Step list (1 coluna) */
     .step{
@@ -241,12 +235,76 @@
       flex: 0 0 auto;
     }
 
+    /* ==== NOVO: MÉTRICAS ==== */
+    .metricsWrap{
+      margin-top: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(176,138,107,.18);
+      background: linear-gradient(135deg, rgba(243,236,226,.85), rgba(255,255,255,.86));
+      box-shadow: var(--shadow2);
+      padding: 14px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .metric{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(28,26,23,.08);
+    }
+    .metric b{
+      font-size: 14px;
+      letter-spacing: -.2px;
+    }
+    .metric span{
+      font-size: 12px;
+      color: var(--muted2);
+    }
+
+    /* ==== NOVO: FEEDBACKS ==== */
+    .quote{
+      position: relative;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(176,138,107,.18);
+      box-shadow: var(--shadow2);
+    }
+    .quote:before{
+      content:"“";
+      position:absolute;
+      top: 10px; left: 14px;
+      font-size: 34px;
+      color: rgba(176,138,107,.55);
+      line-height: 1;
+      font-weight: 900;
+    }
+    .quote p{
+      margin: 0;
+      padding-left: 16px;
+      color: rgba(28,26,23,.78);
+      font-size: 13px;
+    }
+    .quote .who{
+      margin-top: 10px;
+      padding-left: 16px;
+      font-size: 12px;
+      color: var(--muted2);
+      font-weight: 800;
+    }
+
     /* FAQ - simples e elegante */
     .qa{
       border: 1px solid rgba(176,138,107,.18);
       border-radius: 16px;
       overflow:hidden;
       background: rgba(255,255,255,.85);
+      box-shadow: 0 10px 26px rgba(28,26,23,.06);
     }
     .q{
       width:100%;
@@ -360,6 +418,8 @@
           <a href="#tratamentos">Tratamentos</a>
           <a href="#como-funciona">Como funciona</a>
           <a href="#sobre">Sobre</a>
+          <a href="#feedbacks">Feedbacks</a>
+          <a href="#faq">Dúvidas</a>
           <a href="#contato">Contato</a>
         </div>
 
@@ -484,11 +544,48 @@
           <h3>Meu diferencial é a experiência</h3>
           <p>Eu explico o caso com calma, sem julgamento, e te ajudo a escolher o melhor caminho com segurança e transparência.</p>
         </div>
+
+        <!-- MÉTRICAS (logo abaixo do Sobre) -->
+        <div class="metricsWrap" aria-label="Métricas de experiência">
+          <div class="metric">
+            <b>+1000 canais realizados</b>
+            <span>Experiência prática em casos variados</span>
+          </div>
+          <div class="metric">
+            <b>+6 anos de experiência</b>
+            <span>Atendimento particular e acompanhamento</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- Feedbacks (logo depois do Sobre) -->
+  <section id="feedbacks">
+    <div class="container">
+      <h2 class="sectionTitle">Feedbacks de pacientes</h2>
+      <p class="sectionSub">Depoimentos reais variam — mas a prioridade é sempre: acolhimento, clareza e técnica.</p>
+
+      <div class="stack">
+        <div class="quote">
+          <p>“Cheguei com muita dor e ela me explicou tudo com calma. Atendimento impecável e muito cuidadoso.”</p>
+          <div class="who">Paciente • Atendimento particular</div>
+        </div>
+
+        <div class="quote">
+          <p>“Procedimento tranquilo, sem sofrimento. Saí aliviado e com orientações muito claras.”</p>
+          <div class="who">Paciente • Endodontia</div>
+        </div>
+
+        <div class="quote">
+          <p>“Muito profissional e humana. Me senti seguro do começo ao fim.”</p>
+          <div class="who">Paciente • Avaliação e canal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (perguntas em seguida) -->
   <section id="faq">
     <div class="container">
       <h2 class="sectionTitle">Dúvidas frequentes</h2>
@@ -496,18 +593,39 @@
 
       <div class="stack">
         <div class="qa">
-          <button class="q" type="button"><span>Tratamento de canal dói?</span><small>+</small></button>
-          <div class="a"><p>O objetivo é controlar dor e sensibilidade. A condução moderna prioriza conforto e cada caso é orientado pelo diagnóstico.</p></div>
+          <button class="q" type="button" aria-expanded="false">
+            <span>Tratamento de canal dói?</span><small>+</small>
+          </button>
+          <div class="a">
+            <p>O objetivo é controlar dor e sensibilidade. A condução moderna prioriza conforto e cada caso é orientado pelo diagnóstico.</p>
+          </div>
         </div>
 
         <div class="qa">
-          <button class="q" type="button"><span>Precisa fazer tudo no mesmo dia?</span><small>+</small></button>
-          <div class="a"><p>Depende do quadro. Em urgência, a prioridade é sair da dor com segurança; em outros casos, o planejamento pode ser dividido por etapas.</p></div>
+          <button class="q" type="button" aria-expanded="false">
+            <span>Precisa fazer tudo no mesmo dia?</span><small>+</small>
+          </button>
+          <div class="a">
+            <p>Depende do quadro. Em urgência, a prioridade é sair da dor com segurança; em outros casos, o planejamento pode ser dividido por etapas.</p>
+          </div>
         </div>
 
         <div class="qa">
-          <button class="q" type="button"><span>Quanto custa?</span><small>+</small></button>
-          <div class="a"><p>Varia conforme complexidade e planejamento. Eu explico etapas e valores antes de iniciar.</p></div>
+          <button class="q" type="button" aria-expanded="false">
+            <span>Quanto custa?</span><small>+</small>
+          </button>
+          <div class="a">
+            <p>Varia conforme complexidade e planejamento. Eu explico etapas e valores antes de iniciar.</p>
+          </div>
+        </div>
+
+        <div class="qa">
+          <button class="q" type="button" aria-expanded="false">
+            <span>Dente escurecido sempre precisa de canal?</span><small>+</small>
+          </button>
+          <div class="a">
+            <p>Nem sempre. É preciso avaliação clínica e radiográfica para entender a causa e indicar o melhor tratamento.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -571,18 +689,25 @@
     ["btnTopWhats","btnHeroWhats","btnFlowWhats","btnContactWhats","btnFloatWhats"]
       .forEach(id => { const el = document.getElementById(id); if(el) el.href = wa; });
 
-    // FAQ accordion
+    // FAQ accordion (com aria-expanded)
     document.querySelectorAll(".qa").forEach(box => {
       const btn = box.querySelector(".q");
       const ans = box.querySelector(".a");
       const plus = btn.querySelector("small");
+
       btn.addEventListener("click", () => {
-        const open = ans.style.maxHeight && ans.style.maxHeight !== "0px";
+        const isOpen = ans.style.maxHeight && ans.style.maxHeight !== "0px";
+
+        // fecha todos
         document.querySelectorAll(".a").forEach(a => a.style.maxHeight = "0px");
         document.querySelectorAll(".q small").forEach(s => s.textContent = "+");
-        if(!open){
+        document.querySelectorAll(".q").forEach(q => q.setAttribute("aria-expanded", "false"));
+
+        // abre o clicado
+        if(!isOpen){
           ans.style.maxHeight = ans.scrollHeight + "px";
           plus.textContent = "–";
+          btn.setAttribute("aria-expanded", "true");
         }
       });
     });
