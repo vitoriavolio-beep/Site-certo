@@ -133,6 +133,17 @@
     .card h3{ margin: 0; font-size: 15px; letter-spacing: -.2px; }
     .card p{ margin: 8px 0 0; color: var(--muted); font-size: 13px; }
 
+    /* NOVO: grid 3 cards lado a lado (desktop) */
+    .cards3{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    @media (max-width: 860px){
+      .cards3{ grid-template-columns: 1fr; }
+    }
+
     /* Metrics */
     .metricsWrap{
       margin-top: 12px;
@@ -293,7 +304,6 @@
   <div class="topbar">
     <div class="container">
       <div class="topbarInner">
-        <!-- ESQUERDA: só o nome -->
         <a class="brand" href="#topo" aria-label="Ir para o topo">
           <div>
             <b>Dra. Maria Vitória Avolio</b>
@@ -301,7 +311,6 @@
           </div>
         </a>
 
-        <!-- DIREITA: só o botão -->
         <a class="btn btnPrimary" id="btnTopWhats" target="_blank" rel="noopener">Agendar</a>
       </div>
     </div>
@@ -319,10 +328,9 @@
           <h1>Tratamento de canal especializado em sessão única</h1>
 
           <p class="lead">
-            Dor de dente, sensibilidade, dente escurecido ou suspeita de infecção?
-            Eu avalio com calma, explico seu caso com clareza e conduzo o tratamento com técnica e previsibilidade.
+            A clínica tem seu foco de atuação na prevenção e nos atendimentos de endodontia,
+            resolvendo casos simples e complexos da especialidade, aliados à estética dental.
           </p>
-          <!-- removi os botões do hero conforme pedido -->
         </div>
       </div>
     </div>
@@ -332,22 +340,21 @@
   <section id="tratamentos">
     <div class="container">
       <h2 class="sectionTitle">Tratamentos</h2>
-      <p class="sectionSub">O que mais aparece no consultório — e como eu costumo conduzir cada situação com previsibilidade.</p>
 
-      <div class="stack">
+      <div class="cards3">
         <div class="card">
-          <h3>Dor de dente / urgência</h3>
-          <p>Priorizo sair da dor com segurança, definindo conduta e próximos passos de forma clara.</p>
-        </div>
-
-        <div class="card">
-          <h3>Dente escurecido</h3>
-          <p>Investigação da causa e planejamento para devolver estética e função (sem promessas irreais).</p>
+          <h3>Prevenção dental</h3>
+          <p>Acompanhamento e orientações para manter sua saúde bucal em dia.</p>
         </div>
 
         <div class="card">
           <h3>Tratamento de canal</h3>
-          <p>Endodontia com foco em conforto, controle e execução minuciosa, baseada no diagnóstico.</p>
+          <p>Endodontia com diagnóstico preciso e foco em previsibilidade e conforto.</p>
+        </div>
+
+        <div class="card">
+          <h3>Atendimento de urgência</h3>
+          <p>Priorizo aliviar a dor com segurança e definir os próximos passos com clareza.</p>
         </div>
       </div>
     </div>
@@ -536,7 +543,7 @@
     ["btnTopWhats","btnContactWhats","btnFloatWhats"]
       .forEach(id => { const el = document.getElementById(id); if(el) el.href = wa; });
 
-    // FAQ accordion (com aria-expanded)
+    // FAQ accordion
     document.querySelectorAll(".qa").forEach(box => {
       const btn = box.querySelector(".q");
       const ans = box.querySelector(".a");
