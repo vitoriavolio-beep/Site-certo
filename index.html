@@ -4,326 +4,377 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dra. Maria Vitória Avolio | Endodontia em São Paulo</title>
-  <meta name="description" content="Endodontia (tratamento de canal) com abordagem moderna, atendimento acolhedor e foco em conforto. Jardim Paulista, São Paulo." />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Tratamento de canal (endodontia) com atendimento acolhedor e abordagem moderna. Jardim Paulista, São Paulo." />
+  <meta name="theme-color" content="#ffffff" />
 
   <style>
     :root{
-      --bg:#070b14;
-      --card:#0c1326;
-      --muted:#9aa6c0;
-      --text:#eef2ff;
-      --brand:#7dd3fc;      /* azul claro */
-      --brand2:#a7f3d0;     /* verde água */
-      --line: rgba(255,255,255,.10);
-      --shadow: 0 16px 60px rgba(0,0,0,.55);
+      --bg:#ffffff;
+      --ink:#0f172a;            /* slate-900 */
+      --muted:#475569;          /* slate-600 */
+      --muted2:#64748b;         /* slate-500 */
+      --line:#e2e8f0;           /* slate-200 */
+      --soft:#f8fafc;           /* slate-50 */
+      --soft2:#f1f5f9;          /* slate-100 */
+      --brand:#0ea5e9;          /* sky-500 */
+      --brand2:#0284c7;         /* sky-600 */
+      --shadow: 0 18px 60px rgba(15,23,42,.10);
+      --shadow2: 0 10px 30px rgba(15,23,42,.08);
       --radius: 18px;
-      --max: 1120px;
+      --max: 1140px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--ink);
       background:
-        radial-gradient(1200px 700px at 15% -10%, rgba(125,211,252,.18), transparent 60%),
-        radial-gradient(1000px 700px at 90% 10%, rgba(167,243,208,.14), transparent 60%),
-        radial-gradient(900px 500px at 50% 110%, rgba(125,211,252,.10), transparent 55%),
+        radial-gradient(900px 450px at 85% -10%, rgba(14,165,233,.12), transparent 60%),
+        radial-gradient(800px 420px at 5% 5%, rgba(2,132,199,.08), transparent 55%),
         var(--bg);
-      color:var(--text);
       line-height:1.4;
     }
+
     a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .container{max-width:var(--max); margin:0 auto; padding:0 22px}
+
+    /* Topbar */
     .topbar{
-      position:sticky; top:0; z-index:50;
-      background: rgba(7,11,20,.65);
+      position: sticky; top:0; z-index:50;
+      background: rgba(255,255,255,.78);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(226,232,240,.9);
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:16px;
+      padding: 14px 0;
+      gap:14px;
     }
     .brand{
-      display:flex; align-items:center; gap:12px; min-width: 240px;
+      display:flex; align-items:center; gap:12px;
+      min-width: 280px;
     }
-    .logo{
-      width:42px; height:42px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(125,211,252,.95), rgba(167,243,208,.85));
-      box-shadow: 0 12px 30px rgba(125,211,252,.18);
+    .mark{
+      width:44px; height:44px; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(2,132,199,.10));
+      border: 1px solid rgba(14,165,233,.18);
+      display:grid; place-items:center;
     }
-    .brand h1{font-size:14px; margin:0; letter-spacing:.2px}
-    .brand p{font-size:12px; margin:2px 0 0; color:var(--muted)}
+    .mark svg{opacity:.85}
+    .brand .t1{font-weight:800; letter-spacing:-.2px; font-size:14px; margin:0}
+    .brand .t2{font-size:12px; color:var(--muted2); margin:3px 0 0}
+
     .links{
-      display:flex; gap:18px; align-items:center; justify-content:center;
+      display:flex; align-items:center; gap:16px;
       flex-wrap:wrap;
+      justify-content:center;
     }
     .links a{
-      font-size:13px; color: rgba(238,242,255,.88);
-      padding:8px 10px; border-radius:12px;
-      border:1px solid transparent;
+      font-size:13px;
+      color: rgba(15,23,42,.78);
+      padding:8px 10px;
+      border-radius: 12px;
     }
-    .links a:hover{border-color: var(--line); background: rgba(255,255,255,.04)}
-    .ctaRow{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width: 240px}
+    .links a:hover{background: var(--soft2)}
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:11px 14px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      font-weight: 650;
+      padding: 11px 14px;
+      border-radius: 14px;
       font-size: 13px;
-      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+      font-weight: 750;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(15,23,42,.06);
+      transition: transform .08s ease, box-shadow .18s ease, border-color .18s ease;
       white-space:nowrap;
     }
-    .btn:hover{background: rgba(255,255,255,.06); border-color: rgba(125,211,252,.35)}
+    .btn:hover{border-color: rgba(14,165,233,.25); box-shadow: var(--shadow2)}
     .btn:active{transform: translateY(1px)}
     .btnPrimary{
-      border:1px solid rgba(125,211,252,.35);
-      background: linear-gradient(135deg, rgba(125,211,252,.16), rgba(167,243,208,.12));
-      box-shadow: 0 16px 50px rgba(0,0,0,.35);
+      border-color: rgba(14,165,233,.30);
+      background: linear-gradient(135deg, rgba(14,165,233,.14), rgba(2,132,199,.08));
     }
-    .hero{
-      padding: 64px 0 34px;
-    }
+    .ctaRow{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width: 240px}
+
+    /* Hero */
+    .hero{padding: 48px 0 26px}
     .heroGrid{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 26px;
-      align-items:stretch;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 22px;
+      align-items: stretch;
     }
-    .pill{
+
+    .eyebrow{
       display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px;
-      border:1px solid rgba(125,211,252,.25);
-      background: rgba(125,211,252,.06);
-      color: rgba(238,242,255,.92);
-      border-radius: 999px;
       font-size: 12px;
+      color: rgba(2,132,199,.92);
+      background: rgba(14,165,233,.10);
+      border: 1px solid rgba(14,165,233,.18);
+      padding: 8px 12px;
+      border-radius: 999px;
       width: fit-content;
     }
-    .hero h2{
-      margin:14px 0 0;
+
+    h1{
+      margin: 14px 0 0;
       font-size: 44px;
-      line-height:1.06;
-      letter-spacing:-.6px;
+      letter-spacing:-1px;
+      line-height: 1.06;
     }
-    .grad{
-      background: linear-gradient(90deg, var(--brand), var(--brand2));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color: transparent;
-    }
-    .hero p{
+    .lead{
       margin: 14px 0 0;
       color: var(--muted);
       font-size: 16px;
-      max-width: 54ch;
+      max-width: 62ch;
     }
     .heroActions{
       display:flex; flex-wrap:wrap; gap:12px;
-      margin-top: 22px;
+      margin-top: 20px;
       align-items:center;
     }
-    .mini{
-      display:flex; gap:14px; flex-wrap:wrap;
+    .trustRow{
       margin-top: 18px;
-      color: rgba(238,242,255,.86);
+      display:flex; gap:10px; flex-wrap:wrap;
+      color: rgba(15,23,42,.78);
       font-size: 13px;
     }
-    .mini span{display:inline-flex; gap:8px; align-items:center; opacity:.9}
+    .chip{
+      background: #fff;
+      border:1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 12px;
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .chip .dot{
+      width:8px; height:8px; border-radius: 99px;
+      background: var(--brand);
+      box-shadow: 0 0 0 3px rgba(14,165,233,.14);
+    }
+
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
+
     .heroCard{
       padding: 16px;
-      display:flex; flex-direction:column; gap:12px;
-      position:relative;
-      overflow:hidden;
-    }
-    .heroCard:before{
-      content:"";
-      position:absolute; inset:-80px -80px auto auto;
-      width:180px; height:180px;
-      background: radial-gradient(circle at 30% 30%, rgba(125,211,252,.28), transparent 65%);
-      filter: blur(2px);
-      pointer-events:none;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
     }
     .photo{
-      width:100%;
-      aspect-ratio: 4 / 4.6;
+      width: 100%;
+      aspect-ratio: 4 / 4.1;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.10);
       background:
-        linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,243,208,.10)),
+        linear-gradient(135deg, rgba(14,165,233,.12), rgba(2,132,199,.06)),
         url("foto-hero.jpg") center/cover no-repeat;
+      border: 1px solid rgba(226,232,240,.9);
     }
-    .heroCard .name{font-weight:800; margin:2px 0 0}
-    .heroCard .desc{margin:2px 0 0; color:var(--muted); font-size:13px}
-    .badgeRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:2px}
-    .badge{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      color: rgba(238,242,255,.9);
+    .miniTitle{
+      margin: 2px 0 0;
+      font-weight: 850;
+      letter-spacing:-.2px;
     }
+    .miniDesc{
+      margin: 4px 0 0;
+      color: var(--muted2);
+      font-size: 13px;
+    }
+    .miniGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .miniBox{
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .miniBox b{display:block; font-size:13px}
+    .miniBox span{display:block; font-size:12px; color: var(--muted2); margin-top:4px}
 
-    .section{padding: 46px 0}
-    .sectionHeader{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:18px}
-    .sectionHeader h3{margin:0; font-size:26px; letter-spacing:-.3px}
-    .sectionHeader p{margin:0; color:var(--muted); max-width:60ch}
+    /* Sections */
+    .section{padding: 44px 0}
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
+      margin-bottom: 16px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: 26px;
+      letter-spacing:-.5px;
+    }
+    .sectionHead p{
+      margin: 6px 0 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 14px;
+    }
 
     .grid3{
-      display:grid; gap:14px;
+      display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
     }
-    .feature{
-      padding:16px;
+    .feat{
+      padding: 16px;
       border-radius: 18px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(15,23,42,.05);
     }
-    .feature h4{margin:10px 0 0; font-size:15px}
-    .feature p{margin:8px 0 0; color:var(--muted); font-size:13px}
-    .icon{
-      width:42px; height:42px; border-radius:14px;
-      border:1px solid rgba(125,211,252,.20);
-      background: linear-gradient(135deg, rgba(125,211,252,.16), rgba(167,243,208,.10));
+    .featTop{
+      display:flex; gap:12px; align-items:center;
+    }
+    .ic{
+      width:44px; height:44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(14,165,233,.14), rgba(2,132,199,.08));
+      border: 1px solid rgba(14,165,233,.18);
       display:grid; place-items:center;
     }
-    .icon svg{opacity:.95}
+    .feat h3{margin: 10px 0 0; font-size: 15px; letter-spacing:-.2px}
+    .feat p{margin: 8px 0 0; color: var(--muted); font-size: 13px}
 
     .split{
-      display:grid; gap:14px;
+      display:grid;
       grid-template-columns: 1fr 1fr;
-      align-items:stretch;
+      gap: 14px;
+      align-items: stretch;
     }
-    .panel{padding:18px}
-    .panel h4{margin:0 0 8px; font-size:16px}
-    .panel p{margin:0; color:var(--muted); font-size:13px}
-    .list{margin:14px 0 0; padding:0; list-style:none; display:grid; gap:10px}
-    .list li{
-      padding:12px 12px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background: rgba(255,255,255,.03);
-      color: rgba(238,242,255,.9);
-      font-size:13px;
+    .panel{padding: 18px}
+    .panel h3{margin:0 0 10px; font-size: 16px; letter-spacing:-.2px}
+    .panel p{margin:0; color: var(--muted); font-size: 13px}
+    .bullets{margin: 12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+    .bullets li{
       display:flex; gap:10px; align-items:flex-start;
+      padding: 12px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      font-size: 13px;
+      color: rgba(15,23,42,.82);
     }
-    .dot{
-      width:10px; height:10px; border-radius:99px;
-      margin-top:4px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
+    .check{
+      width:18px; height:18px; border-radius: 6px;
+      background: rgba(14,165,233,.12);
+      border: 1px solid rgba(14,165,233,.20);
+      display:grid; place-items:center;
       flex: 0 0 auto;
+      margin-top:2px;
     }
 
+    /* FAQ */
     .faq{display:grid; gap:10px}
     .qa{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
       border-radius: 16px;
       overflow:hidden;
+      background:#fff;
+      box-shadow: 0 10px 26px rgba(15,23,42,.04);
     }
     .q{
       width:100%;
-      display:flex; justify-content:space-between; align-items:center;
-      padding:14px 14px;
-      background: transparent;
       border:0;
-      color: var(--text);
-      font-weight: 700;
+      background: transparent;
+      padding: 14px 14px;
+      display:flex; justify-content:space-between; align-items:center;
       cursor:pointer;
       text-align:left;
+      font-weight: 800;
+      color: rgba(15,23,42,.92);
     }
-    .q span{color: rgba(238,242,255,.92)}
-    .q small{color:var(--muted); font-weight:600}
+    .q small{color: var(--muted2); font-weight:900}
     .a{
       max-height:0;
       overflow:hidden;
       transition: max-height .25s ease;
-      border-top:1px solid var(--line);
+      border-top: 1px solid var(--line);
+      background: var(--soft);
     }
-    .a p{margin:0; padding:12px 14px; color:var(--muted); font-size:13px}
+    .a p{margin:0; padding: 12px 14px; color: var(--muted); font-size: 13px}
 
+    /* Contact */
     .contactGrid{
-      display:grid; gap:14px;
+      display:grid;
       grid-template-columns: 1fr 1fr;
-      align-items:stretch;
+      gap: 14px;
     }
     .map{
       border-radius: 16px;
+      border: 1px solid var(--line);
       overflow:hidden;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      min-height: 320px;
+      background: #fff;
+      min-height: 330px;
+      box-shadow: var(--shadow2);
     }
     iframe{width:100%; height:100%; border:0}
 
     footer{
       padding: 26px 0 34px;
-      border-top:1px solid var(--line);
-      color: var(--muted);
+      border-top: 1px solid var(--line);
+      color: var(--muted2);
       font-size: 12px;
+      background: #fff;
     }
-    .footRow{display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .footRow a{color: rgba(238,242,255,.8)}
-    .footRow a:hover{color: var(--text)}
+    .footRow{
+      display:flex; justify-content:space-between; gap:12px;
+      flex-wrap:wrap; align-items:center;
+    }
+    .footRow a{color: rgba(2,132,199,.92)}
+    .footRow a:hover{color: var(--brand2)}
 
-    /* WhatsApp floating */
+    /* Floating WhatsApp */
     .waFloat{
       position: fixed;
       right: 18px;
       bottom: 18px;
-      z-index: 60;
+      z-index: 70;
       display:flex;
       gap:10px;
       align-items:center;
     }
     .waHint{
-      display:none;
-      padding:10px 12px;
+      padding: 10px 12px;
       border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(12,19,38,.78);
-      backdrop-filter: blur(10px);
-      color: rgba(238,242,255,.9);
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow2);
+      color: rgba(15,23,42,.78);
       font-size: 12px;
-      max-width: 220px;
-      box-shadow: var(--shadow);
+      display:none;
     }
     .waBtn{
-      width:52px; height:52px;
+      width:54px; height:54px;
       border-radius: 18px;
-      border:1px solid rgba(167,243,208,.30);
-      background: linear-gradient(135deg, rgba(167,243,208,.20), rgba(125,211,252,.12));
-      box-shadow: 0 18px 60px rgba(0,0,0,.45);
+      border: 1px solid rgba(14,165,233,.22);
+      background: linear-gradient(135deg, rgba(14,165,233,.16), rgba(2,132,199,.08));
+      box-shadow: var(--shadow);
       display:grid; place-items:center;
     }
-    .waBtn:hover{filter: brightness(1.05)}
-    .waBtn svg{opacity:.95}
 
     /* Responsive */
     @media (max-width: 980px){
-      .heroGrid{grid-template-columns: 1fr; }
+      .heroGrid{grid-template-columns: 1fr}
       .ctaRow{display:none}
       .grid3{grid-template-columns: 1fr}
       .split{grid-template-columns: 1fr}
       .contactGrid{grid-template-columns: 1fr}
-      .hero h2{font-size: 38px}
+      h1{font-size: 38px}
       .waHint{display:block}
     }
-    @media (max-width: 420px){
-      .hero h2{font-size: 34px}
+    @media (max-width: 460px){
       .links{display:none}
+      h1{font-size: 34px}
     }
   </style>
 </head>
@@ -334,19 +385,23 @@
     <div class="container">
       <div class="nav">
         <a class="brand" href="#topo" aria-label="Ir para o topo">
-          <div class="logo" aria-hidden="true"></div>
+          <div class="mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s7-4.35 7-10a7 7 0 10-14 0c0 5.65 7 10 7 10z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
           <div>
-            <h1>Dra. Maria Vitória Avolio</h1>
-            <p>Endodontia • Jardim Paulista • São Paulo</p>
+            <p class="t1">Dra. Maria Vitória Avolio</p>
+            <p class="t2">Endodontia • Jardim Paulista • São Paulo</p>
           </div>
         </a>
 
-        <div class="links" aria-label="Navegação">
+        <nav class="links" aria-label="Navegação">
           <a href="#tratamentos">Tratamentos</a>
-          <a href="#diferenciais">Diferenciais</a>
+          <a href="#como-funciona">Como funciona</a>
           <a href="#faq">Dúvidas</a>
           <a href="#contato">Contato</a>
-        </div>
+        </nav>
 
         <div class="ctaRow">
           <a class="btn" href="tel:+5511994802149">Ligar</a>
@@ -361,15 +416,13 @@
     <div class="container">
       <div class="heroGrid">
         <div>
-          <div class="pill">
-            <span aria-hidden="true">✦</span>
-            Atendimento acolhedor e técnico • Endodontia
-          </div>
+          <div class="eyebrow">Atendimento acolhedor • Endodontia (Canal)</div>
 
-          <h2>Tratamento de canal com <span class="grad">conforto</span>, <span class="grad">clareza</span> e <span class="grad">segurança</span>.</h2>
-          <p>
-            Se você está com dor, sensibilidade ou um dente escurecido, vamos investigar a causa e propor um plano objetivo.
-            Meu foco é resolver o problema com tranquilidade e um padrão de execução alto — sem drama, sem susto.
+          <h1>Tratamento de canal com foco em <span style="color:var(--brand2)">conforto</span> e <span style="color:var(--brand2)">previsibilidade</span>.</h1>
+
+          <p class="lead">
+            Dor, sensibilidade ao frio/quente, dente escurecido ou suspeita de infecção?
+            Eu avalio seu caso com calma, explico o plano de forma simples e conduzo o tratamento com critério técnico.
           </p>
 
           <div class="heroActions">
@@ -377,27 +430,32 @@
             <a class="btn" href="#contato">Ver endereço e horários</a>
           </div>
 
-          <div class="mini">
-            <span>✅ Urgências (quando possível)</span>
-            <span>✅ Explicação do caso (sem “juridiquês”)</span>
-            <span>✅ Opções de pagamento com transparência</span>
+          <div class="trustRow" aria-label="Pontos de confiança">
+            <div class="chip"><span class="dot"></span> Explico o caso sem pressão</div>
+            <div class="chip"><span class="dot"></span> Transparência de etapas e valores</div>
+            <div class="chip"><span class="dot"></span> Atendimento particular</div>
           </div>
         </div>
 
         <aside class="card heroCard" aria-label="Cartão da profissional">
           <div class="photo" role="img" aria-label="Foto da Dra. Maria Vitória"></div>
           <div>
-            <div class="name">Dra. Maria Vitória Avolio</div>
-            <div class="desc">
-              Graduada em Odontologia pela UNICAMP • Especialista em Endodontia pela São Leopoldo Mandic
+            <div class="miniTitle">Dra. Maria Vitória Avolio</div>
+            <div class="miniDesc">Graduação em Odontologia pela UNICAMP • Especialista em Endodontia pela São Leopoldo Mandic</div>
+          </div>
+
+          <div class="miniGrid" aria-label="Destaques">
+            <div class="miniBox">
+              <b>Foco em urgência</b>
+              <span>Quando possível, priorizo sair da dor com segurança.</span>
+            </div>
+            <div class="miniBox">
+              <b>Atendimento humano</b>
+              <span>Sem julgamentos e com orientação clara.</span>
             </div>
           </div>
-          <div class="badgeRow">
-            <span class="badge">Endodontia (Canal)</span>
-            <span class="badge">Atendimento humanizado</span>
-            <span class="badge">Jardim Paulista</span>
-          </div>
-          <a class="btn btnPrimary" id="btnCardWhats" target="_blank" rel="noopener" style="width:100%; margin-top:4px;">
+
+          <a class="btn btnPrimary" id="btnCardWhats" target="_blank" rel="noopener" style="width:100%; margin-top:2px;">
             Agendar avaliação
           </a>
         </aside>
@@ -408,81 +466,92 @@
   <!-- Tratamentos -->
   <section class="section" id="tratamentos">
     <div class="container">
-      <div class="sectionHeader">
+      <div class="sectionHead">
         <div>
-          <h3>O que eu resolvo por aqui</h3>
-          <p>Uma abordagem direta: identificar a causa, aliviar sintomas e tratar com previsibilidade.</p>
+          <h2>Tratamentos</h2>
+          <p>O que normalmente leva pacientes a me procurarem — com orientação direta e execução cuidadosa.</p>
         </div>
       </div>
 
       <div class="grid3">
-        <div class="feature">
-          <div class="icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M12 21s7-4.35 7-10a7 7 0 10-14 0c0 5.65 7 10 7 10z" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 11v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 8h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            </svg>
+        <div class="feat">
+          <div class="featTop">
+            <div class="ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s7-4.35 7-10a7 7 0 10-14 0c0 5.65 7 10 7 10z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 11v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 8h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Dor de dente / urgência</h3>
+              <p>Triagem e conduta para aliviar dor e tratar a causa com segurança.</p>
+            </div>
           </div>
-          <h4>Dor de dente / urgência</h4>
-          <p>Triagem rápida, orientação clara e conduta para sair da dor com segurança.</p>
         </div>
 
-        <div class="feature">
-          <div class="icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M4 12s3-7 8-7 8 7 8 7-3 7-8 7-8-7-8-7z" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="2"/>
-            </svg>
+        <div class="feat">
+          <div class="featTop">
+            <div class="ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M4 12s3-7 8-7 8 7 8 7-3 7-8 7-8-7-8-7z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Dente escurecido</h3>
+              <p>Avaliação da causa e planejamento para estética e função.</p>
+            </div>
           </div>
-          <h4>Dente escurecido</h4>
-          <p>Investigação da causa e planejamento para estética e função — sem promessas irreais.</p>
         </div>
 
-        <div class="feature">
-          <div class="icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M7 17V7a5 5 0 0110 0v10" stroke="currentColor" stroke-width="2"/>
-              <path d="M9 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+        <div class="feat">
+          <div class="featTop">
+            <div class="ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="2"/>
+                <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Tratamento de canal</h3>
+              <p>Plano objetivo, explicação clara e execução minuciosa.</p>
+            </div>
           </div>
-          <h4>Tratamento de canal</h4>
-          <p>Endodontia com foco em conforto, controle e execução minuciosa.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Diferenciais -->
-  <section class="section" id="diferenciais">
+  <!-- Como funciona -->
+  <section class="section" id="como-funciona">
     <div class="container">
-      <div class="sectionHeader">
+      <div class="sectionHead">
         <div>
-          <h3>Por que pacientes gostam do meu atendimento</h3>
-          <p>Menos tensão, mais entendimento do que está acontecendo — e um plano que faz sentido.</p>
+          <h2>Como funciona</h2>
+          <p>Um fluxo “clínica premium” bem redondo: você entende o que está acontecendo e sabe o próximo passo.</p>
         </div>
-        <a class="btn" href="#contato">Quero agendar</a>
+        <a class="btn btnPrimary" id="btnFlowWhats" target="_blank" rel="noopener">Agendar</a>
       </div>
 
       <div class="split">
         <div class="card panel">
-          <h4>Experiência centrada em você</h4>
-          <p>Eu explico o problema e as opções de forma simples, sem te colocar medo e sem pressa.</p>
-          <ul class="list">
-            <li><span class="dot"></span> Atendimento acolhedor, sem julgamentos</li>
-            <li><span class="dot"></span> Transparência de valores e etapas</li>
-            <li><span class="dot"></span> Condução com calma (e firmeza quando precisa)</li>
+          <h3>1) Avaliação + diagnóstico</h3>
+          <p>Eu escuto sua queixa, avalio e explico as hipóteses com transparência.</p>
+          <ul class="bullets">
+            <li><span class="check" aria-hidden="true">✓</span> Você entende o “porquê” da dor/sensibilidade</li>
+            <li><span class="check" aria-hidden="true">✓</span> Opções de tratamento e prioridades</li>
+            <li><span class="check" aria-hidden="true">✓</span> Plano com etapas e prazos</li>
           </ul>
         </div>
 
         <div class="card panel">
-          <h4>Técnica + previsibilidade</h4>
-          <p>Objetivo: resolver bem feito, com critérios e acompanhamento quando indicado.</p>
-          <ul class="list">
-            <li><span class="dot"></span> Planejamento baseado em diagnóstico</li>
-            <li><span class="dot"></span> Conduta focada em preservar estrutura dental</li>
-            <li><span class="dot"></span> Pós-atendimento com orientações claras</li>
+          <h3>2) Tratamento + orientações</h3>
+          <p>Condução cuidadosa e instruções claras para o pós-atendimento.</p>
+          <ul class="bullets">
+            <li><span class="check" aria-hidden="true">✓</span> Foco em conforto durante o procedimento</li>
+            <li><span class="check" aria-hidden="true">✓</span> Acompanhamento quando indicado</li>
+            <li><span class="check" aria-hidden="true">✓</span> Comunicação simples (sem terrorismo)</li>
           </ul>
         </div>
       </div>
@@ -492,44 +561,32 @@
   <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
-      <div class="sectionHeader">
+      <div class="sectionHead">
         <div>
-          <h3>Dúvidas comuns</h3>
-          <p>Respostas objetivas — e se sua dúvida for específica, me chama no WhatsApp.</p>
+          <h2>Dúvidas frequentes</h2>
+          <p>Se quiser, manda sua dúvida no WhatsApp que eu te respondo de forma objetiva.</p>
         </div>
       </div>
 
       <div class="faq">
         <div class="qa">
-          <button class="q" type="button">
-            <span>Canal dói?</span>
-            <small>+</small>
-          </button>
-          <div class="a"><p>O objetivo é controlar a dor. Cada caso tem uma história, mas a experiência moderna é focada em conforto e redução de sensibilidade.</p></div>
+          <button class="q" type="button"><span>Canal dói?</span><small>+</small></button>
+          <div class="a"><p>O objetivo é tratar a causa e controlar dor/sensibilidade. A experiência moderna é focada em conforto, e cada caso é conduzido conforme o diagnóstico.</p></div>
         </div>
 
         <div class="qa">
-          <button class="q" type="button">
-            <span>Precisa fazer tudo no mesmo dia?</span>
-            <small>+</small>
-          </button>
-          <div class="a"><p>Depende do diagnóstico e do seu quadro. Algumas urgências priorizam sair da dor; em outros casos, dá para planejar com calma e previsibilidade.</p></div>
+          <button class="q" type="button"><span>Precisa fazer tudo no mesmo dia?</span><small>+</small></button>
+          <div class="a"><p>Depende do quadro. Em urgências, priorizo sair da dor com segurança. Em outros casos, dá para planejar com calma e previsibilidade.</p></div>
         </div>
 
         <div class="qa">
-          <button class="q" type="button">
-            <span>Quanto custa?</span>
-            <small>+</small>
-          </button>
-          <div class="a"><p>Eu preciso avaliar o dente, exames e complexidade. Eu te explico o plano e os valores com transparência antes de iniciar.</p></div>
+          <button class="q" type="button"><span>Quanto custa?</span><small>+</small></button>
+          <div class="a"><p>O valor varia conforme a complexidade do dente e o planejamento. Eu explico etapas e valores antes de iniciar.</p></div>
         </div>
 
         <div class="qa">
-          <button class="q" type="button">
-            <span>Atende urgência?</span>
-            <small>+</small>
-          </button>
-          <div class="a"><p>Quando possível, sim. Me chama no WhatsApp com sua queixa e, se tiver, foto/radiografia para eu orientar o melhor caminho.</p></div>
+          <button class="q" type="button"><span>Atende urgência?</span><small>+</small></button>
+          <div class="a"><p>Quando possível, sim. Me chama no WhatsApp com sua queixa e, se tiver, radiografia/foto para orientar o melhor caminho.</p></div>
         </div>
       </div>
     </div>
@@ -538,39 +595,38 @@
   <!-- Contato -->
   <section class="section" id="contato">
     <div class="container">
-      <div class="sectionHeader">
+      <div class="sectionHead">
         <div>
-          <h3>Contato e localização</h3>
-          <p>Jardim Paulista • Avenida Nove de Julho, 3229, conjunto 1506 • São Paulo</p>
+          <h2>Contato e localização</h2>
+          <p>Avenida Nove de Julho, 3229, conjunto 1506 • Jardim Paulista • São Paulo</p>
         </div>
       </div>
 
       <div class="contactGrid">
         <div class="card panel">
-          <h4>Agendamento</h4>
-          <p><strong>WhatsApp:</strong> (11) 99480-2149</p>
-          <p style="margin-top:8px"><strong>Horários:</strong><br>
+          <h3>Agendamento</h3>
+          <p><b>WhatsApp:</b> (11) 99480-2149</p>
+          <p style="margin-top:8px"><b>Horários:</b><br>
             Seg–Sex: 08:00–19:00<br>
             Sáb: 09:00–12:00
           </p>
 
-          <div class="heroActions" style="margin-top:16px">
+          <div class="heroActions" style="margin-top:14px">
             <a class="btn btnPrimary" id="btnContactWhats" target="_blank" rel="noopener">Agendar no WhatsApp</a>
-            <a class="btn" href="tel:+5511994802149">Ligar agora</a>
+            <a class="btn" href="tel:+5511994802149">Ligar</a>
           </div>
 
-          <p style="margin-top:14px; font-size:12px; color:var(--muted)">
-            Dica: mande sua queixa e, se tiver, foto do dente/radiografia. Isso acelera sua triagem.
+          <p style="margin-top:12px; font-size:12px; color:var(--muted2)">
+            Para agilizar: me mande sua queixa e, se tiver, radiografia/foto do dente.
           </p>
         </div>
 
         <div class="map" aria-label="Mapa">
-          <!-- Troque o src abaixo pelo seu link de incorporação do Google Maps -->
           <iframe
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Avenida%20Nove%20de%20Julho%203229%20S%C3%A3o%20Paulo&output=embed"
-            title="Mapa - Avenida Nove de Julho 3229, São Paulo">
+            title="Mapa - Av. Nove de Julho 3229, São Paulo">
           </iframe>
         </div>
       </div>
@@ -589,9 +645,9 @@
     </div>
   </footer>
 
-  <!-- WhatsApp floating -->
+  <!-- Floating WhatsApp -->
   <div class="waFloat" aria-label="Atalho WhatsApp">
-    <div class="waHint">Agende por WhatsApp 👇</div>
+    <div class="waHint">Agende por WhatsApp</div>
     <a class="waBtn" id="btnFloatWhats" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path d="M20 11.8a7.8 7.8 0 10-14.7 3.3L4 20l5-1.3a7.8 7.8 0 0011-6.9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -601,20 +657,18 @@
   </div>
 
   <script>
-    // ====== WhatsApp links (com mensagem pronta) ======
+    // WhatsApp
     const phone = "5511994802149";
     const msg = encodeURIComponent("Oi, Dra. Maria Vitória! Quero agendar uma avaliação. Minha queixa é: ");
-    const waLink = `https://wa.me/${phone}?text=${msg}`;
+    const wa = `https://wa.me/${phone}?text=${msg}`;
 
-    const ids = [
-      "btnTopWhats","btnHeroWhats","btnCardWhats","btnContactWhats","btnFloatWhats","footWhats"
-    ];
-    ids.forEach(id => {
-      const el = document.getElementById(id);
-      if(el) el.href = waLink;
-    });
+    ["btnTopWhats","btnHeroWhats","btnCardWhats","btnFlowWhats","btnContactWhats","btnFloatWhats","footWhats"]
+      .forEach(id => {
+        const el = document.getElementById(id);
+        if(el) el.href = wa;
+      });
 
-    // ====== FAQ accordion ======
+    // FAQ accordion
     document.querySelectorAll(".qa").forEach(box => {
       const btn = box.querySelector(".q");
       const ans = box.querySelector(".a");
@@ -630,7 +684,7 @@
       });
     });
 
-    // ====== Year ======
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
