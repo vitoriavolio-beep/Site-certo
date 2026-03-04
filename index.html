@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -10,7 +9,6 @@
 
   <style>
     :root{
-      /* Nude / bege premium */
       --bg: #f7f2ea;
       --paper: #ffffff;
       --sand: #f3ece2;
@@ -21,10 +19,8 @@
       --line: rgba(28,26,23,.10);
       --shadow: 0 18px 60px rgba(28,26,23,.12);
       --shadow2: 0 10px 28px rgba(28,26,23,.10);
-
-      /* detalhe sofisticado */
-      --accent:#b08a6b;     /* nude dourado */
-      --accent2:#8b6b51;    /* mais escuro */
+      --accent:#b08a6b;
+      --accent2:#8b6b51;
       --radius: 18px;
       --max: 980px;
     }
@@ -44,7 +40,7 @@
     a{ color: inherit; text-decoration: none; }
     .container{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
 
-    /* Topbar (1 coluna: nav vira lista simples) */
+    /* Topbar */
     .topbar{
       position: sticky; top:0; z-index: 40;
       background: rgba(247,242,234,.82);
@@ -62,38 +58,8 @@
       display:flex; align-items:center; gap: 10px;
       min-width: 240px;
     }
-    .mark{
-      width: 40px; height: 40px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(176,138,107,.22), rgba(255,255,255,.7));
-      border: 1px solid rgba(176,138,107,.22);
-      box-shadow: 0 10px 24px rgba(176,138,107,.14);
-      display:grid; place-items:center;
-      font-weight: 900;
-      color: rgba(139,107,81,.95);
-      letter-spacing: .5px;
-    }
     .brand b{ display:block; font-size: 13px; letter-spacing: -.2px; }
     .brand span{ display:block; font-size: 12px; color: var(--muted2); margin-top: 2px; }
-
-    .navLinks{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-      align-items:center;
-    }
-    .navLinks a{
-      font-size: 12px;
-      color: rgba(28,26,23,.78);
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
-    .navLinks a:hover{
-      background: rgba(255,255,255,.6);
-      border-color: rgba(176,138,107,.20);
-    }
 
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
@@ -114,7 +80,7 @@
       border-color: rgba(176,138,107,.32);
     }
 
-    /* HERO - banner imagem + card central (tudo 1 coluna) */
+    /* HERO */
     .hero{ padding: 16px 0 0; }
     .banner{
       border-radius: 22px;
@@ -138,18 +104,8 @@
       box-shadow: var(--shadow);
       padding: 18px;
     }
-    .eyebrow{
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(176,138,107,.12);
-      border: 1px solid rgba(176,138,107,.18);
-      color: rgba(139,107,81,.95);
-      font-size: 12px;
-      font-weight: 750;
-    }
     h1{
-      margin: 12px 0 0;
+      margin: 0;
       font-size: 34px;
       letter-spacing: -1px;
       line-height: 1.06;
@@ -160,46 +116,13 @@
       font-size: 15px;
       max-width: 70ch;
     }
-    .heroActions{
-      margin-top: 14px;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-    }
-    .miniRow{
-      margin-top: 12px;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 8px;
-    }
-    .pill{
-      font-size: 12px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.70);
-      color: rgba(28,26,23,.76);
-    }
 
-    /* Sections - 1 coluna sempre */
+    /* Sections */
     section{ padding: 34px 0; }
-    .sectionTitle{
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: -.5px;
-    }
-    .sectionSub{
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      max-width: 80ch;
-    }
+    .sectionTitle{ margin: 0; font-size: 22px; letter-spacing: -.5px; }
+    .sectionSub{ margin: 8px 0 0; color: var(--muted); font-size: 14px; max-width: 80ch; }
 
-    .stack{
-      margin-top: 14px;
-      display:grid;
-      gap: 12px;
-    }
+    .stack{ margin-top: 14px; display:grid; gap: 12px; }
     .card{
       background: var(--paper);
       border: 1px solid rgba(176,138,107,.18);
@@ -207,35 +130,10 @@
       box-shadow: var(--shadow2);
       padding: 16px;
     }
-    .card h3{
-      margin: 0;
-      font-size: 15px;
-      letter-spacing: -.2px;
-    }
-    .card p{
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
+    .card h3{ margin: 0; font-size: 15px; letter-spacing: -.2px; }
+    .card p{ margin: 8px 0 0; color: var(--muted); font-size: 13px; }
 
-    /* Step list (1 coluna) */
-    .step{
-      display:flex;
-      gap: 12px;
-      align-items:flex-start;
-    }
-    .num{
-      width: 36px; height: 36px;
-      border-radius: 14px;
-      border: 1px solid rgba(176,138,107,.22);
-      background: linear-gradient(135deg, rgba(176,138,107,.18), rgba(255,255,255,.9));
-      display:grid; place-items:center;
-      font-weight: 900;
-      color: rgba(139,107,81,.95);
-      flex: 0 0 auto;
-    }
-
-    /* ==== NOVO: MÉTRICAS ==== */
+    /* Metrics */
     .metricsWrap{
       margin-top: 12px;
       border-radius: 18px;
@@ -257,16 +155,10 @@
       background: rgba(255,255,255,.75);
       border: 1px solid rgba(28,26,23,.08);
     }
-    .metric b{
-      font-size: 14px;
-      letter-spacing: -.2px;
-    }
-    .metric span{
-      font-size: 12px;
-      color: var(--muted2);
-    }
+    .metric b{ font-size: 14px; letter-spacing: -.2px; }
+    .metric span{ font-size: 12px; color: var(--muted2); }
 
-    /* ==== NOVO: FEEDBACKS ==== */
+    /* Feedbacks */
     .quote{
       position: relative;
       padding: 16px;
@@ -298,7 +190,7 @@
       font-weight: 800;
     }
 
-    /* FAQ - simples e elegante */
+    /* FAQ */
     .qa{
       border: 1px solid rgba(176,138,107,.18);
       border-radius: 16px;
@@ -342,11 +234,7 @@
       margin-top: 12px;
       align-items:center;
     }
-    .small{
-      font-size: 12px;
-      color: var(--muted2);
-      margin-top: 10px;
-    }
+    .small{ font-size: 12px; color: var(--muted2); margin-top: 10px; }
     .map{
       margin-top: 12px;
       border-radius: 18px;
@@ -396,7 +284,6 @@
     @media (max-width: 520px){
       .bannerImg{ height: 320px; }
       h1{ font-size: 30px; }
-      .navLinks{ display:none; } /* fica minimal no mobile */
     }
   </style>
 </head>
@@ -406,23 +293,15 @@
   <div class="topbar">
     <div class="container">
       <div class="topbarInner">
+        <!-- ESQUERDA: só o nome -->
         <a class="brand" href="#topo" aria-label="Ir para o topo">
-          <div class="mark" aria-hidden="true">MV</div>
           <div>
             <b>Dra. Maria Vitória Avolio</b>
             <span>Endodontia • Jardim Paulista • São Paulo</span>
           </div>
         </a>
 
-        <div class="navLinks" aria-label="Navegação">
-          <a href="#tratamentos">Tratamentos</a>
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#feedbacks">Feedbacks</a>
-          <a href="#faq">Dúvidas</a>
-          <a href="#contato">Contato</a>
-        </div>
-
+        <!-- DIREITA: só o botão -->
         <a class="btn btnPrimary" id="btnTopWhats" target="_blank" rel="noopener">Agendar</a>
       </div>
     </div>
@@ -437,25 +316,13 @@
 
       <div class="heroCardWrap">
         <div class="heroCard">
-          <div class="eyebrow">Endodontia (Tratamento de Canal) • Luxo clean</div>
-
-          <h1>Atendimento elegante, acolhedor e técnico — com foco em resolver a sua dor com segurança.</h1>
+          <h1>Tratamento de canal especializado em sessão única</h1>
 
           <p class="lead">
             Dor de dente, sensibilidade, dente escurecido ou suspeita de infecção?
-            Eu avalio com calma, explico seu caso com clareza e conduzo o tratamento de forma criteriosa — sem pressa e sem terrorismo.
+            Eu avalio com calma, explico seu caso com clareza e conduzo o tratamento com técnica e previsibilidade.
           </p>
-
-          <div class="heroActions">
-            <a class="btn btnPrimary" id="btnHeroWhats" target="_blank" rel="noopener">Falar no WhatsApp</a>
-            <a class="btn" href="#contato">Endereço e horários</a>
-          </div>
-
-          <div class="miniRow" aria-label="Destaques rápidos">
-            <span class="pill">✅ Explicação simples do caso</span>
-            <span class="pill">✅ Transparência de etapas e valores</span>
-            <span class="pill">✅ Atendimento particular</span>
-          </div>
+          <!-- removi os botões do hero conforme pedido -->
         </div>
       </div>
     </div>
@@ -490,42 +357,23 @@
   <section id="como-funciona">
     <div class="container">
       <h2 class="sectionTitle">Como funciona</h2>
-      <p class="sectionSub">Fluxo objetivo, elegante e previsível — você entende o que está acontecendo e o que vem depois.</p>
+      <p class="sectionSub">Fluxo objetivo e previsível — você entende o que está acontecendo e o que vem depois.</p>
 
       <div class="stack">
         <div class="card">
-          <div class="step">
-            <div class="num">1</div>
-            <div>
-              <h3>Avaliação e diagnóstico</h3>
-              <p>Eu escuto sua queixa, avalio e explico as hipóteses e o plano de tratamento com transparência.</p>
-            </div>
-          </div>
+          <h3>1) Avaliação e diagnóstico</h3>
+          <p>Eu escuto sua queixa, avalio e explico as hipóteses e o plano de tratamento com transparência.</p>
         </div>
 
         <div class="card">
-          <div class="step">
-            <div class="num">2</div>
-            <div>
-              <h3>Tratamento e controle de sintomas</h3>
-              <p>Condução cuidadosa, com foco em conforto e resolução da causa — sem correria.</p>
-            </div>
-          </div>
+          <h3>2) Tratamento e controle de sintomas</h3>
+          <p>Condução cuidadosa, com foco em conforto e resolução da causa.</p>
         </div>
 
         <div class="card">
-          <div class="step">
-            <div class="num">3</div>
-            <div>
-              <h3>Orientações e acompanhamento</h3>
-              <p>Você sai com orientações claras e acompanhamento quando indicado, com comunicação simples.</p>
-            </div>
-          </div>
+          <h3>3) Orientações e acompanhamento</h3>
+          <p>Você sai com orientações claras e acompanhamento quando indicado.</p>
         </div>
-      </div>
-
-      <div class="contactLine" style="margin-top:14px">
-        <a class="btn btnPrimary" id="btnFlowWhats" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
       </div>
     </div>
   </section>
@@ -545,7 +393,6 @@
           <p>Eu explico o caso com calma, sem julgamento, e te ajudo a escolher o melhor caminho com segurança e transparência.</p>
         </div>
 
-        <!-- MÉTRICAS (logo abaixo do Sobre) -->
         <div class="metricsWrap" aria-label="Métricas de experiência">
           <div class="metric">
             <b>+1000 canais realizados</b>
@@ -560,11 +407,11 @@
     </div>
   </section>
 
-  <!-- Feedbacks (logo depois do Sobre) -->
+  <!-- Feedbacks -->
   <section id="feedbacks">
     <div class="container">
       <h2 class="sectionTitle">Feedbacks de pacientes</h2>
-      <p class="sectionSub">Depoimentos reais variam — mas a prioridade é sempre: acolhimento, clareza e técnica.</p>
+      <p class="sectionSub">A prioridade é sempre: acolhimento, clareza e técnica.</p>
 
       <div class="stack">
         <div class="quote">
@@ -585,7 +432,7 @@
     </div>
   </section>
 
-  <!-- FAQ (perguntas em seguida) -->
+  <!-- FAQ -->
   <section id="faq">
     <div class="container">
       <h2 class="sectionTitle">Dúvidas frequentes</h2>
@@ -686,7 +533,7 @@
     const msg = encodeURIComponent("Oi, Dra. Maria Vitória! Quero agendar uma avaliação. Minha queixa é: ");
     const wa = `https://wa.me/${phone}?text=${msg}`;
 
-    ["btnTopWhats","btnHeroWhats","btnFlowWhats","btnContactWhats","btnFloatWhats"]
+    ["btnTopWhats","btnContactWhats","btnFloatWhats"]
       .forEach(id => { const el = document.getElementById(id); if(el) el.href = wa; });
 
     // FAQ accordion (com aria-expanded)
@@ -698,12 +545,10 @@
       btn.addEventListener("click", () => {
         const isOpen = ans.style.maxHeight && ans.style.maxHeight !== "0px";
 
-        // fecha todos
         document.querySelectorAll(".a").forEach(a => a.style.maxHeight = "0px");
         document.querySelectorAll(".q small").forEach(s => s.textContent = "+");
         document.querySelectorAll(".q").forEach(q => q.setAttribute("aria-expanded", "false"));
 
-        // abre o clicado
         if(!isOpen){
           ans.style.maxHeight = ans.scrollHeight + "px";
           plus.textContent = "–";
