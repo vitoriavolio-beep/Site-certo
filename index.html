@@ -137,7 +137,7 @@
       gap: 12px;
     }
 
-    /* 2 colunas (sobre e como funciona) */
+    /* 2 colunas */
     .split{
       margin-top: 14px;
       display:grid;
@@ -145,6 +145,8 @@
       gap: 14px;
       align-items: start;
     }
+
+    /* Media cards */
     .mediaCard{
       background: rgba(255,255,255,.92);
       border: 1px solid rgba(176,138,107,.18);
@@ -154,21 +156,21 @@
     }
     .mediaCard img{
       width:100%;
-      height:100%;
       display:block;
       object-fit: cover;
     }
-    .mediaPad{
-      padding: 10px;
-      background: rgba(255,255,255,.86);
-    }
-    .mediaNote{
-      font-size: 12px;
-      color: var(--muted2);
-      margin-top: 8px;
+
+    /* RX do meio: altura fixa elegante */
+    .mediaCardRX img{
+      height: 420px;
     }
 
-    /* Texto "em evidência" */
+    /* Foto Dra: altura proporcional ao bloco de texto */
+    .mediaCardPhoto img{
+      height: 360px;
+    }
+
+    /* Texto em evidência */
     .highlight{
       background: linear-gradient(135deg, rgba(243,236,226,.90), rgba(255,255,255,.96));
       border: 1px solid rgba(176,138,107,.18);
@@ -341,6 +343,8 @@
     @media (max-width: 860px){
       .cards3{ grid-template-columns: 1fr; }
       .split{ grid-template-columns: 1fr; }
+      .mediaCardRX img{ height: auto; }
+      .mediaCardPhoto img{ height: auto; }
     }
     @media (max-width: 520px){
       .bannerImg{ height: 320px; }
@@ -351,7 +355,6 @@
 </head>
 
 <body>
-  <!-- Topbar -->
   <div class="topbar">
     <div class="container">
       <div class="topbarInner">
@@ -367,7 +370,6 @@
     </div>
   </div>
 
-  <!-- Hero -->
   <header class="hero" id="topo">
     <div class="container">
       <div class="banner" aria-label="Foto do consultório">
@@ -377,7 +379,6 @@
       <div class="heroCardWrap">
         <div class="heroCard">
           <h1>Tratamento de canal especializado em sessão única</h1>
-
           <p class="lead">
             A clínica tem seu foco de atuação na prevenção e nos atendimentos de endodontia,
             resolvendo casos simples e complexos da especialidade, aliados à estética dental.
@@ -387,7 +388,6 @@
     </div>
   </header>
 
-  <!-- Tratamentos -->
   <section id="tratamentos">
     <div class="container">
       <h2 class="sectionTitle">Tratamentos</h2>
@@ -411,14 +411,12 @@
     </div>
   </section>
 
-  <!-- Como funciona (caixinhas à esquerda + RX à direita) -->
   <section id="como-funciona">
     <div class="container">
       <h2 class="sectionTitle">Como funciona</h2>
       <p class="sectionSub">Fluxo objetivo e previsível — você entende o que está acontecendo e o que vem depois.</p>
 
       <div class="split">
-        <!-- esquerda: caixinhas (como estava) -->
         <div class="stack" style="margin-top:0">
           <div class="card">
             <h3>1) Avaliação e diagnóstico</h3>
@@ -436,15 +434,14 @@
           </div>
         </div>
 
-        <!-- direita: imagem RX -->
-        <div class="mediaCard" aria-label="Imagem de radiografia">
-          <img src="rx.jpeg" alt="Radiografia - exemplo clínico" />
+        <!-- FOTO DO MEIO: RX.jpeg -->
+        <div class="mediaCard mediaCardRX" aria-label="Imagem de radiografia">
+          <img src="RX.jpeg" alt="Radiografia - exemplo clínico" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sobre (texto em evidência à esquerda + foto 1.jpeg à direita) -->
   <section id="sobre">
     <div class="container">
       <h2 class="sectionTitle">Sobre a Dra. Maria Vitória</h2>
@@ -471,14 +468,14 @@
           </div>
         </div>
 
-        <div class="mediaCard" aria-label="Foto da doutora">
+        <!-- FOTO DRA: tamanho ajustado -->
+        <div class="mediaCard mediaCardPhoto" aria-label="Foto da doutora">
           <img src="1.jpeg" alt="Dra. Maria Vitória Avolio" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Feedbacks -->
   <section id="feedbacks">
     <div class="container">
       <h2 class="sectionTitle">Feedbacks de pacientes</h2>
@@ -503,7 +500,6 @@
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq">
     <div class="container">
       <h2 class="sectionTitle">Dúvidas frequentes</h2>
@@ -549,7 +545,6 @@
     </div>
   </section>
 
-  <!-- Contato -->
   <section id="contato">
     <div class="container">
       <h2 class="sectionTitle">Contato</h2>
@@ -587,7 +582,6 @@
     </div>
   </footer>
 
-  <!-- WhatsApp floating -->
   <div class="waFloat" aria-label="Atalho WhatsApp">
     <div class="waHint">Agende por WhatsApp</div>
     <a class="waBtn" id="btnFloatWhats" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
