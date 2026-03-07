@@ -290,13 +290,25 @@
       max-width:70ch;
     }
 
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
+    .carousel-wrap{
+      position:relative;
     }
 
-    .gallery-item{
+    .carousel-track{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      scrollbar-width:none;
+      padding:4px 2px;
+    }
+
+    .carousel-track::-webkit-scrollbar{
+      display:none;
+    }
+
+    .carousel-item{
+      flex:0 0 calc(33.333% - 10px);
       border:1px solid var(--line);
       border-radius:20px;
       overflow:hidden;
@@ -305,11 +317,32 @@
       aspect-ratio:4 / 3;
     }
 
-    .gallery-item img{
+    .carousel-item img{
       width:100%;
       height:100%;
       object-fit:cover;
     }
+
+    .carousel-arrow{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.95);
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      cursor:pointer;
+      z-index:2;
+    }
+
+    .carousel-arrow.left{left:-10px}
+    .carousel-arrow.right{right:-10px}
 
     .cta-banner{
       border:1px solid var(--gold-line);
@@ -462,14 +495,20 @@
 
       .about,
       .contact-grid,
-      .treatments,
-      .gallery-grid{
+      .treatments{
         grid-template-columns:1fr;
       }
 
       .about-photo{
         min-height:280px;
       }
+
+      .carousel-item{
+        flex:0 0 85%;
+      }
+
+      .carousel-arrow.left{left:4px}
+      .carousel-arrow.right{right:4px}
     }
   </style>
 </head>
@@ -616,14 +655,17 @@
         <p>Um espaço pensado para acolhimento, conforto e atendimento com calma.</p>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="5.jpeg" alt="Consultório 1"></div>
-        <div class="gallery-item"><img src="4.jpeg" alt="Consultório 2"></div>
-        <div class="gallery-item"><img src="xx.jpeg" alt="Consultório 3"></div>
-        <div class="gallery-item"><img src="RX.jpeg" alt="Raio-x do consultório"></div>
-        <div class="gallery-item"><img src="este.jpeg" alt="Consultório 4"></div>
-        <div class="gallery-item"><img src="recep.jpeg" alt="Recepção 1"></div>
-        <div class="gallery-item"><img src="recep2.jpeg" alt="Recepção 2"></div>
+      <div class="carousel-wrap">
+        <button class="carousel-arrow left" type="button" aria-label="Anterior" onclick="scrollGallery(-1)">‹</button>
+        <div class="carousel-track" id="galleryTrack">
+          <div class="carousel-item"><img src="5.jpeg" alt="Consultório 1"></div>
+          <div class="carousel-item"><img src="4.jpeg" alt="Consultório 2"></div>
+          <div class="carousel-item"><img src="xx.jpeg" alt="Consultório 3"></div>
+          <div class="carousel-item"><img src="RX.jpeg" alt="Raio-x do consultório"></div>
+          <div class="carousel-item"><img src="este.jpeg" alt="Consultório 4"></div>
+          <div class="carousel-item"><img src="recep2.jpeg" alt="Recepção"></div>
+        </div>
+        <button class="carousel-arrow right" type="button" aria-label="Próxima" onclick="scrollGallery(1)">›</button>
       </div>
     </div>
   </section>
@@ -779,6 +821,14 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    function scrollGallery(direction){
+      const track = document.getElementById('galleryTrack');
+      const item = track.querySelector('.carousel-item');
+      if(!item) return;
+      const amount = item.offsetWidth + 14;
+      track.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    }
 
     function sendMail(e){
       e.preventDefault();
