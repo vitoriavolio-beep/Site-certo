@@ -212,6 +212,16 @@
 
     .map-wrap{overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
 
+    .floating-wa{
+      position:fixed;right:18px;bottom:18px;z-index:80;
+      display:inline-flex;align-items:center;justify-content:center;
+      width:60px;height:60px;border-radius:999px;
+      background:linear-gradient(180deg, rgba(182,154,99,.98), rgba(214,193,149,.96));
+      border:1px solid rgba(182,154,99,.42);color:#1f1706;
+      box-shadow:0 18px 40px rgba(15,23,42,.18);
+    }
+    .floating-wa svg{width:26px;height:26px}
+
     .foot{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
     .foot-row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
     .foot-links{display:flex;gap:12px;flex-wrap:wrap}
@@ -251,7 +261,7 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <div class="eyebrow">Atendimento particular • Jardim Paulista</div>
-            <h2>Tratamento de canal com clareza, cuidado e conforto.</h2>
+            <h2>Tratamento de canal em São Paulo, com clareza, cuidado e conforto.</h2>
             <p>
               Atendimento acolhedor para quem quer resolver dor, inflamação ou necessidade de tratamento endodôntico com segurança, explicação clara e um plano objetivo.
             </p>
@@ -264,8 +274,9 @@
             <div class="trust-row">
               <div class="trust-pill">Graduação pela UNICAMP</div>
               <div class="trust-pill">Especialista em Endodontia</div>
-              <div class="trust-pill">WhatsApp direto</div>
+              <div class="trust-pill">Avaliações no Google</div>
             </div>
+          </div>
           </div>
 
           <div class="hero-side">
@@ -291,8 +302,15 @@
                 <div class="quick-item">
                   <div class="dot"></div>
                   <div>
-                    <b>Localização premium</b>
+                    <b>Fácil acesso</b>
                     <span>Av. Nove de Julho, 3229, conj. 1506, Jardim Paulista.</span>
+                  </div>
+                </div>
+                <div class="quick-item">
+                  <div class="dot"></div>
+                  <div>
+                    <b>Boa reputação online</b>
+                    <span>Adicione aqui sua nota e seus comentários do Google para aumentar confiança.</span>
                   </div>
                 </div>
               </div>
@@ -336,28 +354,7 @@
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h3>Por que esse site converte melhor para anúncio</h3>
-        <p>Ele reduz distrações e deixa a jornada do paciente mais simples: entender, confiar e clicar no WhatsApp.</p>
-      </div>
-      <div class="benefits">
-        <div class="benefit">
-          <h4>Mensagem direta</h4>
-          <p>O paciente entende em segundos quem você é, o que faz e como entrar em contato.</p>
-        </div>
-        <div class="benefit">
-          <h4>Mais autoridade</h4>
-          <p>Formação, especialidade e localização aparecem cedo, o que ajuda na confiança.</p>
-        </div>
-        <div class="benefit">
-          <h4>Mais clique no WhatsApp</h4>
-          <p>Chamadas fortes ao longo da página aumentam a chance de contato imediato.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <section id="tratamentos">
     <div class="wrap">
@@ -509,6 +506,13 @@
       </div>
     </div>
   </section>
+
+  <a class="floating-wa" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20 12a8 8 0 0 1-12.5 6.7L4 20l1.4-3.2A8 8 0 1 1 20 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8.5 10.2c.2-.5.4-.6.8-.6h.5c.2 0 .5.1.6.5l.5 1.3c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.2.5.7 1.2 1.3 1.7.6.5 1.4 1 2 .9.2 0 .3-.1.4-.2l.6-.7c.2-.2.5-.3.8-.2l1.4.5c.3.1.5.4.5.7 0 .8-.3 1.5-1 1.8-1 .5-2.4.5-4.4-.4-2.2-1-4-3.3-4.3-4.6-.2-.9 0-1.7.3-2.4Z" fill="currentColor" opacity=".25"/>
+    </svg>
+  </a>
 
   <footer class="foot">
     <div class="wrap foot-row">
