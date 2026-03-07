@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dra. Maria Vitória Avolio | Endodontia em São Paulo</title>
-  <meta name="description" content="Tratamento de canal com atendimento acolhedor, explicação clara e foco em conforto. Dra. Maria Vitória Avolio — UNICAMP, especialista em Endodontia pela São Leopoldo Mandic. Jardim Paulista, São Paulo." />
+  <meta name="description" content="Tratamento de canal com atendimento acolhedor, explicação clara e foco em conforto. Dra. Maria Vitória Avolio — Graduação em Odontologia pela UNICAMP e Especialista em Endodontia pela São Leopoldo Mandic." />
   <meta name="theme-color" content="#ffffff" />
+
   <style>
     :root{
       --bg:#fff;
@@ -15,11 +16,9 @@
       --gold:#b69a63;
       --gold-soft:rgba(182,154,99,.12);
       --gold-line:rgba(182,154,99,.28);
-      --card:#ffffff;
       --shadow:0 18px 50px rgba(15,23,42,.08);
       --shadow-soft:0 10px 24px rgba(15,23,42,.06);
       --radius:24px;
-      --radius-sm:18px;
       --max:1120px;
     }
 
@@ -40,41 +39,88 @@
     .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
 
     .topbar{
-      position:sticky;top:0;z-index:50;
+      position:sticky;
+      top:0;
+      z-index:50;
       background:rgba(255,255,255,.82);
       backdrop-filter:blur(14px);
       border-bottom:1px solid var(--line);
     }
+
     .topbar-inner{
-      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
       padding:14px 0;
     }
-    .brand{display:flex;align-items:center;gap:12px}
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
     .mark{
-      width:40px;height:40px;border-radius:14px;
+      width:40px;
+      height:40px;
+      border-radius:14px;
       background:linear-gradient(135deg, rgba(182,154,99,.95), rgba(221,203,161,.95));
       box-shadow:0 10px 24px rgba(182,154,99,.24);
       border:1px solid rgba(182,154,99,.35);
     }
-    .brand h1{margin:0;font-size:14px;line-height:1.1}
-    .brand small{display:block;margin-top:3px;color:var(--muted);font-size:12px}
 
-    .actions{display:flex;gap:10px;align-items:center}
+    .brand h1{
+      margin:0;
+      font-size:14px;
+      line-height:1.1;
+    }
+
+    .brand small{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:13px 16px;border-radius:999px;border:1px solid var(--line);
-      background:#fff;font-weight:700;font-size:14px;box-shadow:var(--shadow-soft);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:13px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-weight:700;
+      font-size:14px;
+      box-shadow:var(--shadow-soft);
       transition:.18s ease;
       cursor:pointer;
     }
-    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow);border-color:var(--gold-line)}
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:var(--shadow);
+      border-color:var(--gold-line);
+    }
+
     .btn.primary{
       background:linear-gradient(180deg, rgba(182,154,99,.98), rgba(214,193,149,.96));
-      border-color:rgba(182,154,99,.42);color:#1f1706;
+      border-color:rgba(182,154,99,.42);
+      color:#1f1706;
     }
-    .btn svg{width:18px;height:18px}
 
-    .hero{padding:42px 0 22px}
+    .hero{
+      padding:42px 0 22px;
+    }
+
     .hero-box{
       border:1px solid var(--line);
       border-radius:32px;
@@ -83,156 +129,325 @@
       overflow:hidden;
       position:relative;
     }
+
     .hero-box:before{
-      content:"";position:absolute;inset:0;
+      content:"";
+      position:absolute;
+      inset:0;
       background:radial-gradient(580px 220px at 20% 0%, rgba(182,154,99,.17), transparent 62%);
       pointer-events:none;
     }
-    .hero-grid{
-      display:grid;grid-template-columns:1.08fr .92fr;gap:0;align-items:stretch;
+
+    .hero-copy{
+      padding:42px 40px 34px;
+      position:relative;
+      z-index:1;
     }
-    .hero-copy{padding:42px 40px 34px;position:relative;z-index:1}
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 12px;border-radius:999px;border:1px solid var(--gold-line);
-      background:var(--gold-soft);color:#5a4720;font-size:12px;font-weight:800;
-      letter-spacing:.35px;text-transform:uppercase;margin-bottom:16px;
-    }
+
     .hero h2{
-      margin:0 0 14px 0;font-size:48px;line-height:1.02;letter-spacing:-1px;max-width:10ch;
+      margin:0 0 14px 0;
+      font-size:48px;
+      line-height:1.02;
+      letter-spacing:-1px;
+      max-width:12ch;
     }
+
     .hero p{
-      margin:0;color:var(--muted);font-size:17px;line-height:1.65;max-width:58ch;
-    }
-    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-    .trust-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .trust-pill{
-      padding:10px 12px;border-radius:999px;border:1px solid var(--line);
-      background:rgba(255,255,255,.74);font-size:13px;font-weight:700;color:#3a4250;
+      margin:0;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.65;
+      max-width:58ch;
     }
 
-    .hero-side{
-      border-left:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.56), rgba(255,255,255,.78));
-      padding:26px;
-      display:flex;align-items:center;
+    .hero-ctas{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:24px;
     }
-    .quick-card{
-      width:100%;border:1px solid var(--line);border-radius:26px;background:#fff;
-      box-shadow:var(--shadow-soft);padding:22px;
-    }
-    .quick-card h3{margin:0 0 10px 0;font-size:22px;letter-spacing:-.4px}
-    .quick-card p{margin:0;color:var(--muted);line-height:1.6}
-    .quick-list{display:grid;gap:10px;margin:18px 0}
-    .quick-item{
-      display:flex;gap:10px;align-items:flex-start;padding:12px 0;border-top:1px solid rgba(16,19,26,.07)
-    }
-    .quick-item:first-child{border-top:none;padding-top:0}
-    .dot{
-      width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg, var(--gold), #e0cfab);margin-top:6px;flex:0 0 auto
-    }
-    .quick-item b{display:block;font-size:14px;margin-bottom:2px}
-    .quick-item span{display:block;color:var(--muted);font-size:14px;line-height:1.45}
 
-    section{padding:58px 0}
-    .section-head{margin-bottom:18px}
-    .section-head h3{margin:0 0 8px 0;font-size:30px;letter-spacing:-.6px}
-    .section-head p{margin:0;color:var(--muted);line-height:1.65;max-width:70ch}
+    section{
+      padding:58px 0;
+    }
+
+    .section-head{
+      margin-bottom:18px;
+    }
+
+    .section-head.empty{
+      margin-bottom:0;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.82);
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .card h4{
+      margin:0 0 8px 0;
+      font-size:22px;
+      letter-spacing:-.4px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:12px;
+      padding:8px 11px;
+      border-radius:999px;
+      border:1px solid var(--gold-line);
+      background:var(--gold-soft);
+      font-size:12px;
+      font-weight:800;
+      color:#5a4720;
+    }
 
     .about{
-      display:grid;grid-template-columns:1fr 420px;gap:16px;align-items:stretch;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:16px;
+      align-items:stretch;
     }
-    .card{
-      border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.82);
-      box-shadow:var(--shadow);padding:24px;
-    }
-    .card h4{margin:0 0 8px 0;font-size:22px;letter-spacing:-.4px}
-    .card p{margin:0;color:var(--muted);line-height:1.7}
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;margin-top:12px;
-      padding:8px 11px;border-radius:999px;border:1px solid var(--gold-line);
-      background:var(--gold-soft);font-size:12px;font-weight:800;color:#5a4720;
-    }
+
     .about-photo{
-      border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
-      background:#fff;min-height:370px;position:relative;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#fff;
+      min-height:370px;
+      position:relative;
     }
-    .about-photo img{width:100%;height:100%;object-fit:cover}
+
+    .about-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
     .about-photo:after{
-      content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0), rgba(182,154,99,.08));pointer-events:none;
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(255,255,255,0), rgba(182,154,99,.08));
+      pointer-events:none;
     }
 
-    .benefits{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+    .treatments{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
     }
-    .benefit{
-      border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.8);
-      box-shadow:var(--shadow-soft);padding:20px;
-    }
-    .benefit h4{margin:0 0 6px 0;font-size:18px}
-    .benefit p{margin:0;color:var(--muted);line-height:1.65}
 
-    .treatments{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .treat{display:flex;gap:14px;align-items:flex-start}
+    .treat{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
     .iconbox{
-      width:74px;height:74px;border-radius:20px;flex:0 0 auto;border:1px solid var(--gold-line);
+      width:74px;
+      height:74px;
+      border-radius:20px;
+      flex:0 0 auto;
+      border:1px solid var(--gold-line);
       background:linear-gradient(135deg, rgba(182,154,99,.26), rgba(227,214,186,.18));
       box-shadow:var(--shadow-soft);
     }
-    .treat h4{margin:0 0 6px 0;font-size:19px}
-    .treat p{margin:0;color:var(--muted);line-height:1.65}
+
+    .treat h4{
+      margin:0 0 6px 0;
+      font-size:19px;
+    }
+
+    .treat p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .section-head h3{
+      margin:0 0 8px 0;
+      font-size:30px;
+      letter-spacing:-.6px;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+      max-width:70ch;
+    }
 
     .cta-banner{
-      border:1px solid var(--gold-line);border-radius:30px;padding:28px;background:
-      radial-gradient(400px 180px at 15% 0%, rgba(182,154,99,.16), transparent 60%),
-      linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.85));
+      border:1px solid var(--gold-line);
+      border-radius:30px;
+      padding:28px;
+      background:
+        radial-gradient(400px 180px at 15% 0%, rgba(182,154,99,.16), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.85));
       box-shadow:var(--shadow);
-      display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
     }
-    .cta-banner h3{margin:0 0 6px 0;font-size:28px;letter-spacing:-.5px}
-    .cta-banner p{margin:0;color:var(--muted);line-height:1.6;max-width:60ch}
+
+    .cta-banner h3{
+      margin:0 0 6px 0;
+      font-size:28px;
+      letter-spacing:-.5px;
+    }
+
+    .cta-banner p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+      max-width:60ch;
+    }
 
     details{
-      border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.82);
-      box-shadow:var(--shadow-soft);padding:16px 18px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.82);
+      box-shadow:var(--shadow-soft);
+      padding:16px 18px;
     }
-    details+details{margin-top:10px}
-    summary{cursor:pointer;list-style:none;font-weight:800;display:flex;justify-content:space-between;gap:14px}
-    summary::-webkit-details-marker{display:none}
-    details p{margin:10px 0 0 0;color:var(--muted);line-height:1.7}
 
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .field{display:grid;gap:8px;margin-top:12px}
-    label{font-size:13px;font-weight:700;color:#3e4754}
-    input,textarea{
-      width:100%;border:1px solid var(--line);border-radius:16px;padding:13px 14px;font:inherit;
-      background:#fff;outline:none;
+    details + details{
+      margin-top:10px;
     }
-    textarea{min-height:120px;resize:vertical}
 
-    .map-wrap{overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:800;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details p{
+      margin:10px 0 0 0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .field{
+      display:grid;
+      gap:8px;
+      margin-top:12px;
+    }
+
+    label{
+      font-size:13px;
+      font-weight:700;
+      color:#3e4754;
+    }
+
+    input, textarea{
+      width:100%;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:13px 14px;
+      font:inherit;
+      background:#fff;
+      outline:none;
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .map-wrap{
+      overflow:hidden;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
 
     .floating-wa{
-      position:fixed;right:18px;bottom:18px;z-index:80;
-      display:inline-flex;align-items:center;justify-content:center;
-      width:60px;height:60px;border-radius:999px;
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:80;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:60px;
+      height:60px;
+      border-radius:999px;
       background:linear-gradient(180deg, rgba(182,154,99,.98), rgba(214,193,149,.96));
-      border:1px solid rgba(182,154,99,.42);color:#1f1706;
+      border:1px solid rgba(182,154,99,.42);
+      color:#1f1706;
       box-shadow:0 18px 40px rgba(15,23,42,.18);
     }
-    .floating-wa svg{width:26px;height:26px}
 
-    .foot{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-    .foot-row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
-    .foot-links{display:flex;gap:12px;flex-wrap:wrap}
+    .floating-wa svg{
+      width:26px;
+      height:26px;
+    }
 
-    @media (max-width: 980px){
-      .hero-grid,.about,.contact-grid{grid-template-columns:1fr}
-      .hero-side{border-left:none;border-top:1px solid var(--line)}
-      .benefits,.treatments{grid-template-columns:1fr}
-      .hero h2{font-size:38px;max-width:12ch}
-      .about-photo{min-height:280px}
-      .actions .btn:not(.primary){display:none}
+    .foot{
+      padding:28px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .foot-row{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .foot-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:980px){
+      .hero h2{
+        font-size:38px;
+        max-width:14ch;
+      }
+
+      .about,
+      .contact-grid,
+      .treatments{
+        grid-template-columns:1fr;
+      }
+
+      .about-photo{
+        min-height:280px;
+      }
     }
   </style>
 </head>
@@ -247,8 +462,11 @@
             <small>Endodontia • São Paulo</small>
           </div>
         </a>
+
         <div class="actions">
-          <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+            WhatsApp
+          </a>
         </div>
       </div>
     </div>
@@ -257,61 +475,19 @@
   <main id="topo" class="hero">
     <div class="wrap">
       <div class="hero-box">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <h2>Tratamento de canal em São Paulo, com clareza, cuidado e conforto.</h2>
-            <p>
-              Atendimento acolhedor para quem quer resolver dor, inflamação ou necessidade de tratamento endodôntico com segurança, explicação clara e um plano objetivo.
-            </p>
+        <div class="hero-copy">
+          <h2>Tratamento de canal em São Paulo, com clareza, cuidado e conforto.</h2>
+          <p>
+            Atendimento acolhedor para quem quer resolver dor, inflamação ou necessidade de tratamento endodôntico com segurança, explicação clara e um plano objetivo.
+          </p>
 
-            <div class="hero-ctas">
-              <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
-              <a class="btn" href="#tratamentos">Ver tratamentos</a>
-            </div>
-<div class="trust-pill">Especialista em Endodontia</div>
-              <div class="trust-pill">Avaliações no Google</div>
-            </div>
-          </div>
-          </div>
-
-          <div class="hero-side">
-            <div class="quick-card">
-              <h3>Atendimento acolhedor e objetivo</h3>
-              <p>Estrutura mais direta para anúncio: promessa clara, autoridade, localização e chamada forte para WhatsApp.</p>
-
-              <div class="quick-list">
-                <div class="quick-item">
-                  <div class="dot"></div>
-                  <div>
-                    <b>Para urgência e avaliação</b>
-                    <span>Ideal para paciente que chega com dor, medo ou dúvida.</span>
-                  </div>
-                </div>
-                <div class="quick-item">
-                  <div class="dot"></div>
-                  <div>
-                    <b>Explicação clara do caso</b>
-                    <span>Você entende o que precisa fazer e quais são as opções.</span>
-                  </div>
-                </div>
-                <div class="quick-item">
-                  <div class="dot"></div>
-                  <div>
-                    <b>Fácil acesso</b>
-                    <span>Av. Nove de Julho, 3229, conj. 1506, Jardim Paulista.</span>
-                  </div>
-                </div>
-                <div class="quick-item">
-                  <div class="dot"></div>
-                  <div>
-                    <b>Boa reputação online</b>
-                    <span>Adicione aqui sua nota e seus comentários do Google para aumentar confiança.</span>
-                  </div>
-                </div>
-              </div>
-
-              <a class="btn primary" style="width:100%" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Falar no WhatsApp agora</a>
-            </div>
+          <div class="hero-ctas">
+            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+              Agendar WhatsApp
+            </a>
+            <a class="btn" href="#tratamentos">
+              Ver tratamentos
+            </a>
           </div>
         </div>
       </div>
@@ -320,10 +496,7 @@
 
   <section id="quem-sou">
     <div class="wrap">
-      <div class="section-head">
-        <h3>Quem sou</h3>
-        <p>Formação sólida, atendimento humano e foco em Endodontia.</p>
-      </div>
+      <div class="section-head empty"></div>
 
       <div class="about">
         <div class="card">
@@ -332,30 +505,34 @@
             <b>Graduação em Odontologia pela UNICAMP</b>.<br>
             <b>Especialista em Endodontia pela São Leopoldo Mandic</b>.
           </p>
+
           <div class="chip">Endodontia • Atendimento acolhedor</div>
+
           <p style="margin-top:14px;">
             Meu foco é que você se sinta seguro(a). Eu explico o diagnóstico, apresento as possibilidades de tratamento e conduzo cada etapa com clareza, calma e responsabilidade.
           </p>
+
           <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
-            <a class="btn" href="#contato">Tirar dúvida</a>
+            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+              Agendar avaliação
+            </a>
           </div>
         </div>
 
         <div class="about-photo">
-          <img src="1.jpeg" alt="Dra. Maria Vitória Avolio" />
+          <img src="1.jpeg" alt="Dra. Maria Vitória Avolio">
         </div>
       </div>
     </div>
   </section>
 
-  
-
   <section id="tratamentos">
     <div class="wrap">
       <div class="section-head">
         <h3>Tratamentos</h3>
-        <p>Uma página de anúncio funciona melhor quando mostra poucos serviços, mas com clareza. Aqui o foco principal é Endodontia.</p>
+        <p>
+          Uma página clara e direta, com foco principal em Endodontia.
+        </p>
       </div>
 
       <div class="treatments">
@@ -364,7 +541,9 @@
             <div class="iconbox"></div>
             <div>
               <h4>Tratamento de canal</h4>
-              <p>Indicado para casos de dor, inflamação, infecção ou necessidade de preservar o dente com segurança.</p>
+              <p>
+                Indicado para casos de dor, inflamação, infecção ou necessidade de preservar o dente com segurança.
+              </p>
             </div>
           </div>
         </div>
@@ -374,7 +553,9 @@
             <div class="iconbox"></div>
             <div>
               <h4>Retratamento endodôntico</h4>
-              <p>Quando um canal já realizado precisa ser reavaliado e tratado novamente.</p>
+              <p>
+                Quando um canal já realizado precisa ser reavaliado e tratado novamente.
+              </p>
             </div>
           </div>
         </div>
@@ -384,7 +565,9 @@
             <div class="iconbox"></div>
             <div>
               <h4>Avaliação e diagnóstico</h4>
-              <p>Consulta com explicação clara do caso, planejamento e orientação sobre as opções.</p>
+              <p>
+                Consulta com explicação clara do caso, planejamento e orientação sobre as opções.
+              </p>
             </div>
           </div>
         </div>
@@ -394,7 +577,9 @@
             <div class="iconbox"></div>
             <div>
               <h4>Urgência odontológica</h4>
-              <p>Para casos de dor intensa ou necessidade de orientação rápida, conforme disponibilidade de agenda.</p>
+              <p>
+                Para casos de dor intensa ou necessidade de orientação rápida, conforme disponibilidade de agenda.
+              </p>
             </div>
           </div>
         </div>
@@ -407,9 +592,14 @@
       <div class="cta-banner">
         <div>
           <h3>Sentindo dor ou precisa avaliar um dente?</h3>
-          <p>Fale direto no WhatsApp para verificar disponibilidade e receber orientação inicial.</p>
+          <p>
+            Fale direto no WhatsApp para verificar disponibilidade e receber orientação inicial.
+          </p>
         </div>
-        <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20estou%20com%20dor%20ou%20preciso%20avaliar%20um%20dente." target="_blank" rel="noopener">Falar agora</a>
+
+        <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20estou%20com%20dor%20ou%20preciso%20avaliar%20um%20dente." target="_blank" rel="noopener">
+          Falar agora
+        </a>
       </div>
     </div>
   </section>
@@ -418,24 +608,37 @@
     <div class="wrap">
       <div class="section-head">
         <h3>Dúvidas frequentes</h3>
-        <p>Essa parte ajuda a quebrar objeções antes do paciente sair da página.</p>
+        <p>
+          Respostas rápidas para ajudar o paciente antes do contato.
+        </p>
       </div>
 
       <details>
         <summary><span>Você atende convênio?</span><span>+</span></summary>
-        <p>O atendimento é particular. Após a avaliação, você recebe explicação do caso e um plano claro.</p>
+        <p>
+          O atendimento é particular. Após a avaliação, você recebe explicação do caso e um plano claro.
+        </p>
       </details>
+
       <details>
         <summary><span>Tenho medo de dentista. Como funciona?</span><span>+</span></summary>
-        <p>O atendimento é conduzido com calma, explicação e respeito ao seu ritmo, especialmente para pacientes ansiosos.</p>
+        <p>
+          O atendimento é conduzido com calma, explicação e respeito ao seu ritmo, especialmente para pacientes ansiosos.
+        </p>
       </details>
+
       <details>
         <summary><span>Atende urgência de dor?</span><span>+</span></summary>
-        <p>Sim, conforme disponibilidade na agenda. O ideal é chamar no WhatsApp e explicar o que está sentindo.</p>
+        <p>
+          Sim, conforme disponibilidade na agenda. O ideal é chamar no WhatsApp e explicar o que está sentindo.
+        </p>
       </details>
+
       <details>
         <summary><span>Onde fica a clínica?</span><span>+</span></summary>
-        <p>Av. Nove de Julho, 3229, conjunto 1506, Jardim Paulista, São Paulo.</p>
+        <p>
+          Av. Nove de Julho, 3229, conjunto 1506, Jardim Paulista, São Paulo.
+        </p>
       </details>
     </div>
   </section>
@@ -444,35 +647,47 @@
     <div class="wrap">
       <div class="section-head">
         <h3>Contato</h3>
-        <p>Você pode me chamar diretamente no WhatsApp ou enviar uma mensagem pelo formulário.</p>
+        <p>
+          Você pode me chamar diretamente no WhatsApp ou enviar uma mensagem pelo formulário.
+        </p>
       </div>
 
       <div class="contact-grid">
         <div class="card">
           <h4>WhatsApp</h4>
           <p>Canal mais rápido para agendar e tirar dúvidas.</p>
+
           <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
-            <a class="btn" href="tel:+5511994802149">Ligar</a>
+            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+              Chamar no WhatsApp
+            </a>
+            <a class="btn" href="tel:+5511994802149">
+              Ligar
+            </a>
           </div>
+
           <div class="chip">Seg a Sex 08h às 19h • Sáb 09h às 12h</div>
         </div>
 
         <div class="card">
           <h4>Enviar mensagem</h4>
+
           <form onsubmit="return sendMail(event)">
             <div class="field">
               <label for="nome">Nome</label>
-              <input id="nome" required placeholder="Seu nome" />
+              <input id="nome" required placeholder="Seu nome">
             </div>
+
             <div class="field">
               <label for="tel">Telefone</label>
-              <input id="tel" required placeholder="(11) 9xxxx-xxxx" />
+              <input id="tel" required placeholder="(11) 9xxxx-xxxx">
             </div>
+
             <div class="field">
               <label for="msg">Mensagem</label>
               <textarea id="msg" required placeholder="Me conte o que você precisa"></textarea>
             </div>
+
             <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
               <button class="btn primary" type="submit">Enviar</button>
               <a class="btn" href="#topo">Voltar ao topo</a>
@@ -489,6 +704,7 @@
         <h3>Localização</h3>
         <p>Jardim Paulista, São Paulo.</p>
       </div>
+
       <div class="map-wrap">
         <iframe
           title="Mapa"
@@ -512,6 +728,7 @@
   <footer class="foot">
     <div class="wrap foot-row">
       <div>© <span id="y"></span> Dra. Maria Vitória Avolio • Avolio Odontologia</div>
+
       <div class="foot-links">
         <a href="https://wa.me/5511994802149" target="_blank" rel="noopener">WhatsApp</a>
         <a href="mailto:vitoriavolio@gmail.com">vitoriavolio@gmail.com</a>
@@ -521,6 +738,7 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
     function sendMail(e){
       e.preventDefault();
       const nome = document.getElementById('nome').value.trim();
