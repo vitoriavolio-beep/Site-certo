@@ -244,24 +244,63 @@
       pointer-events:none;
     }
 
-    .treatments{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
+    .carousel{
+      position:relative;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.82);
+      box-shadow:var(--shadow);
+      padding:18px 56px;
+      overflow:hidden;
     }
 
-    .treat{
+    .carousel-track{
       display:flex;
       gap:14px;
-      align-items:flex-start;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      scroll-snap-type:x mandatory;
+      scrollbar-width:none;
     }
 
-    .iconbox{
-      width:74px;
-      height:74px;
-      border-radius:20px;
-      flex:0 0 auto;
-      border:1px solid var(--gold-line);
+    .carousel-track::-webkit-scrollbar{
+      display:none;
+    }
+
+    .carousel-slide{
+      flex:0 0 calc(33.333% - 10px);
+      scroll-snap-align:start;
+      border-radius:18px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+      aspect-ratio:4 / 3;
+    }
+
+    .carousel-slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .carousel-btn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      border:1px solid var.about-photo:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(255,255,255,0), rgba(182,154,99,.08));
+      pointer-events:none;
+    }
+
+    .carousel{
+      posd var(--gold-line);
       background:linear-gradient(135deg, rgba(182,154,99,.26), rgba(227,214,186,.18));
       box-shadow:var(--shadow-soft);
     }
@@ -448,6 +487,14 @@
       .about-photo{
         min-height:280px;
       }
+
+      .carousel{
+        padding:16px 46px;
+      }
+
+      .carousel-slide{
+        flex:0 0 calc(85% - 8px);
+      }
     }
   </style>
 </head>
@@ -476,57 +523,7 @@
     <div class="wrap">
       <div class="hero-box">
         <div class="hero-copy">
-          <h2>Tratamento de canal em São Paulo, com clareza, cuidado e conforto.</h2>
-          <p>
-            Atendimento acolhedor para quem quer resolver dor, inflamação ou necessidade de tratamento endodôntico com segurança, explicação clara e um plano objetivo.
-          </p>
-
-          <div class="hero-ctas">
-            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
-              Agendar WhatsApp
-            </a>
-            <a class="btn" href="#tratamentos">
-              Ver tratamentos
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <section id="quem-sou">
-    <div class="wrap">
-      <div class="section-head empty"></div>
-
-      <div class="about">
-        <div class="card">
-          <h4>Dra. Maria Vitória Avolio</h4>
-          <p>
-            <b>Graduação em Odontologia pela UNICAMP</b>.<br>
-            <b>Especialista em Endodontia pela São Leopoldo Mandic</b>.
-          </p>
-
-          <div class="chip">Endodontia • Atendimento acolhedor</div>
-
-          <p style="margin-top:14px;">
-            Meu foco é que você se sinta seguro(a). Eu explico o diagnóstico, apresento as possibilidades de tratamento e conduzo cada etapa com clareza, calma e responsabilidade.
-          </p>
-
-          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
-              Agendar avaliação
-            </a>
-          </div>
-        </div>
-
-        <div class="about-photo">
-          <img src="1.jpeg" alt="Dra. Maria Vitória Avolio">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="tratamentos">
+          <h<section id="tratamentos">
     <div class="wrap">
       <div class="section-head">
         <h3>Tratamentos</h3>
@@ -543,6 +540,56 @@
               <h4>Tratamento de canal</h4>
               <p>
                 Indicado para casos de dor, inflamação, infecção ou necessidade de preservar o dente com segurança.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="treat">
+            <div class="iconbox"></div>
+            <div>
+              <h4>Retratamento endodôntico</h4>
+              <p>
+                Quando um canal já realizado precisa ser reavaliado e tratado novamente.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="treat">
+            <div class="iconbox"></div>
+            <div>
+              <h4>Avaliação e dia<div class="wrap">
+      <div class="section-head">
+        <h3>Consultório</h3>
+        <p>Um espaço pensado para acolhimento, conforto e atendimento com calma.</p>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel-btn prev" type="button" aria-label="Foto anterior" onclick="moveCarousel(-1)">‹</button>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><img src="5.jpeg" alt="Consultório 1"></div>
+          <div class="carousel-slide"><img src="4.jpeg" alt="Consultório 2"></div>
+          <div class="carousel-slide"><img src="xx.jpeg" alt="Consultório 3"></div>
+          <div class="carousel-slide"><img src="RX.jpeg" alt="Raio-x do consultório"></div>
+          <div class="carousel-slide"><img src="este.jpeg" alt="Consultório 4"></div>
+          <div class="carousel-slide"><img src="recep.jpeg" alt="Recepção 1"></div>
+          <div class="carousel-slide"><img src="recep2.jpeg" alt="Recepção 2"></div>
+        </div>
+        <button class="carousel-btn next" type="button" aria-label="Próxima foto" onclick="moveCarousel(1)">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section>   <img src="1.jpeg" alt="Dra. Maria Vitória Avolio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consultorio">dicado para casos de dor, inflamação, infecção ou necessidade de preservar o dente com segurança.
               </p>
             </div>
           </div>
@@ -583,6 +630,61 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quem-sou">
+    <div class="wrap">
+      <div class="section-head empty"></div>
+
+      <div class="about">
+        <div class="card">
+          <h4>Dra. Maria Vitória Avolio</h4>
+          <p>
+            <b>Graduação em Odontologia pela UNICAMP</b>.<br>
+            <b>Especialista em Endodontia pela São Leopoldo Mandic</b>.
+          </p>
+
+          <div class="chip">Endodontia • Atendimento acolhedor</div>
+
+          <p style="margin-top:14px;">
+            Meu foco é que você se sinta seguro(a). Eu explico o diagnóstico, apresento as possibilidades de tratamento e conduzo cada etapa com clareza, calma e responsabilidade.
+          </p>
+
+          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="btn primary" href="https://wa.me/5511994802149?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+              Agendar avaliação
+            </a>
+          </div>
+        </div>
+
+        <div class="about-photo">
+          <img src="1.jpeg" alt="Dra. Maria Vitória Avolio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consultorio">
+    <div class="wrap">
+      <div class="section-head">
+        <h3>Consultório</h3>
+        <p>Um espaço pensado para acolhimento, conforto e atendimento com calma.</p>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel-btn prev" type="button" aria-label="Foto anterior" onclick="moveCarousel(-1)">‹</button>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><img src="5.jpeg" alt="Consultório 1"></div>
+          <div class="carousel-slide"><img src="4.jpeg" alt="Consultório 2"></div>
+          <div class="carousel-slide"><img src="xx.jpeg" alt="Consultório 3"></div>
+          <div class="carousel-slide"><img src="RX.jpeg" alt="Raio-x do consultório"></div>
+          <div class="carousel-slide"><img src="este.jpeg" alt="Consultório 4"></div>
+          <div class="carousel-slide"><img src="recep.jpeg" alt="Recepção 1"></div>
+          <div class="carousel-slide"><img src="recep2.jpeg" alt="Recepção 2"></div>
+        </div>
+        <button class="carousel-btn next" type="button" aria-label="Próxima foto" onclick="moveCarousel(1)">›</button>
       </div>
     </div>
   </section>
@@ -739,6 +841,16 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    function moveCarousel(direction){
+      const track = document.getElementById('carouselTrack');
+      if(!track) return;
+      const slide = track.querySelector('.carousel-slide');
+      if(!slide) return;
+      const gap = 14;
+      const amount = slide.offsetWidth + gap;
+      track.scrollBy({ left: amount * direction, behavior: 'smooth' });
+    }
+
     function sendMail(e){
       e.preventDefault();
       const nome = document.getElementById('nome').value.trim();
@@ -752,4 +864,3 @@
   </script>
 </body>
 </html>
-
