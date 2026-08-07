@@ -3,819 +3,1111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Odontologia particular em São Paulo com atendimento individualizado, tecnologia e planejamento personalizado." />
-  <title>MV Odontologia | Dra. Maria Vitória Avolio</title>
+  <meta name="description" content="Avolio Odontologia — atendimento individualizado, tecnologia e planejamento personalizado." />
+
+  <title>Avolio Odontologia | Dra. Maria Vitória Avolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    :root{
-      --ivory:#f8f5ef;
-      --ivory-2:#f1ece3;
-      --white:#fffdf9;
-      --ink:#292824;
-      --muted:#6e6a62;
-      --gold:#a78957;
-      --gold-light:#d7c29d;
-      --line:#dfd7ca;
-      --shadow:0 20px 50px rgba(57,49,38,.09);
-      --radius:24px;
+
+    :root {
+      --ivory: #f8f5ef;
+      --ivory-2: #f1ece3;
+      --white: #fffdf9;
+      --ink: #292824;
+      --muted: #6e6a62;
+      --gold: #a78957;
+      --gold-light: #d7c29d;
+      --line: #dfd7ca;
+      --shadow: 0 20px 50px rgba(57, 49, 38, .09);
+      --radius: 24px;
     }
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      font-family:"DM Sans",sans-serif;
-      color:var(--ink);
-      background:var(--ivory);
-      line-height:1.6;
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--ivory);
+      line-height: 1.6;
     }
 
-    img{
-      max-width:100%;
-      display:block;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     button,
     input,
-    textarea{
-      font:inherit;
+    textarea {
+      font: inherit;
     }
 
-    .container{
-      width:min(1160px, calc(100% - 40px));
-      margin-inline:auto;
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
     }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      font-size:.75rem;
-      font-weight:600;
-      color:var(--gold);
-      margin-bottom:18px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      text-transform: uppercase;
+      letter-spacing: .18em;
+
+      font-size: .75rem;
+      font-weight: 600;
+
+      color: var(--gold);
+
+      margin-bottom: 18px;
     }
 
-    .eyebrow::before{
-      content:"";
-      width:34px;
-      height:1px;
-      background:var(--gold);
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
     }
 
     h1,
     h2,
-    h3{
-      font-family:"Playfair Display",serif;
-      font-weight:500;
-      line-height:1.08;
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+      line-height: 1.08;
     }
 
-    h1{
-      font-size:clamp(3rem,7vw,6.7rem);
-      letter-spacing:-.045em;
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 5.2rem);
+      letter-spacing: -.04em;
     }
 
-    h2{
-      font-size:clamp(2.2rem,4.5vw,4.2rem);
-      letter-spacing:-.035em;
+    h2 {
+      font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+      letter-spacing: -.035em;
     }
 
-    h3{
-      font-size:1.6rem;
+    h3 {
+      font-size: 1.6rem;
     }
 
-    p{
-      color:var(--muted);
+    p {
+      color: var(--muted);
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:52px;
-      padding:0 24px;
-      border-radius:999px;
-      border:1px solid transparent;
-      font-weight:600;
-      transition:.25s ease;
-      cursor:pointer;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 52px;
+
+      padding: 0 24px;
+
+      border-radius: 999px;
+      border: 1px solid transparent;
+
+      font-weight: 600;
+
+      transition: .25s ease;
+
+      cursor: pointer;
     }
 
-    .btn-primary{
-      background:var(--ink);
-      color:white;
+    .btn-primary {
+      background: var(--ink);
+      color: white;
     }
 
-    .btn-primary:hover{
-      background:var(--gold);
-      transform:translateY(-2px);
+    .btn-primary:hover {
+      background: var(--gold);
+      transform: translateY(-2px);
     }
 
-    .btn-outline{
-      border-color:var(--line);
-      background:rgba(255,255,255,.35);
+    .btn-outline {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, .35);
     }
 
-    .btn-outline:hover{
-      border-color:var(--gold);
-      color:var(--gold);
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================== */
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter:blur(18px);
-      background:rgba(248,245,239,.82);
-      border-bottom:1px solid rgba(167,137,87,.10);
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+
+      backdrop-filter: blur(18px);
+
+      background: rgba(248, 245, 239, .84);
+
+      border-bottom: 1px solid rgba(167, 137, 87, .10);
     }
 
-    .nav{
-      height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
+    .nav {
+      height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:13px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
     }
 
-    .brand-mark{
-      width:42px;
-      height:42px;
-      border:1px solid var(--gold);
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      font-family:"Playfair Display",serif;
-      color:var(--gold);
-      font-size:.9rem;
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      font-family: "Playfair Display", serif;
+      color: var(--gold);
+
+      font-size: .9rem;
     }
 
-    .brand-text strong{
-      display:block;
-      font-family:"Playfair Display",serif;
-      font-size:1.05rem;
-      font-weight:600;
-      letter-spacing:.02em;
+    .brand-text strong {
+      display: block;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.08rem;
+      font-weight: 600;
+
+      letter-spacing: .02em;
     }
 
-    .brand-text span{
-      display:block;
-      font-size:.67rem;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:var(--muted);
+    .brand-text span {
+      display: block;
+
+      font-size: .67rem;
+
+      letter-spacing: .16em;
+      text-transform: uppercase;
+
+      color: var(--muted);
     }
 
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:28px;
-      list-style:none;
-      font-size:.9rem;
+    .nav-links {
+      display: flex;
+      align-items: center;
+
+      gap: 28px;
+
+      list-style: none;
+
+      font-size: .9rem;
     }
 
-    .nav-links a:hover{
-      color:var(--gold);
+    .nav-links a {
+      transition: .2s ease;
     }
 
-    /* HERO */
-
-    .hero{
-      min-height:calc(100vh - 82px);
-      display:grid;
-      align-items:center;
-      overflow:hidden;
-      position:relative;
+    .nav-links a:hover {
+      color: var(--gold);
     }
 
-    .hero::after{
-      content:"";
-      position:absolute;
-      right:-120px;
-      top:50px;
-      width:500px;
-      height:500px;
-      border:1px solid rgba(167,137,87,.20);
-      border-radius:50%;
-      pointer-events:none;
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: calc(100vh - 82px);
+
+      display: grid;
+      align-items: center;
+
+      overflow: hidden;
+
+      position: relative;
     }
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.04fr .96fr;
-      gap:70px;
-      align-items:center;
-      padding:70px 0 80px;
-      position:relative;
-      z-index:1;
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      right: -120px;
+      top: 50px;
+
+      width: 500px;
+      height: 500px;
+
+      border: 1px solid rgba(167, 137, 87, .20);
+      border-radius: 50%;
+
+      pointer-events: none;
     }
 
-    .hero h1 em{
-      color:var(--gold);
-      font-style:italic;
-      font-weight:500;
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1.04fr .96fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+      padding: 75px 0 90px;
+
+      position: relative;
+
+      z-index: 1;
     }
 
-    .hero-copy > p{
-      max-width:590px;
-      font-size:1.08rem;
-      margin:26px 0 34px;
+    .hero h1 {
+      max-width: 700px;
     }
 
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
+    .hero h1 em {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: 500;
     }
 
-    .hero-meta{
-      display:flex;
-      gap:28px;
-      margin-top:50px;
-      padding-top:24px;
-      border-top:1px solid var(--line);
-      max-width:620px;
+    .hero-copy > p {
+      max-width: 590px;
+
+      font-size: 1.08rem;
+
+      margin: 28px 0 34px;
     }
 
-    .hero-meta div{
-      max-width:170px;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
     }
 
-    .hero-meta strong{
-      display:block;
-      color:var(--ink);
-      margin-bottom:3px;
-      font-size:.92rem;
+    .hero-meta {
+      display: flex;
+
+      gap: 28px;
+
+      margin-top: 50px;
+      padding-top: 24px;
+
+      border-top: 1px solid var(--line);
+
+      max-width: 620px;
     }
 
-    .hero-meta span{
-      color:var(--muted);
-      font-size:.8rem;
+    .hero-meta div {
+      max-width: 170px;
     }
 
-    .hero-visual{
-      position:relative;
-      padding:14px;
+    .hero-meta strong {
+      display: block;
+
+      color: var(--ink);
+
+      margin-bottom: 3px;
+
+      font-size: .92rem;
     }
 
-    .portrait{
-      min-height:650px;
-      border-radius:160px 160px 28px 28px;
-      overflow:hidden;
+    .hero-meta span {
+      color: var(--muted);
+
+      font-size: .8rem;
+    }
+
+    .hero-visual {
+      position: relative;
+
+      padding: 14px;
+    }
+
+    .portrait {
+      min-height: 650px;
+
+      border-radius: 160px 160px 28px 28px;
+
+      overflow: hidden;
 
       background:
-        linear-gradient(155deg, rgba(255,255,255,.1), rgba(35,34,30,.12)),
-        url("foto-dra.jpg") center/cover no-repeat,
-        linear-gradient(135deg,#ddd5c8,#bbaa91);
+        linear-gradient(
+          155deg,
+          rgba(255,255,255,.1),
+          rgba(35,34,30,.12)
+        ),
+        url("foto-dra.jpg") center / cover no-repeat,
+        linear-gradient(
+          135deg,
+          #ddd5c8,
+          #bbaa91
+        );
 
-      box-shadow:var(--shadow);
-      position:relative;
+      box-shadow: var(--shadow);
+
+      position: relative;
     }
 
-    .floating-card{
-      position:absolute;
-      left:-34px;
-      bottom:80px;
-      width:230px;
-      background:var(--white);
-      padding:20px;
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(167,137,87,.14);
+    .floating-card {
+      position: absolute;
+
+      left: -34px;
+      bottom: 80px;
+
+      width: 230px;
+
+      background: var(--white);
+
+      padding: 20px;
+
+      border-radius: 18px;
+
+      box-shadow: var(--shadow);
+
+      border: 1px solid rgba(167, 137, 87, .14);
     }
 
-    .floating-card strong{
-      font-family:"Playfair Display",serif;
-      font-size:1.15rem;
-      display:block;
-      margin-bottom:5px;
+    .floating-card strong {
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.15rem;
+
+      display: block;
+
+      margin-bottom: 5px;
     }
 
-    .floating-card p{
-      font-size:.82rem;
+    .floating-card p {
+      font-size: .82rem;
     }
 
-    /* FAIXA */
+    /* =========================
+       SEÇÕES
+    ========================== */
 
-    .trust{
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      background:var(--white);
+    section {
+      padding: 110px 0;
     }
 
-    .trust-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
+    .section-head {
+      display: grid;
+
+      grid-template-columns: 1fr .75fr;
+
+      gap: 70px;
+
+      align-items: end;
+
+      margin-bottom: 55px;
     }
 
-    .trust-item{
-      padding:25px 26px;
-      text-align:center;
-      border-right:1px solid var(--line);
-      font-size:.8rem;
-      text-transform:uppercase;
-      letter-spacing:.1em;
-      color:var(--muted);
+    .section-head p {
+      max-width: 540px;
     }
 
-    .trust-item:last-child{
-      border-right:0;
+    /* =========================
+       TRATAMENTOS
+    ========================== */
+
+    #tratamentos {
+      background: var(--white);
+
+      border-top: 1px solid var(--line);
     }
 
-    /* SEÇÕES */
+    .services-grid {
+      display: grid;
 
-    section{
-      padding:110px 0;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
     }
 
-    .section-head{
-      display:grid;
-      grid-template-columns:1fr .75fr;
-      gap:70px;
-      align-items:end;
-      margin-bottom:55px;
+    .service {
+      min-height: 320px;
+
+      border: 1px solid var(--line);
+
+      padding: 30px;
+
+      border-radius: var(--radius);
+
+      background: rgba(248, 245, 239, .52);
+
+      display: flex;
+      flex-direction: column;
+
+      transition: .25s ease;
     }
 
-    .section-head p{
-      max-width:540px;
+    .service:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow);
+
+      background: var(--white);
     }
 
-    /* TRATAMENTOS */
+    .service-number {
+      color: var(--gold);
 
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+      font-size: .78rem;
+
+      letter-spacing: .13em;
+
+      margin-bottom: 70px;
     }
 
-    .service{
-      min-height:320px;
-      border:1px solid var(--line);
-      padding:30px;
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.38);
-      display:flex;
-      flex-direction:column;
-      transition:.25s ease;
+    .service h3 {
+      margin-bottom: 12px;
     }
 
-    .service:hover{
-      transform:translateY(-5px);
-      box-shadow:var(--shadow);
-      background:var(--white);
+    .service p {
+      font-size: .92rem;
+
+      margin-bottom: 24px;
     }
 
-    .service-number{
-      color:var(--gold);
-      font-size:.78rem;
-      letter-spacing:.13em;
-      margin-bottom:70px;
+    .service a {
+      margin-top: auto;
+
+      font-size: .85rem;
+      font-weight: 600;
+
+      color: var(--gold);
     }
 
-    .service h3{
-      margin-bottom:12px;
+    /* =========================
+       EXPERIÊNCIA
+    ========================== */
+
+    .experience {
+      background: var(--ink);
+
+      color: white;
     }
 
-    .service p{
-      font-size:.92rem;
-      margin-bottom:24px;
+    .experience p {
+      color: #cbc6bb;
     }
 
-    .service a{
-      margin-top:auto;
-      font-size:.85rem;
-      font-weight:600;
-      color:var(--gold);
+    .experience .eyebrow {
+      color: var(--gold-light);
     }
 
-    /* EXPERIÊNCIA */
-
-    .experience{
-      background:var(--ink);
-      color:white;
+    .experience .eyebrow::before {
+      background: var(--gold-light);
     }
 
-    .experience p{
-      color:#cbc6bb;
+    .experience-grid {
+      display: grid;
+
+      grid-template-columns: .95fr 1.05fr;
+
+      gap: 80px;
+
+      align-items: center;
     }
 
-    .experience .eyebrow{
-      color:var(--gold-light);
-    }
+    .experience-photo {
+      aspect-ratio: 4 / 5;
 
-    .experience .eyebrow::before{
-      background:var(--gold-light);
-    }
-
-    .experience-grid{
-      display:grid;
-      grid-template-columns:.95fr 1.05fr;
-      gap:80px;
-      align-items:center;
-    }
-
-    .experience-photo{
-      aspect-ratio:4/5;
-      border-radius:28px;
+      border-radius: 28px;
 
       background:
-        linear-gradient(rgba(20,20,18,.08),rgba(20,20,18,.18)),
-        url("foto-consultorio.jpg") center/cover no-repeat,
-        linear-gradient(135deg,#716b61,#a99d8b);
+        linear-gradient(
+          rgba(20,20,18,.08),
+          rgba(20,20,18,.18)
+        ),
+        url("foto-consultorio.jpg") center / cover no-repeat,
+        linear-gradient(
+          135deg,
+          #716b61,
+          #a99d8b
+        );
 
-      position:relative;
-      overflow:hidden;
+      position: relative;
+
+      overflow: hidden;
     }
 
-    .experience-list{
-      margin-top:34px;
-      display:grid;
-      gap:6px;
+    .experience-list {
+      margin-top: 34px;
+
+      display: grid;
+
+      gap: 6px;
     }
 
-    .experience-row{
-      padding:17px 0;
-      border-bottom:1px solid rgba(255,255,255,.13);
-      display:grid;
-      grid-template-columns:40px 1fr;
-      gap:10px;
+    .experience-row {
+      padding: 17px 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.13);
+
+      display: grid;
+
+      grid-template-columns: 40px 1fr;
+
+      gap: 10px;
     }
 
-    .experience-row span{
-      color:var(--gold-light);
+    .experience-row span {
+      color: var(--gold-light);
     }
 
-    /* CASOS */
+    /* =========================
+       CASOS
+    ========================== */
 
-    .cases-grid{
-      display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:18px;
+    #casos {
+      background: var(--ivory);
     }
 
-    .case-card{
-      background:var(--white);
-      border-radius:var(--radius);
-      overflow:hidden;
-      border:1px solid var(--line);
+    .cases-grid {
+      display: grid;
+
+      grid-template-columns: 1.15fr .85fr;
+
+      gap: 18px;
     }
 
-    .case-image{
-      aspect-ratio:16/10;
+    .case-card {
+      background: var(--white);
+
+      border-radius: var(--radius);
+
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+    }
+
+    .case-image {
+      aspect-ratio: 16 / 10;
 
       background:
-        linear-gradient(135deg,rgba(167,137,87,.1),rgba(255,255,255,.2)),
-        url("caso-clinico-1.jpg") center/cover no-repeat,
+        linear-gradient(
+          135deg,
+          rgba(167,137,87,.1),
+          rgba(255,255,255,.2)
+        ),
+        url("caso-clinico-1.jpg") center / cover no-repeat,
         #d8d0c3;
 
-      display:flex;
-      align-items:end;
-      justify-content:center;
-      padding:16px;
-      color:var(--muted);
-      font-size:.72rem;
-      letter-spacing:.12em;
+      display: flex;
+
+      align-items: end;
+      justify-content: center;
+
+      padding: 16px;
+
+      color: var(--muted);
+
+      font-size: .72rem;
+
+      letter-spacing: .12em;
     }
 
-    .case-card.secondary .case-image{
+    .case-card.secondary .case-image {
       background:
-        linear-gradient(135deg,rgba(167,137,87,.1),rgba(255,255,255,.2)),
-        url("caso-clinico-2.jpg") center/cover no-repeat,
+        linear-gradient(
+          135deg,
+          rgba(167,137,87,.1),
+          rgba(255,255,255,.2)
+        ),
+        url("caso-clinico-2.jpg") center / cover no-repeat,
         #d8d0c3;
     }
 
-    .case-copy{
-      padding:24px;
+    .case-copy {
+      padding: 24px;
     }
 
-    .case-copy h3{
-      margin-bottom:8px;
+    .case-copy h3 {
+      margin-bottom: 8px;
     }
 
-    .case-copy p{
-      font-size:.88rem;
+    .case-copy p {
+      font-size: .88rem;
     }
 
-    /* SOBRE */
+    /* =========================
+       SOBRE
+    ========================== */
 
-    .doctor-grid{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:80px;
-      align-items:center;
+    #sobre {
+      background: var(--white);
     }
 
-    .doctor-photo{
-      aspect-ratio:4/5;
+    .doctor-grid {
+      display: grid;
+
+      grid-template-columns: .9fr 1.1fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .doctor-photo {
+      aspect-ratio: 4 / 5;
 
       background:
-        url("foto-dra-2.jpg") center/cover no-repeat,
-        linear-gradient(140deg,#d4c7b3,#a99677);
+        url("foto-dra-2.jpg") center / cover no-repeat,
+        linear-gradient(
+          140deg,
+          #d4c7b3,
+          #a99677
+        );
 
-      border-radius:28px;
-      box-shadow:var(--shadow);
+      border-radius: 28px;
+
+      box-shadow: var(--shadow);
     }
 
-    .doctor-copy p{
-      margin-top:22px;
-      max-width:620px;
+    .doctor-copy p {
+      margin-top: 22px;
+
+      max-width: 620px;
     }
 
-    .credentials{
-      display:flex;
-      flex-wrap:wrap;
-      gap:9px;
-      margin:28px 0 34px;
+    .credentials {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin: 28px 0 34px;
     }
 
-    .credential{
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:9px 13px;
-      font-size:.78rem;
-      color:var(--muted);
-      background:var(--white);
+    .credential {
+      border: 1px solid var(--line);
+
+      border-radius: 999px;
+
+      padding: 9px 13px;
+
+      font-size: .78rem;
+
+      color: var(--muted);
+
+      background: var(--white);
     }
 
-    /* AVALIAÇÕES */
+    /* =========================
+       AVALIAÇÕES
+    ========================== */
 
-    .reviews{
-      background:var(--ivory-2);
+    .reviews {
+      background: var(--ivory-2);
     }
 
-    .reviews-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+    .reviews-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
     }
 
-    .review{
-      background:var(--white);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:28px;
+    .review {
+      background: var(--white);
+
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      padding: 28px;
     }
 
-    .stars{
-      color:var(--gold);
-      letter-spacing:.12em;
-      margin-bottom:18px;
+    .stars {
+      color: var(--gold);
+
+      letter-spacing: .12em;
+
+      margin-bottom: 18px;
     }
 
-    .review blockquote{
-      font-family:"Playfair Display",serif;
-      font-size:1.18rem;
-      line-height:1.45;
-      margin-bottom:22px;
+    .review blockquote {
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.18rem;
+
+      line-height: 1.45;
+
+      margin-bottom: 22px;
     }
 
-    .review small{
-      color:var(--muted);
+    .review small {
+      color: var(--muted);
     }
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================== */
 
-    .cta-wrap{
-      background:var(--gold);
-      border-radius:34px;
-      padding:70px;
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:60px;
-      align-items:center;
-      color:white;
+    #contato {
+      background: var(--white);
     }
 
-    .cta-wrap p{
-      color:#f7f0e4;
-      margin-top:14px;
-      max-width:650px;
+    .cta-wrap {
+      background: var(--gold);
+
+      border-radius: 34px;
+
+      padding: 70px;
+
+      display: grid;
+
+      grid-template-columns: 1fr auto;
+
+      gap: 60px;
+
+      align-items: center;
+
+      color: white;
     }
 
-    .cta-wrap .btn{
-      background:white;
-      color:var(--ink);
+    .cta-wrap p {
+      color: #f7f0e4;
+
+      margin-top: 14px;
+
+      max-width: 650px;
     }
 
-    /* RODAPÉ */
+    .cta-wrap .btn {
+      background: white;
 
-    footer{
-      padding:55px 0 35px;
-      background:var(--white);
-      border-top:1px solid var(--line);
+      color: var(--ink);
     }
 
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.3fr repeat(2,.7fr);
-      gap:50px;
+    .cta-wrap .btn:hover {
+      transform: translateY(-2px);
     }
 
-    .footer-brand p{
-      max-width:420px;
-      margin-top:16px;
-      font-size:.88rem;
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 55px 0 35px;
+
+      background: var(--white);
+
+      border-top: 1px solid var(--line);
     }
 
-    footer h4{
-      margin-bottom:14px;
-      font-size:.85rem;
-      text-transform:uppercase;
-      letter-spacing:.1em;
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.3fr repeat(2, .7fr);
+
+      gap: 50px;
     }
 
-    footer ul{
-      list-style:none;
-      display:grid;
-      gap:8px;
-      color:var(--muted);
-      font-size:.88rem;
+    .footer-brand p {
+      max-width: 420px;
+
+      margin-top: 16px;
+
+      font-size: .88rem;
     }
 
-    .legal{
-      border-top:1px solid var(--line);
-      margin-top:40px;
-      padding-top:22px;
-      font-size:.75rem;
-      color:var(--muted);
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
+    footer h4 {
+      margin-bottom: 14px;
+
+      font-size: .85rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: .1em;
     }
 
-    .whatsapp{
-      position:fixed;
-      right:22px;
-      bottom:22px;
-      z-index:40;
-      width:56px;
-      height:56px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:#20211d;
-      color:white;
-      box-shadow:0 12px 30px rgba(0,0,0,.18);
-      font-size:1.2rem;
+    footer ul {
+      list-style: none;
+
+      display: grid;
+
+      gap: 8px;
+
+      color: var(--muted);
+
+      font-size: .88rem;
     }
 
-    /* RESPONSIVO */
+    .legal {
+      border-top: 1px solid var(--line);
 
-    @media(max-width:900px){
+      margin-top: 40px;
 
-      .nav-links{
-        display:none;
+      padding-top: 22px;
+
+      font-size: .75rem;
+
+      color: var(--muted);
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================== */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 40;
+
+      width: 56px;
+      height: 56px;
+
+      border-radius: 50%;
+
+      display: grid;
+
+      place-items: center;
+
+      background: #20211d;
+
+      color: white;
+
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+
+      font-size: 1.2rem;
+
+      transition: .2s ease;
+    }
+
+    .whatsapp:hover {
+      background: var(--gold);
+
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================== */
+
+    @media(max-width: 900px) {
+
+      .nav-links {
+        display: none;
       }
 
       .hero-grid,
       .section-head,
       .experience-grid,
       .doctor-grid,
-      .cta-wrap{
-        grid-template-columns:1fr;
+      .cta-wrap {
+        grid-template-columns: 1fr;
       }
 
-      .hero-grid{
-        gap:40px;
+      .hero-grid {
+        gap: 40px;
       }
 
-      .hero-visual{
-        max-width:620px;
-        margin:auto;
-        width:100%;
+      .hero-visual {
+        max-width: 620px;
+
+        margin: auto;
+
+        width: 100%;
       }
 
-      .portrait{
-        min-height:570px;
-      }
-
-      .services-grid,
-      .reviews-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .cases-grid{
-        grid-template-columns:1fr;
-      }
-
-      .cta-wrap{
-        padding:48px;
-      }
-
-      .trust-grid{
-        grid-template-columns:1fr 1fr;
-      }
-    }
-
-    @media(max-width:620px){
-
-      .container{
-        width:min(100% - 28px,1160px);
-      }
-
-      section{
-        padding:78px 0;
-      }
-
-      .hero-grid{
-        padding:50px 0 65px;
-      }
-
-      h1{
-        font-size:3.4rem;
-      }
-
-      .hero-meta{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:18px;
-      }
-
-      .portrait{
-        min-height:460px;
-        border-radius:110px 110px 24px 24px;
-      }
-
-      .floating-card{
-        left:-4px;
-        bottom:30px;
-        width:200px;
+      .portrait {
+        min-height: 570px;
       }
 
       .services-grid,
-      .reviews-grid{
-        grid-template-columns:1fr;
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .service{
-        min-height:270px;
+      .cases-grid {
+        grid-template-columns: 1fr;
       }
 
-      .service-number{
-        margin-bottom:45px;
+      .cta-wrap {
+        padding: 48px;
       }
 
-      .cta-wrap{
-        padding:36px 25px;
-      }
-
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
     }
+
+    @media(max-width: 620px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      section {
+        padding: 78px 0;
+      }
+
+      .hero-grid {
+        padding: 50px 0 65px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .hero-meta {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 18px;
+      }
+
+      .portrait {
+        min-height: 460px;
+
+        border-radius: 110px 110px 24px 24px;
+      }
+
+      .floating-card {
+        left: -4px;
+
+        bottom: 30px;
+
+        width: 200px;
+      }
+
+      .services-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service {
+        min-height: 270px;
+      }
+
+      .service-number {
+        margin-bottom: 45px;
+      }
+
+      .cta-wrap {
+        padding: 36px 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
+
     <div class="container nav">
 
       <a class="brand" href="#inicio">
-        <div class="brand-mark">MV</div>
+
+        <div class="brand-mark">
+          AV
+        </div>
 
         <div class="brand-text">
-          <strong>MV Odontologia</strong>
-          <span>Dra. Maria Vitória Avolio</span>
+
+          <strong>
+            Avolio Odontologia
+          </strong>
+
+          <span>
+            Dra. Maria Vitória Avolio
+          </span>
+
         </div>
+
       </a>
 
       <nav>
+
         <ul class="nav-links">
-          <li><a href="#tratamentos">Tratamentos</a></li>
-          <li><a href="#casos">Casos clínicos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#avaliacoes">Avaliações</a></li>
-          <li><a href="#contato">Contato</a></li>
+
+          <li>
+            <a href="#tratamentos">
+              Tratamentos
+            </a>
+          </li>
+
+          <li>
+            <a href="#casos">
+              Casos clínicos
+            </a>
+          </li>
+
+          <li>
+            <a href="#sobre">
+              Sobre
+            </a>
+          </li>
+
+          <li>
+            <a href="#avaliacoes">
+              Avaliações
+            </a>
+          </li>
+
+          <li>
+            <a href="#contato">
+              Contato
+            </a>
+          </li>
+
         </ul>
+
       </nav>
 
       <a
@@ -827,21 +1119,20 @@
       </a>
 
     </div>
+
   </header>
 
   <main>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero" id="inicio">
 
       <div class="container hero-grid">
 
         <div class="hero-copy">
-
-          <span class="eyebrow">
-            Odontologia particular em São Paulo
-          </span>
 
           <h1>
             Cuidado que une
@@ -877,18 +1168,39 @@
           <div class="hero-meta">
 
             <div>
-              <strong>Atendimento particular</strong>
-              <span>Tempo e atenção para cada paciente.</span>
+
+              <strong>
+                Atendimento individualizado
+              </strong>
+
+              <span>
+                Tempo e atenção para cada paciente.
+              </span>
+
             </div>
 
             <div>
-              <strong>Tecnologia</strong>
-              <span>Recursos modernos para diagnóstico e tratamento.</span>
+
+              <strong>
+                Tecnologia
+              </strong>
+
+              <span>
+                Recursos modernos para diagnóstico e tratamento.
+              </span>
+
             </div>
 
             <div>
-              <strong>Planejamento</strong>
-              <span>Condutas indicadas de forma individual.</span>
+
+              <strong>
+                Planejamento
+              </strong>
+
+              <span>
+                Condutas indicadas de forma individual.
+              </span>
+
             </div>
 
           </div>
@@ -900,10 +1212,15 @@
           <div class="portrait"></div>
 
           <div class="floating-card">
-            <strong>Seu sorriso, sem excessos.</strong>
+
+            <strong>
+              Seu sorriso, sem excessos.
+            </strong>
+
             <p>
               Resultado natural, funcional e pensado para você.
             </p>
+
           </div>
 
         </div>
@@ -912,33 +1229,9 @@
 
     </section>
 
-    <!-- FAIXA -->
-
-    <div class="trust">
-
-      <div class="container trust-grid">
-
-        <div class="trust-item">
-          Endodontia
-        </div>
-
-        <div class="trust-item">
-          Estética
-        </div>
-
-        <div class="trust-item">
-          Implantes
-        </div>
-
-        <div class="trust-item">
-          Odontologia digital
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- TRATAMENTOS -->
+    <!-- =========================
+         TRATAMENTOS
+    ========================== -->
 
     <section id="tratamentos">
 
@@ -1001,7 +1294,7 @@
 
             <p>
               Planejamento estético para melhorar forma,
-              proporção e harmonia preservando naturalidade.
+              proporção e harmonia, preservando naturalidade.
             </p>
 
             <a href="#contato">
@@ -1038,12 +1331,12 @@
             </div>
 
             <h3>
-              Clareamento
+              Clareamento dental
             </h3>
 
             <p>
-              Protocolos personalizados para um sorriso mais claro
-              com acompanhamento profissional.
+              Protocolos personalizados para um sorriso mais claro,
+              sempre com acompanhamento profissional.
             </p>
 
             <a href="#contato">
@@ -1100,7 +1393,9 @@
 
     </section>
 
-    <!-- EXPERIÊNCIA -->
+    <!-- =========================
+         EXPERIÊNCIA
+    ========================== -->
 
     <section class="experience">
 
@@ -1132,7 +1427,9 @@
 
             <div class="experience-row">
 
-              <span>01</span>
+              <span>
+                01
+              </span>
 
               <div>
 
@@ -1151,7 +1448,9 @@
 
             <div class="experience-row">
 
-              <span>02</span>
+              <span>
+                02
+              </span>
 
               <div>
 
@@ -1170,7 +1469,9 @@
 
             <div class="experience-row">
 
-              <span>03</span>
+              <span>
+                03
+              </span>
 
               <div>
 
@@ -1195,7 +1496,9 @@
 
     </section>
 
-    <!-- CASOS -->
+    <!-- =========================
+         CASOS CLÍNICOS
+    ========================== -->
 
     <section id="casos">
 
@@ -1216,9 +1519,9 @@
           </div>
 
           <p>
-            Aqui você pode colocar seus casos clínicos,
-            mostrando diferentes áreas da odontologia
-            e a qualidade dos tratamentos realizados.
+            Uma seleção de tratamentos realizados,
+            mostrando diferentes possibilidades da odontologia
+            sempre respeitando as particularidades de cada paciente.
           </p>
 
         </div>
@@ -1228,7 +1531,7 @@
           <article class="case-card">
 
             <div class="case-image">
-              ADICIONE AQUI SEU ANTES E DEPOIS
+              ADICIONE AQUI SEU CASO CLÍNICO
             </div>
 
             <div class="case-copy">
@@ -1273,7 +1576,9 @@
 
     </section>
 
-    <!-- SOBRE -->
+    <!-- =========================
+         SOBRE
+    ========================== -->
 
     <section id="sobre">
 
@@ -1336,7 +1641,9 @@
 
     </section>
 
-    <!-- AVALIAÇÕES -->
+    <!-- =========================
+         AVALIAÇÕES
+    ========================== -->
 
     <section class="reviews" id="avaliacoes">
 
@@ -1357,8 +1664,8 @@
           </div>
 
           <p>
-            Aqui entram avaliações reais de pacientes
-            publicadas no Google.
+            Experiências compartilhadas por pacientes
+            que passaram pela Avolio Odontologia.
           </p>
 
         </div>
@@ -1378,7 +1685,7 @@
             </blockquote>
 
             <small>
-              Paciente verificado • Google
+              Paciente • Google
             </small>
 
           </article>
@@ -1396,7 +1703,7 @@
             </blockquote>
 
             <small>
-              Paciente verificado • Google
+              Paciente • Google
             </small>
 
           </article>
@@ -1414,7 +1721,7 @@
             </blockquote>
 
             <small>
-              Paciente verificado • Google
+              Paciente • Google
             </small>
 
           </article>
@@ -1425,7 +1732,9 @@
 
     </section>
 
-    <!-- CONTATO -->
+    <!-- =========================
+         CONTATO
+    ========================== -->
 
     <section id="contato">
 
@@ -1437,7 +1746,7 @@
 
             <span
               class="eyebrow"
-              style="color:#fff"
+              style="color:white;"
             >
               Agendamento
             </span>
@@ -1470,7 +1779,9 @@
 
   </main>
 
-  <!-- RODAPÉ -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
@@ -1483,13 +1794,13 @@
           <div class="brand">
 
             <div class="brand-mark">
-              MV
+              AV
             </div>
 
             <div class="brand-text">
 
               <strong>
-                MV Odontologia
+                Avolio Odontologia
               </strong>
 
               <span>
@@ -1501,8 +1812,8 @@
           </div>
 
           <p>
-            Odontologia particular com atendimento
-            individualizado em São Paulo.
+            Odontologia com atendimento individualizado,
+            planejamento e atenção aos detalhes.
           </p>
 
         </div>
@@ -1572,7 +1883,7 @@
       <div class="legal">
 
         <span>
-          © 2026 MV Odontologia.
+          © 2026 Avolio Odontologia.
           Todos os direitos reservados.
         </span>
 
