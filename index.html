@@ -1,233 +1,448 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Avolio Odontologia — atendimento individualizado, tecnologia e planejamento personalizado." />
 
-  <title>Avolio Odontologia | Dra. Maria Vitória Avolio</title>
+  <meta charset="UTF-8">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Avolio Odontologia — atendimento individualizado, tecnologia e planejamento personalizado."
+  >
+
+  <title>
+    Avolio Odontologia | Dra. Maria Vitória Avolio
+  </title>
+
+
+  <!-- FONTES -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
 
+    /* =========================
+       CORES
+    ========================== */
+
     :root {
+
       --ivory: #f8f5ef;
+
       --ivory-2: #f1ece3;
+
       --white: #fffdf9;
+
       --ink: #292824;
+
       --muted: #6e6a62;
+
       --gold: #a78957;
+
       --gold-light: #d7c29d;
+
       --line: #dfd7ca;
-      --shadow: 0 20px 50px rgba(57, 49, 38, .09);
+
+      --shadow:
+        0 20px 50px rgba(57, 49, 38, .09);
+
       --radius: 24px;
+
     }
+
+
+    /* =========================
+       RESET
+    ========================== */
 
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
+
 
     html {
+
       scroll-behavior: smooth;
+
     }
+
 
     body {
-      font-family: "DM Sans", sans-serif;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
       color: var(--ink);
+
       background: var(--ivory);
+
       line-height: 1.6;
+
     }
+
 
     img {
+
       max-width: 100%;
+
       display: block;
+
     }
 
+
     a {
-      text-decoration: none;
+
       color: inherit;
+
+      text-decoration: none;
+
     }
+
 
     button,
     input,
     textarea {
+
       font: inherit;
+
     }
+
 
     .container {
-      width: min(1160px, calc(100% - 40px));
+
+      width:
+        min(
+          1160px,
+          calc(100% - 40px)
+        );
+
       margin-inline: auto;
+
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
 
-      text-transform: uppercase;
-      letter-spacing: .18em;
-
-      font-size: .75rem;
-      font-weight: 600;
-
-      color: var(--gold);
-
-      margin-bottom: 18px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 34px;
-      height: 1px;
-      background: var(--gold);
-    }
+    /* =========================
+       TIPOGRAFIA
+    ========================== */
 
     h1,
     h2,
     h3 {
-      font-family: "Playfair Display", serif;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
       font-weight: 500;
+
       line-height: 1.08;
+
     }
+
 
     h1 {
-      font-size: clamp(2.8rem, 5vw, 5.2rem);
+
+      font-size:
+        clamp(
+          2.8rem,
+          5vw,
+          5.2rem
+        );
+
       letter-spacing: -.04em;
+
     }
+
 
     h2 {
-      font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+
+      font-size:
+        clamp(
+          2.2rem,
+          4.5vw,
+          4.2rem
+        );
+
       letter-spacing: -.035em;
+
     }
+
 
     h3 {
+
       font-size: 1.6rem;
+
     }
+
 
     p {
+
       color: var(--muted);
+
     }
 
-    .btn {
+
+    .eyebrow {
+
       display: inline-flex;
+
       align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 18px;
+
+      color: var(--gold);
+
+      font-size: .75rem;
+
+      font-weight: 600;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .eyebrow::before {
+
+      content: "";
+
+      width: 34px;
+
+      height: 1px;
+
+      background: var(--gold);
+
+    }
+
+
+    /* =========================
+       BOTÕES
+    ========================== */
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
       justify-content: center;
 
       min-height: 52px;
 
-      padding: 0 24px;
+      padding:
+        0 24px;
+
+      border:
+        1px solid transparent;
 
       border-radius: 999px;
-      border: 1px solid transparent;
 
       font-weight: 600;
 
+      cursor: pointer;
+
       transition: .25s ease;
 
-      cursor: pointer;
     }
+
 
     .btn-primary {
-      background: var(--ink);
+
       color: white;
+
+      background: var(--ink);
+
     }
+
 
     .btn-primary:hover {
+
       background: var(--gold);
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
+
     }
+
 
     .btn-outline {
+
       border-color: var(--line);
-      background: rgba(255, 255, 255, .35);
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .35
+        );
+
     }
 
+
     .btn-outline:hover {
-      border-color: var(--gold);
+
       color: var(--gold);
+
+      border-color: var(--gold);
+
     }
+
 
     /* =========================
        HEADER
     ========================== */
 
     header {
+
       position: sticky;
+
       top: 0;
+
       z-index: 50;
 
-      backdrop-filter: blur(18px);
+      background:
+        rgba(
+          248,
+          245,
+          239,
+          .86
+        );
 
-      background: rgba(248, 245, 239, .84);
+      border-bottom:
+        1px solid
+        rgba(
+          167,
+          137,
+          87,
+          .10
+        );
 
-      border-bottom: 1px solid rgba(167, 137, 87, .10);
+      backdrop-filter:
+        blur(18px);
+
     }
 
+
     .nav {
+
       height: 82px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 24px;
+
     }
+
 
     .brand {
+
       display: flex;
+
       align-items: center;
+
       gap: 13px;
+
     }
+
 
     .brand-mark {
+
       width: 42px;
+
       height: 42px;
 
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-
       display: grid;
+
       place-items: center;
 
-      font-family: "Playfair Display", serif;
+      border:
+        1px solid
+        var(--gold);
+
+      border-radius: 50%;
+
       color: var(--gold);
 
+      font-family:
+        "Playfair Display",
+        serif;
+
       font-size: .9rem;
+
     }
 
+
     .brand-text strong {
+
       display: block;
 
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       font-size: 1.08rem;
+
       font-weight: 600;
 
       letter-spacing: .02em;
+
     }
 
+
     .brand-text span {
+
       display: block;
+
+      color: var(--muted);
 
       font-size: .67rem;
 
       letter-spacing: .16em;
+
       text-transform: uppercase;
 
-      color: var(--muted);
     }
 
+
     .nav-links {
+
       display: flex;
+
       align-items: center;
 
       gap: 28px;
@@ -235,814 +450,1251 @@
       list-style: none;
 
       font-size: .9rem;
+
     }
+
 
     .nav-links a {
+
       transition: .2s ease;
+
     }
 
+
     .nav-links a:hover {
+
       color: var(--gold);
+
     }
+
 
     /* =========================
        HERO
     ========================== */
 
     .hero {
-      min-height: calc(100vh - 82px);
+
+      min-height:
+        calc(
+          100vh - 82px
+        );
 
       display: grid;
+
       align-items: center;
+
+      position: relative;
 
       overflow: hidden;
 
-      position: relative;
     }
 
+
     .hero::after {
+
       content: "";
 
       position: absolute;
 
       right: -120px;
+
       top: 50px;
 
       width: 500px;
+
       height: 500px;
 
-      border: 1px solid rgba(167, 137, 87, .20);
+      border:
+        1px solid
+        rgba(
+          167,
+          137,
+          87,
+          .20
+        );
+
       border-radius: 50%;
 
       pointer-events: none;
+
     }
 
+
     .hero-grid {
+
       display: grid;
 
-      grid-template-columns: 1.04fr .96fr;
-
-      gap: 70px;
+      grid-template-columns:
+        1.04fr .96fr;
 
       align-items: center;
 
-      padding: 75px 0 90px;
+      gap: 70px;
+
+      padding:
+        75px 0 90px;
 
       position: relative;
 
       z-index: 1;
+
     }
+
 
     .hero h1 {
+
       max-width: 700px;
+
     }
+
 
     .hero h1 em {
+
       color: var(--gold);
-      font-style: italic;
+
       font-weight: 500;
+
+      font-style: italic;
+
     }
 
+
     .hero-copy > p {
+
       max-width: 590px;
+
+      margin:
+        28px 0 34px;
 
       font-size: 1.08rem;
 
-      margin: 28px 0 34px;
     }
 
+
     .hero-actions {
+
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 12px;
+
     }
 
+
     .hero-meta {
+
+      max-width: 620px;
+
       display: flex;
 
       gap: 28px;
 
       margin-top: 50px;
+
       padding-top: 24px;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px solid
+        var(--line);
 
-      max-width: 620px;
     }
+
 
     .hero-meta div {
+
       max-width: 170px;
+
     }
 
-    .hero-meta strong {
-      display: block;
 
-      color: var(--ink);
+    .hero-meta strong {
+
+      display: block;
 
       margin-bottom: 3px;
 
+      color: var(--ink);
+
       font-size: .92rem;
+
     }
 
+
     .hero-meta span {
+
       color: var(--muted);
 
       font-size: .8rem;
+
     }
 
+
     .hero-visual {
+
       position: relative;
 
       padding: 14px;
+
     }
 
+
     .portrait {
+
       min-height: 650px;
 
-      border-radius: 160px 160px 28px 28px;
+      border-radius:
+        160px 160px 28px 28px;
 
       overflow: hidden;
 
       background:
-        linear-gradient(
-          155deg,
-          rgba(255,255,255,.1),
-          rgba(35,34,30,.12)
-        ),
-        url("foto-dra.jpg") center / cover no-repeat,
-        linear-gradient(
-          135deg,
-          #ddd5c8,
-          #bbaa91
-        );
 
-      box-shadow: var(--shadow);
+        url(
+          "WhatsApp Image 2026-08-07 at 11.14.24.jpeg"
+        )
 
-      position: relative;
+        center
+        center
+
+        / cover
+
+        no-repeat;
+
+      box-shadow:
+        var(--shadow);
+
     }
 
-    .floating-card {
-      position: absolute;
-
-      left: -34px;
-      bottom: 80px;
-
-      width: 230px;
-
-      background: var(--white);
-
-      padding: 20px;
-
-      border-radius: 18px;
-
-      box-shadow: var(--shadow);
-
-      border: 1px solid rgba(167, 137, 87, .14);
-    }
-
-    .floating-card strong {
-      font-family: "Playfair Display", serif;
-
-      font-size: 1.15rem;
-
-      display: block;
-
-      margin-bottom: 5px;
-    }
-
-    .floating-card p {
-      font-size: .82rem;
-    }
 
     /* =========================
        SEÇÕES
     ========================== */
 
     section {
-      padding: 110px 0;
+
+      padding:
+        110px 0;
+
     }
 
+
     .section-head {
+
       display: grid;
 
-      grid-template-columns: 1fr .75fr;
-
-      gap: 70px;
+      grid-template-columns:
+        1fr .75fr;
 
       align-items: end;
 
+      gap: 70px;
+
       margin-bottom: 55px;
+
     }
 
+
     .section-head p {
+
       max-width: 540px;
+
     }
+
 
     /* =========================
        TRATAMENTOS
     ========================== */
 
     #tratamentos {
-      background: var(--white);
 
-      border-top: 1px solid var(--line);
+      background:
+        var(--white);
+
+      border-top:
+        1px solid
+        var(--line);
+
     }
+
 
     .services-grid {
+
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
 
       gap: 18px;
+
     }
 
+
     .service {
+
       min-height: 320px;
 
-      border: 1px solid var(--line);
+      display: flex;
+
+      flex-direction: column;
 
       padding: 30px;
 
-      border-radius: var(--radius);
+      border:
+        1px solid
+        var(--line);
 
-      background: rgba(248, 245, 239, .52);
+      border-radius:
+        var(--radius);
 
-      display: flex;
-      flex-direction: column;
+      background:
+        rgba(
+          248,
+          245,
+          239,
+          .52
+        );
 
-      transition: .25s ease;
+      transition:
+        .25s ease;
+
     }
+
 
     .service:hover {
-      transform: translateY(-5px);
 
-      box-shadow: var(--shadow);
+      background:
+        var(--white);
 
-      background: var(--white);
+      box-shadow:
+        var(--shadow);
+
+      transform:
+        translateY(-5px);
+
     }
 
+
     .service-number {
+
+      margin-bottom: 70px;
+
       color: var(--gold);
 
       font-size: .78rem;
 
       letter-spacing: .13em;
 
-      margin-bottom: 70px;
     }
+
 
     .service h3 {
+
       margin-bottom: 12px;
+
     }
+
 
     .service p {
-      font-size: .92rem;
 
       margin-bottom: 24px;
+
+      font-size: .92rem;
+
     }
+
 
     .service a {
+
       margin-top: auto;
 
+      color: var(--gold);
+
       font-size: .85rem;
+
       font-weight: 600;
 
-      color: var(--gold);
     }
+
 
     /* =========================
        EXPERIÊNCIA
     ========================== */
 
     .experience {
-      background: var(--ink);
 
       color: white;
+
+      background:
+        var(--ink);
+
     }
+
 
     .experience p {
+
       color: #cbc6bb;
+
     }
+
 
     .experience .eyebrow {
-      color: var(--gold-light);
+
+      color:
+        var(--gold-light);
+
     }
+
 
     .experience .eyebrow::before {
-      background: var(--gold-light);
+
+      background:
+        var(--gold-light);
+
     }
 
+
     .experience-grid {
+
       display: grid;
 
-      grid-template-columns: .95fr 1.05fr;
+      grid-template-columns:
+        .95fr 1.05fr;
+
+      align-items: center;
 
       gap: 80px;
 
-      align-items: center;
     }
 
-    .experience-photo {
-      aspect-ratio: 4 / 5;
 
-      border-radius: 28px;
+    .experience-photo {
+
+      aspect-ratio:
+        4 / 5;
+
+      border-radius:
+        28px;
+
+      overflow: hidden;
 
       background:
+
         linear-gradient(
-          rgba(20,20,18,.08),
-          rgba(20,20,18,.18)
+          rgba(
+            20,
+            20,
+            18,
+            .08
+          ),
+          rgba(
+            20,
+            20,
+            18,
+            .18
+          )
         ),
-        url("foto-consultorio.jpg") center / cover no-repeat,
+
+        url(
+          "foto-consultorio.jpg"
+        )
+
+        center
+        / cover
+        no-repeat,
+
         linear-gradient(
           135deg,
           #716b61,
           #a99d8b
         );
 
-      position: relative;
-
-      overflow: hidden;
     }
 
+
     .experience-list {
-      margin-top: 34px;
 
       display: grid;
 
       gap: 6px;
+
+      margin-top: 34px;
+
     }
 
-    .experience-row {
-      padding: 17px 0;
 
-      border-bottom: 1px solid rgba(255,255,255,.13);
+    .experience-row {
 
       display: grid;
 
-      grid-template-columns: 40px 1fr;
+      grid-template-columns:
+        40px 1fr;
 
       gap: 10px;
+
+      padding:
+        17px 0;
+
+      border-bottom:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .13
+        );
+
     }
 
+
     .experience-row span {
-      color: var(--gold-light);
+
+      color:
+        var(--gold-light);
+
     }
+
 
     /* =========================
        CASOS
     ========================== */
 
     #casos {
-      background: var(--ivory);
+
+      background:
+        var(--ivory);
+
     }
+
 
     .cases-grid {
+
       display: grid;
 
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns:
+        1.15fr .85fr;
 
       gap: 18px;
+
     }
 
-    .case-card {
-      background: var(--white);
 
-      border-radius: var(--radius);
+    .case-card {
 
       overflow: hidden;
 
-      border: 1px solid var(--line);
-    }
+      border:
+        1px solid
+        var(--line);
 
-    .case-image {
-      aspect-ratio: 16 / 10;
+      border-radius:
+        var(--radius);
 
       background:
-        linear-gradient(
-          135deg,
-          rgba(167,137,87,.1),
-          rgba(255,255,255,.2)
-        ),
-        url("caso-clinico-1.jpg") center / cover no-repeat,
-        #d8d0c3;
+        var(--white);
+
+    }
+
+
+    .case-image {
+
+      aspect-ratio:
+        16 / 10;
 
       display: flex;
 
       align-items: end;
+
       justify-content: center;
 
       padding: 16px;
 
-      color: var(--muted);
+      color:
+        var(--muted);
 
       font-size: .72rem;
 
       letter-spacing: .12em;
-    }
 
-    .case-card.secondary .case-image {
       background:
+
         linear-gradient(
           135deg,
-          rgba(167,137,87,.1),
-          rgba(255,255,255,.2)
+          rgba(
+            167,
+            137,
+            87,
+            .10
+          ),
+          rgba(
+            255,
+            255,
+            255,
+            .20
+          )
         ),
-        url("caso-clinico-2.jpg") center / cover no-repeat,
+
+        url(
+          "caso-clinico-1.jpg"
+        )
+
+        center
+        / cover
+        no-repeat,
+
         #d8d0c3;
+
     }
+
+
+    .case-card.secondary
+    .case-image {
+
+      background:
+
+        linear-gradient(
+          135deg,
+          rgba(
+            167,
+            137,
+            87,
+            .10
+          ),
+          rgba(
+            255,
+            255,
+            255,
+            .20
+          )
+        ),
+
+        url(
+          "caso-clinico-2.jpg"
+        )
+
+        center
+        / cover
+        no-repeat,
+
+        #d8d0c3;
+
+    }
+
 
     .case-copy {
+
       padding: 24px;
+
     }
+
 
     .case-copy h3 {
+
       margin-bottom: 8px;
+
     }
 
+
     .case-copy p {
+
       font-size: .88rem;
+
     }
+
 
     /* =========================
        SOBRE
     ========================== */
 
     #sobre {
-      background: var(--white);
+
+      background:
+        var(--white);
+
     }
 
+
     .doctor-grid {
+
       display: grid;
 
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns:
+        .9fr 1.1fr;
+
+      align-items: center;
 
       gap: 80px;
 
-      align-items: center;
     }
 
+
     .doctor-photo {
-      aspect-ratio: 4 / 5;
+
+      aspect-ratio:
+        4 / 5;
+
+      border-radius:
+        28px;
+
+      box-shadow:
+        var(--shadow);
 
       background:
-        url("foto-dra-2.jpg") center / cover no-repeat,
+
+        url(
+          "foto-dra-2.jpg"
+        )
+
+        center
+        / cover
+        no-repeat,
+
         linear-gradient(
           140deg,
           #d4c7b3,
           #a99677
         );
 
-      border-radius: 28px;
-
-      box-shadow: var(--shadow);
     }
+
 
     .doctor-copy p {
-      margin-top: 22px;
 
       max-width: 620px;
+
+      margin-top: 22px;
+
     }
 
+
     .credentials {
+
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 9px;
 
-      margin: 28px 0 34px;
+      margin:
+        28px 0 34px;
+
     }
 
+
     .credential {
-      border: 1px solid var(--line);
 
-      border-radius: 999px;
+      padding:
+        9px 13px;
 
-      padding: 9px 13px;
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        999px;
+
+      color:
+        var(--muted);
+
+      background:
+        var(--white);
 
       font-size: .78rem;
 
-      color: var(--muted);
-
-      background: var(--white);
     }
+
 
     /* =========================
        AVALIAÇÕES
     ========================== */
 
     .reviews {
-      background: var(--ivory-2);
+
+      background:
+        var(--ivory-2);
+
     }
+
 
     .reviews-grid {
+
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
 
       gap: 18px;
+
     }
+
 
     .review {
-      background: var(--white);
-
-      border: 1px solid var(--line);
-
-      border-radius: var(--radius);
 
       padding: 28px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius);
+
+      background:
+        var(--white);
+
     }
 
+
     .stars {
-      color: var(--gold);
+
+      margin-bottom: 18px;
+
+      color:
+        var(--gold);
 
       letter-spacing: .12em;
 
-      margin-bottom: 18px;
     }
 
+
     .review blockquote {
-      font-family: "Playfair Display", serif;
+
+      margin-bottom: 22px;
+
+      font-family:
+        "Playfair Display",
+        serif;
 
       font-size: 1.18rem;
 
       line-height: 1.45;
 
-      margin-bottom: 22px;
     }
 
+
     .review small {
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
     }
+
 
     /* =========================
        CTA
     ========================== */
 
     #contato {
-      background: var(--white);
+
+      background:
+        var(--white);
+
     }
 
+
     .cta-wrap {
-      background: var(--gold);
-
-      border-radius: 34px;
-
-      padding: 70px;
 
       display: grid;
 
-      grid-template-columns: 1fr auto;
-
-      gap: 60px;
+      grid-template-columns:
+        1fr auto;
 
       align-items: center;
 
+      gap: 60px;
+
+      padding: 70px;
+
+      border-radius:
+        34px;
+
       color: white;
+
+      background:
+        var(--gold);
+
     }
 
+
     .cta-wrap p {
-      color: #f7f0e4;
+
+      max-width: 650px;
 
       margin-top: 14px;
 
-      max-width: 650px;
+      color: #f7f0e4;
+
     }
+
 
     .cta-wrap .btn {
+
+      color:
+        var(--ink);
+
       background: white;
 
-      color: var(--ink);
     }
 
+
     .cta-wrap .btn:hover {
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
+
     }
+
 
     /* =========================
        FOOTER
     ========================== */
 
     footer {
-      padding: 55px 0 35px;
 
-      background: var(--white);
+      padding:
+        55px 0 35px;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px solid
+        var(--line);
+
+      background:
+        var(--white);
+
     }
+
 
     .footer-grid {
+
       display: grid;
 
-      grid-template-columns: 1.3fr repeat(2, .7fr);
+      grid-template-columns:
+        1.3fr
+        .7fr
+        .7fr;
 
       gap: 50px;
+
     }
 
+
     .footer-brand p {
+
       max-width: 420px;
 
       margin-top: 16px;
 
       font-size: .88rem;
+
     }
 
+
     footer h4 {
+
       margin-bottom: 14px;
 
       font-size: .85rem;
 
+      letter-spacing: .1em;
+
       text-transform: uppercase;
 
-      letter-spacing: .1em;
     }
 
+
     footer ul {
-      list-style: none;
 
       display: grid;
 
       gap: 8px;
 
-      color: var(--muted);
+      color:
+        var(--muted);
 
       font-size: .88rem;
+
+      list-style: none;
+
     }
 
+
     .legal {
-      border-top: 1px solid var(--line);
-
-      margin-top: 40px;
-
-      padding-top: 22px;
-
-      font-size: .75rem;
-
-      color: var(--muted);
 
       display: flex;
 
       justify-content: space-between;
 
+      flex-wrap: wrap;
+
       gap: 20px;
 
-      flex-wrap: wrap;
+      margin-top: 40px;
+
+      padding-top: 22px;
+
+      border-top:
+        1px solid
+        var(--line);
+
+      color:
+        var(--muted);
+
+      font-size: .75rem;
+
     }
+
 
     /* =========================
        WHATSAPP
     ========================== */
 
     .whatsapp {
+
       position: fixed;
 
       right: 22px;
+
       bottom: 22px;
 
       z-index: 40;
 
       width: 56px;
-      height: 56px;
 
-      border-radius: 50%;
+      height: 56px;
 
       display: grid;
 
       place-items: center;
 
-      background: #20211d;
+      border-radius: 50%;
 
       color: white;
 
-      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+      background:
+        #20211d;
+
+      box-shadow:
+        0 12px 30px
+        rgba(
+          0,
+          0,
+          0,
+          .18
+        );
 
       font-size: 1.2rem;
 
-      transition: .2s ease;
+      transition:
+        .2s ease;
+
     }
+
 
     .whatsapp:hover {
-      background: var(--gold);
 
-      transform: translateY(-2px);
+      background:
+        var(--gold);
+
+      transform:
+        translateY(-2px);
+
     }
+
 
     /* =========================
        RESPONSIVO
     ========================== */
 
-    @media(max-width: 900px) {
+    @media(
+      max-width: 900px
+    ) {
 
       .nav-links {
+
         display: none;
+
       }
+
 
       .hero-grid,
       .section-head,
       .experience-grid,
       .doctor-grid,
       .cta-wrap {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .hero-grid {
+
         gap: 40px;
+
       }
 
+
       .hero-visual {
+
+        width: 100%;
+
         max-width: 620px;
 
         margin: auto;
 
-        width: 100%;
       }
 
+
       .portrait {
+
         min-height: 570px;
+
       }
+
 
       .services-grid,
       .reviews-grid {
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:
+          1fr 1fr;
+
       }
+
 
       .cases-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
 
+
       .cta-wrap {
+
         padding: 48px;
+
       }
 
     }
 
-    @media(max-width: 620px) {
+
+    @media(
+      max-width: 620px
+    ) {
 
       .container {
-        width: min(100% - 28px, 1160px);
+
+        width:
+          min(
+            100% - 28px,
+            1160px
+          );
+
       }
+
 
       section {
-        padding: 78px 0;
+
+        padding:
+          78px 0;
+
       }
+
 
       .hero-grid {
-        padding: 50px 0 65px;
+
+        padding:
+          50px 0 65px;
+
       }
+
 
       h1 {
+
         font-size: 3rem;
+
       }
+
 
       .hero-meta {
+
         display: grid;
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          1fr 1fr;
 
         gap: 18px;
+
       }
+
 
       .portrait {
+
         min-height: 460px;
 
-        border-radius: 110px 110px 24px 24px;
+        border-radius:
+          110px
+          110px
+          24px
+          24px;
+
       }
 
-      .floating-card {
-        left: -4px;
-
-        bottom: 30px;
-
-        width: 200px;
-      }
 
       .services-grid,
       .reviews-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .service {
+
         min-height: 270px;
+
       }
+
 
       .service-number {
+
         margin-bottom: 45px;
+
       }
+
 
       .cta-wrap {
-        padding: 36px 25px;
+
+        padding:
+          36px 25px;
+
       }
 
+
       .footer-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
 
     }
 
   </style>
+
 </head>
 
+
 <body>
+
 
   <!-- =========================
        HEADER
@@ -1052,11 +1704,16 @@
 
     <div class="container nav">
 
-      <a class="brand" href="#inicio">
+
+      <a
+        class="brand"
+        href="#inicio"
+      >
 
         <div class="brand-mark">
           AV
         </div>
+
 
         <div class="brand-text">
 
@@ -1071,6 +1728,7 @@
         </div>
 
       </a>
+
 
       <nav>
 
@@ -1110,6 +1768,7 @@
 
       </nav>
 
+
       <a
         class="btn btn-outline"
         href="https://wa.me/5511999999999"
@@ -1118,54 +1777,87 @@
         Agendar consulta
       </a>
 
+
     </div>
 
   </header>
 
+
+
   <main>
+
 
     <!-- =========================
          HERO
     ========================== -->
 
-    <section class="hero" id="inicio">
+    <section
+      class="hero"
+      id="inicio"
+    >
 
-      <div class="container hero-grid">
+      <div
+        class="container hero-grid"
+      >
+
 
         <div class="hero-copy">
 
+
           <h1>
+
             Cuidado que une
-            <em>precisão</em>,
+
+            <em>
+              precisão
+            </em>,
+
             estética e confiança.
+
           </h1>
 
+
           <p>
-            Atendimento individualizado, planejamento criterioso e
-            tecnologia para oferecer tratamentos odontológicos com
-            naturalidade, segurança e atenção aos detalhes.
+
+            Atendimento individualizado,
+            planejamento criterioso e
+            tecnologia para oferecer
+            tratamentos odontológicos
+            com naturalidade, segurança
+            e atenção aos detalhes.
+
           </p>
 
+
           <div class="hero-actions">
+
 
             <a
               class="btn btn-primary"
               href="https://wa.me/5511999999999"
               target="_blank"
             >
+
               Agendar pelo WhatsApp
+
             </a>
+
 
             <a
               class="btn btn-outline"
               href="#casos"
             >
+
               Conhecer os casos
+
             </a>
+
 
           </div>
 
+
           <div class="hero-meta">
+
 
             <div>
 
@@ -1179,6 +1871,7 @@
 
             </div>
 
+
             <div>
 
               <strong>
@@ -1190,6 +1883,7 @@
               </span>
 
             </div>
+
 
             <div>
 
@@ -1203,31 +1897,28 @@
 
             </div>
 
+
           </div>
 
+
         </div>
+
+
+
+        <!-- FOTO PRINCIPAL -->
 
         <div class="hero-visual">
 
           <div class="portrait"></div>
 
-          <div class="floating-card">
-
-            <strong>
-              Seu sorriso, sem excessos.
-            </strong>
-
-            <p>
-              Resultado natural, funcional e pensado para você.
-            </p>
-
-          </div>
-
         </div>
+
 
       </div>
 
     </section>
+
+
 
     <!-- =========================
          TRATAMENTOS
@@ -1237,7 +1928,9 @@
 
       <div class="container">
 
+
         <div class="section-head">
+
 
           <div>
 
@@ -1251,15 +1944,28 @@
 
           </div>
 
+
           <p>
-            Cada tratamento começa por um diagnóstico cuidadoso.
-            A proposta é indicar o que realmente faz sentido para
-            o seu caso, com clareza em todas as etapas.
+
+            Cada tratamento começa por
+            um diagnóstico cuidadoso.
+
+            A proposta é indicar o que
+            realmente faz sentido para
+            o seu caso, com clareza
+            em todas as etapas.
+
           </p>
+
 
         </div>
 
+
+
         <div class="services-grid">
+
+
+          <!-- ENDODONTIA -->
 
           <article class="service">
 
@@ -1272,8 +1978,12 @@
             </h3>
 
             <p>
-              Tratamento e retratamento de canal com magnificação,
-              precisão e recursos tecnológicos.
+
+              Tratamento e retratamento
+              de canal com magnificação,
+              precisão e recursos
+              tecnológicos.
+
             </p>
 
             <a href="#contato">
@@ -1281,6 +1991,10 @@
             </a>
 
           </article>
+
+
+
+          <!-- FACETAS -->
 
           <article class="service">
 
@@ -1293,8 +2007,12 @@
             </h3>
 
             <p>
-              Planejamento estético para melhorar forma,
-              proporção e harmonia, preservando naturalidade.
+
+              Planejamento estético
+              para melhorar forma,
+              proporção e harmonia,
+              preservando naturalidade.
+
             </p>
 
             <a href="#contato">
@@ -1302,6 +2020,10 @@
             </a>
 
           </article>
+
+
+
+          <!-- IMPLANTES -->
 
           <article class="service">
 
@@ -1314,8 +2036,12 @@
             </h3>
 
             <p>
-              Reabilitação de dentes ausentes com planejamento
-              individualizado e foco em função e estética.
+
+              Reabilitação de dentes
+              ausentes com planejamento
+              individualizado e foco
+              em função e estética.
+
             </p>
 
             <a href="#contato">
@@ -1323,6 +2049,10 @@
             </a>
 
           </article>
+
+
+
+          <!-- CLAREAMENTO -->
 
           <article class="service">
 
@@ -1335,8 +2065,12 @@
             </h3>
 
             <p>
-              Protocolos personalizados para um sorriso mais claro,
-              sempre com acompanhamento profissional.
+
+              Protocolos personalizados
+              para um sorriso mais claro,
+              sempre com acompanhamento
+              profissional.
+
             </p>
 
             <a href="#contato">
@@ -1344,6 +2078,10 @@
             </a>
 
           </article>
+
+
+
+          <!-- RESTAURAÇÕES -->
 
           <article class="service">
 
@@ -1356,8 +2094,12 @@
             </h3>
 
             <p>
-              Reconstruções em resina composta com atenção à anatomia,
-              cor, textura e integração ao sorriso.
+
+              Reconstruções em resina
+              composta com atenção à
+              anatomia, cor, textura
+              e integração ao sorriso.
+
             </p>
 
             <a href="#contato">
@@ -1365,6 +2107,10 @@
             </a>
 
           </article>
+
+
+
+          <!-- LIMPEZA -->
 
           <article class="service">
 
@@ -1377,8 +2123,12 @@
             </h3>
 
             <p>
-              Profilaxia profissional, orientação individual
-              e acompanhamento para manutenção da saúde bucal.
+
+              Profilaxia profissional,
+              orientação individual e
+              acompanhamento para
+              manutenção da saúde bucal.
+
             </p>
 
             <a href="#contato">
@@ -1387,11 +2137,14 @@
 
           </article>
 
+
         </div>
 
       </div>
 
     </section>
+
+
 
     <!-- =========================
          EXPERIÊNCIA
@@ -1399,31 +2152,52 @@
 
     <section class="experience">
 
-      <div class="container experience-grid">
 
-        <div class="experience-photo"></div>
+      <div
+        class="container experience-grid"
+      >
+
+
+        <div
+          class="experience-photo"
+        ></div>
+
+
 
         <div>
+
 
           <span class="eyebrow">
             Experiência
           </span>
 
+
           <h2>
-            Uma consulta feita para ser clara,
+
+            Uma consulta feita
+            para ser clara,
             tranquila e completa.
+
           </h2>
 
-          <p style="margin-top:22px">
 
-            Mais do que executar um procedimento,
-            o objetivo é que você entenda o diagnóstico,
-            as possibilidades de tratamento e cada decisão
-            tomada ao longo do processo.
+          <p
+            style="margin-top:22px;"
+          >
+
+            Mais do que executar
+            um procedimento, o objetivo
+            é que você entenda o diagnóstico,
+            as possibilidades de tratamento
+            e cada decisão tomada
+            ao longo do processo.
 
           </p>
 
+
+
           <div class="experience-list">
+
 
             <div class="experience-row">
 
@@ -1438,13 +2212,18 @@
                 </strong>
 
                 <p>
-                  Exame clínico, documentação
-                  e análise individualizada.
+
+                  Exame clínico,
+                  documentação e
+                  análise individualizada.
+
                 </p>
 
               </div>
 
             </div>
+
+
 
             <div class="experience-row">
 
@@ -1459,13 +2238,18 @@
                 </strong>
 
                 <p>
-                  Explicação das opções, indicações,
-                  limites e etapas do tratamento.
+
+                  Explicação das opções,
+                  indicações, limites
+                  e etapas do tratamento.
+
                 </p>
 
               </div>
 
             </div>
+
+
 
             <div class="experience-row">
 
@@ -1480,21 +2264,30 @@
                 </strong>
 
                 <p>
-                  Cuidado antes, durante
-                  e após o procedimento.
+
+                  Cuidado antes,
+                  durante e após
+                  o procedimento.
+
                 </p>
 
               </div>
 
             </div>
 
+
           </div>
+
 
         </div>
 
+
       </div>
 
+
     </section>
+
+
 
     <!-- =========================
          CASOS CLÍNICOS
@@ -1502,9 +2295,12 @@
 
     <section id="casos">
 
+
       <div class="container">
 
+
         <div class="section-head">
+
 
           <div>
 
@@ -1518,21 +2314,35 @@
 
           </div>
 
+
           <p>
-            Uma seleção de tratamentos realizados,
-            mostrando diferentes possibilidades da odontologia
-            sempre respeitando as particularidades de cada paciente.
+
+            Uma seleção de tratamentos
+            realizados, mostrando diferentes
+            possibilidades da odontologia
+            sempre respeitando as
+            particularidades de cada paciente.
+
           </p>
+
 
         </div>
 
+
+
         <div class="cases-grid">
+
 
           <article class="case-card">
 
+
             <div class="case-image">
-              ADICIONE AQUI SEU CASO CLÍNICO
+
+              ADICIONE AQUI
+              SEU CASO CLÍNICO
+
             </div>
+
 
             <div class="case-copy">
 
@@ -1541,19 +2351,32 @@
               </h3>
 
               <p>
-                Planejamento voltado à harmonia
-                de forma, textura e proporção.
+
+                Planejamento voltado à
+                harmonia de forma,
+                textura e proporção.
+
               </p>
 
             </div>
 
+
           </article>
 
-          <article class="case-card secondary">
+
+
+          <article
+            class="case-card secondary"
+          >
+
 
             <div class="case-image">
-              ADICIONE AQUI OUTRO CASO
+
+              ADICIONE AQUI
+              OUTRO CASO
+
             </div>
+
 
             <div class="case-copy">
 
@@ -1562,19 +2385,28 @@
               </h3>
 
               <p>
-                Tratamentos conduzidos com foco
-                em previsibilidade e preservação.
+
+                Tratamentos conduzidos
+                com foco em previsibilidade
+                e preservação.
+
               </p>
 
             </div>
 
+
           </article>
+
 
         </div>
 
+
       </div>
 
+
     </section>
+
+
 
     <!-- =========================
          SOBRE
@@ -1582,74 +2414,110 @@
 
     <section id="sobre">
 
-      <div class="container doctor-grid">
 
-        <div class="doctor-photo"></div>
+      <div
+        class="container doctor-grid"
+      >
+
+
+        <div
+          class="doctor-photo"
+        ></div>
+
+
 
         <div class="doctor-copy">
+
 
           <span class="eyebrow">
             Sobre a dentista
           </span>
 
+
           <h2>
             Dra. Maria Vitória Avolio
           </h2>
 
+
           <p>
-            Cirurgiã-dentista formada pela UNICAMP,
-            especialista em Endodontia e com formação
+
+            Cirurgiã-dentista formada
+            pela UNICAMP, especialista
+            em Endodontia e com formação
             em Implantodontia.
 
-            Atua com uma odontologia que valoriza
-            diagnóstico, planejamento e atendimento próximo,
-            combinando conhecimento técnico e tecnologia
+            Atua com uma odontologia
+            que valoriza diagnóstico,
+            planejamento e atendimento
+            próximo, combinando conhecimento
+            técnico e tecnologia
             no cuidado diário.
+
           </p>
 
+
           <div class="credentials">
+
 
             <span class="credential">
               Cirurgiã-dentista — UNICAMP
             </span>
 
+
             <span class="credential">
               Especialista em Endodontia
             </span>
+
 
             <span class="credential">
               Formação em Implantodontia
             </span>
 
+
             <span class="credential">
               CRO-SP 136492
             </span>
 
+
           </div>
+
 
           <a
             class="btn btn-primary"
             href="https://wa.me/5511999999999"
             target="_blank"
           >
+
             Quero agendar uma avaliação
+
           </a>
+
 
         </div>
 
+
       </div>
 
+
     </section>
+
+
 
     <!-- =========================
          AVALIAÇÕES
     ========================== -->
 
-    <section class="reviews" id="avaliacoes">
+    <section
+      class="reviews"
+      id="avaliacoes"
+    >
+
 
       <div class="container">
 
+
         <div class="section-head">
+
 
           <div>
 
@@ -1663,74 +2531,110 @@
 
           </div>
 
+
           <p>
-            Experiências compartilhadas por pacientes
-            que passaram pela Avolio Odontologia.
+
+            Experiências compartilhadas
+            por pacientes que passaram
+            pela Avolio Odontologia.
+
           </p>
 
+
         </div>
+
+
 
         <div class="reviews-grid">
 
+
           <article class="review">
+
 
             <div class="stars">
               ★★★★★
             </div>
 
+
             <blockquote>
-              “Atendimento extremamente cuidadoso
-              e explicação de todas as etapas
+
+              “Atendimento extremamente
+              cuidadoso e explicação
+              de todas as etapas
               do tratamento.”
+
             </blockquote>
+
 
             <small>
               Paciente • Google
             </small>
 
+
           </article>
 
+
+
           <article class="review">
+
 
             <div class="stars">
               ★★★★★
             </div>
 
+
             <blockquote>
+
               “Me senti muito segura.
-              Consultório organizado, moderno
-              e atendimento excelente.”
+              Consultório organizado,
+              moderno e atendimento excelente.”
+
             </blockquote>
+
 
             <small>
               Paciente • Google
             </small>
 
+
           </article>
 
+
+
           <article class="review">
+
 
             <div class="stars">
               ★★★★★
             </div>
 
+
             <blockquote>
+
               “Profissional muito atenciosa,
-              detalhista e preocupada em fazer
-              o melhor para o paciente.”
+              detalhista e preocupada em
+              fazer o melhor para o paciente.”
+
             </blockquote>
+
 
             <small>
               Paciente • Google
             </small>
 
+
           </article>
+
 
         </div>
 
+
       </div>
 
+
     </section>
+
+
 
     <!-- =========================
          CONTATO
@@ -1738,46 +2642,71 @@
 
     <section id="contato">
 
+
       <div class="container">
+
 
         <div class="cta-wrap">
 
+
           <div>
+
 
             <span
               class="eyebrow"
-              style="color:white;"
+              style="
+                color:white;
+              "
             >
+
               Agendamento
+
             </span>
+
 
             <h2>
               Vamos cuidar do seu sorriso?
             </h2>
 
+
             <p>
-              Entre em contato para agendar sua avaliação
-              e entender qual é o tratamento
-              mais indicado para você.
+
+              Entre em contato para
+              agendar sua avaliação
+              e entender qual é
+              o tratamento mais indicado
+              para você.
+
             </p>
 
+
           </div>
+
+
 
           <a
             class="btn"
             href="https://wa.me/5511999999999"
             target="_blank"
           >
+
             Falar no WhatsApp
+
           </a>
+
 
         </div>
 
+
       </div>
+
 
     </section>
 
+
   </main>
+
+
 
   <!-- =========================
        FOOTER
@@ -1785,128 +2714,196 @@
 
   <footer>
 
+
     <div class="container">
+
 
       <div class="footer-grid">
 
+
         <div class="footer-brand">
 
+
           <div class="brand">
+
 
             <div class="brand-mark">
               AV
             </div>
 
+
             <div class="brand-text">
+
 
               <strong>
                 Avolio Odontologia
               </strong>
 
+
               <span>
                 Dra. Maria Vitória Avolio
               </span>
 
+
             </div>
+
 
           </div>
 
+
           <p>
-            Odontologia com atendimento individualizado,
-            planejamento e atenção aos detalhes.
+
+            Odontologia com atendimento
+            individualizado, planejamento
+            e atenção aos detalhes.
+
           </p>
+
 
         </div>
 
+
+
         <div>
+
 
           <h4>
             Navegação
           </h4>
 
+
           <ul>
 
+
             <li>
+
               <a href="#tratamentos">
                 Tratamentos
               </a>
+
             </li>
 
+
             <li>
+
               <a href="#casos">
                 Casos clínicos
               </a>
+
             </li>
 
+
             <li>
+
               <a href="#sobre">
                 Sobre
               </a>
+
             </li>
 
+
             <li>
+
               <a href="#avaliacoes">
                 Avaliações
               </a>
+
             </li>
+
 
           </ul>
 
+
         </div>
 
+
+
         <div>
+
 
           <h4>
             Contato
           </h4>
 
+
           <ul>
+
 
             <li>
               São Paulo — SP
             </li>
 
+
             <li>
               WhatsApp: (11) 99999-9999
             </li>
+
 
             <li>
               Instagram: @seuinstagram
             </li>
 
+
           </ul>
+
 
         </div>
 
+
       </div>
+
+
 
       <div class="legal">
 
-        <span>
-          © 2026 Avolio Odontologia.
-          Todos os direitos reservados.
-        </span>
 
         <span>
-          Dra. Maria Vitória Avolio • CRO-SP 136492
+
+          © 2026 Avolio Odontologia.
+          Todos os direitos reservados.
+
         </span>
+
+
+        <span>
+
+          Dra. Maria Vitória Avolio
+          • CRO-SP 136492
+
+        </span>
+
 
       </div>
 
+
     </div>
+
 
   </footer>
 
-  <!-- BOTÃO FLUTUANTE -->
+
+
+  <!-- =========================
+       BOTÃO FLUTUANTE
+  ========================== -->
 
   <a
+
     class="whatsapp"
+
     href="https://wa.me/5511999999999"
+
     target="_blank"
+
     aria-label="WhatsApp"
+
   >
+
     ✦
+
   </a>
 
+
 </body>
+
 </html>
