@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="Dentista no Jardim Paulista, São Paulo. Atendimento individualizado em prevenção, restaurações, canal com microscópio, próteses, clareamento e implantes."
+    content="Dentista no Jardim Paulista, São Paulo. Atendimento individualizado, urgências odontológicas, canal com microscópio, próteses, clareamento e implantes."
   >
 
   <meta name="theme-color" content="#f8f5ef">
@@ -391,6 +391,60 @@
     .hero-meta span {
       color: var(--muted);
       font-size: .8rem;
+    }
+
+    .emergency {
+      padding: 0 0 44px;
+    }
+
+    .emergency-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 42px;
+      padding: 34px 38px;
+      border: 1px solid rgba(167,137,87,.32);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 14px 40px rgba(57,49,38,.06);
+    }
+
+    .emergency-content {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .emergency-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--gold);
+      background: var(--ivory-2);
+      font-family: "Playfair Display", serif;
+      font-size: 1.45rem;
+    }
+
+    .emergency h2 {
+      margin-bottom: 8px;
+      font-size: clamp(1.65rem, 2.6vw, 2.35rem);
+    }
+
+    .emergency p {
+      max-width: 720px;
+    }
+
+    .emergency-note {
+      display: block;
+      margin-top: 7px;
+      color: var(--gold);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .hero-visual {
@@ -879,6 +933,14 @@
         grid-template-columns: 1fr;
       }
 
+      .emergency-card {
+        grid-template-columns: 1fr;
+      }
+
+      .emergency-card .btn {
+        width: 100%;
+      }
+
       .hero-grid {
         gap: 40px;
       }
@@ -930,6 +992,20 @@
 
       .hero-grid {
         padding: 50px 0 65px;
+      }
+
+      .emergency {
+        padding-bottom: 20px;
+      }
+
+      .emergency-card {
+        gap: 24px;
+        padding: 28px 22px;
+      }
+
+      .emergency-content {
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
 
       h1 {
@@ -1018,6 +1094,12 @@
       <nav>
 
         <ul class="nav-links">
+
+          <li>
+            <a href="#urgencias">
+              Urgências
+            </a>
+          </li>
 
           <li>
             <a href="#tratamentos">
@@ -1163,6 +1245,59 @@
         <div class="hero-visual">
 
           <div class="portrait"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="emergency" id="urgencias">
+
+      <div class="container">
+
+        <div class="emergency-card">
+
+          <div class="emergency-content">
+
+            <div class="emergency-icon" aria-hidden="true">
+              +
+            </div>
+
+            <div>
+
+              <span class="eyebrow">
+                Urgências odontológicas
+              </span>
+
+              <h2>
+                Dor de dente ou alguma situação inesperada?
+              </h2>
+
+              <p>
+                Atendemos urgências odontológicas, como dor intensa,
+                fraturas dentárias, perda de restaurações ou coroas,
+                inchaço e traumas. Entre em contato para verificarmos
+                a disponibilidade e orientarmos o atendimento.
+              </p>
+
+              <span class="emergency-note">
+                Atendimento mediante disponibilidade e agendamento prévio
+              </span>
+
+            </div>
+
+          </div>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Preciso%20de%20atendimento%20para%20uma%20urg%C3%AAncia%20odontol%C3%B3gica."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Preciso de atendimento
+          </a>
 
         </div>
 
@@ -1844,6 +1979,12 @@
           </h4>
 
           <ul>
+
+            <li>
+              <a href="#urgencias">
+                Urgências odontológicas
+              </a>
+            </li>
 
             <li>
               <a href="#tratamentos">
