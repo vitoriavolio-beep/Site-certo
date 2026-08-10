@@ -589,61 +589,111 @@
       color: var(--gold-light);
     }
 
-    #casos {
+    #endodontia {
+      overflow: hidden;
       background: var(--ivory);
     }
 
-    .cases-grid {
+    .endo-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 18px;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: clamp(48px,7vw,96px);
     }
 
-    .case-card {
+    .endo-visual {
+      position: relative;
+      min-height: 610px;
+    }
+
+    .endo-photo {
+      position: absolute;
+      inset: 0 48px 48px 0;
       overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--white);
+      border-radius: 28px;
+      background: #d8d0c3;
+      box-shadow: var(--shadow);
     }
 
-    .case-image {
-      aspect-ratio: 16 / 10;
-      display: flex;
-      align-items: end;
-      justify-content: center;
-      padding: 16px;
+    .endo-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg,transparent 55%,rgba(25,25,22,.18));
+    }
+
+    .endo-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .endo-badge {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(255px,68%);
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 22px;
       color: white;
-      text-shadow: 0 1px 12px rgba(0,0,0,.35);
-      font-size: .72rem;
-      letter-spacing: .12em;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(167,137,87,.10),
-          rgba(255,255,255,.20)
-        ),
-        url("caso-clinico-1.jpg")
-        center / cover no-repeat,
-        #d8d0c3;
+      background: #20211d;
+      box-shadow: 0 20px 50px rgba(31,29,25,.22);
     }
 
-    .case-card.secondary .case-image {
-      background:
-        url("coroa.jpeg")
-        center / contain no-repeat,
-        #211b18;
+    .endo-badge strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--gold-light);
+      font-family: "Playfair Display",serif;
+      font-size: 1.35rem;
+      font-weight: 500;
     }
 
-    .case-copy {
-      padding: 24px;
+    .endo-badge span {
+      color: rgba(255,255,255,.72);
+      font-size: .78rem;
+      line-height: 1.55;
     }
 
-    .case-copy h3 {
-      margin-bottom: 8px;
+    .endo-copy h2 {
+      max-width: 680px;
+      margin: 12px 0 24px;
+      font-size: clamp(2rem,4vw,4rem);
     }
 
-    .case-copy p {
-      font-size: .88rem;
+    .endo-copy > p {
+      max-width: 640px;
+      font-size: 1rem;
+    }
+
+    .endo-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 26px;
+      margin: 34px 0 38px;
+      border-top: 1px solid var(--line);
+    }
+
+    .endo-feature {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .endo-feature strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: .92rem;
+    }
+
+    .endo-feature span {
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.5;
     }
 
     #sobre {
@@ -955,8 +1005,14 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .cases-grid {
+      .endo-grid {
         grid-template-columns: 1fr;
+      }
+
+      .endo-visual {
+        width: 100%;
+        max-width: 640px;
+        margin: auto;
       }
 
       .doctor-photo {
@@ -1024,6 +1080,22 @@
 
       .services-grid,
       .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .endo-visual {
+        min-height: 500px;
+      }
+
+      .endo-photo {
+        inset: 0 26px 52px 0;
+      }
+
+      .endo-badge {
+        padding: 20px;
+      }
+
+      .endo-features {
         grid-template-columns: 1fr;
       }
 
@@ -1103,8 +1175,8 @@
           </li>
 
           <li>
-            <a href="#casos">
-              Casos clínicos
+            <a href="#endodontia">
+              Endodontia microscópica
             </a>
           </li>
 
@@ -1188,9 +1260,9 @@
 
             <a
               class="btn btn-outline"
-              href="#casos"
+              href="#endodontia"
             >
-              Conhecer os casos
+              Conhecer a endodontia
             </a>
 
           </div>
@@ -1569,77 +1641,76 @@
     </section>
 
 
-    <section id="casos">
+    <section id="endodontia">
 
-      <div class="container">
+      <div class="container endo-grid">
 
-        <div class="section-head">
+        <div class="endo-visual">
 
-          <div>
-
-            <span class="eyebrow">
-              Casos clínicos
-            </span>
-
-            <h2>
-              Resultados que respeitam cada sorriso.
-            </h2>
-
+          <div class="endo-photo">
+            <img
+              src="./endodontia-microscopica.jpeg"
+              alt="Consultório equipado com microscópio operatório"
+            >
           </div>
 
-          <p>
-            Uma seleção de tratamentos realizados,
-            mostrando diferentes possibilidades da odontologia
-            sempre respeitando as particularidades de cada paciente.
-          </p>
+          <div class="endo-badge">
+            <strong>Visão ampliada</strong>
+            <span>
+              Mais controle e precisão em cada etapa do tratamento.
+            </span>
+          </div>
 
         </div>
 
-        <div class="cases-grid">
+        <div class="endo-copy">
 
-          <article class="case-card">
+          <span class="eyebrow">
+            Endodontia microscópica
+          </span>
 
-            <div class="case-image">
-              RESINA COMPOSTA • CASO CLÍNICO
+          <h2>
+            Precisão para cuidar do seu dente nos mínimos detalhes.
+          </h2>
+
+          <p>
+            O microscópio operatório amplia a visualização das estruturas
+            internas do dente, auxiliando na localização dos canais e
+            permitindo um tratamento mais preciso, seguro e conservador.
+          </p>
+
+          <div class="endo-features">
+
+            <div class="endo-feature">
+              <strong>Maior precisão</strong>
+              <span>Visualização de detalhes que não podem ser vistos a olho nu.</span>
             </div>
 
-            <div class="case-copy">
-
-              <h3>
-                Estética em resina composta
-              </h3>
-
-              <p>
-                Planejamento voltado à harmonia
-                de forma, textura e proporção.
-              </p>
-
+            <div class="endo-feature">
+              <strong>Preservação dentária</strong>
+              <span>Abordagem cuidadosa para preservar o máximo de estrutura saudável.</span>
             </div>
 
-          </article>
-
-          <article class="case-card secondary">
-
-            <div
-              class="case-image"
-              role="img"
-              aria-label="Antes e depois de reabilitação funcional"
-            ></div>
-
-            <div class="case-copy">
-
-              <h3>
-                Reabilitação funcional
-              </h3>
-
-              <p>
-                Tratamentos conduzidos com foco
-                em previsibilidade e preservação.
-              </p>
-
+            <div class="endo-feature">
+              <strong>Casos complexos</strong>
+              <span>Mais segurança em anatomias desafiadoras e retratamentos.</span>
             </div>
 
-          </article>
+            <div class="endo-feature">
+              <strong>Conforto e segurança</strong>
+              <span>Tecnologia e planejamento criterioso durante todo o atendimento.</span>
+            </div>
+
+          </div>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20canal%20com%20microsc%C3%B3pio."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar uma avaliação
+          </a>
 
         </div>
 
@@ -1994,8 +2065,8 @@
             </li>
 
             <li>
-              <a href="#casos">
-                Casos clínicos
+              <a href="#endodontia">
+                Endodontia microscópica
               </a>
             </li>
 
