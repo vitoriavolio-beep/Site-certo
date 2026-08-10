@@ -627,16 +627,25 @@
         #d8d0c3;
     }
 
-    .case-card.secondary .case-image {
-      background:
-        linear-gradient(
-          135deg,
-          rgba(167,137,87,.10),
-          rgba(255,255,255,.20)
-        ),
-        url("coroa.jpeg")
-        center / cover no-repeat,
-        #d8d0c3;
+    .case-image.actual-photo {
+      position: relative;
+      padding: 0;
+      background: #211b18;
+    }
+
+    .case-image.actual-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .case-image.actual-photo span {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      text-align: center;
     }
 
     .case-copy {
@@ -1625,8 +1634,14 @@
 
           <article class="case-card secondary">
 
-            <div class="case-image">
-              REABILITAÇÃO • CASO CLÍNICO
+            <div class="case-image actual-photo">
+              <img
+                src="./coroa.jpeg"
+                alt="Antes e depois de reabilitação funcional com coroa"
+              >
+              <span>
+                REABILITAÇÃO • CASO CLÍNICO
+              </span>
             </div>
 
             <div class="case-copy">
