@@ -611,7 +611,7 @@
       inset: 0 48px 48px 0;
       overflow: hidden;
       border-radius: 28px;
-      background: #d8d0c3;
+      background: #171714;
       box-shadow: var(--shadow);
     }
 
@@ -619,16 +619,87 @@
       content: "";
       position: absolute;
       inset: 0;
+      z-index: 1;
       pointer-events: none;
-      background: linear-gradient(180deg,transparent 55%,rgba(25,25,22,.18));
+      background: linear-gradient(180deg,transparent 70%,rgba(25,25,22,.24));
     }
 
-    .endo-photo img {
+    .endo-slide {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .4s ease, visibility .4s ease;
+    }
+
+    .endo-slide.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .endo-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.48);
+      border-radius: 50%;
+      color: white;
+      background: rgba(25,25,22,.55);
+      box-shadow: 0 8px 22px rgba(0,0,0,.18);
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: .2s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .endo-arrow:hover,
+    .endo-arrow:focus-visible {
+      border-color: var(--gold-light);
+      background: var(--gold);
+    }
+
+    .endo-arrow.prev { left: 16px; }
+    .endo-arrow.next { right: 16px; }
+
+    .endo-arrow span {
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .endo-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 18px;
+      z-index: 3;
+      display: flex;
+      gap: 8px;
+      transform: translateX(-50%);
+    }
+
+    .endo-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .endo-dot.active {
+      width: 24px;
+      border-radius: 99px;
+      background: white;
     }
 
     .endo-badge {
@@ -1647,11 +1718,52 @@
 
         <div class="endo-visual">
 
-          <div class="endo-photo">
+          <div
+            class="endo-photo"
+            role="region"
+            aria-label="Galeria de Endodontia Microscópica"
+            aria-roledescription="carrossel"
+            tabindex="0"
+          >
             <img
-              src="./endodontia-microscopica.jpeg"
-              alt="Consultório equipado com microscópio operatório"
+              class="endo-slide active"
+              src="./5.jpeg"
+              alt="Caso de Endodontia Microscópica — imagem 1 de 3"
             >
+
+            <img
+              class="endo-slide"
+              src="./xx.jpeg"
+              alt="Caso de Endodontia Microscópica — imagem 2 de 3"
+            >
+
+            <img
+              class="endo-slide"
+              src="./rx.jpeg"
+              alt="Caso de Endodontia Microscópica — imagem 3 de 3"
+            >
+
+            <button
+              class="endo-arrow prev"
+              type="button"
+              aria-label="Ver foto anterior"
+            >
+              <span aria-hidden="true">&#8249;</span>
+            </button>
+
+            <button
+              class="endo-arrow next"
+              type="button"
+              aria-label="Ver próxima foto"
+            >
+              <span aria-hidden="true">&#8250;</span>
+            </button>
+
+            <div class="endo-dots" aria-label="Selecionar foto">
+              <button class="endo-dot active" type="button" aria-label="Ver foto 1" aria-current="true"></button>
+              <button class="endo-dot" type="button" aria-label="Ver foto 2" aria-current="false"></button>
+              <button class="endo-dot" type="button" aria-label="Ver foto 3" aria-current="false"></button>
+            </div>
           </div>
 
           <div class="endo-badge">
@@ -2177,6 +2289,59 @@
         menuButton.setAttribute('aria-label', 'Abrir menu');
       });
     });
+
+    const endoCarousel = document.querySelector('.endo-photo');
+    const endoSlides = [...document.querySelectorAll('.endo-slide')];
+    const endoDots = [...document.querySelectorAll('.endo-dot')];
+    const endoPrev = document.querySelector('.endo-arrow.prev');
+    const endoNext = document.querySelector('.endo-arrow.next');
+    let endoCurrent = 0;
+    let touchStartX = 0;
+
+    const showEndoSlide = (index) => {
+      endoCurrent = (index + endoSlides.length) % endoSlides.length;
+
+      endoSlides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('active', slideIndex === endoCurrent);
+      });
+
+      endoDots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === endoCurrent;
+        dot.classList.toggle('active', isActive);
+        dot.setAttribute('aria-current', String(isActive));
+      });
+    };
+
+    endoPrev.addEventListener('click', () => showEndoSlide(endoCurrent - 1));
+    endoNext.addEventListener('click', () => showEndoSlide(endoCurrent + 1));
+
+    endoDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showEndoSlide(index));
+    });
+
+    endoCarousel.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showEndoSlide(endoCurrent - 1);
+      }
+
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showEndoSlide(endoCurrent + 1);
+      }
+    });
+
+    endoCarousel.addEventListener('touchstart', (event) => {
+      touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+
+    endoCarousel.addEventListener('touchend', (event) => {
+      const distance = event.changedTouches[0].clientX - touchStartX;
+
+      if (Math.abs(distance) > 45) {
+        showEndoSlide(endoCurrent + (distance < 0 ? 1 : -1));
+      }
+    }, { passive: true });
   </script>
 
 
