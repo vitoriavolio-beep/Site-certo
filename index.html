@@ -12,8 +12,14 @@
 
   <meta
     name="description"
-    content="Avolio Odontologia — atendimento individualizado, tecnologia e planejamento personalizado."
+    content="Dentista no Jardim Paulista, São Paulo. Atendimento individualizado em prevenção, restaurações, canal com microscópio, próteses, clareamento e implantes."
   >
+
+  <meta name="theme-color" content="#f8f5ef">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Avolio Odontologia | Dra. Maria Vitória Avolio">
+  <meta property="og:description" content="Precisão, estética e confiança em cada etapa do seu tratamento.">
 
   <title>
     Avolio Odontologia | Dra. Maria Vitória Avolio
@@ -34,6 +40,38 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
     rel="stylesheet"
   >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Avolio Odontologia",
+    "description": "Clínica odontológica com atendimento individualizado no Jardim Paulista, em São Paulo.",
+    "telephone": "+55 11 95668-2021",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Nove de Julho, 3229, conjunto 1506",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "12:00"
+      }
+    ],
+    "sameAs": ["https://www.instagram.com/avolio.odontologia/"]
+  }
+  </script>
 
   <style>
 
@@ -58,6 +96,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 96px;
     }
 
     body {
@@ -65,6 +104,7 @@
       color: var(--ink);
       background: var(--ivory);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     img {
@@ -82,6 +122,26 @@
     textarea {
       font: inherit;
     }
+
+    :focus-visible {
+      outline: 3px solid rgba(167,137,87,.45);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 100;
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: white;
+      background: var(--ink);
+      transform: translateY(-150%);
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
 
     .container {
       width: min(1160px, calc(100% - 40px));
@@ -231,6 +291,29 @@
 
     .nav-links a:hover {
       color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--ink);
+      background: rgba(255,255,255,.45);
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 1px;
+      margin: 5px auto;
+      background: currentColor;
+      transition: .2s ease;
     }
 
     .hero {
@@ -475,7 +558,8 @@
       align-items: end;
       justify-content: center;
       padding: 16px;
-      color: var(--muted);
+      color: white;
+      text-shadow: 0 1px 12px rgba(0,0,0,.35);
       font-size: .72rem;
       letter-spacing: .12em;
       background:
@@ -741,10 +825,49 @@
       transform: translateY(-2px);
     }
 
+    .whatsapp svg { width: 25px; height: 25px; fill: currentColor; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+
     @media(max-width:900px) {
 
+      .nav > .btn { display: none; }
+
+      .menu-toggle { display: block; }
+
+      nav {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        padding: 0 20px;
+        background: rgba(248,245,239,.98);
+        border-bottom: 1px solid var(--line);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: .2s ease;
+      }
+
+      header.menu-open nav {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
       .nav-links {
-        display: none;
+        display: grid;
+        gap: 0;
+        padding: 10px 0 18px;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 0;
+        border-bottom: 1px solid rgba(223,215,202,.7);
       }
 
       .hero-grid,
@@ -866,6 +989,8 @@
 
 <body>
 
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
   <header>
 
     <div class="container nav">
@@ -928,10 +1053,20 @@
 
       </nav>
 
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <span></span>
+      </button>
+
       <a
         class="btn btn-outline"
-        href="https://wa.me/5511956682021"
+        href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Avolio%20Odontologia."
         target="_blank"
+        rel="noopener noreferrer"
       >
         Agendar consulta
       </a>
@@ -941,7 +1076,7 @@
   </header>
 
 
-  <main>
+  <main id="conteudo">
 
 
     <section class="hero" id="inicio">
@@ -967,8 +1102,9 @@
 
             <a
               class="btn btn-primary"
-              href="https://wa.me/5511956682021"
+              href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Avolio%20Odontologia."
               target="_blank"
+        rel="noopener noreferrer"
             >
               Agendar pelo WhatsApp
             </a>
@@ -1330,7 +1466,7 @@
           <article class="case-card">
 
             <div class="case-image">
-              ADICIONE AQUI SEU CASO CLÍNICO
+              RESINA COMPOSTA • CASO CLÍNICO
             </div>
 
             <div class="case-copy">
@@ -1351,7 +1487,7 @@
           <article class="case-card secondary">
 
             <div class="case-image">
-              ADICIONE AQUI OUTRO CASO
+              REABILITAÇÃO • CASO CLÍNICO
             </div>
 
             <div class="case-copy">
@@ -1411,8 +1547,9 @@
 
           <a
             class="btn btn-primary"
-            href="https://wa.me/5511956682021"
+            href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Avolio%20Odontologia."
             target="_blank"
+        rel="noopener noreferrer"
             style="margin-top:32px;"
           >
             Quero agendar uma avaliação
@@ -1546,8 +1683,9 @@
 
           <a
             class="btn"
-            href="https://wa.me/5511956682021"
+            href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Avolio%20Odontologia."
             target="_blank"
+        rel="noopener noreferrer"
           >
             Falar no WhatsApp
           </a>
@@ -1762,7 +1900,13 @@
             </li>
 
             <li>
-              Instagram: @seuinstagram
+              <a
+                href="https://www.instagram.com/avolio.odontologia/"
+                target="_blank"
+        rel="noopener noreferrer"
+              >
+                Instagram: @avolio.odontologia
+              </a>
             </li>
 
           </ul>
@@ -1792,12 +1936,35 @@
 
   <a
     class="whatsapp"
-    href="https://wa.me/5511956682021"
+    href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Avolio%20Odontologia."
     target="_blank"
-    aria-label="WhatsApp"
+        rel="noopener noreferrer"
+    aria-label="Falar com a Avolio Odontologia pelo WhatsApp"
   >
-    ✦
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.21c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.59.13-.17.26-.67.85-.83 1.02-.15.17-.3.2-.56.07-.26-.13-1.09-.4-2.08-1.28-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.07-.13-.59-1.41-.8-1.93-.21-.51-.43-.44-.59-.45h-.5c-.17 0-.46.07-.7.33-.24.26-.91.89-.91 2.17s.93 2.52 1.06 2.69c.13.17 1.83 2.79 4.43 3.91.62.27 1.1.43 1.48.55.62.2 1.18.17 1.63.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3z"/>
+      <path d="M16.03 3.2A12.65 12.65 0 0 0 5.2 22.39L3.5 28.6l6.36-1.67a12.62 12.62 0 0 0 6.16 1.57h.01A12.65 12.65 0 0 0 16.03 3.2zm0 23.16h-.01a10.49 10.49 0 0 1-5.35-1.47l-.38-.22-3.77.99 1.01-3.68-.24-.38a10.5 10.5 0 1 1 8.74 4.76z"/>
+    </svg>
   </a>
+
+  <script>
+    const header = document.querySelector('header');
+    const menuButton = document.querySelector('.menu-toggle');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('menu-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => {
+        header.classList.remove('menu-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Abrir menu');
+      });
+    });
+  </script>
 
 
 </body>
