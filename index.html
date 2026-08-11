@@ -997,6 +997,69 @@
 
     .whatsapp svg { width: 25px; height: 25px; fill: currentColor; }
 
+    .faq { background: #f7f4ef; }
+
+    .faq-wrap {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .faq-intro { position: sticky; top: 120px; }
+    .faq-intro h2 { max-width: 520px; margin-top: 18px; }
+
+    .faq-intro p {
+      max-width: 480px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.8;
+    }
+
+    .faq-list { border-top: 1px solid rgba(34,45,42,.18); }
+    .faq-item { border-bottom: 1px solid rgba(34,45,42,.18); }
+
+    .faq-item summary {
+      position: relative;
+      padding: 28px 58px 28px 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.22rem;
+      line-height: 1.35;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::before,
+    .faq-item summary::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      width: 18px;
+      height: 1px;
+      background: var(--green);
+      transition: transform .25s ease;
+    }
+
+    .faq-item summary::after { transform: rotate(90deg); }
+    .faq-item[open] summary::after { transform: rotate(0); }
+
+    .faq-item summary:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 5px;
+    }
+
+    .faq-answer {
+      max-width: 680px;
+      padding: 0 58px 28px 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
@@ -1044,10 +1107,14 @@
       .section-head,
       .experience-grid,
       .doctor-grid,
+      .faq-wrap,
       .cta-wrap,
       .location-grid {
         grid-template-columns: 1fr;
       }
+
+      .faq-wrap { gap: 44px; }
+      .faq-intro { position: static; }
 
       .emergency-card {
         grid-template-columns: 1fr;
@@ -1189,6 +1256,13 @@
       .footer-grid {
         grid-template-columns: 1fr;
       }
+
+      .faq-item summary {
+        padding: 24px 48px 24px 0;
+        font-size: 1.12rem;
+      }
+
+      .faq-answer { padding: 0 48px 24px 0; }
 
       .map-wrap,
       .map-wrap iframe {
@@ -1962,6 +2036,71 @@
             </small>
 
           </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="faq" id="faq">
+
+      <div class="container faq-wrap">
+
+        <div class="faq-intro">
+
+          <span class="eyebrow">Dúvidas frequentes</span>
+
+          <h2>Informação também faz parte do cuidado.</h2>
+
+          <p>
+            Reunimos algumas das dúvidas mais comuns sobre a primeira consulta
+            e o tratamento de canal. Clique em uma pergunta para ver a resposta.
+          </p>
+
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Como funciona a primeira consulta?</summary>
+            <div class="faq-answer">
+              Na primeira consulta, conversamos sobre sua queixa, avaliamos sua
+              saúde bucal e, quando necessário, realizamos exames clínicos e
+              radiográficos. A partir disso, explicamos o diagnóstico e as opções
+              de tratamento de forma clara e individualizada.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Tratamento de canal dói?</summary>
+            <div class="faq-answer">
+              O procedimento é realizado com anestesia local e técnicas voltadas
+              ao conforto do paciente. O objetivo do tratamento é remover a causa
+              da inflamação ou infecção e aliviar a dor. Depois, pode existir uma
+              sensibilidade temporária, que é orientada e acompanhada pela dentista.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>O tratamento de canal é feito em quantas sessões?</summary>
+            <div class="faq-answer">
+              Muitos casos podem ser concluídos em uma única sessão, mas o número
+              de consultas depende da anatomia do dente, da presença de infecção e
+              da complexidade do caso. Essa previsão é apresentada após a avaliação.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>O que acontece com o dente depois do canal?</summary>
+            <div class="faq-answer">
+              Após o canal, o dente precisa receber uma restauração definitiva e,
+              em alguns casos, uma coroa para recuperar sua resistência, função e
+              proteção. A indicação depende da quantidade de estrutura dentária
+              remanescente e é definida individualmente.
+            </div>
+          </details>
 
         </div>
 
