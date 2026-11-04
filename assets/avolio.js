@@ -3,6 +3,23 @@
     document.documentElement.classList.add("js");
 
     /* ========================================================
+       MEDIÇÃO DE CLIQUES NO WHATSAPP
+       Evento informativo; não equivale a mensagem enviada.
+       A conversão do Google Ads requer um conversion label.
+       ======================================================== */
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest('a[href*="wa.me/"], a[href*="api.whatsapp.com/"]');
+      if (!link || typeof window.gtag !== "function") return;
+
+      window.gtag("event", "whatsapp_click", {
+        link_url: link.href,
+        link_text: (link.textContent || "").trim().slice(0, 100),
+        transport_type: "beacon"
+      });
+    });
+
+    /* ========================================================
        FOTOS
        ======================================================== */
 
