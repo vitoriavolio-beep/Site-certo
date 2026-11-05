@@ -3,15 +3,15 @@
        ========================================================== */
 
     :root {
-      --paper: #f8f6f2;
+      --paper: #f8f7f5;
       --white: #ffffff;
-      --ink: #363b36;
-      --muted: #676960;
-      --accent: #88634e;
-      --accent-dark: #76523f;
-      --sand: #eee8df;
-      --line: #dedbd2;
-      --dark: #343f39;
+      --ink: #333536;
+      --muted: #6b6c6c;
+      --accent: #77716c;
+      --accent-dark: #555352;
+      --sand: #eeece8;
+      --line: #deddda;
+      --dark: #e8e7e4;
       --serif: Georgia, "Times New Roman", serif;
       --sans: Arial, Helvetica, sans-serif;
     }
@@ -2074,3 +2074,27 @@
 
 .education-logo { display:block; flex:0 0 56px; width:56px; height:56px; object-fit:contain; background:#fff; border-radius:4px; padding:4px; }
 .education-logo-mandic { object-position:left center; }
+
+/* Paleta editorial clara — branco, bege suave e cinza.
+   Mantém componentes, espaçamento e responsividade existentes. */
+.site-header { background: rgba(250, 249, 247, .97); }
+.hero { background: radial-gradient(ellipse at 10% 20%, #ffffff 0%, var(--paper) 72%); }
+.photo-slot { background: #e7e5e1; }
+.photo-note { border-color: #e8e6e2; box-shadow: 0 8px 40px #3335360c; }
+.signature-rule { background: #b8b4ae; }
+.services, .location, .related { background: #fff; }
+.service-card { border-color: #e2e0dc; }
+.service-featured { background: #efeeeb; border-color: #d9d7d3; }
+.service-number { color: #77716c; }
+.urgent-icon { border-color: #bdbab5; }
+.experience { background: #eeece9; color: var(--ink); }
+.experience .eyebrow, .experience em { color: var(--accent-dark); }
+.experience p { color: var(--muted); }
+.experience h2, .experience h3, .experience li, .experience strong { color: var(--ink); }
+.contact { background: #f0eeeb; }
+.section-soft { background: #f2f0ed; }
+.booking-card { background: #fff; }
+.button:hover { background: #3f3e3d; border-color: #3f3e3d; }
+.button-outline { border-color: #a8a5a1; }
+.button-outline:hover { background: #eeece8; }
+a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visible { outline-color: #77716c; }
