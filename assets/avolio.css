@@ -2071,3 +2071,6 @@
 .education-mark { display: inline-flex; flex: 0 0 46px; width: 46px; height: 46px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 50%; color: var(--accent-dark); background: #f3efe9; font-family: Georgia, serif; font-size: .85rem !important; font-weight: 600; letter-spacing: -.03em; }
 .education-details { min-width: 0; }
 .education-details strong { margin-bottom: 5px; }
+
+.education-logo { display:block; flex:0 0 56px; width:56px; height:56px; object-fit:contain; background:#fff; border-radius:4px; padding:4px; }
+.education-logo-mandic { object-position:left center; }
