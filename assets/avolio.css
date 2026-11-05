@@ -2065,3 +2065,9 @@
 @media(max-width:850px){.page-hero-grid{gap:35px}.page-hero h1{font-size:2.8rem}.page-photo{aspect-ratio:4/5}.explain-grid{gap:40px}.page-facts{font-size:.65rem}.care-card h3{font-size:1.5rem}}
 @media(max-width:700px){.breadcrumb{padding-top:17px;margin-bottom:22px;font-size:.66rem}.page-hero{padding-bottom:40px}.page-hero-grid,.explain-grid{grid-template-columns:1fr;gap:30px}.page-hero h1{font-size:clamp(2.65rem,8.6vw,3.6rem)}.page-hero .hero-description{font-size:.91rem}.page-photo{aspect-ratio:5/4;border-top-left-radius:65px}.page-photo.office img{object-position:50% 43%}.page-facts{font-size:.65rem;gap:8px 16px}.page-facts span+span:before{margin-right:16px}.page-intro{font-size:.89rem}.explain-copy p{font-size:.88rem}.care-card h3{font-size:1.7rem}.page-quote{font-size:1.3rem}.related{padding:26px 0}.related nav{gap:5px 24px}.related a{font-size:.73rem}.contact-page .contact{padding-top:25px}.simple-steps{margin-top:20px}.arrival-list{font-size:.87rem}}
 @media(max-width:370px){.page-hero h1{font-size:2.5rem}.page-facts span+span:before{display:none}.page-facts{flex-direction:column;gap:5px}}
+
+/* Identificadores tipográficos das instituições (não são logotipos oficiais) */
+.education li { display: flex; align-items: center; gap: 14px; }
+.education-mark { display: inline-flex; flex: 0 0 46px; width: 46px; height: 46px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 50%; color: var(--accent-dark); background: #f3efe9; font-family: Georgia, serif; font-size: .85rem !important; font-weight: 600; letter-spacing: -.03em; }
+.education-details { min-width: 0; }
+.education-details strong { margin-bottom: 5px; }
