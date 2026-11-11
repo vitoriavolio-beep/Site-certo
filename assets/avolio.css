@@ -2098,3 +2098,13 @@
 .button-outline { border-color: #a8a5a1; }
 .button-outline:hover { background: #eeece8; }
 a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visible { outline-color: #77716c; }
+
+
+/* Acessos sociais fixos, discretos e responsivos. */
+.floating-social{position:fixed;right:22px;bottom:24px;z-index:950;display:flex;flex-direction:column;gap:10px}
+.floating-social-link{width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#fff;color:#4d4945;border:1px solid #ddd8d1;box-shadow:0 5px 20px rgba(0,0,0,.13);transition:transform .2s ease,box-shadow .2s ease}
+.floating-social-link svg{width:26px;height:26px}
+.floating-social-link:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.floating-whatsapp{background:#287d5a;color:#fff;border-color:#287d5a}
+.floating-social-link:focus-visible{outline:3px solid #77716c;outline-offset:3px}
+@media(max-width:700px){.floating-social{right:14px;bottom:calc(86px + env(safe-area-inset-bottom,0px));gap:8px}.floating-social-link{width:46px;height:46px}.floating-social-link svg{width:23px;height:23px}}
