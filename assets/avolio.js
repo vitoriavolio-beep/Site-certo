@@ -1,5 +1,31 @@
 "use strict";
 
+    /* Acessos flutuantes em todas as páginas: Instagram e WhatsApp. */
+    const socialDock = document.createElement("nav");
+    socialDock.className = "floating-social";
+    socialDock.setAttribute("aria-label", "Redes sociais e contato");
+    socialDock.innerHTML = `
+      <a class="floating-social-link floating-instagram"
+         href="https://www.instagram.com/avolio.odontologia/"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Abrir Instagram da Avolio Odontologia" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+          <circle cx="12" cy="12" r="4.1"/>
+          <circle cx="17.8" cy="6.3" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a class="floating-social-link floating-whatsapp"
+         href="https://wa.me/5511956682021?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Agendar avaliação pelo WhatsApp" title="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.5 3.5A11.2 11.2 0 0 0 3.1 17l-1.5 5.4 5.6-1.5A11.2 11.2 0 1 0 20.5 3.5ZM12 20.9a9 9 0 0 1-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3A9 9 0 1 1 12 20.9Zm5-6.8c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.7-1.7-2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6L8.5 6.8c-.2-.4-.4-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.3 3.5 5.6 4.9.8.4 1.4.6 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+        </svg>
+      </a>`;
+    document.body.appendChild(socialDock);
+
+
     document.documentElement.classList.add("js");
 
     /* ========================================================
