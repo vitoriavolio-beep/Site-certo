@@ -6,7 +6,7 @@
     socialDock.setAttribute("aria-label", "Redes sociais e contato");
     socialDock.innerHTML = `
       <a class="floating-social-link floating-instagram"
-         href="https://www.instagram.com/avolio.odontologia/"
+         href="https://www.instagram.com/viavolio/"
          target="_blank" rel="noopener noreferrer"
          aria-label="Abrir Instagram da Avolio Odontologia" title="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
