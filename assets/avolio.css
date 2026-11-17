@@ -2111,3 +2111,75 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
 .floating-whatsapp{background:#287d5a;color:#fff;border-color:#287d5a}
 .floating-social-link:focus-visible{outline:3px solid #77716c;outline-offset:3px}
 @media(max-width:700px){.floating-social{right:14px;bottom:calc(86px + env(safe-area-inset-bottom,0px));gap:8px}.floating-social-link{width:46px;height:46px}.floating-social-link svg{width:23px;height:23px}}
+
+
+/* Revisão visual: menos elementos acessórios, mais respiro e hierarquia. */
+.hero .eyebrow,
+.photo-note,
+.photo-caption,
+.care-strip,
+.hero-actions > .text-link,
+.hero-signature div > span,
+.section-heading > p,
+.service-top,
+.service-tag,
+.service-details,
+.service-card:not(.service-featured) .service-link,
+.other-care,
+.urgent,
+.image-caption,
+.care-steps li > span,
+.care-steps p,
+.doctor .eyebrow,
+.education,
+.faq .eyebrow {
+  display: none !important;
+}
+
+.hero { padding-top: 76px; }
+.hero-grid { gap: 78px; }
+.hero-copy { padding-block: 28px; }
+.hero h1 { max-width: 620px; }
+.hero-description { max-width: 470px; font-size: 1.04rem; line-height: 1.8; }
+.hero-actions { margin-top: 34px; }
+.hero-signature { margin-top: 30px; }
+.hero-visual { padding-bottom: 0; }
+.hero-photo { border-radius: 110px 3px 3px 3px; }
+
+.section-heading { grid-template-columns: 1fr; gap: 0; margin-bottom: 38px; }
+.section-heading h2 { max-width: 720px; }
+.service-grid { grid-template-columns: 1.25fr 1fr 1fr; gap: 18px; }
+.service-card { padding: 34px 30px; }
+.service-card h3 { min-height: 0; font-size: 1.85rem; margin-bottom: 14px; }
+.service-card > p:not(.service-tag) { font-size: .94rem; line-height: 1.8; margin: 0; }
+.service-featured { background: #f0eeeb; border-color: #d5d1ca; }
+.service-featured .service-link { margin-top: 26px; padding-top: 17px; }
+.experience { padding-block: 88px; }
+.experience-grid { gap: 100px; }
+.experience .eyebrow { display: none; }
+.section-intro { max-width: 470px; font-size: 1rem; }
+.care-steps { margin-top: 26px; }
+.care-steps li { padding: 17px 0; }
+.care-steps h3 { font-size: 1rem; margin: 0; }
+.doctor-registration { font-size: .85rem; margin-top: 16px; }
+.doctor-copy > p:not(.eyebrow):not(.doctor-registration) { font-size: .98rem; line-height: 1.85; }
+.faq-grid > div:first-child > p:not(.eyebrow) { font-size: .98rem; }
+
+@media (max-width: 700px) {
+  .hero { padding-top: 38px; }
+  .hero-grid { gap: 30px; }
+  .hero h1 { font-size: clamp(2.8rem, 9vw, 3.8rem); }
+  .hero-description { font-size: .98rem; line-height: 1.75; margin-top: 20px; }
+  .hero-signature { margin-top: 22px; }
+  .hero-photo { border-radius: 72px 3px 3px 3px; }
+  .section-heading { margin-bottom: 25px; }
+  .service-grid { grid-template-columns: 1fr; gap: 13px; }
+  .service-card { padding: 27px; }
+  .service-card h3 { font-size: 1.9rem; }
+  .service-card > p:not(.service-tag) { font-size: .94rem; }
+  .experience { padding-block: 65px; }
+  .experience-grid { gap: 30px; }
+  .care-steps { margin-top: 20px; }
+  .care-steps li { padding: 17px 0; }
+  .doctor-copy > p:not(.eyebrow):not(.doctor-registration) { font-size: .94rem; }
+}
