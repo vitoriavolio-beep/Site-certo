@@ -632,6 +632,9 @@
       border-color: #d9d4c7;
     }
 
+    /* Prioriza Endodontia na ordem visual sem alterar a navegação. */
+    .service-featured { order: -1; }
+
     .other-care {
       display: flex;
       align-items: center;
